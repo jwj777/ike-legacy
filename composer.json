@@ -9,6 +9,186 @@
             "url": "https://packages.drupal.org/8"
         },
         {
+            "type": "package",
+            "package": {
+                "name": "ckeditor-plugin/templates",
+                "version": "4.11.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/templates/releases/templates_4.11.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor-plugin/font",
+                "version": "4.11.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/font/releases/font_4.11.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor-plugin/colorbutton",
+                "version": "4.11.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/colorbutton/releases/colorbutton_4.11.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor-plugin/panelbutton",
+                "version": "4.11.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/panelbutton/releases/panelbutton_4.11.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor-plugin/indentblock",
+                "version": "4.11.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/indentblock/releases/indentblock_4.11.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor-plugin/indent",
+                "version": "4.11.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/indent/releases/indent_4.11.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "kenwheeler/slick",
+                "version": "1.6.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/kenwheeler/slick/archive/1.6.0.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "gdsmith/jquery.easing",
+                "version": "1.4.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/gdsmith/jquery.easing/archive/1.4.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "dinbror/blazy",
+                "version": "1.8.2",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/dinbror/blazy/archive/1.8.2.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "jackmoore/colorbox",
+                "version": "master",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/jackmoore/colorbox/archive/refs/heads/master.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor-plugin/link",
+                "version": "4.14.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/link/releases/link_4.14.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor-plugin/fakeobjects",
+                "version": "4.14.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.14.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
             "type": "path",
             "url": "upstream-configuration"
         }
@@ -20,7 +200,121 @@
         "drupal/core-recommended": "^10",
         "pantheon-systems/drupal-integrations": "^10",
         "cweagans/composer-patches": "^1.7",
-        "drush/drush": "^11 || ^12"
+        "drush/drush": "^11 || ^12",
+        "mglaman/composer-drupal-lenient": "^1.0",
+        "mglaman/drupal-check": "^1.4",
+        "ckeditor-plugin/colorbutton": "^4.11",
+        "ckeditor-plugin/fakeobjects": "^4.14",
+        "ckeditor-plugin/font": "^4.11",
+        "ckeditor-plugin/indent": "^4.11",
+        "ckeditor-plugin/indentblock": "^4.11",
+        "ckeditor-plugin/link": "^4.14",
+        "ckeditor-plugin/panelbutton": "^4.11",
+        "ckeditor-plugin/templates": "^4.11",
+        "dompdf/dompdf": "^1.0",
+        "drupal/addtoany": "^2.0",
+        "drupal/addtocalendar": "^3.2",
+        "drupal/admin_toolbar": "^3.4",
+        "drupal/advagg": "^6.0@alpha",
+        "drupal/anchor_link": "^2.4",
+        "drupal/antibot": "^2.0",
+        "drupal/bartik": "^1",
+        "drupal/better_exposed_filters": "^6.0",
+        "drupal/blazy": "^2.22",
+        "drupal/block_blacklist": "^1.1",
+        "drupal/block_list_override": "^1.0",
+        "drupal/captcha": "^1.2",
+        "drupal/ckeditor_font": "^1",
+        "drupal/ckeditor_indentblock": "^1",
+        "drupal/ckeditor_templates": "^1.3",
+        "drupal/ckeditor_templates_ui": "^1.5",
+        "drupal/color": "^1",
+        "drupal/colorbox": "^2",
+        "drupal/colorbutton": "^1.1",
+        "drupal/component": "^1.0@RC",
+        "drupal/components": "^3.0@beta",
+        "drupal/config_export_ignore": "^1.1",
+        "drupal/config_ignore": "^2.1",
+        "drupal/config_update": "^2.0@alpha",
+        "drupal/config_split": "^1.3",
+        "drupal/ctools": "^3.6",
+        "drupal/devel": "^5.0",
+        "drupal/dropzonejs": "^2.8",
+        "drupal/edit_uuid": "^2.1",
+        "drupal/editor_advanced_link": "^2.2",
+        "drupal/embed": "^1.3",
+        "drupal/encrypt": "^3.0",
+        "drupal/entity_clone": "1.x-dev@dev",
+        "drupal/entity_embed": "^1.1",
+        "drupal/field_group": "^3.1",
+        "drupal/file_download_link": "^2.0",
+        "drupal/fixed_block_content": "^1.0",
+        "drupal/flag": "^4.0@beta",
+        "drupal/flag_lists": "^4.0",
+        "drupal/flush_single_image": "^2.2",
+        "drupal/focal_point": "^2.0",
+        "drupal/google_analytics": "^4.0",
+        "drupal/honeypot": "^2.0",
+        "drupal/image_widget_crop": "^2.4",
+        "drupal/inline_entity_form": "^1.0@RC",
+        "drupal/key": "^1.14",
+        "drupal/koality_layout_builder_layouts": "^2.0",
+        "drupal/layout_builder_browser": "1.x-dev",
+        "drupal/layout_builder_modal": "^1.2",
+        "drupal/layout_builder_restrictions": "^2.5",
+        "drupal/layout_builder_st": "^1.0@alpha",
+        "drupal/lb_claro": "^2.0@alpha",
+        "drupal/libraries": "^4.0",
+        "drupal/linkit": "^6.0@beta",
+        "drupal/mail_login": "^2.4",
+        "drupal/masquerade": "^2.0@beta",
+        "drupal/media_library_theme_reset": "^1.0",
+        "drupal/menu_item_extras": "^2.15",
+        "drupal/menu_link_attributes": "^1.0",
+        "drupal/metatag": "^1.9",
+        "drupal/migrate_plus": "^6.0",
+        "drupal/migrate_source_csv": "^3.4",
+        "drupal/migrate_tools": "^6.0",
+        "drupal/module_filter": "^4.0",
+        "drupal/paragraphs": "^1.2",
+        "drupal/path_redirect_import": "^2.0",
+        "drupal/pathauto": "~1.0",
+        "drupal/prlp": "^1.2",
+        "drupal/rdf": "^2.1",
+        "drupal/recaptcha": "^3.0",
+        "drupal/recaptcha_v3": "^1.3",
+        "drupal/redirect": "^1.6",
+        "drupal/redirect_after_login": "^2.7",
+        "drupal/restui": "^1.18",
+        "drupal/search_api": "^1.16",
+        "drupal/seven": "^1.0",
+        "drupal/simple_popup_blocks": "^3.1",
+        "drupal/smtp": "^1.2",
+        "drupal/socialfeed": "^2.0@beta",
+        "drupal/stable": "^2.0",
+        "drupal/stage_file_proxy": "^2.1",
+        "drupal/token": "~1.0",
+        "drupal/twig_debugger": "^1.1",
+        "drupal/twig_tweak": "^3.2",
+        "drupal/twig_xdebug": "^1.2",
+        "drupal/twigsuggest": "^2.0@RC",
+        "drupal/ui_patterns": "^1.2",
+        "drupal/upgrade_status": "4.x-dev",
+        "drupal/video_embed_field": "^2.2",
+        "drupal/viewfield": "^3.0@beta",
+        "drupal/views_block_filter_block": "^2.0",
+        "drupal/views_data_export": "^1.4",
+        "drupal/views_ef_fieldset": "^1.4",
+        "drupal/webform": "^6.1",
+        "drupal/webform_content_creator": "^4.0",
+        "drupal/weight": "^3.3",
+        "drupal/xmlsitemap": "^1.4",
+        "jackmoore/colorbox": "master",
+        "vlucas/phpdotenv": "^4.0",
+        "webflo/drupal-finder": "^1.0.0",
+        "webmozart/path-util": "^2.3",
+        "zaporylie/composer-drupal-optimizations": "^1.0",
+        "drupal/config_filter": "^1.12"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
@@ -28,7 +322,7 @@
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "extra": {
         "drupal-scaffold": {
@@ -58,7 +352,33 @@
         "patchLevel": {
             "drupal/core": "-p2"
         },
-        "enable-patching": true
+        "enable-patching": true,
+        "patches": {
+          "drupal/core": {
+            "https://www.drupal.org/project/drupal/issues/3130125 (media entity cant save)": "https://www.drupal.org/files/issues/2020-05-13/3130125-3.patch"
+          },
+          "drupal/paragraphs": {
+            "https://www.drupal.org/project/paragraphs/issues/2901390 (Paragraph langcode null issue)": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch"
+          },
+          "drupal/flags": {
+            "https://www.drupal.org/files/issues/2021-08-26 (Uncaught TypeError: Argument 6 passed to Drupal\\Core\\Template\\TwigEnvironmen)": "https://www.drupal.org/files/issues/2021-08-26/flag-TypeError-3229964-2.patch"
+          },
+          "drupal/socialfeed": {
+            "https://www.drupal.org/project/socialfeed/issues/3320072 (Upgrade 1.4 to 2.0 Facebook not working)": "https://www.drupal.org/files/issues/2022-11-09/fix_facebook_post_collector.patch"
+          },
+          "drupal/edit_uuid": {
+            "https://www.drupal.org/files/issues/2022-06-15/edit_uuid.2.x-dev.rector.patch (d10)": "https://www.drupal.org/files/issues/2022-06-15/edit_uuid.2.x-dev.rector.patch"
+          },
+          "drupal/block_blacklist": {
+            "https://www.drupal.org/files/issues/2023-12-09/block_blacklist.8.x-1.1.rector.patch (d10)": "https://www.drupal.org/files/issues/2023-12-09/block_blacklist.8.x-1.1.rector.patch"
+          },
+          "drupal/config_export_ignore": {
+            "https://www.drupal.org/files/issues/2022-07-18/config_export_ignore.1.1.rector.patch (d10)": "https://www.drupal.org/files/issues/2022-07-18/config_export_ignore.1.1.rector.patch"
+          }
+        },
+        "drupal-lenient": {
+            "allowed-list": ["drupal/block_blacklist", "drupal/edit_uuid", "drupal/ckeditor_templates", "drupal/ckeditor_templates_ui", "drupal/config_export_ignore", "lb_claro"]
+        }
     },
     "autoload": {
         "classmap": ["upstream-configuration/scripts/ComposerScripts.php"]
@@ -71,14 +391,17 @@
         "preferred-install": "dist",
         "sort-packages": false,
         "platform": {
-            "php": "8.2.0"
+            "php": "8.1.13"
         },
         "allow-plugins": {
             "composer/installers": true,
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "php-http/discovery": true,
+            "mglaman/composer-drupal-lenient": true,
+            "zaporylie/composer-drupal-optimizations": true
         }
     }
 }

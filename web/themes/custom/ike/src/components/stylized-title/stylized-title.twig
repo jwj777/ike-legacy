@@ -1,0 +1,35 @@
+{{ attach_library('ike/stylized-title') }}
+
+{% set attributes = create_attribute() %}
+{% set classes = [
+  'stylized-title__top',
+  'flex-container',
+  'flex-dir-column',
+  'flex-jc-flex-start',
+  'flex-wrap-wrap'
+] %}
+
+{% if news == 'true' %}
+  {% set classes = classes|merge(['ike-insight-news']) %}
+{% endif %}
+
+<section class='stylized-title flex-container flex-dir-row flex-jc-flex-start'>
+
+
+<div class='stylized-title__stars flex-2-12'>
+    <span class='star'></span>
+    <span class='star'></span>
+    <span class='star'></span>
+    <span class='star'></span>
+    <span class='star'></span>
+</div>
+
+  <div{{ attributes.addClass(classes) }}>
+    <h2 class="stylized-title__top__title">{{ title }}</h2>
+    {% if description %}<div class="stylized-title__top__description">{{ description|raw }}</div>{% endif %}
+    {% if link %}<div class="stylized-title__top__link"><a href="{{ link }}">{{ link_title }}</a></div>{% endif %}
+    {% if pdf %}<a class="insight-pdf-link" href="{{ file_url(pdf)}}">Download PDF</a>{% endif %}
+  </div>
+
+
+</section>

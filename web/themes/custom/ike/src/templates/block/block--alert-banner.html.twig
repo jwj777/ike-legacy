@@ -1,0 +1,22 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'alert-banner'
+  ]
+%}
+{{ attach_library('ike/alert-banner') }}
+<div{{ attributes.addClass(classes) }}>
+  <div class="alert-banner__inner row flex-container flex-dir-column md-flex-dir-row">
+    {{ title_prefix }}
+    {{ title_suffix }}
+    <div class="alert-banner__title-wrapper flex-container">
+      <img class="alert-banner__image" src="/themes/custom/ike/images/alert-blink.svg" />
+      <h2 class="alert-banner__title">{{ label }}</h2>
+    </div>
+    <div class="alert-banner__body">
+      {{ content }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,446 @@
+// Ike's Soldiers Teaser
+//
+// This is the Teaser component for Ike's Soldiers.
+//
+// Markup: ikes-soldiers-teaser.twig
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.ikes-soldiers-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 66.66667%;
+  justify-content: center;
+
+  header {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+  }
+
+  footer {
+    display: block;
+    width: 100%;
+  }
+
+  .views-row {
+    flex: 0 0 0;
+    max-width: 100%;
+    margin-bottom: 32px;
+    position: relative;
+    width: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
+
+    @include breakpoint($sm) {
+      max-width: 33%;
+      flex: 0 0 66.66667%;
+    }
+
+    @include breakpoint($md) {
+      max-width: 25%;
+    }
+
+    &.open {
+      margin-bottom: -50px;
+
+      @include breakpoint($md) {
+        margin-bottom: 32px;
+      }
+
+      .ikes-soldier-teaser--wrapper {
+        .ikes-soldier-teaser--wrapper-tail {
+          display: block;
+        }
+      }
+
+      .ikes-soldiers-detail--buttons {
+        display: flex;
+      }
+    }
+  }
+}
+
+.ikes-soldier-teaser--wrapper {
+  width: 240px;
+  cursor: pointer;
+
+  @include breakpoint($sm) {
+    width: 185px;
+  }
+
+  a:hover {
+    text-decoration: none !important; //sass-lint:disable-line no-important
+  }
+
+  .ikes-soldier-teaser--wrapper-tail {
+    display: none;
+    width: 100%;
+    height: 20px;
+    min-height: 60px;
+    content: '';
+    border: 0;
+    z-index: 0;
+    background-color: $color-brand-secondary;
+
+    @include breakpoint($md) {
+      border-left: 92px solid transparent;
+      border-right: 92px solid transparent;
+      border-top: 40px solid $color-brand-secondary;
+      z-index: 1;
+      min-height: 0;
+      background-color: transparent;
+    }
+  }
+
+  .ikes-soldier-teaser--image {
+    min-height: 242px;
+    width: 100%;
+    background-image: url('/themes/custom/ike/dist/assets/male-soldier.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.female {
+      background-image: url('/themes/custom/ike/dist/assets/female-soldier.jpg');
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .ikes-soldier-teaser--banner {
+    background-color: $color-brand-secondary;
+    color: $color-white;
+    border-top: solid 2px $color-white;
+    text-align: center;
+    padding: 10px 6px;
+    margin-top: -3px;
+    min-height: 102px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .ikes-soldier-teaser--name {
+    font-size: 22px;
+    font-family: $font-secondary;
+    margin-bottom: 6px;
+    line-height: 1.2em;
+  }
+
+  .ikes-soldier-teaser--rank-branch {
+    font-size: 20px;
+    font-family: $body-font-family;
+    font-style: italic;
+    line-height: 1.1em;
+  }
+}
+
+.ikes-soldiers-detail--buttons {
+  display: none;
+  vertical-align: top;
+  position: relative;
+  top: -68px;
+  justify-content: space-around;
+
+  @include breakpoint($md) {
+    flex-direction: column;
+    top: 0;
+  }
+
+  .ikes-soldiers-detail--buttons__generic {
+    height: 55px;
+    width: 55px;
+    padding: 1rem;
+    background-color: $color-white;
+    margin: 0 0 1rem;
+    border: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @include breakpoint($md) {
+      margin: 0 0 1rem 1rem;
+    }
+  }
+
+  .addtoany_share { // sass-lint:disable-line class-name-format
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-white;
+    margin: 0;
+    height: 55px;
+    width: 55px;
+
+    &:hover {
+      span {
+        opacity: 1;
+      }
+    }
+
+    @include breakpoint($md) {
+      margin: 0 0 1rem 1rem;
+      height: 55px;
+      width: 55px;
+    }
+
+    .a2a_svg { //sass-lint:disable-line class-name-format
+      position: relative;
+      left: -1px;
+      background-color: unset !important; //sass-lint:disable-line no-important
+      background: url('../../images/share.svg') no-repeat center center;
+      background-size: 30px 30px !important; //sass-lint:disable-line no-important
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  .teacher-collection .teacher-collection__add {
+    width: 55px;
+    height: 55px;
+
+    @include breakpoint($md) {
+      float: left;
+      margin: 0 0 0 1rem;
+    }
+  }
+
+  .add-teacher-collection__form-wrapper {
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    right: calc(50% - 50vw);
+    box-shadow: 0 0 4px 0 $color-gray-606060;
+
+    @include breakpoint($md) {
+      right: 40px;
+      max-width: 400px;
+    }
+  }
+}
+
+.inline {
+  display: inline-block;
+  margin-top: 0;
+}
+
+.nudge {
+  margin-left: -5px;
+}
+
+.soldiers-buttons {
+  margin: 17px 132px 0 0;
+  text-align: center;
+  width: 100%;
+
+  .button {
+    margin-bottom: 12px;
+    font-family: $font-secondary;
+    color: #FFF;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 15px;
+    width: 100%;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    @include breakpoint($md) {
+      width: auto;
+      margin-bottom: 32px;
+    }
+  }
+
+  @include breakpoint($lg) {
+    width: auto;
+    text-align: right;
+  }
+
+  .my-collections-button {
+    background-color: #fff;
+    border: 0;
+    padding: 16px 18px 16px 40px;
+    color: #000;
+    background-image: none;
+
+    @include breakpoint($md) {
+      background-image: url('/themes/custom/ike/images/library_books-24px.png');
+      background-repeat: no-repeat;
+      background-position: 10px center;
+    }
+
+    &:hover {
+      color: #000;
+      background-color: $color-light-gray;
+      text-decoration: none;
+    }
+  }
+
+  .soldiers-youtube-button {
+    background-color: #fff;
+    border: 0;
+    padding: 16px 18px 16px 40px;
+    color: #000;
+    background-image: none;
+
+    @include breakpoint($md) {
+      background-image: url('/themes/custom/ike/images/youtube-icon-24px.png');
+      background-repeat: no-repeat;
+      background-position: 10px center;
+    }
+
+    &:hover {
+      color: #000;
+      background-color: $color-light-gray;
+      text-decoration: none;
+    }
+  }
+}
+
+.soldiers-button-wrap {
+  display: none;
+  text-align: center;
+  margin: 35px 0;
+
+  @include breakpoint($md) {
+    display: block;
+  }
+
+  #see-all-soldiers { //sass-lint:disable-line no-ids
+    font-family: $font-secondary;
+    color: #FFF;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 auto;
+    width: auto;
+    padding: 16px 18px;
+    cursor: pointer;
+  }
+}
+
+// More info banner
+.soldiers-banner {
+  text-align: center;
+
+  h2 {
+    color: $color-black;
+    font-size: 48px;
+  }
+
+  .views-row {
+    margin: 15px 0;
+
+    @include breakpoint($lg) {
+      margin: 0;
+    }
+  }
+
+  .soldiers-banner--wrap {
+    background-color: $color-white;
+    padding: 12px;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include breakpoint($lg) {
+      flex-wrap: nowrap;
+    }
+
+    .soldiers-banner--intro {
+      flex: 0 0 100%;
+
+      @include breakpoint($lg) {
+        flex: 0 0 35%;
+        text-align: left;
+        padding: 0 10px;
+      }
+
+      &-logo {
+        width: 200px;
+        height: 180px;
+        background-image: url('../../images/ikes_soldiers_logo_md.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: -65px 0 0 -10px;
+        display: none;
+
+        @include breakpoint($lg) {
+          display: block;
+        }
+      }
+
+      &-text {
+        color: $color-black;
+        text-align: center;
+        font-size: 1.3rem;
+
+        @include breakpoint($lg) {
+          font-size: 1.5rem;
+          text-align: left;
+        }
+      }
+
+      &-button {
+        padding: 10px 20px;
+        border: 0;
+        margin: 16px 0;
+        cursor: pointer;
+      }
+    }
+
+    .soldiers-banner--results {
+      display: flex;
+      flex: 0 0 100%;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      @include breakpoint($lg) {
+        justify-content: space-between;
+        flex: 0 0 65%;
+        flex-wrap: nowrap;
+      }
+    }
+  }
+}
+
+.page-ikes-soldiers {
+
+  .node__component-page {
+    background-color: $color-black;
+  }
+
+  .pager {
+    display: block;
+    width: 100%;
+
+    .pager__item {
+      a {
+        font-family: 'Libre Baskerville';
+        color: $color-black;
+
+        &:hover { //sass-lint:disable-line nesting-depth
+          background-color: $color-light-gray;
+        }
+      }
+
+      &.is-active a {
+        color: $color-white !important; //sass-lint:disable-line no-important
+        background-color: $color-brand-secondary;
+      }
+    }
+  }
+}
+
+.tooltip.top.add-to-collection::after {
+  content: 'Add to collection';
+}

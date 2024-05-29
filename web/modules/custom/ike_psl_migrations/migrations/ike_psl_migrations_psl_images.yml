@@ -1,0 +1,64 @@
+dependencies:
+  module:
+    - file
+id: ike_psl_migrations_psl_images
+uuid: 1bcec3e7-0a49-4473-87a2-6dca09b91bbb
+migration_tags:
+  - CSV
+migration_group: psl_migrations
+label: Import Images for Primary Resources
+source:
+  constants:
+    source_base_path: /var/www/html/docroot/modules/custom/ike_psl_migrations/files/import/images
+    uri_file: 'public://psl_images'
+  plugin: csv
+  track_changes: true
+  path: '/var/www/html/docroot/modules/custom/ike_psl_migrations/files/import.csv'
+  header_offset: 0
+  ids:
+    - id
+  fields:
+    0:
+      name: id
+      label: 'Unique Id'
+    1:
+      name: title
+      label: 'Title'
+    2:
+      name: image
+      label: 'Image'
+
+process:
+  source_full_path:
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/source_base_path
+        - image
+    -
+      plugin: urlencode
+  uri_file:
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/uri_file
+        - image
+    -
+      plugin: urlencode
+  filename: 
+    plugin: skip_on_empty
+    method: row
+    source: image
+  uri:
+    plugin: file_copy
+    source:
+      - '@source_full_path'
+      - '@uri_file'
+destination:
+  plugin: 'entity:file'
+reuse: true
+migration_dependencies:
+  required: {  }
+  optional: {  }

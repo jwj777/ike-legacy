@@ -1,0 +1,114 @@
+.tooltip {
+  padding: 10px 15px;
+  position: relative;
+  text-align: center;
+}
+.tooltip::after {
+  background-color: #0F2043;
+  border-radius: 10px;
+  color: #fff;
+  display: none;
+  padding: 10px 15px;
+  position: absolute;
+  text-align: center;
+  z-index: 999;
+}
+.tooltip::before {
+  background-color: #0F2043;
+  content: " ";
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 999;
+}
+.tooltip:hover::after {
+  display: block;
+}
+.tooltip:hover::before {
+  display: block;
+}
+.tooltip.top::after {
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 10px));
+}
+.tooltip.top::before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
+.tooltip.bottom::after {
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 10px));
+}
+.tooltip.bottom::before {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+}
+.tooltip.right::after {
+  content: "";
+  top: 0;
+  right: 0;
+  transform: translateX(calc(100% + 10px));
+}
+.tooltip.right::before {
+  top: 50%;
+  right: 0;
+  transform: translate(calc(100% + 5px), -50%) rotate(45deg);
+}
+.tooltip.left::after {
+  content: "";
+  top: 0;
+  left: 0;
+  transform: translateX(calc(-100% - 10px));
+}
+.tooltip.left::before {
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-100% - 5px), -50%) rotate(45deg);
+}
+
+.block--page-title {
+  position: relative;
+  top: -10px;
+  margin-bottom: 40px;
+}
+@media (min-width: 992px) {
+  .block--page-title {
+    margin-bottom: 80px;
+    padding-left: 135px;
+    padding-right: 135px;
+  }
+}
+.page-events .block--page-title {
+  top: 10px;
+}
+.page-virtual-classroom .block--page-title::before {
+  display: none;
+}
+.page-virtual-classroom .block--page-title span {
+  color: #000;
+}
+.block--page-title span {
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
+  position: relative;
+  display: block;
+  font-size: 32px;
+  margin: 2rem 0 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  line-height: 1.4;
+  z-index: 10;
+}
+@media (min-width: 768px) {
+  .block--page-title span {
+    font-size: 48px;
+  }
+}

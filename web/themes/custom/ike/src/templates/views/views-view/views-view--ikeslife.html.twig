@@ -1,0 +1,87 @@
+{#
+/**
+ * @file
+ * Theme override for main view template.
+ *
+ * Available variables:
+ * - attributes: Remaining HTML attributes for the element.
+ * - css_name: A CSS-safe version of the view name.
+ * - css_class: The user-specified classes names, if any.
+ * - header: The optional header.
+ * - footer: The optional footer.
+ * - rows: The results of the view query, if any.
+ * - empty: The content to display if there are no rows.
+ * - pager: The optional pager next/prev links to display.
+ * - exposed: Exposed widget form/info to display.
+ * - feed_icons: Optional feed icons to display.
+ * - more: An optional link to the next page of results.
+ * - title: Title of the view, only used when displaying in the admin preview.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the view title.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the view title.
+ * - attachment_before: An optional attachment view to be displayed before the
+ *   view content.
+ * - attachment_after: An optional attachment view to be displayed after the
+ *   view content.
+ * - dom_id: Unique id for every view being printed to give unique class for
+ *   Javascript.
+ *
+ * @see template_preprocess_views_view()
+ */
+#}
+{%
+  set classes = [
+  dom_id ? 'js-view-dom-id-' ~ dom_id,
+]
+%}
+{{ attach_library('ike/articles') }}
+<div{{ attributes.addClass(classes) }}>
+  {{ attach_library('ike/cta-text-overlay-banner') }}
+  {{ title_prefix }}
+  {{ title }}
+  {{ title_suffix }}
+
+  {% if header %}
+    <div class="view-header flex-container flex-dir-column lg-flex-dir-row flex-jc-flex-start flex-ai-stretch">
+      <header>
+        {{ header }}
+      </header>
+      <div class="exposed-filters">
+        {{ exposed }}
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="flex-container flex-dir-row-reverse">
+    <div class="flex-3-10">
+      {{ drupal_block('block_content:d91e9673-c9e8-471f-9872-86da16d380fb')}}
+      <div></div>
+      {{ drupal_block('block_content:62734b5f-48af-4851-bdca-a5a1182a6de6')}}
+    </div>
+    <div class="flex-7-10">
+  {% if rows -%}
+    <div class="articles__rows flex-container flex-dir-column flex-ai-stretch">
+      {{ rows }}
+      {{ pager }}
+    </div>
+  {% elseif empty -%}
+    <div class="articles__empty-rows">
+      {{ empty }}
+    </div>
+  {% endif %}
+    </div>
+  </div>
+
+  {{ attachment_before }}
+  {{ attachment_after }}
+  {{ more }}
+
+  {% if footer %}
+    <footer>
+      {{ footer }}
+    </footer>
+  {% endif %}
+
+  {{ feed_icons }}
+</div>

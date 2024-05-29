@@ -1,0 +1,11 @@
+@import '../utils/init';
+
+.page-join-and-give {
+  .layout__region--right {
+    .block-inline-blockwysiwyg {
+      .field--name-body {
+        padding: 20px 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+icon_text_card:
+  label: Iked CTA Text Overlay
+  description: ""
+  template: iked-cta-text-overlay-banner
+  use: "@ike/iked-cta-text-overlay-banner/iked-cta-text-overlay-banner.twig"
+  fields:
+    link_title:
+      type: renderable
+      label: Link
+      description: Link to page.
+      preview: 'LEARN MORE'
+    link_url:
+      type: renderable
+      label: Link
+      description: Link to page.
+      preview: '#'
+    content:
+      type: renderable
+      label: Content
+      description: Text content.
+      preview: <h4>VIRTUAL CLASSROOM</h4><p>Learn about IKE through our interactive timeline, pivotal moments and lesson plans designed for you!</p>
+    image:
+      type: renderable
+      label: Image
+      description: Background image for banner.
+      preview: <img src="https://picsum.photos/id/1059/7360/4912.jpg">

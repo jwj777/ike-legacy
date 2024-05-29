@@ -1,0 +1,139 @@
+// Stylized Title Component
+//
+// This is the Stylized Title Component component. It's an example.
+//
+// Markup: stylized-title-component.twig
+//
+// Style guide: Components.stylized-title-component
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.stylized-title {
+  position: relative;
+  padding: 20px 0;
+  color: $color-white;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: -20px;
+    right: -20px;
+    height: 3px;
+    width: 100%;
+    margin: 0 auto;
+    background-image: linear-gradient(to right , transparent 1%, $color-brand-secondary 15%, transparent 100%);
+
+    @include breakpoint($md) {
+      left: -45px;
+      right: 0;
+      width: 120%;
+    }
+  }
+
+  .stylized-title__top {
+    align-items: flex-start;
+
+    @include breakpoint($xl) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .ike-insight-news.stylized-title__top {
+    align-items: baseline;
+  }
+
+  .stylized-title__top__title {
+    flex: 0 0 auto;
+    margin: 0;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    @include breakpoint($xl) {
+      float: left;
+      margin-right: 2rem;
+    }
+  }
+
+  .stylized-title__top__link {
+    flex: 0 0 auto;
+    align-self: flex-start;
+    display: inline-block;
+    font-size: 0;
+    margin-top: 10px;
+
+    @include breakpoint($xl) {
+      align-self: flex-end;
+      margin-top: 0;
+      padding-bottom: 6px;
+    }
+
+    a {
+      display: inline-block;
+      margin-bottom: 4px;
+      font-family: $font-secondary;
+      font-size: 14px;
+      color: $color-white;
+
+      @include breakpoint($xl) {
+        margin-bottom: 0;
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .stylized-title__stars {
+    padding-bottom: 10px;
+    padding-top: 5px;
+    max-width: 110px;
+    min-width: 109px;
+
+    .star {
+      position: relative;
+      margin-right: 20px;
+
+      &::before {
+        content: '\2605';
+        position: absolute;
+        color: $color-brand-secondary;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.stylized-title__top__description {
+  flex: 0 1 auto;
+  margin-bottom: 10px;
+
+  p {
+    font-size: 14px;
+    font-weight: 100;
+    margin: 0;
+  }
+}
+
+.layout--two-center-regions {
+  .layout__region--right {
+    .stylized-title .stylized-title__top {
+      @include breakpoint($xl) {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.ike-insight-news {
+  .insight-pdf-link {
+    display: contents;
+    color: $color-white;
+  }
+}
+
+@include breakpoint($lg) {
+  .view--articles .stylized-title {
+    width: 74%;
+  }
+}

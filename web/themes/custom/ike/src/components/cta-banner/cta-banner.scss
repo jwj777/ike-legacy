@@ -1,0 +1,327 @@
+// CTA Banner
+//
+// This is the CTA Banner component. It's an example.
+//
+// Markup: cta-banner.twig
+//
+// Style guide: Components.cta-banner
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.cta-banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: $color-white;
+  border: 4px solid $color-brand-secondary;
+  text-align: center;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  @include breakpoint($sm) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @include breakpoint($md) {
+    text-align: left;
+  }
+
+  @include breakpoint($lg) {
+    padding: 0 0 0 192px;
+    justify-content: space-around;
+  }
+
+  .cta-banner__heading {
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-black;
+    width: 100%;
+    min-width: 100%;
+
+    @include breakpoint($md) {
+      top: -54px;
+      left: 0;
+      position: absolute;
+      color: $color-white;
+      text-align: left;
+    }
+
+    @include breakpoint($lg) {
+      left: 200px;
+    }
+  }
+
+  .cta-banner__image--overlap {
+    margin: 0 auto;
+    padding-bottom: 20px;
+
+    @include breakpoint($sm) {
+      padding-right: 20px;
+      padding-bottom: 0;
+    }
+
+    @include breakpoint($md) {
+      margin: 0;
+    }
+
+    @include breakpoint($lg) {
+      position: absolute;
+      top: -24px;
+      left: -28px;
+      padding: 0;
+    }
+
+    img {
+      max-width: 150px;
+      height: auto;
+
+      @include breakpoint($md) {
+        max-width: 210px;
+      }
+
+      @include breakpoint($lg) {
+        max-width: 220px;
+      }
+    }
+  }
+
+  .cta-banner__image--left,
+  .cta-banner__image--right {
+    display: none;
+    max-height: 100%;
+    font-size: 0;
+    overflow: hidden;
+
+    img {
+      max-width: 260px;
+      height: auto;
+
+      @include breakpoint($lg) {
+        max-width: 266px;
+      }
+    }
+  }
+
+  .cta-banner__image--left {
+    @include breakpoint($xl) {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    img {
+      @include breakpoint($lg) {
+        max-width: 246px;
+      }
+    }
+  }
+
+  .cta-banner__image--right {
+    position: relative;
+
+    @include breakpoint($lg) {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('../assets/star-2.png');
+      background-size: 100%;
+      background-repeat: no-repeat;
+      opacity: 0.0;
+    }
+
+    &::before {
+      top: 20px;
+      left: 15px;
+      height: 70px;
+      width: 85px;
+      animation: pulsateLeft 1.5s ease-out;
+      animation-delay: 0.5s;
+      animation-iteration-count: infinite;
+    }
+
+    &::after {
+      top: 90px;
+      left: 70px;
+      height: 40px;
+      width: 45px;
+      animation: pulsateRight 1.5s ease-out;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  .cta-banner__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .cta-banner__image {
+    font-size: 0;
+
+    &,
+    & *:not(.contextual),
+    img {
+      width: 100%;
+
+      @include breakpoint($md) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+      }
+    }
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .cta-banner__content,
+  .cta-banner__link-title {
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-banner__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+    color: $color-black;
+
+    @include breakpoint($md) {
+      min-width: 65%;
+      width: 65%;
+      padding-left: 40px;
+    }
+
+    @include breakpoint($lg) {
+      min-width: 60%;
+      width: 60%;
+      padding: 14px 0;
+    }
+
+    @include breakpoint($xl) {
+      min-width: 44%;
+      width: 44%;
+    }
+
+    *:not(div) {
+      margin-bottom: 5px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    h3 {
+      font-family: $body-font-family;
+      line-height: 1.5;
+      margin-bottom: 10px;
+
+      span {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          background-color: #fee97b;
+          z-index: -1;
+          animation: fillRight 4s ease-out;
+          animation-iteration-count: infinite;
+        }
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.8;
+
+      span {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: -4px;
+          height: 4px;
+          background-color: #ca1592;
+          animation: fillRight 4s ease-out;
+          animation-iteration-count: infinite;
+          animation-delay: 0.5s;
+        }
+      }
+    }
+  }
+
+  &.alt-style {
+    .cta-banner__content {
+      width: 100%;
+      min-width: 100%;
+      padding: 36px 40px;
+
+      h3 span::before {
+        background-color: #F7868E;
+      }
+    }
+  }
+}
+
+@keyframes pulsateLeft {
+  0% {
+    transform: scale(0.1, 0.1);
+    opacity: 0.0;
+  }
+
+  50% {
+    opacity: 1.0;
+  }
+
+  100% {
+    transform: scale(1.2, 1.2);
+    opacity: 0.0;
+  }
+}
+
+@keyframes pulsateRight {
+  0% {
+    transform: scale(-0.1, 0.1);
+    opacity: 0.0;
+  }
+
+  50% {
+    opacity: 1.0;
+  }
+
+  100% {
+    transform: scale(-1.2, 1.2);
+    opacity: 0.0;
+  }
+}
+
+@keyframes fillRight {
+  0% {
+    min-width: 0;
+  }
+
+  50% {
+    min-width: 100%;
+  }
+}

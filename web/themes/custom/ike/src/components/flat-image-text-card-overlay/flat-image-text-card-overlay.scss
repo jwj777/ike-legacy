@@ -1,0 +1,132 @@
+@import '../../global/utils/init';
+
+.flat-image-text-card-overlay {
+  position: relative;
+  padding-right: 1rem;
+  color: $color-white;
+  // really just adding to make /patterns not terrible
+
+  @include breakpoint($md) {
+    max-width: 500px;
+  }
+
+  @include breakpoint($lg) {
+    padding-right: 2rem;
+  }
+
+  @include breakpoint($xl) {
+    padding-right: 4rem;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    img {
+      filter: grayscale(0);
+      transform: scale(1.15);
+      transition: transform 0.5s ease, filter 0.5s ease;
+    }
+  }
+
+  .field--name-field-media-embed-3d-image {
+    display: none;
+  }
+}
+
+.view--articles {
+  .flat-image-text-card-overlay {
+    padding-right: 0;
+  }
+}
+
+.flat-image-text-card-overlay__image {
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 8;
+  margin-bottom: 15px;
+
+  @include breakpoint($md) {
+    margin-bottom: 0;
+  }
+
+  .field__item {
+    font-size: 0;
+  }
+
+  img {
+    object-fit: contain;
+    // do cool reveal of img color on hover
+    filter: grayscale(40%);
+    transition: transform 0.5s ease, filter 0.5s ease;
+    width: 100%;
+    background-color: $color-black;
+    height: auto;
+
+    @include breakpoint($md) {
+      height: unset;
+    }
+  }
+}
+
+.flat-image-text-card-overlay__title {
+  @include font-sans-serif-bold;
+  background: $color-white;
+  border-top: 2px solid $color-brand-secondary;
+  box-shadow: 0 -1px 3px 0 $color-gray-606060;
+  position: relative;
+  z-index: 10;
+  color: $color-brand-primary;
+  font-size: 16px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  width: 100%;
+  margin: 0;
+  height: 71px;
+  word-break: break-word;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.flat-image-text-card-overlay__wrapper {
+  display: block;
+  height: auto;
+  position: relative;
+  z-index: 5;
+  width: 100%;
+}
+
+.flat-image-text-card-overlay__categories {
+  display: none; // temp hiding categories, I really hope they come back
+  position: absolute;
+  right: -7px;
+  top: -10px;
+  z-index: 10;
+
+  ul {
+    margin: 0;
+  }
+
+  li,
+  .field--name-field-resource-grade-level .field__item {
+    background: $color-brand-primary;
+    color: $color-white;
+    font-size: 14px;
+    font-weight: bold;
+    float: left;
+    margin-left: 5px;
+    padding: 5px 10px;
+    list-style: none;
+    z-index: 10;
+  }
+}
+
+.view--lesson-plans-full--inner {
+  margin-bottom: 4rem;
+
+  .views-row {
+    margin-bottom: 3rem;
+  }
+}

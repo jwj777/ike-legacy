@@ -1,0 +1,187 @@
+.tooltip {
+  padding: 10px 15px;
+  position: relative;
+  text-align: center;
+}
+.tooltip::after {
+  background-color: #0F2043;
+  border-radius: 10px;
+  color: #fff;
+  display: none;
+  padding: 10px 15px;
+  position: absolute;
+  text-align: center;
+  z-index: 999;
+}
+.tooltip::before {
+  background-color: #0F2043;
+  content: " ";
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 999;
+}
+.tooltip:hover::after {
+  display: block;
+}
+.tooltip:hover::before {
+  display: block;
+}
+.tooltip.top::after {
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 10px));
+}
+.tooltip.top::before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
+.tooltip.bottom::after {
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 10px));
+}
+.tooltip.bottom::before {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+}
+.tooltip.right::after {
+  content: "";
+  top: 0;
+  right: 0;
+  transform: translateX(calc(100% + 10px));
+}
+.tooltip.right::before {
+  top: 50%;
+  right: 0;
+  transform: translate(calc(100% + 5px), -50%) rotate(45deg);
+}
+.tooltip.left::after {
+  content: "";
+  top: 0;
+  left: 0;
+  transform: translateX(calc(-100% - 10px));
+}
+.tooltip.left::before {
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-100% - 5px), -50%) rotate(45deg);
+}
+
+.user-login-content {
+  padding-top: 150px;
+}
+.user-login-content .user-login-form,
+.user-login-content .user-form,
+.user-login-content .user-pass,
+.user-login-content .user-pass-reset {
+  max-width: 800px;
+  padding: 15px;
+  margin: 0 auto 30px;
+  background-color: #FFF;
+  box-shadow: 0 2px 4px 4px rgba(0, 0, 0, 0.33);
+  color: #000;
+}
+.user-login-content .user-login-form .form-item,
+.user-login-content .user-form .form-item,
+.user-login-content .user-pass .form-item,
+.user-login-content .user-pass-reset .form-item {
+  margin-bottom: 20px;
+}
+.user-login-content .user-login-form label,
+.user-login-content .user-form label,
+.user-login-content .user-pass label,
+.user-login-content .user-pass-reset label {
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.user-login-content .user-login-form .description,
+.user-login-content .user-form .description,
+.user-login-content .user-pass .description,
+.user-login-content .user-pass-reset .description {
+  color: #464646;
+  font-size: 14px;
+  margin: 5px 0;
+}
+.user-login-content .user-login-form textarea,
+.user-login-content .user-form textarea,
+.user-login-content .user-pass textarea,
+.user-login-content .user-pass-reset textarea {
+  width: 100%;
+}
+.user-login-content .user-login-form {
+  font-family: "Libre Baskerville", serif;
+  margin-bottom: 4rem;
+  padding: 2rem;
+}
+.user-login-content .user-login-form .description {
+  font-size: 14px;
+  margin-top: 5px;
+}
+.user-login-content .form-submit {
+  font-family: "Libre Baskerville", serif;
+  background-color: #C11F2A;
+  border: 0;
+  color: #FFF;
+  display: inline-block;
+  font-size: 16px;
+  padding: 14px 18px;
+  text-decoration: none;
+}
+.user-login-content .block-local-tasks-block {
+  margin: 0 auto 30px;
+  max-width: 800px;
+}
+.user-login-content .block-local-tasks-block a {
+  font-family: "Libre Baskerville", serif;
+}
+.user-login-content .block-local-tasks-block > ul {
+  padding: 0 !important;
+}
+.user-login-content .user-register-form {
+  display: flex;
+  flex-direction: column;
+}
+.user-login-content .user-register-form #edit-account {
+  order: 0;
+}
+.user-login-content .user-register-form .field--name-field-first-name {
+  order: 1;
+}
+.user-login-content .user-register-form .field--name-field-last-name {
+  order: 2;
+}
+.user-login-content .user-register-form .field--name-field-classroom-description {
+  order: 3;
+}
+.user-login-content .user-register-form #edit-timezone {
+  order: 4;
+}
+.user-login-content .user-register-form .captcha {
+  order: 5;
+  margin: 10px 0;
+}
+.user-login-content .user-register-form .form-actions {
+  order: 6;
+}
+.user-login-content .user-pass-reset .form-item {
+  margin: 10px 0;
+}
+.user-login-content .filter-guidelines {
+  color: #464646;
+  font-size: 14px;
+  margin: 5px 0;
+}
+.user-login-content #edit-timezone summary {
+  display: none;
+}
+.user-login-content .field--name-user-picture,
+.user-login-content #edit-contact {
+  display: none;
+}

@@ -1,0 +1,10 @@
+@import '../../global/utils/init';
+
+.event-listing {
+  margin: 0 30px 50px;
+
+  @include breakpoint($md) {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+}

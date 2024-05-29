@@ -1,0 +1,16 @@
+{%
+  set classes = [
+    'block',
+    'block-email-signup'
+  ]
+%}
+{{ attach_library('ike/email-signup') }}
+<div{{ attributes.addClass(classes) }}>
+  <a id="block-ike-education-email-signup__trigger" class="button-red button" href="#">Get updates on our classroom resources!</a>
+  <div class="block-ike-education-email-signup__form hidden">
+    <div class="block-ike-education-email-signup__overlay"></div>
+    <div class="block-ike-education-email-signup__form-inner ctct-inline-form" data-form-id="6113645a-1881-4e1c-ae5d-7342bf583917"></div>
+  </div>
+  <script> var _ctct_m = "f0290b9be81417044f3395edfd7f3936"; </script>
+  <script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" defer></script>
+</div>

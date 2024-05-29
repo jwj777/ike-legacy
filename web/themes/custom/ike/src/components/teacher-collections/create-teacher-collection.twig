@@ -1,0 +1,21 @@
+{{ attach_library('ike/teacher-collections-create' )}}
+<div id="create-teacher-collection" class="create-teacher-collection teacher-collection">
+  <button class="teacher-collection__add" @click="showForm=true">
+    <img width="25" src="/themes/custom/ike/images/collections-bookmark.svg" />
+  </button>
+  <div v-if="showForm" class="teacher-collection__form-wrapper">
+    <div class="teacher-collection__form-shadow" @click="showForm=false"></div>
+    <form class="teacher-collection__form">
+      <h3>Create a new Teacher Collection</h3>
+      <input v-model="title" type="text" name="title" placeholder="My New Collection"/>
+      <input v-model="description" type="text" name="description" placeholder="This is my collection description."/>
+      <div class="teacher-collection--submit button-red" @click="submit">Create New Collection</div>
+      <div class="teacher-collection__close" @click="showForm=false">×</div>
+    </form>
+  </div>
+  {% verbatim %}
+  <div v-if="submitting" class="teacher-collection__loader">
+    <div class="teacher-collection__spinner"></div>
+  </div>
+  {% endverbatim %}
+</div>

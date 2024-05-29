@@ -1,0 +1,22 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+    'paragraph--stylized-title'
+  ]
+%}
+
+<div{{ attributes.addClass('paragraph__slide') }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% set paragraph_info = {
+    "title": content.field_slide_title,
+    "content": content.field_slide_body,
+    "link": content.field_slide_link,
+    "image": content.field_slide_media
+  } %}
+
+  {% include "@ike/slider/slide/slide.twig" with paragraph_info %}
+</div>

@@ -1,0 +1,457 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the ike theme.
+ */
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Database\Database;
+use Drupal\Core\Template\Attribute;
+use Drupal\Core\Url;
+use Drupal\node\NodeInterface;
+use Drupal\views\ViewExecutable;
+
+/**
+ * @file
+ * Functions to support theming in the ike theme.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for html.html.twig.
+ */
+function ike_preprocess_html(array &$variables) {
+  $variables['attributes']['class'][] = 'page-' . $variables['root_path'];
+  $current_path = \Drupal::service('path.current')->getPath();
+  $current_path_sanitized = str_replace('/', '-', substr($current_path, 1));
+  $aliased_path = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
+  $split_path = explode('/', $aliased_path);
+  $variables['attributes']['class'][] = 'page-' . $current_path_sanitized;
+  foreach ($split_path as $path) {
+    $variables['attributes']['class'][] = 'page-' . $path;
+  }
+
+  if ($variables['root_path']) {
+    $variables['attributes']['class'][] = 'not-front';
+  }
+  else {
+    $variables['attributes']['class'][] = 'front';
+  }
+
+  $current_user = \Drupal::currentUser();
+  $roles = $current_user->getRoles();
+  foreach ($roles as $role) {
+    $variables['attributes']['class'][] = 'role-' . $role;
+  }
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function ike_page_attachments_alter(array &$page) {
+  // Tell IE to use latest rendering engine (not to use compatibility mode).
+  /*$ie_edge = [
+  '#type' => 'html_tag',
+  '#tag' => 'meta',
+  '#attributes' => [
+  'http-equiv' => 'X-UA-Compatible',
+  'content' => 'IE=edge',
+  ],
+  ];
+  $page['#attached']['html_head'][] = [$ie_edge, 'ie_edge'];*/
+}
+
+/**
+ * Implements hook_preprocess_page() for page.html.twig.
+ */
+function ike_preprocess_page(array &$variables) {
+  $route = \Drupal::routeMatch()->getRouteName();
+  if (stripos($route, 'layout_builder.') !== FALSE) {
+    $variables['#attached']['library'][] = 'ike/layout-builder-prettier';
+  }
+  else {
+    // Not a Layout builder route, so let's mark to hide contextual links.
+    $variables['attributes']['class'][] = 'hide-contextual-links';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function ike_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $suggestions[] = 'page__' . $node->bundle();
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_node_alter().
+ */
+function ike_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  /*$node = $variables['elements']['#node'];
+  if ($variables['elements']['#view_mode'] == "full") {
+  }*/
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for Block document templates.
+ */
+function ike_preprocess_block(array &$variables) {
+  if (isset($variables['content']['#block_content'])) {
+    /** @var \Drupal\block_content\Entity\BlockContent $block */
+    $block = $variables['content']['#block_content'];
+    $type = $block->bundle();
+    $variables['block'] = $variables['content']['#block_content'];
+
+    if ($variables['elements']['#derivative_plugin_id'] === 'wysiwyg') {
+      if ($block->field_wysiwyg_remove_padding->value == 1) {
+        $variables['attributes']['class'][] = t('no-wysiwyg-padding');
+      }
+    }
+
+    $function = __FUNCTION__ . "_{$type}";
+    if (function_exists($function)) {
+      $function($variables);
+    }
+  }
+  if ($variables['plugin_id'] === 'system_menu_block:main') {
+    $variables['#attached']['library'][] = 'ike/main-menu';
+  }
+  if ($variables['plugin_id'] === 'inline_block:link_block') {
+    $database = Database::getConnection('default');
+    $query = $database->select('block_content_field_data', 'bc');
+    $query->condition('bc.type', 'gallery_block');
+    $query->condition('bc.status', 1);
+    $query->fields('bc', ['info']);
+    $query->accessCheck(false);
+    $status = $query->execute()->fetchCol();
+
+    $variables['content']['gallery_list'];
+    foreach ($status as $val) {
+      $variables['gallery_list'][] = $val;
+    }
+  }
+  if ($variables['plugin_id'] === 'inline_block:gallery_block') {
+    $variables['label'] = $variables["block"]->get('info')->getString();
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function ike_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if (isset($variables['elements']['content']['#block_content']) && !is_null($variables['elements']['content']['#block_content'])) {
+    $block_bundle = $variables['elements']['content']['#block_content']->bundle();
+    $suggestions[] = 'block__' . $block_bundle;
+  }
+}
+
+/**
+ * Implements hook_preprocess_image_formatter().
+ *
+ * This is used on PSL List view to convert the path on the 3d
+ * preview images from linking to the media entity to instead
+ * linking to the node entity which is the correct behavior.
+ */
+function ike_preprocess_image_formatter(&$variables) {
+  $referenced_entity = $variables["item"]->getEntity();
+  if ($referenced_entity->bundle() == "3d_image") {
+    $mid = $referenced_entity->get('mid')->getString();
+
+    $database = \Drupal::database();
+    $query = $database->select('node__field_3d_media', 'u');
+    $query->condition('u.field_3d_media_target_id', $mid, '=');
+    $query->fields('u', ['entity_id']);
+    $res = $query->execute()->fetchCol();
+
+    $variables['url'] = Url::fromUri('internal:/node/' . $res[0]);
+  }
+
+}
+
+/**
+ * Implements hook_suggestion_HOOK_alter().
+ */
+function ike_theme_suggestions_form_element_alter(array &$suggestions, array $variables) {
+  if (array_key_exists('#name', $variables['element']) && $variables['element']['#name'] === 'psl-combine-filter') {
+    $suggestions[] = $variables['theme_hook_original'] . '__psl_search_custom';
+  }
+
+  $soldier_search_filters = [
+    "ikes-soldiers-combine-filter",
+    "field_ikes_soldiers_first_name",
+    "field_ikes_soldiers_last_name",
+  ];
+  if (array_key_exists('#name', $variables['element']) && in_array($variables['element']['#name'], $soldier_search_filters)) {
+    $suggestions[] = $variables['theme_hook_original'] . '__ikes_soldiers_search_custom';
+  }
+}
+
+/**
+ * Implements hook_suggestions_HOOK_alter().
+ */
+function ike_theme_suggestions_details_alter(array &$suggestions, array $variables) {
+  $psl_details = [
+    "field_psl_type_target_id",
+    "field_psl_timeframe_target_id",
+    "field_psl_subject_target_id",
+    "field_psl_collection_target_id",
+  ];
+  if (in_array($variables['element'][0]['#name'], $psl_details)) {
+    $suggestions[] = $variables['theme_hook_original'] . '__psl_custom';
+  }
+
+  $ikes_soldiers_details = [
+    "field_ikes_soldiers_theater_op_target_id",
+    "field_ikes_soldiers_serv_branch_target_id",
+    "field_ikes_soldiers_gender_target_id",
+    "field_ikes_soldiers_source_target_id",
+    "field_ikes_soldiers_k_i_a_value",
+    "field_ikes_soldiers_p_o_w_value",
+
+  ];
+  if (in_array($variables['element'][0]['#name'], $ikes_soldiers_details)) {
+    $suggestions[] = $variables['theme_hook_original'] . '__ikes_soldiers_custom';
+  }
+}
+
+/**
+ * Implements hook_preprocess_details().
+ */
+function ike_preprocess_details(array &$variables) {
+  if ($variables["element"][0]["#name"] == "field_psl_type_target_id") {
+    $variables['show_filter_title'] = TRUE;
+  }
+
+  if ($variables["element"][0]["#name"] == "field_ikes_soldiers_theater_op_target_id") {
+    $variables['show_filter_title'] = TRUE;
+  }
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function ike_preprocess_node(array &$variables) {
+  /** @var \Drupal\node\Entity\Node $node */
+  $node = $variables['node'];
+  $type = $node->bundle();
+  $view_mode = $variables['view_mode'] ?? NULL;
+
+  $variables['attributes']['class'][] = 'node';
+  $variables['attributes']['class'][] = 'node__' . Html::cleanCssIdentifier($type);
+  if ($view_mode) {
+    $variables['attributes']['class'][] = 'node__' . Html::cleanCssIdentifier($type) . '__view_mode_' . Html::cleanCssIdentifier($view_mode);
+  }
+
+  $function = __FUNCTION__ . "_{$type}";
+  if (function_exists($function)) {
+    $function($variables);
+  }
+}
+
+/**
+ * Implements template_preprocess_paragraph().
+ */
+function ike_preprocess_paragraph(array &$variables) {
+  /** @var \Drupal\paragraphs\Entity\ParagraphsType $paragraph_type */
+  $paragraph_type = $variables['elements']['#paragraph']->getParagraphType();
+  $function = __FUNCTION__ . "_{$paragraph_type->id()}";
+
+  if (function_exists($function)) {
+    $function($variables);
+  }
+}
+
+/**
+ * Implements template_preprocess_media().
+ */
+function ike_preprocess_media(array &$variables) {
+  $bundle = $variables['media']->bundle();
+
+  $function = __FUNCTION__ . "_{$bundle}";
+  if (function_exists($function)) {
+    $function($variables);
+  }
+}
+
+/**
+ * Implements template_preprocess_layout().
+ */
+function ike_preprocess_layout(array &$variables) {
+  // Make sure all region attributes exist even if the region is empty.
+  /** @var \Drupal\Core\Layout\LayoutDefinition $layout_definition */
+  $layout_definition = $variables['content']['#layout'];
+  foreach ($layout_definition->getRegionNames() as $region_name) {
+    if (!isset($variables['region_attributes'][$region_name])) {
+      $variables['region_attributes'][$region_name] = new Attribute();
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_views_view_alter().
+ */
+function ike_views_view_alter(array &$suggestions, array $variables) {
+
+}
+
+/**
+ * Implements hook_preprocess_form().
+ */
+function ike_preprocess_form(array &$variables) {
+  // $variables['attributes']['novalidate'] = 'novalidate';
+  $variables['attributes']['class'][] = str_replace('_', '-', $variables['element']['#form_id']);
+}
+
+/**
+ * Implements hook_preprocess_select().
+ */
+function ike_preprocess_select(array &$variables) {
+  // $variables['attributes']['class'][] = 'select-chosen';
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function ike_preprocess_field(array &$variables, $hook) {
+
+  // Formatting event date per design.
+  if ($variables['field_name'] === 'field_event_date') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node instanceof NodeInterface) {
+
+      if ($node->bundle() === 'event') {
+        $variables['formatted_date'] = NULL;
+
+        $start_date = $variables['items'][0]['content']['start_date']['#attributes']['datetime'];
+        $end_date = $variables['items'][0]['content']['end_date']['#attributes']['datetime'];
+
+        $start_day = date('m d Y', strtotime($start_date));
+        $end_day = date('m d Y', strtotime($end_date));
+
+        if ($start_day !== $end_day) {
+          $variables['formatted_date'] = date('F j, Y | g:i A', strtotime($start_date)) . '-' . date('F j, Y | g:i A', strtotime($end_date));
+        }
+        else {
+          $variables['formatted_date'] = date('F j, Y', strtotime($start_date)) . ' | ' . date('g:i A', strtotime($end_date)) . ' - ' . date('g:i A', strtotime($end_date));
+        }
+      }
+    }
+  }
+  elseif ($variables['field_name'] === 'field_lesson_plan_file') {
+    // Access the field value.
+    $fieldItems = $variables['items'];
+
+    // Modify the link class and text for each field item.
+    foreach ($fieldItems as $delta => $item) {
+      // Modify the link text.
+      $variables['items'][$delta]['content']['0']['#title'] = 'Download Lesson';
+    }
+
+  }
+}
+
+/**
+ * Implements template_preprocess_views_view_unformatted().
+ */
+function ike_preprocess_views_view_unformatted(array &$variables) {
+  $view_id = $variables['view']->id();
+
+  if ($view_id === 'lesson_plan_full') {
+    $variables['tid'] = NULL;
+    $first_row = reset($variables['rows']);
+    if (!is_null($first_row) && !is_null($first_row['content'])) {
+      $variables['tid'] = $first_row['content']['#row']->tid;
+    }
+  }
+}
+
+/**
+ * Implements template_views_pre_render().
+ */
+function ike_views_pre_render(ViewExecutable $view) {
+  if (isset($view) && ($view->storage->id() == 'donors')) {
+    $view->element['#attached']['library'][] = 'ike/donors';
+  }
+
+  // Fill blank spots on Featured Soldiers view with random Soldiers.
+  if ($view->id() == 'ike_s_soldiers' && $view->current_display == 'featured_soldiers') {
+    $featured_results = $view->result;
+    $results_count = count($featured_results);
+    $k = 0;
+    $temp = [];
+    $nids = \Drupal::entityQuery('node')
+      ->condition('type', 'soldier')
+      ->accessCheck('false')
+      ->condition('field_ikes_soldiers_approved.value', TRUE, '=')
+      ->addTag('sort_by_random')->execute();
+    foreach ($featured_results as $featured_result) {
+      $fid = $featured_result->nid;
+      if (($key = array_search($fid, $nids)) !== FALSE) {
+        unset($nids[$key]);
+      }
+    }
+    $max_results = $view->pager->getItemsPerPage();
+    foreach ($view->result as $key => $value) {
+      if ($k == $results_count - 1) {
+        foreach ($nids as $nid) {
+          if ($results_count < $max_results) {
+            $entity_type = 'node';
+            $entity = \Drupal::entityTypeManager()
+              ->getStorage($entity_type)
+              ->load($nid);
+            $tValue = new $value();
+            $tValue->_entity = $entity;
+            $tValue->index = $k;
+            $temp[] = $tValue;
+            $k++;
+            $results_count++;
+          }
+        }
+      }
+      $value->index = $k;
+      $temp[] = $value;
+      $k++;
+    }
+    $view->result = $temp;
+  }
+}
+
+/**
+ * Implements template_preprocess_views_view().
+ */
+function ike_preprocess_views_view(array &$variables) {
+  $view = $variables['view'];
+  $filter = $view->getExposedInput();
+  $view_id = $variables['view']->id();
+  $filtered = NULL;
+  if (isset($_GET['filtered'])) {
+    $filtered = $_GET['filtered'];
+  }
+
+  if ($view_id === 'psl_list_view') {
+    if ((!empty($filter)) || ($filtered === '1')) {
+      $variables['filter_active'] = TRUE;
+    }
+    else {
+      $variables['filter_active'] = FALSE;
+      // array_splice($variables["rows"][0]["#rows"], 4);.
+    }
+  }
+
+  if ($view_id === 'ike_s_soldiers') {
+    if ((!empty($filter)) || ($filtered === '1')) {
+      $variables['filter_active'] = TRUE;
+    }
+    else {
+      $variables['filter_active'] = FALSE;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ike_preprocess_file_link(&$variables) {
+  $variables['link']['#url']->mergeOptions(['attributes' => ['target' => '_blank']]);
+}

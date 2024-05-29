@@ -1,0 +1,11 @@
+ike_soldiers_generate_pdf.generate:
+  path: '/soldiers/print/{soldier}'
+  defaults:
+    _controller: '\Drupal\ike_soldiers_generate_pdf\Controller\GeneratePDFController::generate'
+    _title: 'Print Soldier'
+  requirements:
+    _access: 'TRUE'
+  options:
+    parameters:
+      soldier:
+        type: entity:node

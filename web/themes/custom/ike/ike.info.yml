@@ -1,0 +1,34 @@
+name: ike
+type: theme
+description: 'Eisenhower Foundation'
+package: Other
+core_version_requirement: ^8 || ^9 || ^10
+libraries:
+  - ike/global-styling
+base theme: stable
+logo: images/logo.svg
+dependencies:
+  - drupal:path_alias
+ckeditor5-stylesheets:
+  - dist/css/global.css
+  - dist/css/ckeditor.css
+regions:
+  alert_banner: Alert Banner
+  utility_header: Utility Header
+  header: Header
+  menu: Menu
+  secondary_menu: Secondary Menu
+  highlighted: Highlighted
+  banner: Banner Content
+  top: Top Content
+  content: Content
+  social: Social Content
+  bottom: Bottom Content
+  footer_left: Footer Left
+  footer_right: Footer Right
+  footer_bottom: Footer Bottom
+
+components:
+  namespaces:
+    ike:
+      - src/components

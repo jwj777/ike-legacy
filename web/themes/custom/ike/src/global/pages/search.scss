@@ -1,0 +1,66 @@
+@import '../utils/init';
+
+.search-page {
+  margin-top: 50px;
+
+  @include breakpoint($md) {
+    margin-top: 200px;
+  }
+
+  .search-form {
+    margin-bottom: 20px;
+
+    .form-wrapper {
+      @include breakpoint($md) {
+        display: flex;
+      }
+
+      .form-search {
+        max-width: 300px;
+      }
+
+      .form-submit {
+        background-color: $color-brand-secondary;
+        font-family: $font-secondary;
+        color: $color-white;
+        display: inline-block;
+        font-size: 18px;
+        border: 0;
+        margin-top: 5px;
+
+        @include breakpoint($md) {
+          margin-top: 0;
+          margin-left: 5px;
+        }
+
+        &:hover {
+          color: $color-white;
+          background-color: darken($color-brand-secondary, 10%);
+        }
+      }
+    }
+  }
+
+  .search-help-link {
+    display: none;
+  }
+
+  .block-system-main-block {
+    > ul,
+    > ol,
+    > li {
+      padding: 0;
+      list-style: none;
+    }
+
+    > ol {
+      background-color: $color-white;
+      padding: 15px;
+      color: $color-black;
+    }
+
+    > li {
+      margin-bottom: 30px;
+    }
+  }
+}

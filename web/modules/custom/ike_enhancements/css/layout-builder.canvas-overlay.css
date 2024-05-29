@@ -1,0 +1,28 @@
+body.js-off-canvas-dialog-open.off-canvas-overlay {
+  overflow: hidden;
+}
+
+body.js-off-canvas-dialog-open.off-canvas-overlay #drupal-off-canvas {
+  position: fixed;
+  top: 40px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh !important;
+  width: 100vw !important;
+}
+
+body.js-off-canvas-dialog-open.off-canvas-overlay #drupal-off-canvas > form {
+  position: static;
+  padding: 0 4em 4em;
+  background: #ffffff;
+}
+
+.layout-builder-canvas-overlay-toggle {
+  height: 60px;
+  padding: 6px 18px;
+  color: #ffffff;
+  background: url(/core/themes/stable/images/core/icons/000000/move.svg) #2f91da center center / 32px 32px no-repeat;
+  text-indent: -9999px;
+  cursor: pointer;
+}

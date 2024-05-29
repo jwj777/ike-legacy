@@ -1,0 +1,20 @@
+<div class='menu-bg hide-on-mobile'></div>
+
+
+<div class="site-header__inner">
+
+  <div id="main-menu-trigger" class="hamburger-menu">
+    <div class="hamburger-menu__burger"></div>
+  </div>
+  <div class="site-logo">
+    <a href="/">
+      {{ drupal_block('system_branding_block', wrapper=false) }}
+    </a>
+  </div>
+  <div class="site-secondary-menu">
+    {{ page.secondary_menu }}
+  </div>
+  <div class="site-main-menu">
+    {{ page.menu }}
+  </div>
+</div>

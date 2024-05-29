@@ -1,0 +1,16 @@
+icon_text_card:
+  label: Icon Text Card
+  description: This displays text alongside an icon.
+  template: icon-text-card
+  use: "@ike/icon-text-card/icon-text-card.twig"
+  fields:
+    image:
+      type: renderable
+      label: Icon
+      description: An icon image.
+      preview: '<div class="placeholder-image"></div>'
+    content:
+      type: renderable
+      label: Content
+      description: Body content
+      preview: '<p>25 new artifacts secured through the help of sponsors like you. Learn how you can help by supporting IKEs legacy.</p>'

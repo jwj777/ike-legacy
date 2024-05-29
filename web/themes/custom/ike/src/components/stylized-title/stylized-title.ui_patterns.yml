@@ -1,0 +1,26 @@
+stylized_title:
+  label: Stylized Title
+  description: A title with stars and a red gradient underline.
+  template: stylized-title
+  use: "@ike/stylized-title/stylized-title.twig"
+  fields:
+    title:
+      type: text
+      label: Title
+      description: A text string.
+      preview: 'Ike Insight'
+    link:
+      type: renderable
+      label: Link
+      description: A link to another page.
+      preview: 'https://google.com'
+    link_title:
+      type: text
+      label: Link Title
+      description: A title for the link.
+      preview: 'Explore IKE'
+    description:
+      type: text
+      label: Title Description
+      description: Text to be displayed alongside Stylized Title.
+      preview: 'From four-legged recruits to Rosies, or steelies to civil rights, students will enjoy learning about the young life of Dwight D. Eisenhower, how World War II affected the lives of kids on the home front, or the issues they asked President Eisenhower.'

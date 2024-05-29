@@ -1,0 +1,142 @@
+@import '../../global/utils/init';
+
+.teacher-collections {
+  .teacher-collections__body {
+    font-size: 22px;
+
+    p {
+      font-size: 22px;
+    }
+  }
+
+  .stylized-title {
+    margin-bottom: 24px;
+  }
+
+  .lesson-plans-listing {
+    margin-top: 40px;
+  }
+}
+
+.page-flagging_collection { //sass-lint:disable-line class-name-format
+  .site-header__inner {
+    //  @todo: move these styles to a global classname that can be added or removed to menu per page if the menu should NOT overlay
+    margin-bottom: 3rem;
+    position: relative;
+  }
+
+  //@todo: unhide this when done (leaving visible for debugging)
+  //.block-local-actions-block {
+  //  display: none;
+  //}
+
+  .block-help-block {
+    margin: 0 0 2rem;
+  }
+
+  table {
+    width: 100%;
+  }
+}
+
+.teacher-collections--add-node-block {
+  width: initial;
+}
+
+.teacher-collection {
+  width: 100%;
+
+  .teacher-collection__add {
+    float: right;
+    cursor: pointer;
+    background-color: $color-white;
+    padding: 15px;
+    border: 0;
+  }
+
+  .teacher-collection__loader {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    background: transparentize($color: $color-black, $amount: 0.4);
+  }
+
+  .teacher-collection__form-shadow {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .teacher-collection__form {
+    padding: 30px;
+    background-color: $color-white;
+    position: relative;
+    z-index: 10;
+    color: $color-black;
+
+    h3 {
+      color: $color-black;
+    }
+
+    input {
+      margin-bottom: 15px;
+    }
+  }
+
+  .teacher-collection--submit {
+    border: 0;
+    padding: 15px;
+    cursor: pointer;
+
+    margin-top: 0.5rem;
+  }
+
+  .teacher-collection__spinner {
+    display: block;
+    margin: auto;
+    z-index: 11;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top: 5px solid $color-white;
+    animation: spinner linear 1s infinite;
+  }
+
+  .teacher-collection__close {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    cursor: pointer;
+    color: $color-black;
+    font-size: 2rem;
+  }
+}
+
+.create-teacher-collection {
+  margin-bottom: 20px;
+}
+
+.teacher-collection__messages {
+  background-color: $color-white;
+  padding: 15px;
+  border: 0;
+  color: $color-black;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

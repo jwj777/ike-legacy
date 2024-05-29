@@ -1,0 +1,198 @@
+.tooltip {
+  padding: 10px 15px;
+  position: relative;
+  text-align: center;
+}
+.tooltip::after {
+  background-color: #0F2043;
+  border-radius: 10px;
+  color: #fff;
+  display: none;
+  padding: 10px 15px;
+  position: absolute;
+  text-align: center;
+  z-index: 999;
+}
+.tooltip::before {
+  background-color: #0F2043;
+  content: " ";
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 999;
+}
+.tooltip:hover::after {
+  display: block;
+}
+.tooltip:hover::before {
+  display: block;
+}
+.tooltip.top::after {
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 10px));
+}
+.tooltip.top::before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
+.tooltip.bottom::after {
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 10px));
+}
+.tooltip.bottom::before {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+}
+.tooltip.right::after {
+  content: "";
+  top: 0;
+  right: 0;
+  transform: translateX(calc(100% + 10px));
+}
+.tooltip.right::before {
+  top: 50%;
+  right: 0;
+  transform: translate(calc(100% + 5px), -50%) rotate(45deg);
+}
+.tooltip.left::after {
+  content: "";
+  top: 0;
+  left: 0;
+  transform: translateX(calc(-100% - 10px));
+}
+.tooltip.left::before {
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-100% - 5px), -50%) rotate(45deg);
+}
+
+.flat-image-text-card-overlay {
+  position: relative;
+  padding-right: 1rem;
+  color: #FFF;
+}
+@media (min-width: 768px) {
+  .flat-image-text-card-overlay {
+    max-width: 500px;
+  }
+}
+@media (min-width: 992px) {
+  .flat-image-text-card-overlay {
+    padding-right: 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .flat-image-text-card-overlay {
+    padding-right: 4rem;
+  }
+}
+.flat-image-text-card-overlay:hover {
+  text-decoration: none;
+}
+.flat-image-text-card-overlay:hover img {
+  filter: grayscale(0);
+  transform: scale(1.15);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+.flat-image-text-card-overlay .field--name-field-media-embed-3d-image {
+  display: none;
+}
+
+.view--articles .flat-image-text-card-overlay {
+  padding-right: 0;
+}
+
+.flat-image-text-card-overlay__image {
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 8;
+  margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+  .flat-image-text-card-overlay__image {
+    margin-bottom: 0;
+  }
+}
+.flat-image-text-card-overlay__image .field__item {
+  font-size: 0;
+}
+.flat-image-text-card-overlay__image img {
+  object-fit: contain;
+  filter: grayscale(40%);
+  transition: transform 0.5s ease, filter 0.5s ease;
+  width: 100%;
+  background-color: #000;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .flat-image-text-card-overlay__image img {
+    height: unset;
+  }
+}
+
+.flat-image-text-card-overlay__title {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+  background: #FFF;
+  border-top: 2px solid #C11F2A;
+  box-shadow: 0 -1px 3px 0 #606060;
+  position: relative;
+  z-index: 10;
+  color: #0F2043;
+  font-size: 16px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  width: 100%;
+  margin: 0;
+  height: 71px;
+  word-break: break-word;
+}
+.flat-image-text-card-overlay__title:hover {
+  text-decoration: none;
+}
+
+.flat-image-text-card-overlay__wrapper {
+  display: block;
+  height: auto;
+  position: relative;
+  z-index: 5;
+  width: 100%;
+}
+
+.flat-image-text-card-overlay__categories {
+  display: none;
+  position: absolute;
+  right: -7px;
+  top: -10px;
+  z-index: 10;
+}
+.flat-image-text-card-overlay__categories ul {
+  margin: 0;
+}
+.flat-image-text-card-overlay__categories li,
+.flat-image-text-card-overlay__categories .field--name-field-resource-grade-level .field__item {
+  background: #0F2043;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: bold;
+  float: left;
+  margin-left: 5px;
+  padding: 5px 10px;
+  list-style: none;
+  z-index: 10;
+}
+
+.view--lesson-plans-full--inner {
+  margin-bottom: 4rem;
+}
+.view--lesson-plans-full--inner .views-row {
+  margin-bottom: 3rem;
+}

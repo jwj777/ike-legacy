@@ -1,0 +1,61 @@
+// Import site utilities.
+@import '../../global/utils/init';
+
+.view--sponsors {
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  .views-row {
+    width: 50%;
+    text-align: center;
+
+    @include breakpoint($md) {
+      width: 33.333%;
+      flex-basis: 33.333%;
+    }
+
+    @include breakpoint($xl) {
+      width: 15%;
+      flex-basis: 15%;
+    }
+  }
+
+  img {
+    height: auto;
+    max-width: 150px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @include breakpoint($lg) {
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+
+  .field--name-field-sponsor-image {
+    + .node-title {
+      display: none;
+    }
+  }
+}
+
+.layout {
+  .view--sponsors {
+    img {
+      max-width: 150px;
+    }
+  }
+}
+
+.pdf-link {
+
+  &::before {
+    content: ' ';
+    background: url('/sites/default/files/styles/inline_image/public/2020-06/iconpdf.gif') no-repeat center center;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin: 0 5px 0 20px;
+    vertical-align: middle;
+  }
+}

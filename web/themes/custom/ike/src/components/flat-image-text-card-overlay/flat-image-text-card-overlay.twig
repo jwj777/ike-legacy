@@ -1,0 +1,19 @@
+{{ attach_library('ike/flat-image-text-card-overlay') }}
+<section class="flat-image-text-card-overlay">
+  <a href="{{ link }}" target="_blank" class="flat-image-text-card-overlay--link">
+    <div class="flat-image-text-card-overlay__wrapper">
+      {% if category %}<div class="flat-image-text-card-overlay__categories">{{ category }}</div>{% endif %}
+      <div class="flat-image-text-card-overlay__image">
+        {{ image }}
+        <h2 class="flat-image-text-card-overlay__title">
+          {{ title }}
+          {% if sub_title %}
+            <div class="flat-image-text-card-overlay__sub-title">
+              {{ sub_title }}
+            </div>
+          {% endif %}
+        </h2>
+      </div>
+    </div>
+  </a>
+</section>

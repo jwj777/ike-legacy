@@ -1,0 +1,219 @@
+@charset "UTF-8";
+.tooltip {
+  padding: 10px 15px;
+  position: relative;
+  text-align: center;
+}
+.tooltip::after {
+  background-color: #0F2043;
+  border-radius: 10px;
+  color: #fff;
+  display: none;
+  padding: 10px 15px;
+  position: absolute;
+  text-align: center;
+  z-index: 999;
+}
+.tooltip::before {
+  background-color: #0F2043;
+  content: " ";
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 999;
+}
+.tooltip:hover::after {
+  display: block;
+}
+.tooltip:hover::before {
+  display: block;
+}
+.tooltip.top::after {
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 10px));
+}
+.tooltip.top::before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
+.tooltip.bottom::after {
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 10px));
+}
+.tooltip.bottom::before {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+}
+.tooltip.right::after {
+  content: "";
+  top: 0;
+  right: 0;
+  transform: translateX(calc(100% + 10px));
+}
+.tooltip.right::before {
+  top: 50%;
+  right: 0;
+  transform: translate(calc(100% + 5px), -50%) rotate(45deg);
+}
+.tooltip.left::after {
+  content: "";
+  top: 0;
+  left: 0;
+  transform: translateX(calc(-100% - 10px));
+}
+.tooltip.left::before {
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-100% - 5px), -50%) rotate(45deg);
+}
+
+.block__memorial-landing {
+  background-color: #FFF;
+  padding: 2rem 0;
+  margin-bottom: 1rem;
+}
+.block__memorial-landing .memorial-landing {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.block__memorial-landing .map-embed-container {
+  border: 2px solid #0F2043;
+  margin: 0 2rem;
+}
+.block__memorial-landing .map-embed-container .map-embed-sub {
+  width: 100%;
+  height: 3rem;
+  background-color: #0F2043;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.block__memorial-landing .map-embed-container .map-embed-sub a {
+  color: #FFF;
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.25rem;
+  text-decoration: underline;
+}
+.block__memorial-landing .map-embed-container .map-embed-sub a:hover {
+  color: #C11F2A;
+}
+.block__memorial-landing .title-container {
+  margin: 2rem 0.75rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.block__memorial-landing .title-container h2 {
+  color: #0F2043;
+}
+.block__memorial-landing .star-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.block__memorial-landing .star::before {
+  content: "★";
+  color: #C11F2A;
+  font-size: 2rem;
+}
+.block__memorial-landing .address-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.block__memorial-landing .address-container p {
+  color: #0F2043;
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.block__memorial-landing .hours-container {
+  color: #0F2043;
+  font-family: "Libre Baskerville", serif;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.block__memorial-landing .hours-container .hours-title {
+  margin-right: 0.5rem;
+}
+.block__memorial-landing .hours-container .hours-title p {
+  color: #0F2043;
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.block__memorial-landing .donors-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.block__memorial-landing .donors-link h2 {
+  margin: 0 2rem;
+  text-align: center;
+}
+.block__memorial-landing .donors-link h2 a {
+  color: #0F2043;
+}
+.block__memorial-landing .donors-link h2 a:hover {
+  color: #C11F2A;
+}
+.block__memorial-landing .audio-link {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+.block__memorial-landing .audio-link .star {
+  margin: 0 2rem;
+}
+.block__memorial-landing .audio-link h2 {
+  text-align: center;
+}
+.block__memorial-landing .audio-link h2 a {
+  color: #0F2043;
+}
+.block__memorial-landing .audio-link h2 a:hover {
+  color: #C11F2A;
+}
+
+.memorial-image-blocks {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.memorial-image-blocks .image-top-row,
+.memorial-image-blocks .image-bottom-row {
+  display: flex;
+  justify-content: center;
+}
+.memorial-image-blocks .image-top-row a:nth-of-type(1) {
+  margin: 0 1rem 1rem 0;
+}
+.memorial-image-blocks .image-top-row a:nth-of-type(2) {
+  margin: 0 0 1rem 1rem;
+}
+.memorial-image-blocks .image-bottom-row a:nth-of-type(1) {
+  margin: 1rem 1rem 0 0;
+}
+.memorial-image-blocks .image-bottom-row a:nth-of-type(2) {
+  margin: 1rem 0 0 1rem;
+}
+.memorial-image-blocks img {
+  max-width: 100%;
+  opacity: 100%;
+  transition: 0.3s;
+}
+.memorial-image-blocks img:hover {
+  opacity: 80%;
+}

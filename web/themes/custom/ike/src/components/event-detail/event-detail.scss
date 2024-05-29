@@ -1,0 +1,237 @@
+@import '../../global/utils/init';
+
+.event-detail--full {
+  background-image: url('../assets/flag-bg.png');
+  background-position: center center;
+  background-size: 165%;
+
+  .field--name-field-event-image {
+    z-index: 8;
+    position: relative;
+
+    .field--name-field-media-image {
+      height: 250px;
+      overflow: hidden;
+
+      @include breakpoint($lg) {
+        height: 450px;
+      }
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  .block--page-title {
+    span {
+      margin: 0;
+    }
+  }
+
+  .layout__region--left {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    position: relative;
+  }
+
+  .block-field-blocknodeeventfield-events-calendar-link {
+    margin-left: 15px;
+
+    .atcb-link {
+      height: 43px;
+      width: 43px;
+      padding: 0;
+      background-color: $color-white;
+      background-image: url('../../images/calendar.svg');
+      background-repeat: no-repeat;
+      background-size: 30px 30px;
+      background-position: center;
+      border-radius: 0;
+      cursor: pointer;
+
+      @include breakpoint($lg) {
+        height: 63px;
+        width: 63px;
+      }
+    }
+
+    em {
+      @include element-invisible;
+    }
+
+    .atcb-list {
+      left: -2px;
+      border: 2px solid $color-brand-primary;
+    }
+
+    .atcb-item {
+      cursor: pointer;
+
+      &:hover {
+        background-color: $color-brand-primary;
+        color: $color-white;
+      }
+    }
+
+    .atcb-item-link {
+      padding: 5px;
+    }
+  }
+
+  .block-addtoany { // sass-lint:disable-line class-name-format
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+  }
+
+  .addtoany_share { // sass-lint:disable-line class-name-format
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 43px;
+    width: 43px;
+    background-color: $color-white;
+
+    @include breakpoint($lg) {
+      height: 63px;
+      width: 63px;
+    }
+
+    &:hover {
+      span {
+        opacity: 1;
+      }
+    }
+
+    .a2a_svg { // sass-lint:disable-line class-name-format
+      position: relative;
+      left: -1px;
+      background-color: unset !important; // sass-lint:disable-line no-important
+      background: url('../../images/share.svg') no-repeat center center;
+      background-size: 30px 30px;
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  .field--name-field-map-embed-image {
+    .field--name-field-media-image {
+      font-size: 0;
+
+      img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+      }
+
+      @include breakpoint($xl) {
+        margin-top: 78px;
+      }
+    }
+  }
+
+  .field--name-field-map-embed-link {
+    a {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      background-color: $color-brand-primary;
+      color: $color-white;
+      border-top: 2px solid $color-brand-secondary;
+      font-size: 18px;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+
+  .block-field-blocknodeeventfield-event-date {
+    @include font-helvetica-neue;
+    font-size: 20px;
+    margin: -30px 0 30px;
+
+    @include breakpoint($lg) {
+      margin-top: -70px;
+      margin-bottom: 60px;
+      font-size: 26px;
+    }
+  }
+
+  .block-field-blocknodeeventtitle,
+  .block-field-blocknodeeventfield-event-date {
+    color: $color-white;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 15;
+  }
+
+  .layout--twocol-section {
+    .layout__region--first {
+      position: relative;
+    }
+  }
+
+  .block-field-blocknodeeventfield-event-location-title {
+    width: 100%;
+    background: $color-brand-secondary;
+    color: $color-white;
+    font-weight: bold;
+    padding: 1rem;
+    font-size: 18px;
+    z-index: 10;
+
+    @include breakpoint($lg) {
+      position: absolute;
+      left: -24px;
+      top: 45px;
+      width: auto;
+    }
+  }
+
+  .block-field-blocknodeeventfield-event-cost {
+    width: 100%;
+    background: $color-brand-primary;
+    color: $color-white;
+    padding: 1rem;
+    text-align: right;
+    z-index: 5;
+
+    @include breakpoint($lg) {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      padding: 1rem 1rem 1rem 290px;
+      width: auto;
+    }
+  }
+
+  .block-field-blocknodeeventfield-event-description {
+    background: $color-white;
+    color: $color-black;
+    padding: 2rem 2rem 1rem;
+    margin-bottom: 40px;
+
+    @include breakpoint($lg) {
+      padding: 3rem 2rem 1rem;
+    }
+
+    @include breakpoint($xl) {
+      margin-bottom: 80px;
+    }
+  }
+
+  .quote-banner {
+    margin-top: 40px;
+
+    @include breakpoint($xl) {
+      margin-top: 0;
+    }
+  }
+}
+

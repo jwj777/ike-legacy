@@ -1,0 +1,35 @@
+// Type
+//
+// Custom fonts are loaded via JavaScript provided by fonts.com.
+
+@mixin font-font-awesome {
+  font-family: 'Font Awesome 5 Free', 'Arial', sans-serif;
+  font-weight: 900;
+}
+
+@mixin font-sans-serif {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+@mixin font-sans-serif-bold {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+}
+
+@mixin font-libre-baskerville {
+  font-family:"Libre Baskerville", serif;
+}
+
+@mixin font-libre-baskerville-bold {
+  font-family:"Libre Baskerville", serif;
+  font-weight: bold;
+}
+
+@mixin font-helvetica-neue {
+  font-family:"Helvetica Neue", sans-serif;
+}
+
+@mixin font-helvetica-neue-bold {
+  font-family:"Helvetica Neue", sans-serif;
+  font-weight: bold;
+}

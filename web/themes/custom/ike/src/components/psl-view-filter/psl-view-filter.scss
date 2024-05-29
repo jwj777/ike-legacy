@@ -1,0 +1,187 @@
+// Import site utilities.
+@import '../../global/utils/init';
+
+#views-exposed-form-psl-list-view-psl-list-view { //sass-lint:disable-line no-ids
+  font-family: 'Libre Baskerville';
+  color: $color-black;
+  background-color: #f7f7f7;
+  padding-top: 15px;
+  margin-top: 20px;
+  display: none;
+
+  @include breakpoint($lg) {
+    display: block;
+    padding-top: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+
+  .js-form-item {
+    background-color: $color-white;
+  }
+
+  h4 {
+    color: $color-white;
+    margin: 0;
+    padding: 0.5rem 0;
+    font-family: 'Libre Baskerville';
+  }
+
+  .psl-search-container {
+    width: 95%;
+    margin: 0 auto;
+    background-color: $color-white;
+    padding-bottom: 10px;
+    border: 1px solid #e3e3e3;
+    margin-bottom: 0.5rem;
+
+    .psl-search-header {
+      background-color: #0f2043;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .form-item-psl-combine-filter {
+      margin: 0.7rem 0.5rem;
+
+      > label {
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+
+  .form-item {
+    margin-bottom: 0;
+  }
+
+  .psl-filter-header {
+    background-color: #0f2043;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .details-container {
+    width: 95%;
+    margin: 0 auto;
+    background-color: $color-white;
+    padding: 12px 2px;
+    padding-left: 5px;
+    border: 1px solid #e3e3e3;
+
+
+    details.form-item { //sass-lint:disable-line no-qualifying-elements
+      background-color: $color-white;
+
+      &.odd {
+        border-left: 3px solid #C11F2A;
+        padding-left: 0.5rem;
+      }
+
+      &.even {
+        border-left: 3px solid #0f2043;
+        padding-left: 0.5rem;
+      }
+
+      > summary {
+        //margin-top: 1rem;
+        list-style: none;
+        margin-right: 1rem;
+        margin-bottom: 0.5rem;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &::marker {
+          display: none;
+        }
+
+        &::after {
+          content: '+';
+          float: right;
+        }
+      }
+    }
+
+    details[open] summary::after {
+      content: '-';
+      float: right;
+    }
+
+  }
+
+  .js-form-type-checkbox {
+    display: flex;
+    padding: 0.5rem 0;
+
+    .form-checkbox {
+      margin: 0 10px;
+    }
+
+    .option {
+      font-size: 0.85rem;
+      line-height: 1.2em;
+    }
+  }
+
+  .form-submit {
+    width: 100%;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.filter-mobile-toggle {
+  display: block;
+  background-color: #0F2043;
+  background-image: url('../../images/filter.png');
+  background-repeat: no-repeat;
+  background-position: 50% 55%;
+  background-size: 50%;
+  width: 75px;
+  height: 75px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 10;
+  right: 10px;
+  bottom: 20px;
+  cursor: pointer;
+
+  @include breakpoint($lg) {
+    display: none;
+  }
+}
+
+
+.psl-button-wrap {
+  display: none;
+  text-align: center;
+  margin: 35px 0;
+
+  @include breakpoint($md) {
+    display: block;
+  }
+
+  #see-all-psls { //sass-lint:disable-line no-ids
+    font-family: $font-secondary;
+    color: #FFF;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 auto;
+    width: auto;
+    padding: 16px 18px;
+    cursor: pointer;
+  }
+}

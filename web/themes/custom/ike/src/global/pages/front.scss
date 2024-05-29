@@ -1,0 +1,215 @@
+@import '../utils/init';
+.front main {
+    @include breakpoint($md) {
+  margin-top: -45px;
+    }
+}
+.frontpage--slider--wrapper,
+.frontpage--banner--wrapper {
+  background: $color-light-gray;
+}
+
+.frontpage--slider--wrapper {
+  // box-shadow: 0 45px 30px 0 $color-black;
+  position: relative;
+}
+
+.frontpage--main-content--wrapper {
+  color: $color-white;
+  // box-shadow: 0 0 90px 40px $color-black;
+  position: relative;
+  z-index: 10;
+
+  // @include breakpoint($md) {
+  //   box-shadow: 0 0 30px 40px $color-black;
+  // }
+}
+
+.frontpage--main-content--wrapper-inner {
+  display: block;
+  height: auto;
+  padding: 1.5rem 0;
+  position: relative;
+  width: 100%;
+
+  @include breakpoint($md) {
+    padding: 3.5rem 0 3rem;
+  }
+}
+
+.frontpage--main-content--overlay {
+  background: $color-black;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  opacity: 0.75;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 6;
+}
+
+.frontpage--main-content--image {
+  background-image: url('../assets/flag-bg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  opacity: 0.75;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+.frontpage--banner--wrapper {
+  position: relative;
+display: none;
+  .quote-banner {
+    max-height: 400px;
+
+    @include breakpoint($md) {
+      max-height: 650px;
+    }
+  }
+
+  &::before {
+    background: $color-black;
+    // box-shadow: 0 0 20px 8px $color-black;
+    content: '';
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 12;
+
+    @include breakpoint($md) {
+      height: 15px;
+      // box-shadow: 0 0 45px 30px $color-black;
+    }
+  }
+}
+
+.frontpage--support-insight--wrapper {
+  margin-bottom: 4rem;
+}
+
+.frontpage--support-insight--wrapper,
+.frontpage--social-media--wrapper,
+.frontpage--cta-banner--wrapper {
+  position: relative;
+  z-index: 8;
+}
+
+.frontpage--support-insight--right {
+  .flat-image-text-card {
+    padding: 0;
+  }
+
+  .stylized-title {
+    margin-top: 50px;
+
+    @include breakpoint($md) {
+      margin-top: 0;
+    }
+  }
+}
+
+.view--ikeducation {
+  margin-top: 1.75rem;
+
+  .views-row {
+    @include breakpoint($md) {
+      flex-basis: 48%;
+    }
+  }
+}
+
+.frontpage--cta-banner--wrapper {
+  margin-top: 110px;
+  margin-bottom: 60px;
+
+  @include breakpoint($lg) {
+    // padding-left: 36px;
+    margin-bottom: 120px;
+  }
+}
+
+.view--hp-soldiers {
+  .youtube-video-block {
+    max-width: unset;
+  }
+
+  .views-row {
+    @include breakpoint($md) {
+      flex-basis: 46%;
+    }
+  }
+
+  video {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.frontpage--social-media--wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint($xl) {
+    flex-direction: row;
+  }
+}
+
+.frontpage--social-media--left {
+  width: 100%;
+  min-width: 100%;
+  margin-bottom: 3.5rem;
+
+  @include breakpoint($xl) {
+    width: 55%;
+    min-width: 55%;
+    margin-bottom: 0;
+  }
+}
+
+.frontpage--social-media--right {
+  display: block;
+  width: 100%;
+  min-width: 100%;
+
+  @include breakpoint($xl) {
+    width: 45%;
+    min-width: 45%;
+    padding-left: 3.5rem;
+  }
+
+  .stylized-title {
+    margin-top: 0;
+
+    @include breakpoint($md) {
+      margin-top: -70px;
+    }
+  }
+
+  .node__soldier {
+    min-height: 100%;
+
+    @include breakpoint($md) {
+      background-color: $color-brand-primary;
+    }
+  }
+}
+
+.frontpage--social-media--left,
+.frontpage--social-media--right,
+.frontpage--support-insight--left,
+.frontpage--support-insight--right {
+  min-height: 200px;
+}

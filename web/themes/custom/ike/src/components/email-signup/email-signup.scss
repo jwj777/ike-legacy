@@ -1,0 +1,115 @@
+@import '../../global/utils/init';
+
+.block-email-signup {
+  .block-email-signup__form {
+    padding: 10px;
+
+    @include breakpoint($md) {
+      padding: 50px;
+    }
+
+    &:not(.hidden) {
+      display: flex;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 49;
+      overflow-y: auto;
+
+      @include breakpoint($md) {
+        overflow-y: hidden;
+      }
+
+      .block-email-signup__overlay {
+        background-color: rgba($color: #000000, $alpha: 0.4);
+      }
+    }
+  }
+
+  .block-email-signup__overlay {
+    transition: background-color 300ms linear;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+    z-index: 50;
+  }
+
+  .ctct-inline-form {
+    z-index: 51;
+    position: relative;
+    margin: auto;
+    max-width: 525px;
+    padding-top: 40px;
+
+    &::before {
+      content: '';
+      background: url('../../images/star.png') center center no-repeat;
+      background-size: 100%;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 50%;
+      transform: translateY(-9%) translateX(-50%);
+
+      @include breakpoint($md) {
+        width: 150px;
+        height: 150px;
+        transform: translateY(-40%) translateX(-50%);
+      }
+    }
+  }
+
+  .ctct-form-custom {
+    > * {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .ctct-form-field {
+      margin-bottom: 10px !important; //sass-lint:disable-line no-important
+    }
+
+    .ctct-form-label {
+      font-weight: normal !important; //sass-lint:disable-line no-important
+    }
+  }
+
+  .ctct-form-defaults {
+    padding: 0 !important; //sass-lint:disable-line no-important
+    border-radius: 0 !important; //sass-lint:disable-line no-important
+    border: 1px solid $color-brand-secondary !important; //sass-lint:disable-line no-important
+  }
+
+  .ctct-form-header {
+    text-align: center !important; //sass-lint:disable-line no-important
+    background-color: $color-brand-primary !important; //sass-lint:disable-line no-important
+    padding: 50px 20px 10px !important; //sass-lint:disable-line no-important
+    margin: 0 !important; //sass-lint:disable-line no-important
+    color: $color-white !important; //sass-lint:disable-line no-important
+  }
+
+  .ctct-form-text {
+    text-align: center !important; //sass-lint:disable-line no-important
+    background-color: $color-brand-primary !important; //sass-lint:disable-line no-important
+    padding: 0 20px 20px !important; //sass-lint:disable-line no-important
+    color: $color-white !important; //sass-lint:disable-line no-important
+    border-bottom: 1px solid $color-brand-secondary !important; //sass-lint:disable-line no-important
+  }
+
+  .ctct-form-button {
+    width: calc(100% - 40px) !important; //sass-lint:disable-line no-important
+    margin: 0 auto 20px !important; //sass-lint:disable-line no-important
+  }
+
+  #list_memberships_label_1 { // sass-lint:disable-line no-ids
+    left: 5px;
+  }
+}

@@ -1,0 +1,75 @@
+{{ attach_library('ike/ikes-soldiers') }}
+
+{%
+  set image_classes = [
+    'ikes-soldier-teaser--image',
+    'flex-1-1',
+  ]
+%}
+
+{% set url = "/node/" ~ link %}
+
+<div class="ikes-soldier-teaser--wrapper flex-container flex-dir-column">
+  <a href="{{ url }}">
+    <div{{ attributes.addClass(image_classes).addClass(gender|render|raw|striptags|lower|replace({' ': ''})) }}>
+      {{ soldier_image }}
+    </div>
+    <div class="ikes-soldier-teaser--banner">
+      <div class="ikes-soldier-teaser--name flex-1-1">
+        {{ first_name }} {% if middle_name %}{% if middle_name|render|striptags|trim|length > 1 %} {{ middle_name|render|striptags|trim|first }}. {% else %} {{ middle_name }}. {% endif %}{% endif %} {{ last_name }} {% if suffix %}{{ suffix }}{% endif %}
+      </div>
+      <div class="ikes-soldier-teaser--rank-branch flex-1-1">
+        {{ branch_of_service }}
+      </div>
+    </div>
+  </a>
+  <div class="ikes-soldier-teaser--wrapper-tail"></div>
+  <div class="ikes-soldier-teaser__hidden visually-hidden">
+    <div class="ikes-soldiers-detail--first-name">{{ first_name }}</div>
+    {% if middle_name %}<div class="ikes-soldiers-detail--middle-name">{% if middle_name|render|striptags|trim|length > 1 %}{{ middle_name|render|striptags|trim|first }}. {% else %}{{ middle_name }}.{% endif %}</div>{% endif %}
+    <div class="ikes-soldiers-detail--last-name">{{ last_name }}</div>
+    {% if suffix != 'empty' %}<div class="ikes-soldiers-detail--suffix">{{ suffix }}</div>{% endif %}
+    {% if branch_of_service %}<div class="ikes-soldiers-detail--branch"><strong>DIVISION: </strong>{{ branch_of_service }}{% if unit %}<span class="nudge">, </span>{% endif %}</div>{% endif %}
+    {% if unit %}<div class="ikes-soldiers-detail--unit">{{ unit }}</div>{% endif %}
+    {% if date_of_birth %}<div class="ikes-soldiers-detail--date-of-birth">{{ date_of_birth|render|striptags|date("M j, Y") }} - {% if date_of_death %}{{ date_of_death|render|striptags|date("M j, Y") }}{% endif %}</div>{% endif %}
+    {% if birthplace %}<div class="ikes-soldiers-detail--birthplace"><strong>BIRTHPLACE: </strong>{{ birthplace }}</div>{% endif %}
+    {% if highest_rank %}<div class="ikes-soldiers-detail--rank"><strong>HIGHEST RANK: </strong>{{ highest_rank }}</div>{% endif %}
+    {% if theater_check %}<div class="ikes-soldiers-detail--theater"><strong>THEATER OF OPERATION: </strong>{{ theater_of_operation }}</div>{% endif %}
+    {% if enlisted_date %}<div class="ikes-soldiers-detail--enlisted-date"><strong>SERVED: </strong>{% if enlisted_approx == '1' %} {{ enlisted_date|render|striptags|date("Y") }} - {% else %} {{ enlisted_date|render|striptags|date("M j, Y") }} - {% endif %}</div>{% endif %}
+    <div class="ikes-soldiers-detail--enlisted-approx">{{ enlisted_approx }}</div>
+    {% if discharge_date %}<div class="ikes-soldiers-detail--discharge-date">{% if enlisted_date == '01/01/2000' or enlisted_date is null or enlisted_date is empty %}<span class="nudge"><strong>DISCHARGED: </strong></span>{% endif %}{% if discharge_approx == '1' %} {{ discharge_date|render|striptags|date("Y") }} {% else %} {{ discharge_date|render|striptags|date("M j, Y") }} {% endif %}</div>{% endif %}
+    <div class="ikes-soldiers-detail--discharge-approx">{{ discharge_approx }}</div>
+    {% if battle %}<div class="ikes-soldiers-detail--battle"><strong>BATTLE: </strong>{{ battle }}</div>{% endif %}
+    {% if military_honors %}<div class="ikes-soldiers-detail--honors"><strong>MILITARY HONORS: </strong>{{ military_honors }}</div>{% endif %}
+    {% if honored_by %}<div class="ikes-soldiers-detail--honored-by"><strong>HONORED BY: </strong>{{ honored_by }}</div>{% endif %}
+    {% if bio_check %}<div class="ikes-soldiers-detail--content__section ikes-soldiers-detail--bio-wrap">
+      <div class="ikes-soldiers-detail--content__section-header"><h4>BIOGRAPHY</h4></div>
+      <div class="ikes-soldiers-detail--biographical-info">
+        {{ biographical_information }}
+      </div>
+    </div>{% endif %}
+    {% if pow == '1'%}<div class="ikes-soldiers-detail--pow"><strong>PRISONER OF WAR</strong></div>{% endif %}
+    {% if kia == '1'%}<div class="ikes-soldiers-detail--kia"><strong>KILLED IN ACTION</strong></div>{% endif %}
+    {% if docs_check %}<div class="ikes-soldiers-detail--content__section ikes-soldiers-detail--docs-wrap">
+      <div class="ikes-soldiers-detail--content__section-header"><h4>Other Service Documents</h4></div>
+      <div class="ikes-soldiers-detail--other-docs">
+        {{ other_docs }}
+      </div>
+    </div>{% endif %}
+    {% if video_check %}<div class="ikes-soldiers-detail--content__section ikes-soldiers-detail--video-wrap">
+      <div class="ikes-soldiers-detail--content__section-header"><h4>VIDEOS</h4></div>
+      <div class="ikes-soldiers-detail--content__video-container">
+        {{ video }}
+      </div>
+    </div>{% endif %}
+  </div>
+</div>
+<div class="ikes-soldiers-detail--buttons">
+  <a href="/soldiers/print/{{ link }}" target="_blank">
+  <button class="ikes-soldiers-detail--buttons__generic ikes-soldiers-print {{ link }}">
+    <img src="/themes/custom/ike/images/artifact-icons/print-icon.png" alt="print">
+  </button>
+  </a>
+  <span class="ikes-soldiers-detail--a2any">{{ addtoany }}</span>
+  {{ drupal_block('add_to_classroom_block', {nid: link }) }}
+</div>

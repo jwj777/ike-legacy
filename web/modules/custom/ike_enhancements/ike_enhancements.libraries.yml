@@ -1,0 +1,11 @@
+layout-builder-canvas-overlay:
+  js:
+    js/layout-builder-canvas-overlay.js: {}
+  css:
+    component:
+      css/layout-builder.canvas-overlay.css: {}
+
+media-library-ajax-throbber:
+  css:
+    component:
+      css/media-library.ajax-throbber.css: {}

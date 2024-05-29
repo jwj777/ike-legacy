@@ -1,0 +1,22 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+    'paragraph--stylized-title'
+  ]
+%}
+
+<div{{ attributes.addClass('paragraph__stylized-title') }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% set comp_info = {
+    "title": content.field_stylized_title_title,
+    "link": paragraph.field_stylized_subtitle_link.0.url,
+    "link_title": paragraph.field_stylized_subtitle_link.0.title,
+    "description": paragraph.field_stylized_title_description,
+  } %}
+
+  {% include "@ike/stylized-title/stylized-title.twig" with comp_info %}
+</div>

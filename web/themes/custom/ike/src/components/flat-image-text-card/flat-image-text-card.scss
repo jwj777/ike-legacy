@@ -1,0 +1,69 @@
+@import '../../global/utils/init';
+
+.flat-image-text-card {
+  position: relative;
+  color: $color-white;
+  // really just adding to make /patterns not terrible
+  max-width: 500px;
+}
+
+.flat-image-text-card__title {
+  @include font-sans-serif-bold;
+  color: $color-white;
+  font-size: 26px;
+  font-weight: bold;
+  padding: 0 1rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  z-index: 8;
+}
+
+.flat-image-text-card__image {
+  overflow: hidden;
+  position: relative;
+  z-index: 8;
+
+  img {
+    height: auto;
+    // do cool reveal of img color on hover
+    filter: grayscale(40%);
+    transition: transform 0.5s ease, filter 0.5s ease;
+    width: 100%;
+  }
+}
+
+.flat-image-text-card__body {
+  background: $color-white;
+  border-top: 2px solid $color-brand-secondary;
+  box-shadow: 0 -1px 3px 0 $color-gray-606060;
+  position: relative;
+  z-index: 10;
+  color: $color-black;
+  font-size: 14px;
+  font-weight: $bold-font-weight;
+  padding: 0.75rem;
+  text-decoration: none;
+  width: 100%;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.flat-image-text-card--link {
+  color: $color-white;
+
+  &:hover {
+    text-decoration: none;
+
+    img {
+      filter: grayscale(0);
+      transform: scale(1.15);
+      transition: transform 0.5s ease, filter 0.5s ease;
+    }
+  }
+}

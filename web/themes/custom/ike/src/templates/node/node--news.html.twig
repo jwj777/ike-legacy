@@ -1,0 +1,12 @@
+{{ attach_library('ike/articles') }}
+{{ attach_library('ike/news') }}
+<article{{ attributes.addClass('article--detail' , 'news-detail') }}>
+
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  <div{{ content_attributes }}>
+    {{ content }}
+  </div>
+
+</article>

@@ -1,0 +1,39 @@
+// Icon Text Card
+//
+// This is the Icon Text Card component. It's an example.
+//
+// Markup: icon-text-card.twig
+//
+// Style guide: Components.icon-text-card
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.icon-text-card {
+  position: relative;
+  padding-left: 60px;
+
+  .icon-text-card__icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    img {
+      max-width: 120px;
+      height: auto;
+    }
+  }
+
+  .icon-text-card__content {
+    padding: 16px 10px 16px 70px;
+    font-size: 15px;
+    border: 1px solid $color-brand-secondary;
+    background-color: $color-brand-primary;
+    color: $color-white;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}

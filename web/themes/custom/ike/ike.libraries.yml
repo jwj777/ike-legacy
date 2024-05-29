@@ -1,0 +1,353 @@
+global-styling:
+  version: 1.0
+  css:
+    base:
+      dist/css/global.css: {}
+  js:
+    dist/js/ie11.js : {}
+  dependencies:
+    - core/drupal
+    - ike/header
+    - ike/fontawesome
+
+axios:
+  js:
+    https://unpkg.com/axios/dist/axios.min.js: { type: external }
+
+vue-js:
+  js:
+    https://cdn.jsdelivr.net/npm/vue/dist/vue.js: { type: external }
+
+# Page Styles
+user-login:
+  css:
+    layout:
+      dist/css/user-login-page.css: {}
+
+youtube-video-block:
+  css:
+    component:
+      dist/css/youtube-video-block.css: {}
+
+patterns-overview-page:
+  css:
+    layout:
+      dist/css/patterns-overview-page.css: {}
+
+stylized-title:
+  css:
+    component:
+      dist/css/stylized-title.css: {}
+
+support-ike-block:
+  css:
+    component:
+      dist/css/support-ike-block.css: {}
+
+icon-text-card:
+  css:
+    component:
+      dist/css/icon-text-card.css: {}
+
+donors:
+  css:
+    component:
+      dist/css/donors.css: {}
+
+fontawesome:
+  css:
+    base:
+      https://use.fontawesome.com/releases/v5.12.0/css/all.css:
+        type: external
+  js:
+    https://use.fontawesome.com/releases/v5.12.0/js/all.js:
+      type: external
+
+slick:
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js:
+      type: external
+
+slick-new:
+  js:
+    https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js:
+      type: external
+  css:
+    base:
+      https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css:
+        type: external
+
+front:
+  css:
+    base:
+      dist/css/front.css: {}
+
+main-menu:
+  css:
+    component:
+      dist/css/main-menu.css: {}
+
+gallery-block:
+  js:
+    dist/js/gallery-block.js: { }
+  dependencies:
+    - core/jquery
+  css:
+    component:
+      dist/css/gallery-block.css: {}
+
+link-block:
+  js:
+    dist/js/link-block.js: { }
+  dependencies:
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.once
+  css:
+    component:
+      dist/css/link-block.css: {}
+
+header:
+  css:
+    component:
+      dist/css/header.css: {}
+      dist/css/utility-header.css: {}
+      dist/css/secondary-menu.css: {}
+  js:
+    dist/js/header.js: {}
+  dependencies:
+    - core/jquery
+
+cta-banner:
+  css:
+    component:
+      dist/css/cta-banner.css: {}
+
+memorial-landing:
+  css:
+    component:
+      dist/css/memorial-landing.css: {}
+
+cta-text-overlay-banner:
+  css:
+    component:
+      dist/css/cta-text-overlay-banner.css: {}
+
+iked-cta-text-overlay-banner:
+  css:
+    component:
+      dist/css/iked-cta-text-overlay-banner.css: {}
+
+quote-banner:
+  css:
+    component:
+      dist/css/quote-banner.css: {}
+
+flat-image-text-card:
+  css:
+    component:
+      dist/css/flat-image-text-card.css: {}
+
+fb-feed:
+  css:
+    component:
+      dist/css/fb-feed.css: {}
+
+slider:
+  css:
+    component:
+      dist/css/slider.css: {}
+  js:
+    dist/js/slider.js: {}
+  dependencies:
+    - ike/slick
+
+event-detail:
+  css:
+    component:
+      dist/css/event-detail.css: {}
+  js:
+    dist/js/event-detail.js: {}
+  dependencies:
+    - ike/add-to-cal
+
+cta:
+  css:
+    component:
+      dist/css/cta.css: {}
+
+hero-image:
+  css:
+    component:
+      dist/css/hero-image.css: {}
+
+page-title:
+  css:
+    component:
+      dist/css/page-title.css: {}
+
+ike-social:
+  css:
+    component:
+      dist/css/ike-social.css: {}
+  js:
+    dist/js/ike-social.js: {}
+
+email-signup:
+  css:
+    component:
+      dist/css/email-signup.css: {}
+  js:
+    dist/js/email-signup.js: {}
+
+event-teaser:
+  css:
+    component:
+      dist/css/event-teaser.css: {}
+
+featured-event-teaser:
+  css:
+    component:
+      dist/css/featured-event-teaser.css: {}
+
+event-listing:
+  css:
+    component:
+      dist/css/event-listing.css: {}
+
+flat-image-text-card-overlay:
+  css:
+    component:
+      dist/css/flat-image-text-card-overlay.css: {}
+
+local-tasks:
+  css:
+    component:
+      dist/css/local-tasks.css: {}
+
+lesson-plan-listing:
+  css:
+    component:
+      dist/css/lesson-plan-listing.css: {}
+  js:
+    dist/js/lesson-plan.js: {}
+
+articles:
+  css:
+    component:
+      dist/css/articles.css: {}
+      dist/css/stylized-title.css: {}
+      dist/css/flat-image-text-card.css: {}
+
+lesson-plan-detail:
+  css:
+    component:
+      dist/css/lesson-plan-detail.css: {}
+
+search:
+  css:
+    component:
+      dist/css/search.css: {}
+
+spacer:
+  css:
+    component:
+      dist/css/spacer.css: {}
+
+four-center-regions:
+  css:
+    layout:
+      dist/css/four-center-regions.css: {}
+
+add-to-cal:
+  js:
+    dist/js/add-to-cal.js: {}
+
+teacher-collections:
+  css:
+    component:
+      dist/css/teacher-collections.css: {}
+
+teacher-collections-create:
+  js:
+    dist/js/create-teacher-collection.js: {}
+  dependencies:
+    - ike/axios
+    - ike/vue-js
+    - ike/teacher-collections
+
+teacher-collections-add:
+  js:
+    dist/js/add-teacher-collection.js: {}
+  dependencies:
+    - ike/axios
+    - ike/vue-js
+    - ike/teacher-collections
+
+filter-page:
+  css:
+    component:
+      dist/css/filter-page.css: {}
+
+alert-banner:
+  css:
+    component:
+      dist/css/alert-banner.css: {}
+
+news:
+  css:
+    component:
+      dist/css/news.css: {}
+
+sponsors:
+  css:
+    component:
+      dist/css/sponsors.css: {}
+
+site-environment:
+  css:
+    component:
+      dist/css/site-environment.css: {}
+
+primary-source:
+  css:
+    component:
+      dist/css/primary-source.css: {}
+  js:
+    dist/js/primary-source.js: {}
+  dependencies:
+    - core/jquery
+
+ikes-soldiers:
+  css:
+    component:
+      dist/css/ikes-soldiers-teaser.css: {}
+      dist/css/ikes-soldiers-detail.css: {}
+
+ikes-soldiers-view-filter:
+  css:
+    component:
+      dist/css/ikes-soldiers-filter.css: {}
+  js:
+    dist/js/ikes-soldiers-filter.js: {}
+
+ikes-soldiers-snapshot:
+  js:
+    dist/js/ikes-soldiers-snapshot.js: {}
+
+ikes-soldiers-home-teaser:
+  css:
+    component:
+      dist/css/ikes-soldiers-home-teaser.css: {}
+
+psl-list-view:
+  css:
+    component:
+      dist/css/psl-list-view.css: {}
+
+psl-view-filter:
+  js:
+    dist/js/psl-view-filter.js: {}
+  css:
+    component:
+      dist/css/psl-view-filter.css: {}

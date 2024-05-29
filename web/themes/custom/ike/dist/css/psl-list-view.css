@@ -1,0 +1,173 @@
+.tooltip {
+  padding: 10px 15px;
+  position: relative;
+  text-align: center;
+}
+.tooltip::after {
+  background-color: #0F2043;
+  border-radius: 10px;
+  color: #fff;
+  display: none;
+  padding: 10px 15px;
+  position: absolute;
+  text-align: center;
+  z-index: 999;
+}
+.tooltip::before {
+  background-color: #0F2043;
+  content: " ";
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 999;
+}
+.tooltip:hover::after {
+  display: block;
+}
+.tooltip:hover::before {
+  display: block;
+}
+.tooltip.top::after {
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 10px));
+}
+.tooltip.top::before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
+.tooltip.bottom::after {
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 10px));
+}
+.tooltip.bottom::before {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+}
+.tooltip.right::after {
+  content: "";
+  top: 0;
+  right: 0;
+  transform: translateX(calc(100% + 10px));
+}
+.tooltip.right::before {
+  top: 50%;
+  right: 0;
+  transform: translate(calc(100% + 5px), -50%) rotate(45deg);
+}
+.tooltip.left::after {
+  content: "";
+  top: 0;
+  left: 0;
+  transform: translateX(calc(-100% - 10px));
+}
+.tooltip.left::before {
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-100% - 5px), -50%) rotate(45deg);
+}
+
+.psl-list-view-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 66.66667%;
+  margin-top: 1rem;
+}
+.psl-list-view-container .views-row {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 32px;
+  position: relative;
+  width: 100%;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+@media (min-width: 992px) {
+  .psl-list-view-container .views-row {
+    flex: 0 0 66.66667%;
+    max-width: 33.333%;
+  }
+}
+.psl-list-view-container .views-field-field-psl-image {
+  border: 1px solid #808080;
+  border-bottom: 0;
+}
+.psl-list-view-container .views-field-field-psl-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.psl-list-view-container .views-field-field-3d-media {
+  border: 1px solid #808080;
+  border-bottom: 0;
+}
+.psl-list-view-container .views-field-field-3d-media .field--name-field-media-embed-3d-image.field--type-text-long {
+  display: none;
+}
+.psl-list-view-container .field--name-field-3d-preview-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.psl-list-view-container .views-field-title {
+  background-color: #0f2043;
+  height: auto;
+  min-height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #808080;
+  border-top: 0;
+  padding: 6px;
+  text-align: center;
+}
+.psl-list-view-container .views-field-title a {
+  color: #FFF;
+  font-family: "Libre Baskerville";
+  font-size: 1.25rem;
+  line-height: 1.2em;
+}
+
+.my-collections-button {
+  display: none;
+  margin: 0 15px 15px 0;
+  vertical-align: top;
+  position: absolute;
+  right: 120px;
+  background-color: #fff;
+  border: 0;
+  padding: 16px 18px 16px 40px;
+  color: #000;
+  background-image: url("/themes/custom/ike/images/library_books-24px.png");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+.my-collections-button:hover {
+  color: #000;
+  text-decoration: none;
+}
+@media (min-width: 992px) {
+  .my-collections-button {
+    display: inline-block;
+  }
+}
+
+.block-spacer {
+  z-index: -1;
+}
+
+.psl-soldiers-block-title {
+  margin-bottom: -20px;
+  font-size: 32px;
+}
+@media (min-width: 768px) {
+  .psl-soldiers-block-title {
+    font-size: 48px;
+  }
+}

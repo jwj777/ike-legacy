@@ -1,0 +1,102 @@
+//=======================================================
+// Tooltip
+//=======================================================
+
+.tooltip {
+	padding: 10px 15px;
+	position: relative;
+  text-align: center;
+  
+  &::after {
+    background-color: $color-brand-primary;
+    border-radius: 10px;
+    color: #fff;
+    display: none;
+    padding: 10px 15px;
+    position: absolute;
+    text-align: center;
+    z-index: 999;
+  }
+
+  &::before {
+    background-color: $color-brand-primary;
+    content: ' ';
+    display: none;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    z-index: 999;
+  }
+
+  &:hover::after {
+    display: block;
+  }
+
+  &:hover::before {
+    display: block;
+  }
+
+  &.top {
+
+    &::after {
+      content: '';
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, calc(-100% - 10px));
+    }
+
+    &::before {
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+    }
+  }
+
+  &.bottom {
+
+    &::after {
+      content: '';
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, calc(100% + 10px));
+    }
+
+    &::before {
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+    }
+  }
+
+  &.right {
+
+    &::after {
+      content: '';
+      top: 0;
+      right: 0;
+      transform: translateX(calc(100% + 10px));
+    }
+
+    &::before {
+      top: 50%;
+      right: 0;
+      transform: translate(calc(100% + 5px), -50%) rotate(45deg);
+    }
+  }
+
+  &.left {
+
+    &::after {
+      content: '';
+      top: 0;
+      left: 0;
+      transform: translateX(calc(-100% - 10px));
+    }
+
+    &::before {
+      top: 50%;
+      left: 0;
+      transform: translate(calc(-100% - 5px), -50%) rotate(45deg);
+    }
+  }
+}

@@ -1,0 +1,21 @@
+support_ike_block:
+  label: Support Ike Block
+  description: A bock with a Stylized title, body copy and button.
+  template: support-ike-block
+  use: "@ike/support-ike-block/support-ike-block.twig"
+  fields:
+    body:
+      type: text
+      label: Body
+      description: A text area.
+      preview: 'Established in 1945, the mission of the Eisenhower Foundation is to honor and champion the relevance today of the life and leadership of Dwight D. Eisenhower through compelling programs and events that celebrate his legacy. We accomplish this mission by providing funding to the Eisenhower Presidential Library, Museum, and Boyhood Home. The generosity of donors like you allows the Foundation to provide exhibits, programs, and events for thousands of people.'
+    link:
+      type: renderable
+      label: Link
+      description: A link to another page.
+      preview: <a href="/">Donate</a>
+    title:
+      type: renderable
+      label: Title
+      description: Faking an entity reference
+      preview: '<section class="stylized-title"><h2 class="stylized-title__title">Support</h2><div class="stylized-title__link"><a href="/">Learn More</a></div><div class="stylized-title__stars"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></div></section>'

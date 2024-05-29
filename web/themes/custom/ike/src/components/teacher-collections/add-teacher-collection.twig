@@ -1,0 +1,41 @@
+{{ attach_library('ike/teacher-collections-add') }}
+<div id="add-teacher-collection" class="teacher-collection add-teacher-collection">
+  <button class="teacher-collection__add tooltip top add-to-collection" @click="activeForm();" title="Add to My Collection">
+    <img width="25" src="/themes/custom/ike/images/collections-bookmark.svg" />
+  </button>
+  <div v-if="showForm" class="add-teacher-collection__form-wrapper">
+    <div class="teacher-collection__form-shadow" @click="activeForm();"></div>
+    <form :id="{{ random() }}" class="teacher-collection__form" :class="{active: isActive}">
+      <h3>Add / Remove to one of your teacher collections</h3>
+      <div class="add-teacher-collection__collections">
+        {% if elements.content['#flags'] is empty %}
+          <span class="teacher-collection__empty">No Collections found. Please go to <a href="/my-classroom">your classroom</a> to create a collection</span>
+        {% else %}
+          {% for flag in elements.content['#flags'] %}
+
+            <div class="add-teacher-collection__flag">
+              <label>
+                <input type="checkbox"
+                      data-nodeid="{{ flag.node_id }}"
+                      name="{{ flag.id }}"
+                      value="{{ flag.target_flag }}"
+                  {% if flag.is_flagged %}
+                    checked="checked"
+                  {% endif %}
+                />
+                {{ flag.name }}
+              </label>
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+      <div class="teacher-collection--submit button-red" @click="submit(); activeForm();">Update your Collections</div>
+      <div class="teacher-collection__close" @click="activeForm();">×</div>
+    </form>
+  </div>
+  {% verbatim %}
+  <div v-if="submitting" class="teacher-collection__loader">
+    <div class="teacher-collection__spinner"></div>
+  </div>
+  {% endverbatim %}
+</div>

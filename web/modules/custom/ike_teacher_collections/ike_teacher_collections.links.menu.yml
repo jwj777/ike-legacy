@@ -1,0 +1,13 @@
+ike_teacher_collections.teacher_collection_config_form:
+  title: 'Teacher Collection Page Config'
+  route_name: ike_teacher_collections.teacher_collection_config_form
+  description: 'Modify text on the Teacher Collections page'
+  parent: system.admin_config_system
+  weight: 99
+ike_teacher_collections.classroom:
+  title: 'My Classroom'
+  route_name: 'ike_teacher_collections.my_classroom'
+  menu_name: account
+  weight: 0
+  requirements:
+    _role: 'teacher+administrator'

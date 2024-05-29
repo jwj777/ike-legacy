@@ -1,0 +1,25 @@
+{{ attach_library('ike/event-teaser') }}
+<section class="event-teaser">
+  <div class="event-teaser__image">
+    {{ image }}
+    {% if featured == 1 %}
+      <div class="event-teaser__featured">
+        <span>Featured Event</span>
+      </div>
+    {% endif %}
+  </div>
+  <div class="event-teaser__content">
+    <h2 class="event-teaser__heading">{{ title }}</h2>
+    {% if date %}
+      <div class="event-teaser__date">{{ date }}</div>
+    {% endif %}
+    <div class="event-teaser__body">
+      {% if link %}
+        <p>{{ body|truncate(450) }}{% if body|length > 450 %}...{% endif %}</p>
+        <a class="event-teaser__link" href="{{ link }}">View Details</a>
+      {% else %}
+        <p>{{ body }}</p>
+      {% endif %}
+    </div>
+  </div>
+</section>

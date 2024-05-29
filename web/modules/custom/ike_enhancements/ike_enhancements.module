@@ -1,0 +1,217 @@
+<?php
+
+/**
+ * @file
+ * Contains ike_enhancements.module.
+ */
+
+use Drupal\Component\Serialization\Json;
+use Drupal\Core\Database\Query\AlterableInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\layout_builder\Form\ConfigureSectionForm;
+use Drupal\layout_builder\Plugin\SectionStorage\OverridesSectionStorage;
+use Drupal\webform\Entity\WebformSubmission;
+
+/**
+ * Implements hook_help().
+ */
+function ike_enhancements_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ike_enhancements module.
+    case 'help.page.ike_enhancements':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('A module containing various enhancements for the site.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function ike_enhancements_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id === 'layout_builder_configure_section') {
+    $callback_obj = $form_state->getBuildInfo()['callback_object'];
+    $layout_type = NULL;
+    if ($callback_obj instanceof ConfigureSectionForm) {
+      try {
+        $section = $callback_obj->getSectionStorage()->getSection($form_state->getBuildInfo()['args'][1]);
+        $layout_type = $section->getLayout()->getPluginDefinition()->getLabel();
+        $form['layout_type_label'] = [
+          '#type' => 'markup',
+          '#markup' => "<div class='layout-builder__layout-type padding bg-color-166285 flex-container flex-dir-column flex-ai-flex-start'><label>Section Type:</label><span>{$layout_type}</span></div>",
+          '#weight' => -40,
+        ];
+      }
+      catch (OutOfBoundsException $e) {
+        // We are creating a new section, and apparently trying to get
+        // a section that does not exist throws a fatal error instead
+        // of failing gracefully or returning null...?
+      }
+    }
+  }
+
+  if (stripos($form_id, 'node_add')) {
+    $form['#attached']['library'][] = 'ike_enhancements/media_library_ajax_throbber';
+  }
+
+  if ($form_id === 'layout_builder_add_block') {
+    $form['overlay_toggle'] = [
+      '#type' => 'markup',
+      '#markup' => "<div class='layout-builder-canvas-overlay-toggle'>Go Fullscreen</div>",
+      '#weight' => -50,
+    ];
+
+    $form['settings']['label']['#title'] = t('Internal Title');
+    $form['settings']['label']['#description'] = t('This title is used internally and not displayed to the user.');
+    $form['settings']['label']['#required'] = FALSE;
+    $form['settings']['label_display']['#default_value'] = FALSE;
+    $form['settings']['label_display']['#access'] = FALSE;
+    $form['#attached']['library'][] = 'ike_enhancements/layout-builder-canvas-overlay';
+  }
+
+  if (isset($form[OverridesSectionStorage::FIELD_NAME])) {
+    if (isset($form['revision_information'])) {
+      $form['advanced']['#weight'] = -900;
+      $form['advanced']['#name'] = 'advanced';
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function ike_enhancements_form_views_exposed_form_alter(&$form, $form_state, $form_id) {
+  // Remove Resource subject/program taxonomies from filter if
+  // they don't have any PSL nodes.
+  if ($form_id === 'views_exposed_form') {
+    if ($form['#id'] === 'views-exposed-form-psl-list-view-psl-list-view') {
+      $options = $form['field_psl_subject_target_id']['#options'];
+      foreach ($options as $option_id => $option_title) {
+        $nids = \Drupal::entityQuery('node')
+          ->condition('type', 'primary_source')
+          ->condition('field_psl_subject.target_id', $option_id, '=')
+          ->accessCheck(false)
+          ->execute();
+        if (empty($nids)) {
+          unset($options[$option_id]);
+        }
+      }
+      $form['field_psl_subject_target_id']['#options'] = $options;
+    }
+  }
+}
+
+/**
+ * Implements hook_contextual_links_view_alter().
+ */
+function ike_enhancements_contextual_links_view_alter(&$element, $items) {
+  if (isset($element['#links']['layout-builder-block-update']['url'])) {
+    /** @var \Drupal\Core\Url $url */
+    $url = $element['#links']['layout-builder-block-update']['url'];
+    $attributes = $url->getOption('attributes');
+    if (isset($attributes['data-dialog-options'])) {
+      $dialog_options = Json::decode($attributes['data-dialog-option']);
+    }
+    else {
+      $dialog_options = [];
+    }
+    $dialog_options['width'] = '500px';
+    $attributes['data-dialog-options'] = Json::encode($dialog_options);
+    $url->setOption('attributes', $attributes);
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ike_enhancements_preprocess_links(array &$variables) {
+  // If this is the add block link, make the dialog have a 500px width.
+  foreach ($variables['links'] as $index => $link) {
+    if (isset($link['link']) && $link['link']['#url']->getRouteName() === 'layout_builder.add_block') {
+      $variables['links'][$index]['link']['#attributes']['data-dialog-options'] = Json::encode(['width' => '500px']);
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function ike_enhancements_entity_insert(EntityInterface $entity) {
+  $entity_bundle = $entity->bundle();
+
+  // On User Create assign role of teacher.
+  if ($entity_bundle === 'user') {
+    $entity->addRole('teacher');
+    $entity->save();
+  }
+
+  // On soldier create from webform, set Image and other docs.
+  if ($entity_bundle === 'soldier') {
+    // Check if the soldier was created by the webform.
+    $submission_id = $entity->field_submission_id->value;
+    if ($submission_id) {
+      // Get the webform data.
+      $submission = WebformSubmission::load($submission_id);
+      $submission_data[] = $submission->getData();
+      $submitted_photo_file = $submission_data[0]['veteran_photo'];
+      $submitted_title = $submission_data[0]['first_name'] . '_' . $submission_data[0]['last_name'];
+      $submitted_service_docs = $submission_data[0]['other_service_documents'];
+
+      // Convert submitted files to media.
+      $soldier_media_item = ike_enhancements_create_soldier_image_media($submitted_photo_file, $submitted_title);
+      $soldier_media_item_id = intval($soldier_media_item->mid[0]->value);
+      $final_service_docs = [];
+      $doc_num = 1;
+      foreach ($submitted_service_docs as $submitted_service_doc) {
+        $soldier_doc_media = ike_enhancements_create_soldier_docs_media($submitted_service_doc, $submitted_title, $doc_num);
+        $soldier_doc_media_id = intval($soldier_doc_media->mid[0]->value);
+        $final_service_docs[] = ['target_id' => $soldier_doc_media_id];
+        $doc_num++;
+      }
+      // Set the values.
+      $entity->set('field_ikes_soldiers_image', ['target_id' => $soldier_media_item_id]);
+      $entity->set('field_ikes_soldiers_other_docs', $final_service_docs);
+      $entity->save();
+    }
+  }
+}
+
+/**
+ * Convert the webform soldier photo to media images.
+ */
+function ike_enhancements_create_soldier_image_media($submitted_photo_file, $submitted_title) {
+  $media_storage = \Drupal::entityTypeManager()->getStorage('media');
+  $soldier_media_item = $media_storage->create([
+    'bundle' => 'image',
+    'name' => $submitted_title,
+    'field_media_image' => $submitted_photo_file,
+  ]);
+  $soldier_media_item->save();
+  return $soldier_media_item;
+}
+
+/**
+ * Convert the webform soldier other docs to media documents.
+ */
+function ike_enhancements_create_soldier_docs_media($submitted_service_doc, $submitted_title, $doc_num) {
+  $media_storage = \Drupal::entityTypeManager()->getStorage('media');
+  $soldier_doc_media = $media_storage->create([
+    'bundle' => 'document',
+    'name' => $submitted_title . '_doc_' . $doc_num,
+    'field_media_document' => $submitted_service_doc,
+  ]);
+  $soldier_doc_media->save();
+  return $soldier_doc_media;
+}
+
+/**
+ * Takes in a Query object and randomly orders it.
+ */
+function ike_enhancements_query_sort_by_random_alter(AlterableInterface $query) {
+  $query->orderRandom();
+}

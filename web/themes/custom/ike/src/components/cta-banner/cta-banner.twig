@@ -1,0 +1,17 @@
+{{ attach_library('ike/cta-banner') }}
+<section class="cta-banner {% if alt_styling == 1 %} alt-style {% endif %}">
+  {% if alt_styling != 1 %}
+    <h2 class="cta-banner__heading">Virtual Classroom</h2>
+  {% endif %}
+  {% if link_url %}
+    <a class="cta-banner__link" href="{{ link_url }}"></a>
+  {% endif %}
+  <div class="cta-banner__image--overlap">{{ image_overlap }}</div>
+  {% if image_left %}
+    <div class="cta-banner__image--left">{{ image_left }}</div>
+  {% endif %}
+  <div class="cta-banner__content">{{ content }}</div>
+  {% if image_right %}
+    <div class="cta-banner__image--right">{{ image_right }}</div>
+  {% endif %}
+</section>

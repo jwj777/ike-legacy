@@ -1,0 +1,11 @@
+@import '../../global/utils/init';
+
+.layout--four-center-regions {
+  .layout--inner {
+    margin: 0 -20px;
+
+    .layout__region {
+      padding: 20px;
+    }
+  }
+}

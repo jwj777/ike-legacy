@@ -1,0 +1,74 @@
+dependencies:
+  module:
+    - file
+id: ike_psl_migrations_psl_media_files
+uuid: 1bcec3e7-0a49-4473-87a2-6dca09b91ccc
+migration_tags:
+  - CSV
+migration_group: psl_migrations
+label: Import Media Files (dowloads) for Primary Resources
+source:
+  constants:
+    source_base_path: /var/www/html/docroot/modules/custom/ike_psl_migrations/files/import/media
+    uri_file: 'public://psl_media_files'
+  plugin: csv
+  track_changes: true
+  path: '/var/www/html/docroot/modules/custom/ike_psl_migrations/files/import.csv'
+  header_offset: 0
+  ids:
+    - id
+  fields:
+    0:
+      name: id
+      label: 'Unique Id'
+    1:
+      name: title
+      label: 'Title'
+    2:
+      name: image
+      label: 'Image'
+    3:
+      name: description
+      label: 'Description'
+    4:
+      name: psl_type
+      label: 'PSL type'
+    5:
+      name: media_file
+      label: 'Media File'
+
+process:
+  source_full_path:
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/source_base_path
+        - media_file
+    -
+      plugin: urlencode
+  uri_file:
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/uri_file
+        - media_file
+    -
+      plugin: urlencode
+  filename:
+    plugin: skip_on_empty
+    method: row
+    source: media_file
+  uri:
+    plugin: file_copy
+    source:
+      - '@source_full_path'
+      - '@uri_file'
+destination:
+  plugin: 'entity:file'
+reuse: true
+migration_dependencies:
+  required:
+    - ike_psl_migrations_psl_images
+  optional: {  }

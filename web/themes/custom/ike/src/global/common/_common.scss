@@ -1,0 +1,76 @@
+@import 'visibility';
+@import 'buttons';
+@import 'forms';
+@import 'layout-builder';
+@import 'typography';
+@import 'components';
+
+
+.gray-background {
+  background-color: $color-gray;
+}
+
+.medium-gray-background {
+  background-color: $color-light-gray;
+}
+
+.dark-gray-background {
+  background-color: $color-gray-606060;
+}
+
+.white-background {
+  background-color: $color-white;
+  color: $body-font-color-black;
+  z-index: 1;
+}
+
+.flex-gutters {
+  margin: 0 -1%;
+
+  > * {
+    margin: 0 1%;
+  }
+}
+
+.pager {
+  .pager__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+  }
+
+  .pager__item {
+    margin-bottom: 10px;
+
+    &.is-active a {
+      color: $link-font-hover-color;
+    }
+
+    &.pager__item--first {
+      margin-left: 0;
+    }
+
+    &.pager__item--last {
+      margin-right: 0;
+    }
+
+    a {
+      padding: 7px 9px;
+      display: block;
+      background: #FFF;
+      margin: 0 5px;
+      align-self: center;
+      font-family: $body-font-family;
+      font-weight: 700;
+      height: 30px;
+      line-height: 1;
+      white-space: nowrap;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

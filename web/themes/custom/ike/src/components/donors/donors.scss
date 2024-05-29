@@ -1,0 +1,69 @@
+@import '../../global/utils/init';
+
+.donors-listing {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1rem 2rem;
+  overflow: hidden;
+  font-family: $font-primary;
+
+  header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $header-font-family;
+    margin: 2rem 0;
+    color: #091b46;
+
+    .donors-listing__header-title {
+      display: block;
+      text-align: center;
+      font-size: $h2-size-small;
+      width: 100%;
+      white-space: nowrap;
+      margin: 0.5rem 0;
+
+      @include breakpoint($md) {
+        font-size: $h2-size-medium;
+      }
+    }
+
+    .donors-listing__header-title::before,
+    .donors-listing__header-title::after {
+      content: '';
+      display: inline-block;
+      width: 50%;
+      margin: 0 0.5em 0 -50%;
+      vertical-align: middle;
+      border-bottom: 2px solid $color-brand-secondary;
+    }
+
+    .donors-listing__header-title::after {
+      margin: 0 -50% 0 0.5em;
+    }
+  }
+
+  .views-row {
+    flex-grow: 1;
+    text-align: center;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    color: #091b46;
+    flex-basis: 32%;
+
+    img {
+      max-width: 300px;
+      height: auto;
+    }
+
+    .views-field-title {
+      margin-top: 1rem;
+
+      span {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}

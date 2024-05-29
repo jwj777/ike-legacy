@@ -1,0 +1,98 @@
+@import '../../global/utils/init';
+
+.region-secondary-menu {
+  ul,
+  li {
+    &:not(.contextual-links) {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  ul {
+    &:not(.contextual-links) {
+      display: flex;
+
+      li {
+        height: 100%;
+        display: flex;
+        position: relative;
+      }
+
+      a {
+        padding: 10px;
+        height: 100%;
+      }
+    }
+  }
+
+  .button {
+    text-transform: none;
+  }
+
+  .search-button {
+    font-size: 0;
+    position: relative;
+    display: block;
+
+    @include breakpoint($md) {
+      margin-left: 15px;
+      background-color: $color-white !important; // sass-lint:disable-line no-important
+    }
+
+    &::after {
+      content: '';
+
+      @include breakpoint($md) {
+        background: url('../../images/search-black.svg') no-repeat center center;
+      }
+
+      background: url('../../images/search.svg') no-repeat center center;
+      display: block;
+      height: 40px;
+      width: 40px;
+
+      @include breakpoint($md) {
+        height: 18px;
+        width: 18px;
+      }
+    }
+
+    &.search-open {
+      &::after {
+        background: url('../../images/close.svg') no-repeat center center;
+      }
+    }
+  }
+
+  .search-form {
+    background-color: $color-brand-primary;
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 120px;
+    z-index: 5;
+
+    @include breakpoint($md) {
+      top: 37px;
+    }
+
+
+    &.search-open {
+      border-top: 2px solid $color-brand-secondary;
+      left: 0;
+      right: 0;
+      padding: 15px;
+      max-height: 100vh;
+
+      @include breakpoint($md) {
+        border-top: 0;
+      }
+    }
+
+    input {
+      margin: 0;
+    }
+  }
+}

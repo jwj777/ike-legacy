@@ -1,0 +1,21 @@
+quote_banner:
+  label: Quote Banner
+  description: Creates a banner that contains a quote.
+  template: quote-banner
+  use: "@ike/quote-banner/quote-banner.twig"
+  fields:
+    quote:
+      type: text
+      label: Quote
+      description: Quote text
+      preview: '“The essence of leadership is to get others to do something because they think you want it done and because they know it is worth while doing.”'
+    attribution:
+      type: renderable
+      label: Attribution
+      description: Content
+      preview: <div class="placeholder-image"></div><p>Remarks at the Republican Picnic, Gettysburg Farm, September 12, 1956</p>
+    image:
+      type: renderable
+      label: Image
+      description: Background image for banner.
+      preview: <img src="https://picsum.photos/id/1019/5472/3648.jpg">

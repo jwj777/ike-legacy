@@ -1,0 +1,76 @@
+uuid: 1bcec3e7-0a49-4473-87a2-6dca09b91eee
+id: ike_psl_migrations_psl_video_embeds
+label: Import Embedded Video for Primary Sources
+migration_group: psl_migrations
+
+source:
+  plugin: 'csv'
+  # Full path to the file.
+  path: '/var/www/html/docroot/modules/custom/ike_psl_migrations/files/import.csv'
+  # Column delimiter. Comma (,) by default.
+  delimiter: ','
+  # Field enclosure. Double quotation marks (") by default.
+  enclosure: '"'
+  # The row to be used as the CSV header (indexed from 0), 
+  # or null if there is no header row.
+  header_offset: 0
+  # The column(s) to use as a key. Each column specified will 
+  # create an index in the migration table and too many columns 
+  # may throw an index size error.
+  ids:
+    - id
+  # Here we identify the columns of interest in the source file. 
+  # Each numeric key is the 0-based index of the column. 
+  # For each column, the key below is the field name assigned to 
+  # the data on import, to be used in field mappings below. 
+  # The label value is a user-friendly string for display by the 
+  # migration UI.
+  fields:
+    0:
+      name: id
+      label: 'Unique Id'
+    1:
+      name: title
+      label: 'Title'
+    2:
+      name: image
+      label: 'Image'
+    3:
+      name: description
+      label: 'Description'
+    4:
+      name: psl_type
+      label: 'PSL type'
+    5:
+      name: media_file
+      label: 'Media File'
+    6:
+      name: 3d_media
+      label: '3D Media embed'
+    7:
+      name: video_embed
+      label: 'Video Media embed'
+
+process:
+  bundle:
+    plugin: default_value
+    default_value: remote_video
+  'field_media_oembed_video/value':
+    plugin: skip_on_empty
+    method: row
+    source: video_embed
+  'field_media_oembed_video/format':
+    plugin: default_value
+    default_value: 'plain_text'
+  name: title
+  uid:
+    plugin: default_value
+    default_value: 1
+
+destination:
+  plugin: entity:media
+reuse: true
+migration_dependencies:
+  required:
+    - ike_psl_migrations_psl_images
+  optional: {  }

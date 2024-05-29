@@ -1,0 +1,36 @@
+ikes_soldiers_teaser:
+  label: Ike's Soldiers Teaser
+  description: Shows a teaser of an Ike's Soldier.
+  template: ikes-soldiers-teaser
+  use: "@ike/ikes-soldiers-teaser/ikes-soldiers-teaser.twig"
+  fields:
+    soldier_image:
+      type: renderable
+      label: Image
+      description: The soldiers portrait.
+      preview: <img src="https://eisenhower2.codekoa.la/sites/default/files/styles/inline_image/public/2021-02/bobDole.png?itok=aUMJyca7"
+    first_name:
+      type: text
+      label: First Name
+      description: First Name
+      preview: Robert
+    middle_name:
+      type: text
+      label: Middle Name
+      description: Middle Name
+      preview: Joseph
+    last_name:
+      type: text
+      label: Last Name
+      description: Last Name
+      preview: Dole
+    highest_rank:
+      type: text
+      label: Highest Rank
+      description: Highest Rank Achieved
+      preview: Second Lieutenant
+    branch_of_service:
+      type: text
+      label: Branch of Service
+      description: Branch of Service
+      preview: Army

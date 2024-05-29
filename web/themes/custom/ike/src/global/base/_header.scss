@@ -1,0 +1,54 @@
+@import '../../global/utils/init';
+
+.highlighted {
+  padding: 0 $gutter-width;
+}
+
+// Utility bar links
+.utility-menu {
+  ul {
+    &:not(.contextual-links) {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+
+  li {
+    &:not(:first-child) {
+      margin-left: 16px;
+
+      @include breakpoint($lg) {
+        margin-left: 32px;
+      }
+    }
+  }
+
+  a {
+    color: $color-white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 11px;
+
+    //&.person-icon {
+    //  &::before {
+    //    @include font-font-awesome;
+    //    content: '\f007';
+    //    color: $color-white;
+    //    font-size: 14px;
+    //    margin-right: 5px;
+    //  }
+    //}
+  }
+}
+
+.main-site-header__bottom {
+  height: 75px;
+
+  .hamburger-menu,
+  .tertiary-wrapper,
+  .tertiary-links {
+    min-width: 33.333%;
+  }
+}

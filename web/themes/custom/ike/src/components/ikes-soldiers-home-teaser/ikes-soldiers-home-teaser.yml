@@ -1,0 +1,21 @@
+soldier_home_teaser_block:
+  label: Ike's Soldiers Home Teaser Block
+  description: Add a Home page Soldier teaser
+  template: ikes-soldiers-home-teaser
+  use: "@ike/ikes-soldiers-home-teaser/ikes-soldiers-home-teaser.twig"
+  fields:
+    title:
+      type: text
+      label: Soldier Title
+      description: A text string.
+      preview: 'Ikes Soldiers - Knox Holder'
+    description:
+      type: text
+      label: Soldier Description
+      description: A text string.
+      preview: '<p>Served in WWII with the 30th Infantry Division, NCNG Public Affairs</p>'
+    link:
+      type: text
+      label: Link
+      description: The link url to the content.
+      preview: https://google.com

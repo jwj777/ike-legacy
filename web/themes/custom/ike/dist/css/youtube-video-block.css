@@ -1,0 +1,127 @@
+.tooltip {
+  padding: 10px 15px;
+  position: relative;
+  text-align: center;
+}
+.tooltip::after {
+  background-color: #0F2043;
+  border-radius: 10px;
+  color: #fff;
+  display: none;
+  padding: 10px 15px;
+  position: absolute;
+  text-align: center;
+  z-index: 999;
+}
+.tooltip::before {
+  background-color: #0F2043;
+  content: " ";
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 999;
+}
+.tooltip:hover::after {
+  display: block;
+}
+.tooltip:hover::before {
+  display: block;
+}
+.tooltip.top::after {
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 10px));
+}
+.tooltip.top::before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
+.tooltip.bottom::after {
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 10px));
+}
+.tooltip.bottom::before {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+}
+.tooltip.right::after {
+  content: "";
+  top: 0;
+  right: 0;
+  transform: translateX(calc(100% + 10px));
+}
+.tooltip.right::before {
+  top: 50%;
+  right: 0;
+  transform: translate(calc(100% + 5px), -50%) rotate(45deg);
+}
+.tooltip.left::after {
+  content: "";
+  top: 0;
+  left: 0;
+  transform: translateX(calc(-100% - 10px));
+}
+.tooltip.left::before {
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-100% - 5px), -50%) rotate(45deg);
+}
+
+.youtube-video-block {
+  display: inline-block;
+  color: #FFF;
+  background-color: #0F2043;
+  max-width: 370px;
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .youtube-video-block {
+    margin-bottom: 0;
+  }
+}
+.youtube-video-block .youtube-video-block__title {
+  margin-bottom: 5px;
+}
+.youtube-video-block p {
+  margin: 0;
+  font-size: 14px;
+  font-style: italic;
+}
+.youtube-video-block img {
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+.youtube-video-block .video-embed-field-launch-modal {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+.youtube-video-block .video-embed-field-launch-modal::before {
+  content: url("../assets/yt-play.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 60px;
+  width: 60px;
+  transform: translate(-50%, -50%);
+}
+.youtube-video-block .youtube-video-block__text-content {
+  padding: 8px 16px;
+}
+.youtube-video-block .youtube-video-block--link {
+  color: #FFF;
+}
+.youtube-video-block .youtube-video-block--link:hover {
+  text-decoration: none;
+}
+.youtube-video-block .youtube-video-block--link:hover h2 {
+  text-decoration: underline;
+}

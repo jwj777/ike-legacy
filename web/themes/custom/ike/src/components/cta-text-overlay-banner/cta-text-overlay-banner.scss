@@ -1,0 +1,75 @@
+// CTA Text Overlay Banner
+//
+// This is the CTA Text Overlay Banner component. It's an example.
+//
+// Markup: cta-text-overlay-banner.twig
+//
+// Style guide: Components.cta-text-overlay-banner
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.cta-text-overlay-banner {
+  position: relative;
+  background-color: $color-white;
+  margin: 0 0 30px;
+
+  .cta-text-overlay-banner__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .cta-text-overlay-banner__heading {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .cta-text-overlay-banner__image {
+    font-size: 0;
+
+    &,
+    & *:not(.contextual),
+    img {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+    }
+  }
+
+  .cta-text-overlay-banner__content {
+    position: relative;
+    z-index: 1;
+    min-height: 100%;
+    color: $color-white;
+    background-color: rgba(15, 32, 67, 0.85);
+    border-right: solid 2px $color-brand-secondary;
+    padding: 14px 20px;
+    width: 100%;
+
+    @include breakpoint($sm) {
+      width: 55%;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.4;
+      margin-bottom: 0;
+    }
+
+    a {
+      color: $color-white;
+    }
+  }
+}

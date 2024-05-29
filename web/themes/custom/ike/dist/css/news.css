@@ -1,0 +1,235 @@
+.tooltip {
+  padding: 10px 15px;
+  position: relative;
+  text-align: center;
+}
+.tooltip::after {
+  background-color: #0F2043;
+  border-radius: 10px;
+  color: #fff;
+  display: none;
+  padding: 10px 15px;
+  position: absolute;
+  text-align: center;
+  z-index: 999;
+}
+.tooltip::before {
+  background-color: #0F2043;
+  content: " ";
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 999;
+}
+.tooltip:hover::after {
+  display: block;
+}
+.tooltip:hover::before {
+  display: block;
+}
+.tooltip.top::after {
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 10px));
+}
+.tooltip.top::before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
+.tooltip.bottom::after {
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 10px));
+}
+.tooltip.bottom::before {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+}
+.tooltip.right::after {
+  content: "";
+  top: 0;
+  right: 0;
+  transform: translateX(calc(100% + 10px));
+}
+.tooltip.right::before {
+  top: 50%;
+  right: 0;
+  transform: translate(calc(100% + 5px), -50%) rotate(45deg);
+}
+.tooltip.left::after {
+  content: "";
+  top: 0;
+  left: 0;
+  transform: translateX(calc(-100% - 10px));
+}
+.tooltip.left::before {
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-100% - 5px), -50%) rotate(45deg);
+}
+
+.view--news .node__news__view_mode_teaser {
+  padding: 0 15px 30px;
+}
+
+.news-detail .block-field-blocknodenewstitle,
+.news-detail .block-field-blocknodenewsfield-news-sub-title {
+  position: relative;
+  top: -10px;
+  margin-bottom: 40px;
+  padding: 0 120px;
+}
+.news-detail .block-field-blocknodenewstitle span,
+.news-detail .block-field-blocknodenewstitle div,
+.news-detail .block-field-blocknodenewsfield-news-sub-title span,
+.news-detail .block-field-blocknodenewsfield-news-sub-title div {
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
+  position: relative;
+  display: block;
+  font-size: 32px;
+  margin: 2rem 0 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  z-index: 9;
+  line-height: 38px;
+}
+@media (min-width: 768px) {
+  .news-detail .block-field-blocknodenewstitle span,
+  .news-detail .block-field-blocknodenewstitle div,
+  .news-detail .block-field-blocknodenewsfield-news-sub-title span,
+  .news-detail .block-field-blocknodenewsfield-news-sub-title div {
+    font-size: 48px;
+    line-height: 56px;
+  }
+}
+.news-detail .block-field-blocknodenewsfield-news-body {
+  padding: 20px;
+}
+.news-detail .block-field-blocknodenewsfield-news-body h2,
+.news-detail .block-field-blocknodenewsfield-news-body h3 {
+  font-family: "Arial";
+  font-weight: 700;
+}
+.news-detail .block-field-blocknodenewsfield-news-body h3 {
+  margin-bottom: 0.5rem;
+}
+.news-detail .block-field-blocknodenewsfield-news-body img {
+  padding: 5px;
+}
+.news-detail .block-field-blocknodenewsfield-news-body article img {
+  max-width: 100%;
+  height: auto;
+}
+.news-detail .block-field-blocknodenewsfield-news-body article.align-left {
+  float: none;
+}
+.news-detail .block-field-blocknodenewsfield-news-body article.align-left img {
+  margin: 0 auto;
+  display: block;
+}
+@media (min-width: 768px) {
+  .news-detail .block-field-blocknodenewsfield-news-body article.align-left img {
+    margin: 0 12px 12px 0;
+  }
+}
+@media (min-width: 768px) {
+  .news-detail .block-field-blocknodenewsfield-news-body article.align-left {
+    float: left;
+  }
+}
+.news-detail .block-field-blocknodenewsfield-news-body article.align-right {
+  float: none;
+}
+.news-detail .block-field-blocknodenewsfield-news-body article.align-right img {
+  margin: 0 auto;
+  display: block;
+}
+@media (min-width: 768px) {
+  .news-detail .block-field-blocknodenewsfield-news-body article.align-right img {
+    margin: 12px 0 0 12px;
+  }
+}
+@media (min-width: 768px) {
+  .news-detail .block-field-blocknodenewsfield-news-body article.align-right {
+    float: right;
+  }
+}
+.news-detail .block-field-blocknodenewsfield-news-body article .align-center img {
+  margin: 0 auto;
+  display: block;
+}
+.news-detail .block-field-blocknodenewsfield-news-body figure.align-left {
+  float: none;
+}
+.news-detail .block-field-blocknodenewsfield-news-body figure.align-left img {
+  margin: 0 auto;
+  display: block;
+}
+@media (min-width: 768px) {
+  .news-detail .block-field-blocknodenewsfield-news-body figure.align-left img {
+    margin: 0 12px 12px 0;
+  }
+}
+@media (min-width: 768px) {
+  .news-detail .block-field-blocknodenewsfield-news-body figure.align-left {
+    float: left;
+  }
+}
+.news-detail .block-field-blocknodenewsfield-news-body figure.align-right {
+  float: none;
+}
+.news-detail .block-field-blocknodenewsfield-news-body figure.align-right img {
+  margin: 0 auto;
+  display: block;
+}
+@media (min-width: 768px) {
+  .news-detail .block-field-blocknodenewsfield-news-body figure.align-right img {
+    margin: 12px 0 0 12px;
+  }
+}
+@media (min-width: 768px) {
+  .news-detail .block-field-blocknodenewsfield-news-body figure.align-right {
+    float: right;
+  }
+}
+.news-detail .block-field-blocknodenewsfield-news-body figure.align-center img {
+  display: block;
+  margin: 0 auto 10px;
+}
+.news-detail .block-field-blocknodenewsfield-news-body figcaption {
+  font-size: 0.85rem;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.2em;
+}
+.news-detail .block-field-blocknodenewsfield-news-body blockquote {
+  border: 0;
+}
+.news-detail .block-field-blocknodenewsfield-news-body blockquote p {
+  font-family: "Libre Baskerville";
+  color: #C11F2A;
+  font-size: 1.2rem;
+  text-indent: 24px;
+  line-height: 1.4em;
+  padding: 0;
+}
+.news-detail .block-field-blocknodenewsfield-news-body iframe {
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .news-detail .block-field-blocknodenewsfield-news-body iframe {
+    margin: 0 24px;
+  }
+}
+@media (min-width: 992px) {
+  .news-detail .block-field-blocknodenewsfield-news-body {
+    padding: 30px;
+  }
+}

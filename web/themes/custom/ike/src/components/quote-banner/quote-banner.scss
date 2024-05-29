@@ -1,0 +1,128 @@
+// Quote Banner
+//
+// This is the Quote Banner component. It's an example.
+//
+// Markup: quote-banner.twig
+//
+// Style guide: Components.quote-banner
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.quote-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  color: $color-white;
+  padding: 65px 20px 75px;
+  overflow: hidden;
+
+  @include breakpoint($md) {
+    min-height: 380px;
+    height: 380px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @include breakpoint($lg) {
+    height: 450px;
+    min-height: 450px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  @include breakpoint($xl) {
+    align-items: center;
+  }
+
+  .quote-banner__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    font-size: 0;
+
+    &::before {
+      // background: transparent linear-gradient(to bottom, rgb(0, 0, 0,) 0%, rgba(24, 24, 24, 0.75) 41%, rgba(24, 24, 24, 0) 100%) 0 0 no-repeat padding-box;
+      content: '';
+      height: 40px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      z-index: 20;
+
+      @include breakpoint($lg) {
+        height: 150px;
+      }
+    }
+
+    &,
+    & *,
+    img {
+      height: 100%;
+      width: 100%;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: right;
+
+      @include breakpoint($lg) {
+        object-position: top center;
+      }
+    }
+  }
+
+  .quote-banner__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    padding-top: 40px;
+
+    @include breakpoint($sm) {
+      max-width: 60%;
+    }
+
+    @include breakpoint($md) {
+      max-width: 600px;
+    }
+
+    @include breakpoint($xl) {
+      max-width: 1000px;
+      min-width: 1000px;
+    }
+  }
+
+  .quote-banner__quote,
+  .quote-banner__attribution {
+    position: relative;
+    z-index: 1;
+  }
+
+  .quote-banner__quote {
+    max-width: 480px;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.4;
+
+    @include breakpoint($md) {
+      font-size: 22px;
+    }
+  }
+
+  .quote-banner__attribution {
+    padding-top: 10px;
+
+    @include breakpoint($md) {
+      padding-left: 40px;
+    }
+
+    * {
+      font-size: 12px;
+    }
+  }
+}

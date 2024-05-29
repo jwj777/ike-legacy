@@ -1,0 +1,124 @@
+.tooltip {
+  padding: 10px 15px;
+  position: relative;
+  text-align: center;
+}
+.tooltip::after {
+  background-color: #0F2043;
+  border-radius: 10px;
+  color: #fff;
+  display: none;
+  padding: 10px 15px;
+  position: absolute;
+  text-align: center;
+  z-index: 999;
+}
+.tooltip::before {
+  background-color: #0F2043;
+  content: " ";
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 999;
+}
+.tooltip:hover::after {
+  display: block;
+}
+.tooltip:hover::before {
+  display: block;
+}
+.tooltip.top::after {
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 10px));
+}
+.tooltip.top::before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
+.tooltip.bottom::after {
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 10px));
+}
+.tooltip.bottom::before {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+}
+.tooltip.right::after {
+  content: "";
+  top: 0;
+  right: 0;
+  transform: translateX(calc(100% + 10px));
+}
+.tooltip.right::before {
+  top: 50%;
+  right: 0;
+  transform: translate(calc(100% + 5px), -50%) rotate(45deg);
+}
+.tooltip.left::after {
+  content: "";
+  top: 0;
+  left: 0;
+  transform: translateX(calc(-100% - 10px));
+}
+.tooltip.left::before {
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-100% - 5px), -50%) rotate(45deg);
+}
+
+.view--sponsors {
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.view--sponsors .views-row {
+  width: 50%;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .view--sponsors .views-row {
+    width: 33.333%;
+    flex-basis: 33.333%;
+  }
+}
+@media (min-width: 1200px) {
+  .view--sponsors .views-row {
+    width: 15%;
+    flex-basis: 15%;
+  }
+}
+.view--sponsors img {
+  height: auto;
+  max-width: 150px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (min-width: 992px) {
+  .view--sponsors img {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+.view--sponsors .field--name-field-sponsor-image + .node-title {
+  display: none;
+}
+
+.layout .view--sponsors img {
+  max-width: 150px;
+}
+
+.pdf-link::before {
+  content: " ";
+  background: url("/sites/default/files/styles/inline_image/public/2020-06/iconpdf.gif") no-repeat center center;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin: 0 5px 0 20px;
+  vertical-align: middle;
+}

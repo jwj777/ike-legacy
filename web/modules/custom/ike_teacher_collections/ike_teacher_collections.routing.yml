@@ -1,0 +1,27 @@
+ike_teacher_collections.get_collections:
+  path: '/user/{user}/classroom'
+  defaults:
+    _controller: '\Drupal\ike_teacher_collections\Controller\TeacherCollectionController::getCollections'
+    _title: 'Get Teacher Collections'
+  requirements:
+    _access: 'TRUE'
+  options:
+    parameters:
+      user:
+        type: entity:user
+ike_teacher_collections.my_classroom:
+  path: '/my-classroom'
+  defaults:
+    _controller: '\Drupal\ike_teacher_collections\Controller\TeacherCollectionController::getClassroomPage'
+    _title: 'Get Teacher Collections'
+  requirements:
+    _permission: 'access content'
+ike_teacher_collections.teacher_collection_config_form:
+  path: '/admin/config/ike_teacher_collections/teachercollectionconfig'
+  defaults:
+    _form: '\Drupal\ike_teacher_collections\Form\TeacherCollectionConfigForm'
+    _title: 'TeacherCollectionConfigForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

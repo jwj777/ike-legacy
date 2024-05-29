@@ -1,0 +1,229 @@
+uuid: 2bcec3e7-0a49-4473-87a2-6dca09b91fff
+id: ikes_soldiers_wp_migrations_soldiers
+label: Import Ike's Soldiers from WP
+migration_group: ikes_soldiers_wp_migrations
+
+source:
+  plugin: 'csv'
+  # Full path to the file.
+  path: '/var/www/html/docroot/modules/custom/ikes_soldiers_wp_migrations/files/wp_import.csv'
+  # Column delimiter. Comma (,) by default.
+  delimiter: ','
+  # Field enclosure. Double quotation marks (") by default.
+  enclosure: '"'
+  # The row to be used as the CSV header (indexed from 0), 
+  # or null if there is no header row.
+  header_offset: 0
+  # The column(s) to use as a key. Each column specified will 
+  # create an index in the migration table and too many columns 
+  # may throw an index size error.
+  ids:
+    - id
+  # Here we identify the columns of interest in the source file. 
+  # Each numeric key is the 0-based index of the column. 
+  # For each column, the key below is the field name assigned to 
+  # the data on import, to be used in field mappings below. 
+  # The label value is a user-friendly string for display by the 
+  # migration UI.
+  fields:
+    0:
+      name: id
+      label: 'Unique Id'
+    1:
+      name: first_name
+      label: 'First Name'
+    2:
+      name: last_name
+      label: 'Last Name'
+    3:
+      name: suffix
+      label: 'Suffix'
+    4:
+      name: middle
+      label: 'Middle'
+    5:
+      name: gender
+      label: 'Gender'
+    6:
+      name: date_of_birth
+      label: 'Date of Birth'
+    7:
+      name: date_of_death
+      label: 'Date of Death'
+    8:
+      name: birthplace
+      label: 'Birthplace'
+    9:
+      name: image
+      label: 'Image'
+    10:
+      name: primary_source_type
+      label: 'Primary Source type'
+    11:
+      name: branch
+      label: 'Branch of Service'
+    12:
+      name: unit
+      label: 'Unit'
+    13:
+      name: theater
+      label: 'Theater of Operation'
+    14:
+      name: rank
+      label: 'Highest Rank'
+    15:
+      name: enlisted_commissioned_date
+      label: 'Enlisted/Commissioned Date'
+    16:
+      name: discharge_date
+      label: 'Discharge Date'
+    17:
+      name: k_i_a
+      label: 'Killed in Action'
+    18:
+      name: p_o_w
+      label: 'Prisoner of War'
+    19:
+      name: bio
+      label: 'Biographical Information'
+    20:
+      name: email
+      label: 'Email Address'
+    21:
+      name: honored_by
+      label: 'Honored by'
+    22:
+      name: honors
+      label: 'Honors'
+    23:
+      name: video
+      label: 'Video Embed'
+    24:
+      name: docs
+      label: 'Documents'
+
+process:
+  field_ikes_soldiers_first_name: first_name
+  field_ikes_soldiers_last_name: last_name
+  field_ikes_soldiers_suffix: suffix
+  field_ikes_soldiers_middle_name: middle
+  field_ikes_soldiers_gender: gender
+  field_ikes_soldiers_birth_date:
+    plugin: format_date
+    from_format: 'm/d/Y'
+    to_format: 'Y-m-d'
+    source: date_of_birth
+  field_ikes_soldiers_death_date:
+    plugin: format_date
+    from_format: 'm/d/Y'
+    to_format: 'Y-m-d'
+    source: date_of_death
+  field_ikes_soldiers_birthplace: birthplace
+  field_ikes_soldiers_image:
+    plugin: migration_lookup
+    migration: ikes_soldiers_wp_migrations_convert_image_to_media_type
+    source: id
+    entity_type: media
+    bundle: image
+  field_ikes_soldiers_source:
+    -
+      plugin: explode
+      source: primary_source_type
+      delimiter: '; '
+    -
+      plugin: callback
+      callable: trim
+    -
+      plugin: entity_generate
+      value_key: name
+      bundle_key: vid
+      bundle: soldiers_primary_source_type
+      entity_type: taxonomy_term
+  field_ikes_soldiers_serv_branch:
+    -
+      plugin: explode
+      source: branch
+      delimiter: '; '
+    -
+      plugin: callback
+      callable: trim
+    -
+      plugin: entity_generate
+      value_key: name
+      bundle_key: vid
+      bundle: branch_of_service
+      entity_type: taxonomy_term
+  field_ikes_soldiers_unit: unit
+  field_ikes_soldiers_theater_op:
+    -
+      plugin: explode
+      source: theater
+      delimiter: '; '
+    -
+      plugin: callback
+      callable: trim
+    -
+      plugin: entity_generate
+      value_key: name
+      bundle_key: vid
+      bundle: theater_of_operation
+      entity_type: taxonomy_term
+  field_ikes_soldiers_highest_rank: rank
+  field_ikes_soldiers_enlistment:
+    plugin: format_date
+    from_format: 'm/d/Y'
+    to_format: 'Y-m-d'
+    source: enlisted_commissioned_date
+  field_ikes_soldiers_discharge:
+    plugin: format_date
+    from_format: 'm/d/Y'
+    to_format: 'Y-m-d'
+    source: discharge_date
+  field_ikes_soldiers_k_i_a:
+    plugin: static_map
+    map:
+      'KIA': 1
+      '': 0
+    source: k_i_a
+  field_ikes_soldiers_p_o_w:
+    plugin: static_map
+    map:
+      'POW': 1
+      '': 0
+    source: p_o_w
+  field_ikes_soldiers_biography: bio
+  field_ikes_soldiers_email: email
+  field_ikes_soldiers_honored_by: honored_by
+  field_ikes_soldiers_mil_honors: honors
+  field_ikes_soldiers_video: 
+    -
+      plugin: explode
+      source: video
+      delimiter: '; '
+  field_ikes_soldiers_other_docs:
+    plugin: migration_lookup
+    migration: ikes_soldiers_wp_migrations_convert_docs_to_media_type
+    source: id
+    entity_type: media
+    bundle: document
+  field_ikes_soldiers_approved:
+    plugin: default_value
+    default_value: 1
+  uid:
+    plugin: default_value
+    default_value: 1
+  type:
+    plugin: default_value
+    default_value: soldier
+  title:
+    plugin: concat
+    source:
+      - first_name
+      - last_name
+    delimiter: ' '
+
+destination:
+  plugin: entity:node
+migration_dependencies:
+  required: {  }
+  optional: {  }

@@ -1,0 +1,12 @@
+{{ attach_library('ike/iked-cta-text-overlay-banner') }}
+<section class="iked-cta-text-overlay-banner">
+  {% if link_url.toString() is not empty %}
+      <a class="iked-cta-text-overlay-banner__link" href="{{ link_url }}" target="_blank"></a>
+  {% endif %}
+  <div class="iked-cta-text-overlay-banner__content">
+    <h2 class="iked-cta-text-overlay-banner__heading">{{ title }}</h2>
+    {{ content }}
+  </div>
+  <div class="iked-cta-text-overlay-banner__image">{{ image }}</div>
+</a>
+</section>

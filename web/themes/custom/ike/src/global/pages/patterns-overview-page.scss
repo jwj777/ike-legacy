@@ -1,0 +1,120 @@
+@import '../utils/init';
+
+.patterns-list {
+  position: fixed;
+  max-width: 250px;
+  width: 100%;
+
+  li {
+    > a {
+      display: block;
+      padding: 5px 10px 5px 0;
+      font-size: 15px;
+      font-weight: 500;
+      color: $color-brand-secondary;
+      text-decoration: none;
+
+      &:hover {
+        padding-left: 9px;
+        color: $color-brand-primary;
+        text-decoration: none;
+        background-color: transparent;
+        border-left: 1px solid $color-brand-primary;
+      }
+    }
+  }
+}
+
+.patterns-preview-list {
+  margin-left: 300px;
+
+  hr {
+    margin: 3rem 0;
+  }
+}
+
+.pattern-preview__preview {
+  margin-top: 1rem;
+  padding: 40px;
+  border: 10px solid $color-gray;
+  overflow-x: hidden;
+
+  legend {
+    display: none;
+  }
+}
+
+.pattern-preview__description {
+  margin-bottom: 1rem;
+}
+
+.pattern-preview__fields {
+  border: 1px solid $color-gray;
+  border-collapse: collapse;
+
+  tr {
+    border: 1px solid $color-gray;
+
+    th {
+      background-color: $color-black;
+      color: $color-white;
+    }
+  }
+
+  th,
+  td {
+    border: 1px solid $color-gray;
+    padding: 4px 8px;
+  }
+}
+
+.pattern-preview__markup {
+  display: flex;
+  flex-direction: row;
+}
+
+.pattern-preview__view {
+  display: inline-block;
+  width: auto;
+  margin-top: 2rem;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: $color-brand-primary;
+  color: $color-white;
+  text-decoration: none;
+}
+
+.pattern-preview__stylized_title { // sass-lint:disable-line class-name-format
+  .pattern-preview__preview {
+    background-color: $color-brand-primary;
+  }
+}
+
+.pattern-preview__quote_banner { // sass-lint:disable-line class-name-format
+  .quote-banner {
+    height: 600px;
+  }
+
+  .placeholder-image {
+    background-image: url('../assets/eisenhower-sig.png');
+    background-size: 400px 62px;
+    background-repeat: no-repeat;
+    height: 62px;
+    width: 400px;
+  }
+}
+
+.pattern-preview__icon_text_card { // sass-lint:disable-line class-name-format
+  .pattern-preview__preview {
+    padding: 70px 20px;
+    background-color: $color-brand-primary;
+  }
+
+  .placeholder-image {
+    background-image: url('../assets/star.png');
+    background-size: 120px 110px;
+    background-repeat: no-repeat;
+    height: 110px;
+    width: 120px;
+  }
+}

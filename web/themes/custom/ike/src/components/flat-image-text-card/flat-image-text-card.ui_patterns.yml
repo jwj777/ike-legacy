@@ -1,0 +1,26 @@
+flat_image_text_card:
+  label: Flat Image Text Card
+  description: An image with text below in a flat card format.
+  template: flat-image-text-card
+  use: "@ike/flat-image-text-card/flat-image-text-card.twig"
+  fields:
+    title:
+      type: text
+      label: Title
+      description: A text string.
+      preview: 'Ike Insight'
+    image:
+      type: renderable
+      label: Image
+      description: An image to display.
+      preview: '<img src="https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260">'
+    link:
+      type: renderable
+      label: Link
+      description: A link to another page.
+      preview: 'https://google.com'
+    body:
+      type: text
+      label: Body
+      description: A block of text.
+      preview: Lorem ipsum dolor sit amet, consectetur adipiscing elit.

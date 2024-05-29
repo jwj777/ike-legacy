@@ -1,0 +1,209 @@
+@import '../../global/utils/init';
+
+.slick-dots {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  z-index: 100;
+
+  button {
+    height: 14px;
+    width: 14px;
+    padding: 0;
+    border-radius: 50%;
+    text-indent: -9999px;
+    border: 1px solid $color-gray;
+    background: $color-white;
+    margin: 0 6px;
+
+    &:focus {
+      outline: 0;
+      border: 0;
+    }
+  }
+
+  li {
+    &:focus {
+      outline: 0;
+      border: 0;
+    }
+  }
+
+  .slick-active {
+    button {
+      opacity: 1;
+      background: $color-brand-secondary;
+    }
+  }
+}
+
+.slick-arrow {
+  position: absolute;
+  z-index: 1;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.slick-next {
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  background: url('../assets/chevron_next.svg') repeat 0 0;
+  background-size: 100%;
+  appearance: unset;
+  -webkit-appearance: unset; //sass-lint:disable-line no-vendor-prefixes
+}
+
+.slick-prev {
+  left: 6px;
+  width: 2rem;
+  height: 2rem;
+  background: url('../assets/chevron_back.svg') repeat 0 0;
+  background-size: 100%;
+  appearance: unset;
+  -webkit-appearance: unset; //sass-lint:disable-line no-vendor-prefixes
+}
+
+.slick-track {
+  //max-height: 738px;
+  display: flex !important; //sass-lint:disable-line no-important
+}
+
+.slick-slide {
+  height: auto;
+
+  > article {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.container--sub-image {
+  //height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.stylized-title {
+  //padding: 20px 50px;
+  color: $color-black;
+
+  &::before {
+    @include breakpoint($md) {
+      left: -25px;
+      right: auto;
+      width: 65%;
+    }
+  }
+}
+
+.block__gallery-block {
+  background-color: $color-white;
+  color: $color-black;
+  font-family: 'Libre Baskerville';
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+  position: relative;
+
+  .field--type-entity-reference {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .field--type--gallery-video {
+    background: #eee;
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    margin-bottom: 4rem;
+
+    iframe {
+      box-sizing: border-box;
+
+      //Uncomment height to set video to cover entire container
+      //height: 56.25vw;
+      left: 50%;
+      min-height: 100%;
+      min-width: 100%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      top: 50%;
+      width: 177.77777778vh;
+    }
+  }
+
+  .field--type-image {
+    margin-bottom: 4rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .field--name-name {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+
+    flex: 0 0 auto;
+  }
+
+  .field--name-field-credits {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+    flex: 0 0 auto;
+    line-height: 1rem;
+  }
+
+  .field--name-field-design-credits {
+    margin-bottom: 1rem;
+    font-size: 14px;
+    flex: 0 0 auto;
+    line-height: 1rem;
+  }
+
+  .field--name-field-description {
+    min-height: 4rem;
+    flex: 1 1 auto;
+  }
+
+  .gallery-top-button-container {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+
+    .gallery-top-button {
+      text-decoration: none;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      height: 2.5rem;
+      width: 4.75rem;
+      background-color: $color-brand-secondary;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      p {
+        color: $color-white;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+

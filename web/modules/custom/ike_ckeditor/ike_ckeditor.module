@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Contains ike_ckeditor.module.
+ */
+
+/**
+ * Implements hook_js_settings_alter().
+ */
+function ike_ckeditor_editor_js_settings_alter(array &$settings) {
+  foreach (array_keys($settings['editor']['formats']) as $text_format_id) {
+    if ($settings['editor']['formats'][$text_format_id]['editor'] === 'ckeditor') {
+      $font_sizes = "8/8px;10/10px;12/12px;14/14px;16/16px;18/18px;20/20px;22/22px;24/24px;26/26px;28/28px;30/30px;32/32px;34/34px;36/36px;38/38px;40/40px;48/48px;56/56px;64/64px;78/78px;";
+      $settings['editor']['formats'][$text_format_id]['editorSettings']['font_names'] = "Source Sans Pro/'Source Sans Pro', sans-serif;Libre Baskerville/'Libre Baskerville', serif;Helvetica Neue/'Helvetica Neue', sans-serif;";
+      $settings['editor']['formats'][$text_format_id]['editorSettings']['fontSize_sizes'] = $font_sizes;
+    }
+  }
+}
+
+/**
+ * Implements hook_ckeditor_css_alter().
+ *
+ * Add custom CSS to the ckeditor form.
+ */
+function ike_ckeditor_ckeditor_css_alter(&$css, $editor) {
+  $css[] = \Drupal::service('extension.list.module')->getPath('ike_ckeditor') . '/css/ckeditor-tweaks.css';
+}

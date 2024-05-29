@@ -1,0 +1,84 @@
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.white-text,
+.text-white {
+  color: $color-white;
+}
+
+.text-black {
+  color: $body-font-color-black;
+}
+
+.text-blue {
+  color: $color-brand-primary;
+}
+
+h1,
+.h1 {
+  font-size: 48px;
+}
+
+h2,
+.h2 {
+  font-size: 28px;
+
+  @include breakpoint($md) {
+    font-size: 38px;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 24px;
+}
+
+h4,
+.h4 {
+  font-size: 20px;
+  font-family: $body-font-family;
+}
+
+h5,
+.h5 {
+  font-size: 18px;
+  font-family: $body-font-family;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  line-height: 1.2;
+  margin-bottom: 1.1rem;
+}
+
+p {
+  font-size: 16px;
+  margin-top: 0;
+  line-height: 1.5;
+}

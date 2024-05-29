@@ -1,0 +1,189 @@
+.tooltip {
+  padding: 10px 15px;
+  position: relative;
+  text-align: center;
+}
+.tooltip::after {
+  background-color: #0F2043;
+  border-radius: 10px;
+  color: #fff;
+  display: none;
+  padding: 10px 15px;
+  position: absolute;
+  text-align: center;
+  z-index: 999;
+}
+.tooltip::before {
+  background-color: #0F2043;
+  content: " ";
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 999;
+}
+.tooltip:hover::after {
+  display: block;
+}
+.tooltip:hover::before {
+  display: block;
+}
+.tooltip.top::after {
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 10px));
+}
+.tooltip.top::before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
+.tooltip.bottom::after {
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 10px));
+}
+.tooltip.bottom::before {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+}
+.tooltip.right::after {
+  content: "";
+  top: 0;
+  right: 0;
+  transform: translateX(calc(100% + 10px));
+}
+.tooltip.right::before {
+  top: 50%;
+  right: 0;
+  transform: translate(calc(100% + 5px), -50%) rotate(45deg);
+}
+.tooltip.left::after {
+  content: "";
+  top: 0;
+  left: 0;
+  transform: translateX(calc(-100% - 10px));
+}
+.tooltip.left::before {
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-100% - 5px), -50%) rotate(45deg);
+}
+
+.teacher-collections .teacher-collections__body {
+  font-size: 22px;
+}
+.teacher-collections .teacher-collections__body p {
+  font-size: 22px;
+}
+.teacher-collections .stylized-title {
+  margin-bottom: 24px;
+}
+.teacher-collections .lesson-plans-listing {
+  margin-top: 40px;
+}
+
+.page-flagging_collection .site-header__inner {
+  margin-bottom: 3rem;
+  position: relative;
+}
+.page-flagging_collection .block-help-block {
+  margin: 0 0 2rem;
+}
+.page-flagging_collection table {
+  width: 100%;
+}
+
+.teacher-collections--add-node-block {
+  width: initial;
+}
+
+.teacher-collection {
+  width: 100%;
+}
+.teacher-collection .teacher-collection__add {
+  float: right;
+  cursor: pointer;
+  background-color: #FFF;
+  padding: 15px;
+  border: 0;
+}
+.teacher-collection .teacher-collection__loader {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.6);
+}
+.teacher-collection .teacher-collection__form-shadow {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.teacher-collection .teacher-collection__form {
+  padding: 30px;
+  background-color: #FFF;
+  position: relative;
+  z-index: 10;
+  color: #000;
+}
+.teacher-collection .teacher-collection__form h3 {
+  color: #000;
+}
+.teacher-collection .teacher-collection__form input {
+  margin-bottom: 15px;
+}
+.teacher-collection .teacher-collection--submit {
+  border: 0;
+  padding: 15px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+.teacher-collection .teacher-collection__spinner {
+  display: block;
+  margin: auto;
+  z-index: 11;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-top: 5px solid #FFF;
+  animation: spinner linear 1s infinite;
+}
+.teacher-collection .teacher-collection__close {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  cursor: pointer;
+  color: #000;
+  font-size: 2rem;
+}
+
+.create-teacher-collection {
+  margin-bottom: 20px;
+}
+
+.teacher-collection__messages {
+  background-color: #FFF;
+  padding: 15px;
+  border: 0;
+  color: #000;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

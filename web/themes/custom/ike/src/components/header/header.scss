@@ -1,0 +1,180 @@
+@import '../../global/utils/init';
+
+.site-header {
+  background-color: $color-brand-primary;
+  padding: 15px;
+  z-index: 10;
+
+  @include breakpoint($md) {
+    background-color: transparent;
+    padding: 0;
+    max-width: $row-width;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .site-header__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+
+    @include breakpoint($md) {
+      flex-wrap: nowrap;
+      justify-content: center;
+      max-width: $row-width;
+      position: absolute;
+      top: 20px;
+      padding: 5px;
+    }
+  }
+
+  .hamburger-menu {
+    order: 0;
+  }
+
+  .site-logo {
+    order: 1;
+  }
+
+  .site-secondary-menu {
+    order: 2;
+
+    @include breakpoint($md) {
+      order: 3;
+      position: absolute;
+      right: 5px;
+    }
+  }
+
+  .site-main-menu {
+    order: 3;
+
+    @include breakpoint($md) {
+      order: 2;
+    }
+  }
+}
+
+// .menu-bg {
+//   background-color: $color-white;
+//   width: 100%;
+//   height: 45px; 
+//             border-bottom: 2px solid $color-brand-secondary;
+// }
+
+body.open { // sass-lint:disable-line no-qualifying-elements
+  overflow: hidden;
+
+  @include breakpoint($md) {
+    overflow-y: visible;
+  }
+
+  .site-header {
+    height: 100vh;
+    overflow-y: scroll;
+    align-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+
+    @include breakpoint($md) {
+      height: auto;
+      overflow: visible;
+      position: relative;
+    }
+  }
+}
+
+.site-logo {
+  font-size: 0;
+
+  img {
+    background-color: $color-white;
+    height: 75px;
+    width: 75px;
+
+    @include breakpoint($md) {
+      margin-top: -35px;
+      height: 150px;
+      width: 150px;
+    }
+  }
+}
+
+$s: 5px;
+
+.hamburger-menu {
+  position: relative;
+  flex-shrink: 2;
+  cursor: pointer;
+  width: $s * 10;
+  height: $s * 8;
+  font-weight: 600;
+  font-size: 11px;
+  align-self: center;
+  top: -$s;
+
+  @include breakpoint($md) {
+    display: none;
+  }
+
+  .hamburger-menu__burger {
+    background: $color-white;
+    width: $s * 10;
+    height: $s;
+    left: 2%;
+    position: relative;
+    transition: background 10ms 300ms ease;
+    transform: translateY($s * 4);
+
+    &::before,
+    &::after {
+      transition: top 300ms 350ms ease, transform 300ms 50ms ease;
+      position: absolute;
+      background: $color-white;
+      width: $s * 10;
+      height: $s;
+      content: '';
+    }
+
+    &::before {
+      top: $s * -3;
+    }
+
+    &::after {
+      top: $s * 3;
+    }
+  }
+
+  &.open {
+    .hamburger-menu__burger {
+      background: transparent;
+
+      &::after,
+      &::before {
+        transition: top 300ms 50ms ease, transform 300ms 350ms ease;
+        top: 0;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .hamburger-menu__inner {
+    text-transform: uppercase;
+    padding-left: 45px;
+    line-height: $s * 8;
+    font-weight: 600;
+  }
+}

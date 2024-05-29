@@ -1,0 +1,13 @@
+{
+    "name": "ike_enhancements",
+    "type": "drupal-module",
+    "description": "A module containing various enhancements for the site.",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/ike_enhancements",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/ike_enhancements",
+        "source": "http://cgit.drupalcode.org/ike_enhancements"
+    }
+}

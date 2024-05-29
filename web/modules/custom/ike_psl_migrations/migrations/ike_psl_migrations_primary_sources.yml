@@ -1,0 +1,191 @@
+uuid: 1bcec3e7-0a49-4473-87a2-6dca09b91aba
+id: ike_psl_migrations_primary_sources
+label: Import Primary Sources
+migration_group: psl_migrations
+
+source:
+  plugin: 'csv'
+  # Full path to the file.
+  path: '/var/www/html/docroot/modules/custom/ike_psl_migrations/files/import.csv'
+  # Column delimiter. Comma (,) by default.
+  delimiter: ','
+  # Field enclosure. Double quotation marks (") by default.
+  enclosure: '"'
+  # The row to be used as the CSV header (indexed from 0), 
+  # or null if there is no header row.
+  header_offset: 0
+  # The column(s) to use as a key. Each column specified will 
+  # create an index in the migration table and too many columns 
+  # may throw an index size error.
+  ids:
+    - id
+  # Here we identify the columns of interest in the source file. 
+  # Each numeric key is the 0-based index of the column. 
+  # For each column, the key below is the field name assigned to 
+  # the data on import, to be used in field mappings below. 
+  # The label value is a user-friendly string for display by the 
+  # migration UI.
+  fields:
+    0:
+      name: id
+      label: 'Unique Id'
+    1:
+      name: title
+      label: 'Title'
+    2:
+      name: image
+      label: 'Image'
+    3:
+      name: description
+      label: 'Description'
+    4:
+      name: psl_type
+      label: 'PSL type'
+    5:
+      name: media_file
+      label: 'Media File'
+    6:
+      name: 3d_media
+      label: '3D Media embed'
+    7:
+      name: video_embed
+      label: 'Video Media embed'
+    8:
+      name: original_artifact
+      label: 'Original Artifact'
+    9:
+      name: manufactured_dates
+      label: 'Manufactured Dates'
+    10:
+      name: manufactured_by
+      label: 'Manufactured by'
+    11:
+      name: subject
+      label: 'Subject'
+    12:
+      name: timeframe
+      label: Timeframe
+    13:
+      name: collection
+      label: Collection
+    14:
+      name: tags
+      label: Tags
+    15:
+      name: citations
+      label: Citations
+    16:
+      name: internal_id
+      label: Internal ID
+
+process:
+  title: title
+  'field_psl_image/target_id':
+    plugin: migration
+    migration: ike_psl_migrations_psl_images
+    source: id
+  'field_psl_image/alt': title
+  field_psl_description: description
+  field_psl_type:
+    plugin: entity_lookup
+    source: psl_type
+    value_key: name
+    bundle_key: vid
+    bundle: psl_type
+    entity_type: taxonomy_term
+  'field_psl_file/target_id':
+    plugin: migration
+    migration: ike_psl_migrations_psl_media_files
+    source: id
+  'field_3d_media/target_id':
+    plugin: migration
+    migration: ike_psl_migrations_psl_3d_media
+    source: id
+  'field_video_media/target_id':
+    plugin: migration
+    migration: ike_psl_migrations_psl_video_embeds
+    source: id
+  field_psl_original:
+    plugin: entity_lookup
+    source: original_artifact
+    value_key: name
+    bundle_key: vid
+    bundle: psl_artifact_original
+    entity_type: taxonomy_term
+  field_psl_manufactured_dates: manufactured_dates
+  field_psl_manufactured_by: manufactured_by
+  field_psl_subject:
+    -
+      plugin: explode
+      source: subject
+      delimiter: '; '
+    -
+      plugin: callback
+      callable: trim
+    -
+      plugin: entity_generate
+      value_key: name
+      bundle_key: vid
+      bundle: resource_subject
+      entity_type: taxonomy_term
+  field_psl_timeframe:
+    -
+      plugin: explode
+      source: timeframe
+      delimiter: '; '
+    -
+      plugin: callback
+      callable: trim
+    -
+      plugin: entity_generate
+      value_key: name
+      bundle_key: vid
+      delimiter: '; '
+      bundle: article_categories
+      entity_type: taxonomy_term
+  field_psl_collection:
+    -
+      plugin: explode
+      source: collection
+      delimiter: '; '
+    -
+      plugin: callback
+      callable: trim
+    -
+      plugin: entity_generate
+      value_key: name
+      bundle_key: vid
+      bundle: resource_collections
+      entity_type: taxonomy_term
+  field_psl_tags:
+    -
+      plugin: explode
+      source: tags
+      delimiter: '; '
+    -
+      plugin: callback
+      callable: trim
+    -
+      plugin: entity_generate
+      value_key: name
+      bundle_key: vid
+      bundle: tags
+  field_psl_citations: citations
+  field_psl_internal_id: internal_id
+  uid:
+    plugin: default_value
+    default_value: 1
+  type:
+    plugin: default_value
+    default_value: primary_source
+
+destination:
+  plugin: entity:node
+migration_dependencies:
+  required:
+    - ike_psl_migrations_psl_images
+    - ike_psl_migrations_psl_convert_teaser_to_media_type
+    - ike_psl_migrations_psl_media_files
+    - ike_psl_migrations_psl_3d_media
+    - ike_psl_migrations_psl_video_embeds
+  optional: {  }

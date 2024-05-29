@@ -1,0 +1,482 @@
+.tooltip {
+  padding: 10px 15px;
+  position: relative;
+  text-align: center;
+}
+.tooltip::after {
+  background-color: #0F2043;
+  border-radius: 10px;
+  color: #fff;
+  display: none;
+  padding: 10px 15px;
+  position: absolute;
+  text-align: center;
+  z-index: 999;
+}
+.tooltip::before {
+  background-color: #0F2043;
+  content: " ";
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 999;
+}
+.tooltip:hover::after {
+  display: block;
+}
+.tooltip:hover::before {
+  display: block;
+}
+.tooltip.top::after {
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 10px));
+}
+.tooltip.top::before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
+.tooltip.bottom::after {
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 10px));
+}
+.tooltip.bottom::before {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+}
+.tooltip.right::after {
+  content: "";
+  top: 0;
+  right: 0;
+  transform: translateX(calc(100% + 10px));
+}
+.tooltip.right::before {
+  top: 50%;
+  right: 0;
+  transform: translate(calc(100% + 5px), -50%) rotate(45deg);
+}
+.tooltip.left::after {
+  content: "";
+  top: 0;
+  left: 0;
+  transform: translateX(calc(-100% - 10px));
+}
+.tooltip.left::before {
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-100% - 5px), -50%) rotate(45deg);
+}
+
+.ikes-soldiers-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 66.66667%;
+  justify-content: center;
+}
+.ikes-soldiers-container header {
+  width: 100%;
+  text-align: center;
+  margin: 30px 0;
+}
+.ikes-soldiers-container footer {
+  display: block;
+  width: 100%;
+}
+.ikes-soldiers-container .views-row {
+  flex: 0 0 0;
+  max-width: 100%;
+  margin-bottom: 32px;
+  position: relative;
+  width: 100%;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+@media (min-width: 576px) {
+  .ikes-soldiers-container .views-row {
+    max-width: 33%;
+    flex: 0 0 66.66667%;
+  }
+}
+@media (min-width: 768px) {
+  .ikes-soldiers-container .views-row {
+    max-width: 25%;
+  }
+}
+.ikes-soldiers-container .views-row.open {
+  margin-bottom: -50px;
+}
+@media (min-width: 768px) {
+  .ikes-soldiers-container .views-row.open {
+    margin-bottom: 32px;
+  }
+}
+.ikes-soldiers-container .views-row.open .ikes-soldier-teaser--wrapper .ikes-soldier-teaser--wrapper-tail {
+  display: block;
+}
+.ikes-soldiers-container .views-row.open .ikes-soldiers-detail--buttons {
+  display: flex;
+}
+
+.ikes-soldier-teaser--wrapper {
+  width: 240px;
+  cursor: pointer;
+}
+@media (min-width: 576px) {
+  .ikes-soldier-teaser--wrapper {
+    width: 185px;
+  }
+}
+.ikes-soldier-teaser--wrapper a:hover {
+  text-decoration: none !important;
+}
+.ikes-soldier-teaser--wrapper .ikes-soldier-teaser--wrapper-tail {
+  display: none;
+  width: 100%;
+  height: 20px;
+  min-height: 60px;
+  content: "";
+  border: 0;
+  z-index: 0;
+  background-color: #C11F2A;
+}
+@media (min-width: 768px) {
+  .ikes-soldier-teaser--wrapper .ikes-soldier-teaser--wrapper-tail {
+    border-left: 92px solid transparent;
+    border-right: 92px solid transparent;
+    border-top: 40px solid #C11F2A;
+    z-index: 1;
+    min-height: 0;
+    background-color: transparent;
+  }
+}
+.ikes-soldier-teaser--wrapper .ikes-soldier-teaser--image {
+  min-height: 242px;
+  width: 100%;
+  background-image: url("/themes/custom/ike/dist/assets/male-soldier.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.ikes-soldier-teaser--wrapper .ikes-soldier-teaser--image.female {
+  background-image: url("/themes/custom/ike/dist/assets/female-soldier.jpg");
+}
+.ikes-soldier-teaser--wrapper .ikes-soldier-teaser--image img {
+  width: 100%;
+  height: auto;
+}
+.ikes-soldier-teaser--wrapper .ikes-soldier-teaser--banner {
+  background-color: #C11F2A;
+  color: #FFF;
+  border-top: solid 2px #FFF;
+  text-align: center;
+  padding: 10px 6px;
+  margin-top: -3px;
+  min-height: 102px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.ikes-soldier-teaser--wrapper .ikes-soldier-teaser--name {
+  font-size: 22px;
+  font-family: "Libre Baskerville";
+  margin-bottom: 6px;
+  line-height: 1.2em;
+}
+.ikes-soldier-teaser--wrapper .ikes-soldier-teaser--rank-branch {
+  font-size: 20px;
+  font-family: "Arial";
+  font-style: italic;
+  line-height: 1.1em;
+}
+
+.ikes-soldiers-detail--buttons {
+  display: none;
+  vertical-align: top;
+  position: relative;
+  top: -68px;
+  justify-content: space-around;
+}
+@media (min-width: 768px) {
+  .ikes-soldiers-detail--buttons {
+    flex-direction: column;
+    top: 0;
+  }
+}
+.ikes-soldiers-detail--buttons .ikes-soldiers-detail--buttons__generic {
+  height: 55px;
+  width: 55px;
+  padding: 1rem;
+  background-color: #FFF;
+  margin: 0 0 1rem;
+  border: 0;
+}
+.ikes-soldiers-detail--buttons .ikes-soldiers-detail--buttons__generic:hover {
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .ikes-soldiers-detail--buttons .ikes-soldiers-detail--buttons__generic {
+    margin: 0 0 1rem 1rem;
+  }
+}
+.ikes-soldiers-detail--buttons .addtoany_share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF;
+  margin: 0;
+  height: 55px;
+  width: 55px;
+}
+.ikes-soldiers-detail--buttons .addtoany_share:hover span {
+  opacity: 1;
+}
+@media (min-width: 768px) {
+  .ikes-soldiers-detail--buttons .addtoany_share {
+    margin: 0 0 1rem 1rem;
+    height: 55px;
+    width: 55px;
+  }
+}
+.ikes-soldiers-detail--buttons .addtoany_share .a2a_svg {
+  position: relative;
+  left: -1px;
+  background-color: unset !important;
+  background: url("../../images/share.svg") no-repeat center center;
+  background-size: 30px 30px !important;
+}
+.ikes-soldiers-detail--buttons .addtoany_share svg {
+  display: none;
+}
+.ikes-soldiers-detail--buttons .teacher-collection .teacher-collection__add {
+  width: 55px;
+  height: 55px;
+}
+@media (min-width: 768px) {
+  .ikes-soldiers-detail--buttons .teacher-collection .teacher-collection__add {
+    float: left;
+    margin: 0 0 0 1rem;
+  }
+}
+.ikes-soldiers-detail--buttons .add-teacher-collection__form-wrapper {
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  right: calc(50% - 50vw);
+  box-shadow: 0 0 4px 0 #606060;
+}
+@media (min-width: 768px) {
+  .ikes-soldiers-detail--buttons .add-teacher-collection__form-wrapper {
+    right: 40px;
+    max-width: 400px;
+  }
+}
+
+.inline {
+  display: inline-block;
+  margin-top: 0;
+}
+
+.nudge {
+  margin-left: -5px;
+}
+
+.soldiers-buttons {
+  margin: 17px 132px 0 0;
+  text-align: center;
+  width: 100%;
+}
+.soldiers-buttons .button {
+  margin-bottom: 12px;
+  font-family: "Libre Baskerville";
+  color: #FFF;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 15px;
+  width: 100%;
+}
+.soldiers-buttons .button:last-of-type {
+  margin-right: 0;
+}
+@media (min-width: 768px) {
+  .soldiers-buttons .button {
+    width: auto;
+    margin-bottom: 32px;
+  }
+}
+@media (min-width: 992px) {
+  .soldiers-buttons {
+    width: auto;
+    text-align: right;
+  }
+}
+.soldiers-buttons .my-collections-button {
+  background-color: #fff;
+  border: 0;
+  padding: 16px 18px 16px 40px;
+  color: #000;
+  background-image: none;
+}
+@media (min-width: 768px) {
+  .soldiers-buttons .my-collections-button {
+    background-image: url("/themes/custom/ike/images/library_books-24px.png");
+    background-repeat: no-repeat;
+    background-position: 10px center;
+  }
+}
+.soldiers-buttons .my-collections-button:hover {
+  color: #000;
+  background-color: #CCCCCC;
+  text-decoration: none;
+}
+.soldiers-buttons .soldiers-youtube-button {
+  background-color: #fff;
+  border: 0;
+  padding: 16px 18px 16px 40px;
+  color: #000;
+  background-image: none;
+}
+@media (min-width: 768px) {
+  .soldiers-buttons .soldiers-youtube-button {
+    background-image: url("/themes/custom/ike/images/youtube-icon-24px.png");
+    background-repeat: no-repeat;
+    background-position: 10px center;
+  }
+}
+.soldiers-buttons .soldiers-youtube-button:hover {
+  color: #000;
+  background-color: #CCCCCC;
+  text-decoration: none;
+}
+
+.soldiers-button-wrap {
+  display: none;
+  text-align: center;
+  margin: 35px 0;
+}
+@media (min-width: 768px) {
+  .soldiers-button-wrap {
+    display: block;
+  }
+}
+.soldiers-button-wrap #see-all-soldiers {
+  font-family: "Libre Baskerville";
+  color: #FFF;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 auto;
+  width: auto;
+  padding: 16px 18px;
+  cursor: pointer;
+}
+
+.soldiers-banner {
+  text-align: center;
+}
+.soldiers-banner h2 {
+  color: #000;
+  font-size: 48px;
+}
+.soldiers-banner .views-row {
+  margin: 15px 0;
+}
+@media (min-width: 992px) {
+  .soldiers-banner .views-row {
+    margin: 0;
+  }
+}
+.soldiers-banner .soldiers-banner--wrap {
+  background-color: #FFF;
+  padding: 12px;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 992px) {
+  .soldiers-banner .soldiers-banner--wrap {
+    flex-wrap: nowrap;
+  }
+}
+.soldiers-banner .soldiers-banner--wrap .soldiers-banner--intro {
+  flex: 0 0 100%;
+}
+@media (min-width: 992px) {
+  .soldiers-banner .soldiers-banner--wrap .soldiers-banner--intro {
+    flex: 0 0 35%;
+    text-align: left;
+    padding: 0 10px;
+  }
+}
+.soldiers-banner .soldiers-banner--wrap .soldiers-banner--intro-logo {
+  width: 200px;
+  height: 180px;
+  background-image: url("../../images/ikes_soldiers_logo_md.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: -65px 0 0 -10px;
+  display: none;
+}
+@media (min-width: 992px) {
+  .soldiers-banner .soldiers-banner--wrap .soldiers-banner--intro-logo {
+    display: block;
+  }
+}
+.soldiers-banner .soldiers-banner--wrap .soldiers-banner--intro-text {
+  color: #000;
+  text-align: center;
+  font-size: 1.3rem;
+}
+@media (min-width: 992px) {
+  .soldiers-banner .soldiers-banner--wrap .soldiers-banner--intro-text {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+}
+.soldiers-banner .soldiers-banner--wrap .soldiers-banner--intro-button {
+  padding: 10px 20px;
+  border: 0;
+  margin: 16px 0;
+  cursor: pointer;
+}
+.soldiers-banner .soldiers-banner--wrap .soldiers-banner--results {
+  display: flex;
+  flex: 0 0 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+@media (min-width: 992px) {
+  .soldiers-banner .soldiers-banner--wrap .soldiers-banner--results {
+    justify-content: space-between;
+    flex: 0 0 65%;
+    flex-wrap: nowrap;
+  }
+}
+
+.page-ikes-soldiers .node__component-page {
+  background-color: #000;
+}
+.page-ikes-soldiers .pager {
+  display: block;
+  width: 100%;
+}
+.page-ikes-soldiers .pager .pager__item a {
+  font-family: "Libre Baskerville";
+  color: #000;
+}
+.page-ikes-soldiers .pager .pager__item a:hover {
+  background-color: #CCCCCC;
+}
+.page-ikes-soldiers .pager .pager__item.is-active a {
+  color: #FFF !important;
+  background-color: #C11F2A;
+}
+
+.tooltip.top.add-to-collection::after {
+  content: "Add to collection";
+}

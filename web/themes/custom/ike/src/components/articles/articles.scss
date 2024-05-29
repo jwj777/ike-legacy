@@ -1,0 +1,370 @@
+// Import site utilities.
+@import '../../global/utils/init';
+
+// Article detail pages
+.article--detail {
+
+  .block-field-blocknodearticletitle,
+  .block-field-blocknodearticlefield-article-sub-title {
+    position: relative;
+    top: -10px;
+    margin-bottom: 40px;
+
+    span,
+    div {
+      font-family: $header-font-family, serif;
+      font-weight: bold;
+      position: relative;
+      display: block;
+      font-size: 32px;
+      margin: 2rem 0 0;
+      padding-left: 20px;
+      padding-right: 20px;
+      text-align: center;
+      z-index: 9;
+
+      @include breakpoint($md) {
+        font-size: 48px;
+      }
+    }
+  }
+
+  .layout--one-center-region {
+    margin: 30px auto;
+    width: 94%;
+    padding: 0;
+
+    @include breakpoint($xl) {
+      max-width: 1400px;
+    }
+  }
+
+  .field--name-field-article-description {
+    padding: 20px;
+
+    h2,
+    h3 {
+      font-family: $body-font-family;
+      font-weight: $bold-font-weight;
+    }
+
+    h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    img {
+      padding: 5px;
+    }
+
+    article {
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      &.align-left {
+        float: none;
+
+        img {
+          margin: 0 auto;
+          display: block;
+
+          @include breakpoint($md) {
+            margin: 0 12px 12px 0;
+          }
+        }
+
+        @include breakpoint($md) {
+          float: left;
+        }
+      }
+
+      &.align-right {
+        float: none;
+
+        img {
+          margin: 0 auto;
+          display: block;
+
+          @include breakpoint($md) {
+            margin: 12px 0 0 12px;
+          }
+        }
+
+        @include breakpoint($md) {
+          float: right;
+        }
+      }
+
+      .align-center {
+        img {
+          margin: 0 auto;
+          display: block;
+        }
+      }
+    }
+
+    figure {
+      &.align-left {
+        float: none;
+
+        img {
+          margin: 0 auto;
+          display: block;
+
+          @include breakpoint($md) {
+            margin: 0 12px 12px 0;
+          }
+        }
+
+        @include breakpoint($md) {
+          float: left;
+        }
+      }
+
+      &.align-right {
+        float: none;
+
+        img {
+          margin: 0 auto;
+          display: block;
+
+          @include breakpoint($md) {
+            margin: 12px 0 0 12px;
+          }
+        }
+
+        @include breakpoint($md) {
+          float: right;
+        }
+      }
+
+      &.align-center {
+
+        img {
+          display: block;
+          margin: 0 auto 10px;
+        }
+      }
+    }
+
+    figcaption {
+      font-size: $body-font-size-small;
+      font-style: italic;
+      text-align: center;
+      line-height: 1.2em;
+    }
+
+    blockquote {
+      border: 0;
+
+      p {
+        font-family: $font-secondary;
+        color: $color-brand-secondary;
+        font-size: 1.2rem;
+        text-indent: 24px;
+        line-height: 1.4em;
+        padding: 0;
+      }
+    }
+
+    iframe {
+      margin: 0;
+
+      @include breakpoint($md) {
+        margin: 0 24px;
+      }
+    }
+
+    @include breakpoint($lg) {
+      padding: 30px;
+    }
+  }
+}
+
+.view--articles {
+  position: relative;
+
+  header {
+    flex: 1 1 60%;
+    line-height: 1.2em;
+  }
+
+  .view-header {
+    margin: 30px 0 60px;
+  }
+
+  .exposed-filters {
+    flex: 1 1 35%;
+  }
+
+  .views-exposed-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-top: 15px;
+    float: right;
+
+    @include breakpoint($md) {
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: flex-end;
+      float: none;
+    }
+
+    @include breakpoint($xl) {
+      margin-top: 0;
+    }
+
+    input[type='checkbox'] {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      color: $color-black;
+      background-color: $color-white;
+      border: 1px solid $color-brand-primary;
+      border-radius: 4px;
+      appearance: none;
+      outline: 0;
+      cursor: pointer;
+      transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
+
+      &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 0;
+        left: 5px;
+        width: 8px;
+        height: 14px;
+        border-style: solid;
+        border-color: $color-brand-primary;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        opacity: 0;
+      }
+
+      &:checked {
+        color: $color-white;
+        border-color: $color-brand-primary;
+        background-color: $color-white;
+
+        &::before {
+          opacity: 1;
+        }
+
+        ~ label::before {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+      }
+    }
+
+    input[type='submit'] {
+      padding: 6px 8px;
+      margin-top: 10px;
+
+      @include breakpoint($md) {
+        margin-top: 0;
+      }
+    }
+
+    .form-actions {
+      margin-left: 10px;
+    }
+
+    .form-item {
+      margin: 0;
+    }
+
+    .form-checkboxes {
+      margin-top: 10px;
+
+      ul {
+        &:not(.contextual-links) {
+          list-style: none;
+          padding-inline-start: 15px;
+          margin: 0;
+        }
+      }
+
+      li {
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+
+      .option {
+        margin-left: 10px;
+      }
+    }
+
+    .js-form-type-checkbox {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+
+  [data-drupal-selector='edit-secondary'] {
+    margin: 10px 0;
+  }
+
+  .background-image-50-right {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: -10%;
+    left: 0;
+    // background: url('/sites/default/files/2020-05/Dwight_D._Eisenhower%2C_official_Presidential_portrait%402x.png') bottom right no-repeat;
+    background: url('/themes/custom/ike/images/Dwight_D_Eisenhower_official_Presidential_portrait.png') bottom right no-repeat;
+    background-size: 50%;
+    display: none;
+    z-index: -1;
+
+    @include breakpoint($lg) {
+      display: block;
+    }
+
+  }
+
+  .view--ikeslife--inner {
+    margin-bottom: 4rem;
+    max-width: 100%;
+
+    .views-field {
+      padding: 0 15px 30px;
+    }
+
+    .flat-image-text-card-overlay__title {
+      box-shadow: none;
+    }
+
+    .node__article__view_mode_teaser { //sass-lint:disable-line class-name-format
+      background-color: $color-white;
+      box-shadow: 0 -1px 3px 0 $color-gray-606060;
+    }
+  }
+
+  .stylized-title {
+    width: 100%;
+
+    @include breakpoint($lg) {
+      width: 65%;
+    }
+  }
+
+}
+
+.page-early-military,
+.page-general {
+  .view--articles {
+    .background-image-50-right {
+      background-size: 30%;
+      right: 0;
+    }
+  }
+}

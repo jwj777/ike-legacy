@@ -1,0 +1,85 @@
+dependencies:
+  module:
+    - file
+id: ikes_soldiers_wp_migrations_images
+uuid: 2bcec3e7-0a49-4473-87a2-6dca09b91bbb
+migration_tags:
+  - CSV
+migration_group: ikes_soldiers_wp_migrations
+label: Import Images for Ike's Honor Roll Soldiers
+source:
+  constants:
+    source_base_path: /var/www/html/docroot/modules/custom/ikes_soldiers_wp_migrations/files/import/images
+    uri_file: 'public://soldiers_images'
+  plugin: csv
+  track_changes: true
+  path: '/var/www/html/docroot/modules/custom/ikes_soldiers_wp_migrations/files/wp_import.csv'
+  header_offset: 0
+  ids:
+    - id
+  fields:
+    0:
+      name: id
+      label: 'Unique Id'
+    1:
+      name: first_name
+      label: 'First Name'
+    2:
+      name: last_name
+      label: 'Last Name'
+    3:
+      name: suffix
+      label: 'Suffix'
+    4:
+      name: middle
+      label: 'Middle'
+    5:
+      name: gender
+      label: 'Gender'
+    6:
+      name: date_of_birth
+      label: 'Date of Birth'
+    7:
+      name: date_of_death
+      label: 'Date of Death'
+    8:
+      name: birthplace
+      label: 'Birthplace'
+    9:
+      name: image
+      label: 'Image'
+
+process:
+  source_full_path:
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/source_base_path
+        - image
+    -
+      plugin: urlencode
+  uri_file:
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/uri_file
+        - image
+    -
+      plugin: urlencode
+  filename: 
+    plugin: skip_on_empty
+    method: row
+    source: image
+  uri:
+    plugin: file_copy
+    source:
+      - '@source_full_path'
+      - '@uri_file'
+destination:
+  plugin: 'entity:file'
+reuse: true
+migration_dependencies:
+  required: {  }
+  optional: {  }

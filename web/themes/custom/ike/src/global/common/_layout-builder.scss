@@ -1,0 +1,886 @@
+@import '../utils/init';
+
+// Help block styles
+.block-help {
+  margin: 0 $gutter-width 0 ($gutter-width + 8px);
+  padding: $gutter-width $gutter-width $gutter-width ($gutter-width + 10px);
+  color: $color-black;
+  background-color: $color-alabaster;
+  background-image: url('../images/info.svg');
+  background-repeat: no-repeat;
+  background-position: 10px 17px;
+  border-width: 1px 1px 0 0;
+  border-color: $color-light-blue $color-light-blue $color-light-blue transparent;
+  border-bottom-left-radius: 0;
+  box-shadow: -8px 0 0 $color-light-blue;
+
+  p:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+
+// To make the fullscreen loader look better
+.ajax-progress {
+  &.ajax-progress-fullscreen {
+    display: flex;
+    background: rgba(0, 0, 0, 0.75);
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    z-index: 100;
+
+    &::before {
+      content: '';
+      margin: auto;
+      height: 125px;
+      width: 125px;
+      background: none;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 45%;
+      left: 48.5%;
+      height: 50px;
+      width: 50px;
+      border-top: 4px solid $color-white;
+      border-right: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-left: 4px solid $color-white;
+      border-radius: 50%;
+      animation: ajax-spinner 1000ms linear infinite;
+    }
+  }
+
+  &.ajax-progress-throbber {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+
+    .throbber {
+      background: none;
+      height: 26px;
+      width: 26px;
+      border-top: 2px solid $color-dialog-primary;
+      border-right: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+      border-left: 2px solid $color-dialog-primary;
+      border-radius: 50%;
+      animation: ajax-spinner 1000ms linear infinite;
+    }
+  }
+}
+
+.layout-builder-discard-changes {
+  margin: 0 $gutter-width 0 ($gutter-width + 8px);
+  color: $color-light-blue;
+  background-color: $color-alabaster;
+  background-repeat: no-repeat;
+  background-position: 10px 17px;
+  border-width: 1px 1px 0 0;
+  border-color: $color-light-blue $color-light-blue $color-light-blue transparent;
+  border-bottom-left-radius: 0;
+  border-right: 1px solid $color-light-blue;
+  border-bottom: 1px solid $color-light-blue;
+  padding: 10px 10px 20px 35px;
+  box-shadow: -8px 0 0 $color-light-blue;
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  .form-actions {
+    margin-top: 8px;
+
+    > .button--primary {
+      @include ghost-button-mono;
+      display: inline-block;
+      height: 42px;
+    }
+  }
+}
+
+.ui-dialog.ui-dialog-off-canvas {
+  max-width: 525px !important; // sass-lint:disable-line no-important
+  left: unset !important; // sass-lint:disable-line no-important
+  right: 0 !important; // sass-lint:disable-line no-important
+  width: 30% !important; // sass-lint:disable-line no-important
+
+  .ui-dialog-title {
+    max-width: 100%;
+    overflow: visible;
+    white-space: normal;
+    text-overflow: unset;
+  }
+}
+
+.ui-dialog-position-top {
+  .layout-builder__add-block {
+    position: relative;
+    padding-bottom: 60px;
+    max-height: 100vh;
+    overflow-y: scroll;
+  }
+}
+
+#drupal-off-canvas { // sass-lint:disable-line no-ids
+  background-color: $color-alabaster;
+
+  *:not(input[type='checkbox']) {
+    background-color: $color-alabaster;
+  }
+
+  details {
+    background-color: $color-alabaster;
+
+    &.form-wrapper {
+      .container-inline {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+
+        // Some of the off-canvas styling is pretty specific.
+        // There is also a lack of usable class names. Needing to fight it here.
+        > * { //sass-lint:disable-line nesting-depth
+          flex: 1 1 auto;
+        }
+      }
+    }
+
+    &:first-of-type {
+      summary {
+        background-color: #2C8C07 !important; // sass-lint:disable-line no-important
+      }
+    }
+
+    a {
+      font-size: 1rem;
+      color: #0036b1;
+      padding-bottom: 5px;
+      margin: 0 0 35px !important; // sass-lint:disable-line no-important
+
+      &:last-of-type {
+        margin-bottom: 0 !important; // sass-lint:disable-line no-important
+      }
+
+      img {
+        display: block;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  div {
+    &[data-drupal-selector='edit-settings-block-form'] {
+      > .form-wrapper {
+        // Drupal admin CSS is either specific or has very few usable classes. Ugh.
+        &:not(last-child) { //sass-lint:disable-line nesting-depth
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+
+  fieldset {
+    margin: 0;
+    box-shadow: $card-shadow;
+    background: $color-white;
+  }
+
+  form {
+    color: $color-black;
+    background-color: $color-alabaster;
+  }
+
+  input[type='submit'] {
+    &.button {
+      display: block;
+      border-radius: $button-border-radius;
+      padding: $button-padding;
+      margin-left: auto;
+      margin-right: auto;
+
+      &.button--primary {
+        background-color: $color-dialog-primary;
+
+        &:hover {
+          background-color: darken($color-dialog-primary, 5);
+        }
+      }
+
+      &.paragraphs-icon-button {
+        background-color: $color-dialog-secondary;
+        margin-bottom: 0;
+      }
+
+      &.media-library-item__remove {
+        width: auto;
+        background-color: $color-dialog-cancel;
+        color: $color-white;
+      }
+    }
+  }
+
+  input[type='text'] {
+    border: 1px solid $color-gray;
+    background: $color-white;
+    box-shadow: none;
+  }
+
+  input[name*='media-library-update-settings'] {
+    &.button {
+      background-color: $color-dialog-secondary;
+    }
+  }
+
+  label {
+    color: $color-black;
+  }
+
+  span {
+    &.fieldset-legend {
+      color: $color-white;
+      background-color: $color-dialog-secondary;
+      padding: 2px 5px;
+    }
+  }
+
+  table {
+    margin: 0 -20px;
+
+    th {
+      text-align: left;
+      color: $color-alt-black;
+    }
+  }
+
+  thead {
+    h3,
+    h4 {
+      margin: 0;
+    }
+
+    .paragraphs-actions {
+      margin: 0 10px 10px 0;
+    }
+  }
+
+  td {
+    &.inline-entity-form-block_content-label { //sass-lint:disable-line class-name-format
+      display: none;
+    }
+
+    &:first-child {
+      width: 50px;
+    }
+
+    &:hover {
+      .paragraphs-collapsed-description {
+        &::after {
+          background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, $color-alabaster 100%);
+        }
+      }
+    }
+
+    .form-item {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  tr {
+    &:hover {
+      td {
+        &:not(.ief-row-entity) {
+          background: $color-gray-606060;
+        }
+      }
+    }
+  }
+
+  .block-categories {
+    li {
+      width: auto;
+      background-color: $color-alabaster;
+      color: $color-black;
+      border: 0;
+
+      &:first-child {
+        margin-top: 0.5rem;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+
+      &:hover {
+        background-color: $color-black;
+        color: $color-white;
+        transition: none;
+
+        > * {
+          color: $color-white;
+          transition: none;
+        }
+      }
+
+      > * {
+        display: block;
+        padding: $button-padding;
+        color: $color-brand-primary;
+        background: none;
+        text-decoration: none;
+        transition: none;
+
+        &:hover {
+          text-decoration: underline;
+          transition: none;
+        }
+      }
+    }
+
+    ul {
+      background-color: $color-alabaster;
+    }
+  }
+
+  // Fixes for color field in the off-canvas menu.
+  .color_field_widget_box__square, // sass-lint:disable-line class-name-format
+  .color_field_widget_box__square--transparent { // sass-lint:disable-line class-name-format
+    box-shadow: 0 0 1px $color-black;
+    margin: 5px;
+
+    &.active,
+    &:hover {
+      box-shadow: none;
+      border: 1px solid $color-black;
+      height: 16px;
+      width: 16px;
+      transform: scale(1.75);
+    }
+  }
+
+  .dialog-cancel {
+    display: block;
+    width: 100%;
+    padding: 4px 20px;
+    background: none;
+    font-size: 14px;
+    color: $color-dialog-cancel;
+  }
+
+  .field-description {
+    color: $color-black;
+    margin: 1rem 0;
+  }
+
+  .fieldset-wrapper {
+    padding: 0 1rem;
+  }
+
+  .form-item-settings-admin-label {
+    label {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .form-item {
+    .description {
+      color: $color-black;
+      margin: 0.5rem 0;
+    }
+
+    div {
+      &.text-full {
+        font-size: 14px;
+        padding: 10px;
+        background-color: $color-gray-606060;
+        color: $color-white;
+      }
+    }
+
+    &.js-form-type-textfield {
+      margin-bottom: 0;
+    }
+  }
+
+  .form-text {
+    width: 100%;
+  }
+
+  .form-url {
+    max-width: 400px;
+  }
+
+  .inline-block-create-button {
+    background-color: $color-dialog-primary;
+    color: $color-white;
+    text-decoration: none;
+
+    &:hover {
+      background-color: darken($color-dialog-primary, 10);
+    }
+  }
+
+  .inline-block-list {
+    background: $color-alabaster;
+
+    + a {
+      padding: 8px 20px;
+      background-color: $color-dialog-cancel;
+      color: $color-white;
+      text-decoration: none;
+
+      &:hover {
+        background-color: darken($color-dialog-cancel, 10);
+      }
+
+      &::before {
+        content: '<';
+        display: inline-block;
+        margin-right: 0.5rem;
+        color: $color-white;
+      }
+    }
+
+    * {
+      background: inherit;
+    }
+  }
+
+  .inline-block-list__item {
+    background: none;
+    color: $color-alt-black;
+    cursor: pointer;
+    transition: none;
+
+    &:hover {
+      background: $color-alt-black;
+      color: $color-white;
+      transition: none;
+    }
+  }
+
+  .ief-entity-table {
+    margin-bottom: 1rem;
+  }
+
+  .js-form-type-textarea {
+    margin-bottom: 0;
+  }
+
+  .layout-selection {
+    * {
+      background: $color-alabaster;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: none;
+
+        svg + div {
+          text-decoration: underline;
+        }
+      }
+
+      svg + div {
+        // Yay for classless divs.
+        color: $color-black;
+      }
+    }
+  }
+
+  .layout-builder__selection {
+    li {
+      > a {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: stretch;
+        text-decoration: none;
+      }
+
+      img {
+        max-height: 90px;
+      }
+
+      div {
+        margin: auto 0;
+      }
+    }
+
+    .layout-icon,
+    img {
+      margin-right: 1rem;
+      min-width: 60px;
+    }
+  }
+
+  .layout-builder__add-block {
+    padding-bottom: 4rem;
+  }
+
+  .layout-builder-add-block,
+  .layout-builder-configure-block,
+  .layout-builder-configure-section {
+    *:not(input[type='checkbox']) {
+      background: $color-alabaster;
+    }
+
+    .filter-guidelines {
+      * {
+        color: $color-alt-black;
+      }
+    }
+
+    .form-item-settings-admin-label {
+      color: $color-black;
+    }
+
+    .layout-builder__layout-type {
+      margin: 0 -20px;
+      padding: 15px;
+      background-color: $color-brand-primary !important; // sass-lint:disable-line no-important
+      color: $color-white;
+
+      span {
+        background: none;
+        color: $color-white;
+      }
+    }
+  }
+
+  .paragraphs-content {
+    padding: 10px;
+    margin: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.33);
+    background: $color-white;
+
+    fieldset {
+      box-shadow: none;
+      border: 0;
+    }
+
+    label {
+      font-size: 0.9rem;
+    }
+
+    span {
+      &.fieldset-legend {
+        padding: 5px 8px;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .media-library-item__preview {
+    > div {
+      display: flex;
+    }
+
+    img {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+
+  .media-library-widget__toggle-weight {
+    top: 10px;
+  }
+
+  .media-library-open-button,
+  .media-library-add-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: $button-padding;
+    background-color: $color-dialog-primary;
+    color: $color-white;
+    border-radius: $button-border-radius;
+  }
+
+  .media-library-add-button {
+    margin-left: 1rem;
+  }
+
+  .paragraphs-collapsed-description {
+    text-align: right;
+
+    &::after {
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, $color-alabaster 100%);
+    }
+  }
+
+  .paragraph-type-label {
+    color: $color-alt-black;
+  }
+}
+
+/**
+ * Layout Builder in-page elements
+ */
+#layout-builder { //sass-lint:disable-line no-ids
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0 $gutter-width;
+  border: 0;
+
+  .layout-builder__link--remove,
+  .layout-builder__link--configure {
+    position: relative;
+    z-index: 50;
+  }
+
+  .js-layout-builder-content-preview-placeholder-label {
+    color: $color-black;
+    padding: 15px 0;
+  }
+
+  .layout-builder-block {
+    padding: 0;
+  }
+
+  // Make sure contextual links menu appear above all elements.
+  .contextual-links {
+    z-index: 45;
+  }
+
+  // Media contextual links we don't wanna show.
+  [data-contextual-id*='media:media'] {
+    &.contextual {
+      display: none !important; // sass-lint:disable-line no-important
+    }
+  }
+
+  // Layout builder highlighting
+  [data-layout-builder-highlight-id] {
+    &.layout-builder-highlight {
+      background-color: $color-white;
+      z-index: 40;
+      box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.75);
+    }
+  }
+
+  /* Menu Content Item styles */
+  .menu-item {
+    // Immediate a tags should be slightly styled at least.
+    > a {
+      display: inline-block;
+      position: relative;
+      padding: 32px 0;
+      color: $color-gray;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      &::after {
+        content: attr(data-subtext);
+        display: block;
+        font-style: italic;
+        font-weight: 200;
+        text-transform: lowercase;
+        font-size: 12px;
+      }
+    }
+
+    &.menu-item--expanded {
+      > .menu_link_content { // sass-lint:disable-line class-name-format
+        position: relative;
+        margin-left: 60px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 3rem;
+          left: 0;
+          height: calc(100% - 3rem);
+          width: 30px;
+          background: transparent;
+          border-top: 1px solid $color-black;
+          border-left: 1px solid $color-black;
+          border-bottom: 1px solid $color-black;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -30px;
+          height: 50%;
+          width: 30px;
+          background: transparent;
+          border-left: 1px solid $color-black;
+          border-bottom: 1px solid $color-black;
+        }
+
+        > * {
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+}
+
+.layout-builder__add-block,
+.layout-builder__update-block,
+.layout-builder__add-section,
+.layout-builder__update-section {
+  details {
+    margin: 15px 0;
+    box-shadow: $card-shadow;
+  }
+
+  .filter-guidelines {
+    display: none;
+  }
+}
+
+.layout-builder__region {
+  position: relative;
+}
+
+.layout-builder__message {
+  padding: 0 $gutter-width;
+
+  div[data-drupal-messages] {
+    padding: 0;
+  }
+}
+
+.layout-builder-form {
+  label {
+    &[for='layout-builder-content-preview'] {
+      color: $color-black;
+    }
+  }
+
+  .field--name-moderation-state {
+    padding: 8px 10px;
+    margin: 0 16px;
+    border: 1px solid $color-gray;
+  }
+
+  .form-actions {
+    margin: 0 $gutter-width 0 ($gutter-width + 8px);
+    padding: 0 $gutter-width $gutter-width ($gutter-width + 10px);
+    background-color: $color-alabaster;
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    border-color: $color-light-blue $color-light-blue $color-light-blue transparent;
+    border-top-left-radius: 0;
+    box-shadow: -8px 0 0 $color-light-blue;
+
+    input[type='submit'] {
+      @include ghost-button-mono;
+      font-size: 14px;
+    }
+  }
+
+  .form-item-advanced {
+    margin: 0 $gutter-width;
+  }
+
+  .form-item-revision {
+    .description {
+      font-weight: 500;
+      margin-left: 8px;
+    }
+  }
+
+  .form-item-toggle-content-preview {
+    margin-top: 16px;
+  }
+
+  .js-form-type-checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .js-form-type-vertical-tabs {
+    padding: 0 25px;
+  }
+
+  .vertical-tabs__panes {
+    padding: $gutter-width;
+    background-color: $color-white-opacity;
+    color: $color-black;
+
+    label {
+      color: $color-black;
+    }
+  }
+
+  input[type='checkbox'] {
+    -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
+    -moz-appearance: none; // sass-lint:disable-line no-vendor-prefixes
+    appearance: none;
+    border: 1px solid #8e929c;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: #fff no-repeat 50% 50%;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='10' viewBox='0 0 12 10'xmlns='….2045 .637365L10.0234 .82765L4.18182 6.96572Z' fill='white' /%3E%3C/svg%3E"); // sass-lint:disable-line quotes
+    background-size: 100% 100%;
+    border-radius: 2px;
+    box-shadow: 0 0 0 4px transparent;
+    vertical-align: text-bottom;
+
+    &:checked {
+      background-color: #003cc5;
+      border-color: #003cc5;
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.7949219,7.095703 6.1816406,9.601563 12.205078,3.2753906 13.689453,4.8359375 6.1816406,12.724609 2.3105469,8.65625 Z' fill='white'/%3E%3C/svg%3E"); // sass-lint:disable-line quotes
+    }
+
+    & ~ label {
+      margin-left: 5px;
+    }
+  }
+}
+
+.layout {
+  // hiding footer title on sponsors
+  .views-element-container {
+    .footer--section-title {
+      display: none;
+    }
+  }
+}
+
+@keyframes three-dots-loader {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+
+@keyframes ajax-spinner {
+  0% {
+    transform: rotateZ(0);
+  }
+
+  100% {
+    transform: rotateZ(720deg);
+  }
+}
+
+#drupal-modal { //sass-lint:disable-line no-ids
+  min-height: 250px !important; //sass-lint:disable-line no-important
+}

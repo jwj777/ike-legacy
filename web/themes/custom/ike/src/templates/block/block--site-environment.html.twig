@@ -1,0 +1,18 @@
+{%
+  set classes = [
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-' ~ plugin_id|clean_class,
+  'site-environment'
+]
+%}
+{{ attach_library('ike/site-environment') }}
+
+<div{{ attributes.addClass(classes) }}>
+    <div class="site-environment__title-wrapper flex-container">
+      <h2 class="site-environment__title"></h2>
+        <div class="site-environment__body">
+          {{ content }}
+        </div>
+    </div>
+</div>

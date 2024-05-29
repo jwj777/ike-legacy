@@ -1,0 +1,128 @@
+uuid: 2bcec3e7-0a49-4473-87a2-6dca09b91hhh
+id: ikes_soldiers_wp_migrations_convert_docs_to_media_type
+label: Convert Imported WP Soldier Documents files to Media
+migration_group: ikes_soldiers_wp_migrations
+
+source:
+  plugin: 'csv'
+  # Full path to the file.
+  path: '/var/www/html/docroot/modules/custom/ikes_soldiers_wp_migrations/files/wp_import.csv'
+  # Column delimiter. Comma (,) by default.
+  delimiter: ','
+  # Field enclosure. Double quotation marks (") by default.
+  enclosure: '"'
+  # The row to be used as the CSV header (indexed from 0), 
+  # or null if there is no header row.
+  header_offset: 0
+  # The column(s) to use as a key. Each column specified will 
+  # create an index in the migration table and too many columns 
+  # may throw an index size error.
+  ids:
+    - id
+  # Here we identify the columns of interest in the source file. 
+  # Each numeric key is the 0-based index of the column. 
+  # For each column, the key below is the field name assigned to 
+  # the data on import, to be used in field mappings below. 
+  # The label value is a user-friendly string for display by the 
+  # migration UI.
+  fields:
+    0:
+      name: id
+      label: 'Unique Id'
+    1:
+      name: first_name
+      label: 'First Name'
+    2:
+      name: last_name
+      label: 'Last Name'
+    3:
+      name: suffix
+      label: 'Suffix'
+    4:
+      name: middle
+      label: 'Middle'
+    5:
+      name: gender
+      label: 'Gender'
+    6:
+      name: date_of_birth
+      label: 'Date of Birth'
+    7:
+      name: date_of_death
+      label: 'Date of Death'
+    8:
+      name: birthplace
+      label: 'Birthplace'
+    9:
+      name: image
+      label: 'Image'
+    10:
+      name: primary_source_type
+      label: 'Primary Source type'
+    11:
+      name: branch
+      label: 'Branch of Service'
+    12:
+      name: unit
+      label: 'Unit'
+    13:
+      name: theater
+      label: 'Theater of Operation'
+    14:
+      name: rank
+      label: 'Highest Rank'
+    15:
+      name: enlisted_commissioned_date
+      label: 'Enlisted/Commissioned Date'
+    16:
+      name: discharge_date
+      label: 'Discharge Date'
+    17:
+      name: k_i_a
+      label: 'Killed in Action'
+    18:
+      name: p_o_w
+      label: 'Prisoner of War'
+    19:
+      name: bio
+      label: 'Biographical Information'
+    20:
+      name: email
+      label: 'Email Address'
+    21:
+      name: honored_by
+      label: 'Honored by'
+    22:
+      name: honors
+      label: 'Honors'
+    23:
+      name: video
+      label: 'Video Embed'
+    24:
+      name: docs
+      label: 'Documents'
+
+process:
+  bundle:
+    plugin: default_value
+    default_value: document
+  'field_media_document/target_id':
+  -
+    plugin: migration_lookup
+    migration: ikes_soldiers_wp_migrations_docs
+    source: id
+  -
+    plugin: skip_on_empty
+    method: row
+  'field_media_document/alt': title
+  name: title
+  uid:
+    plugin: default_value
+    default_value: 1
+
+destination:
+  plugin: entity:media
+reuse: true
+migration_dependencies:
+  required: {  }
+  optional: {  }

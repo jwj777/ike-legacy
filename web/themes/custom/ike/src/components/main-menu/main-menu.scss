@@ -1,0 +1,159 @@
+@import '../../global/utils/init';
+
+.site-main-menu {
+  max-height: 0;
+  overflow: hidden;
+  flex: 1 1 100%;
+  margin-top: 15px;
+
+  @include breakpoint($md) {
+    overflow: visible;
+    flex: 0 0 60%;
+    max-height: none;
+    margin-top: 0;
+    margin-left: 15px;
+  }
+
+  @include breakpoint($lg) {
+    flex: 0 0 50%;
+  }
+
+  &.open {
+    max-height: 100vh;
+    width: 100%;
+    overflow: visible;
+  }
+
+  ul,
+  ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .menu-item {
+    @include breakpoint($md) {
+      text-align: center;
+    }
+
+    a,
+    span {
+      background-color: $color-brand-primary;
+      color: $color-white;
+      padding: 12px 20px;
+      font-size: 28px;
+      font-family: $font-secondary;
+      display: block;
+      cursor: pointer;
+
+      @include breakpoint($md) {
+        padding: 10px;
+        font-size: 16px;
+        font-family: $body-font-family;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &:hover {
+      > a,
+      > span {
+        background-color: $color-brand-secondary;
+        // color: $color-white;
+      }
+
+      .menu_link_content { //sass-lint:disable-line class-name-format
+        max-height: 100vh;
+      }
+    }
+  }
+
+  .menu-level-0 {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin: 0 -15px;
+    border-top: 2px solid $color-brand-secondary;
+
+    @include breakpoint($md) {
+      flex-direction: row;
+      margin: 0;
+      border-top: 0;
+    }
+
+    > .menu-item {
+      flex: 1 1 auto;
+
+      > a,
+      > span {
+        @include breakpoint($md) {
+          // border-bottom: 2px solid $color-brand-secondary;
+        }
+      }
+    }
+  }
+
+  .menu_link_content { //sass-lint:disable-line class-name-format
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+
+    @include breakpoint($md) {
+      position: absolute;
+      z-index: 5;
+      display: flex;
+      width: auto;
+    }
+
+    > .menu {
+      @include breakpoint($md) {
+        background-color: $color-brand-primary;
+      }
+
+      > .menu-item {
+        flex: 1 1 auto;
+
+        @include breakpoint($md) {
+          text-align: left;
+        }
+      }
+
+      a {
+        padding-left: 40px;
+        white-space: nowrap;
+
+        @include breakpoint($md) {
+          padding-left: 20px;
+        }
+      }
+    }
+
+    .field--name-field-menu-dropdown-text {
+      background-color: $color-brand-primary;
+      color: $color-white;
+
+      @include breakpoint($md) {
+        background-color: transparentize($color: $color-brand-primary, $amount: 0.56);
+      }
+
+      .field__item {
+        padding: 10px 40px;
+
+        @include breakpoint($md) {
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+  .menu-item:last-child {
+    .menu_link_content { //sass-lint:disable-line class-name-format
+      @include breakpoint($md) {
+        right: 0;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,112 @@
+// Import site utilities.
+@import '../../global/utils/init';
+
+.psl-list-view-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 66.66667%;
+  margin-top: 1rem;
+
+  .views-row {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 32px;
+    position: relative;
+    width: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
+
+    @include breakpoint($lg) {
+      flex: 0 0 66.66667%;
+      max-width: 33.333%;
+    }
+  }
+
+  .views-field-field-psl-image {
+    border: 1px solid #808080;
+    border-bottom: 0;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .views-field-field-3d-media {
+    border: 1px solid #808080;
+    border-bottom: 0;
+
+    .field--name-field-media-embed-3d-image {
+
+      &.field--type-text-long {
+        display: none;
+      }
+    }
+  }
+
+  .field--name-field-3d-preview-image {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .views-field-title {
+    background-color: #0f2043;
+    height: auto;
+    min-height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #808080;
+    border-top: 0;
+    padding: 6px;
+    text-align: center;
+
+    a {
+      color: $color-white;
+      font-family: 'Libre Baskerville';
+      font-size: 1.25rem;
+      line-height: 1.2em;
+    }
+  }
+}
+
+.my-collections-button {
+  display: none;
+  margin: 0 15px 15px 0;
+  vertical-align: top;
+  position: absolute;
+  right: 120px;
+  background-color: #fff;
+  border: 0;
+  padding: 16px 18px 16px 40px;
+  color: #000;
+  background-image: url('/themes/custom/ike/images/library_books-24px.png');
+  background-repeat: no-repeat;
+  background-position: 10px center;
+
+  &:hover {
+    color: #000;
+    text-decoration: none;
+  }
+
+  @include breakpoint($lg) {
+    display: inline-block;
+  }
+}
+
+.block-spacer {
+  z-index: -1;
+}
+
+//Soldiers Block
+.psl-soldiers-block-title {
+  margin-bottom: -20px;
+  font-size: 32px;
+  @include breakpoint($md) {
+    font-size: 48px;
+  }
+}

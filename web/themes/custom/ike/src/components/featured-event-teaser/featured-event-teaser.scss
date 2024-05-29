@@ -1,0 +1,70 @@
+// Featured Event Teaser
+//
+// This is the Featured Event Teaser component. It's an example.
+//
+// Markup: featured-event-teaser.twig
+//
+// Style guide: Components.featured-event-teaser
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.featured-events {
+  padding-top: 40px;
+  padding-bottom: 20px;
+
+  @include breakpoint($md) {
+    padding-bottom: 60px;
+  }
+
+  @include breakpoint($xl) {
+    padding-top: 20px;
+  }
+
+  .featured-events__events {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -20px;
+    margin-right: -20px;
+
+    .views-row {
+      width: 100%;
+      min-width: 100%;
+
+      @include breakpoint($md) {
+        width: 50%;
+        min-width: 50%;
+      }
+
+      @include breakpoint($lg) {
+        width: 25%;
+        min-width: 25%;
+      }
+
+      @include breakpoint($xl) {
+        width: 20%;
+        min-width: 20%;
+      }
+    }
+  }
+}
+
+.featured-event-teaser {
+  .flat-image-text-card {
+    padding: 20px;
+  }
+
+  .flat-image-text-card__image {
+    height: 170px;
+    width: 100%;
+
+    .field__item,
+    img {
+      height: 100%;
+    }
+  }
+
+  .flat-image-text-card__body {
+    font-style: italic;
+  }
+}

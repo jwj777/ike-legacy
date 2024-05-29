@@ -1,0 +1,20 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'flex-container'
+  ]
+%}
+{% if logged_in %}
+  <div{{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+    {{ title_suffix }}
+    <div class="teacher-collection__messages hidden"></div>
+    {% set info = {
+        "flags": content.flags
+      } %}
+
+    {% include "@ike/teacher-collections/add-teacher-collection.twig" with info %}
+  </div>
+{% endif %}

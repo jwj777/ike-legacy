@@ -1,0 +1,140 @@
+.tooltip {
+  padding: 10px 15px;
+  position: relative;
+  text-align: center;
+}
+.tooltip::after {
+  background-color: #0F2043;
+  border-radius: 10px;
+  color: #fff;
+  display: none;
+  padding: 10px 15px;
+  position: absolute;
+  text-align: center;
+  z-index: 999;
+}
+.tooltip::before {
+  background-color: #0F2043;
+  content: " ";
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 999;
+}
+.tooltip:hover::after {
+  display: block;
+}
+.tooltip:hover::before {
+  display: block;
+}
+.tooltip.top::after {
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 10px));
+}
+.tooltip.top::before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
+.tooltip.bottom::after {
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 10px));
+}
+.tooltip.bottom::before {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+}
+.tooltip.right::after {
+  content: "";
+  top: 0;
+  right: 0;
+  transform: translateX(calc(100% + 10px));
+}
+.tooltip.right::before {
+  top: 50%;
+  right: 0;
+  transform: translate(calc(100% + 5px), -50%) rotate(45deg);
+}
+.tooltip.left::after {
+  content: "";
+  top: 0;
+  left: 0;
+  transform: translateX(calc(-100% - 10px));
+}
+.tooltip.left::before {
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-100% - 5px), -50%) rotate(45deg);
+}
+
+.ikes-soldiers-home-teaser {
+  display: inline-block;
+  color: #FFF;
+  background-color: #0F2043;
+  max-width: 370px;
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .ikes-soldiers-home-teaser {
+    margin-bottom: 0;
+  }
+}
+.ikes-soldiers-home-teaser .ikes-soldiers-home-teaser__title {
+  margin-bottom: 5px;
+}
+.ikes-soldiers-home-teaser p {
+  margin: 0;
+  font-size: 14px;
+  font-style: italic;
+}
+.ikes-soldiers-home-teaser .field--name-field-ikes-soldiers-image {
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+.ikes-soldiers-home-teaser .field--name-field-ikes-soldiers-image img {
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(40%);
+  transition: transform 0.5s ease, filter 0.5s ease;
+  background-color: #000;
+}
+.ikes-soldiers-home-teaser .video-embed-field-launch-modal {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+.ikes-soldiers-home-teaser .video-embed-field-launch-modal::before {
+  content: url("../assets/yt-play.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 60px;
+  width: 60px;
+  transform: translate(-50%, -50%);
+}
+.ikes-soldiers-home-teaser .ikes-soldiers-home-teaser__text-content {
+  padding: 8px 16px;
+}
+.ikes-soldiers-home-teaser .ikes-soldiers-home-teaser--link {
+  color: #FFF;
+}
+.ikes-soldiers-home-teaser .ikes-soldiers-home-teaser--link:hover {
+  text-decoration: none;
+}
+.ikes-soldiers-home-teaser .ikes-soldiers-home-teaser--link:hover h2 {
+  text-decoration: underline;
+}
+.ikes-soldiers-home-teaser:hover .field--name-field-ikes-soldiers-image img {
+  filter: grayscale(0);
+  transform: scale(1.15);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}

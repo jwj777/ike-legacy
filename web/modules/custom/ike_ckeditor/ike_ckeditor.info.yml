@@ -1,0 +1,5 @@
+name: 'IKE CKeditor Enhancements'
+type: module
+description: 'Enhancements for the Eisenhower Foundation CKeditor'
+core_version_requirement: ^8 || ^9 || ^10
+package: 'Custom'

@@ -1,0 +1,190 @@
+// Import site utilities.
+@import '../../global/utils/init';
+
+.block__memorial-landing {
+  //max-width: 467px;
+  background-color: $color-white;
+  padding: 2rem 0;
+  margin-bottom: 1rem;
+
+  .memorial-landing {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .map-embed-container {
+    border: 2px solid #0F2043;
+    margin: 0 2rem;
+
+    .map-embed-sub {
+      width: 100%;
+      height: 3rem;
+      background-color: #0F2043;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        color: $color-white;
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.25rem;
+        text-decoration: underline;
+
+        &:hover {
+          color: #C11F2A;
+        }
+      }
+    }
+  }
+
+  .title-container {
+    margin: 2rem 0.75rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    h2 {
+      color: #0F2043;
+    }
+  }
+
+  .star-row {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 1rem;
+    }
+
+  .star {
+    &::before {
+      content: '\2605';
+      color: #C11F2A;
+      font-size: 2rem;
+    }
+  }
+
+  .address-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin-bottom: 1rem;
+
+    p {
+      color: #0F2043;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.25rem;
+      font-weight: bold;
+
+      margin-bottom: 0;
+    }
+  }
+
+  .hours-container {
+    color: #0F2043;
+    font-family: 'Libre Baskerville', serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+
+    .hours-title {
+      margin-right: 0.5rem;
+
+      p {
+        color: #0F2043;
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .donors-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 3rem;
+
+    h2 {
+      margin: 0 2rem;
+      text-align: center;
+
+      a {
+        color: #0F2043;
+
+        &:hover {
+          color: #C11F2A;
+        }
+      }
+    }
+  }
+
+  .audio-link {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+
+    .star {
+      margin: 0 2rem;
+    }
+
+    h2 {
+      //margin: 0 2rem;
+      text-align: center;
+
+      a {
+        color: #0F2043;
+
+        &:hover {
+          color: #C11F2A;
+        }
+      }
+    }
+  }
+}
+
+
+.memorial-image-blocks {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  .image-top-row,
+  .image-bottom-row {
+    display: flex;
+    justify-content: center;
+  }
+
+  .image-top-row {
+    a:nth-of-type(1) {
+      margin: 0 1rem 1rem 0;
+    }
+
+    a:nth-of-type(2) {
+      margin: 0 0 1rem 1rem;
+    }
+  }
+
+  .image-bottom-row {
+    a:nth-of-type(1) {
+      margin: 1rem 1rem 0 0;
+    }
+
+    a:nth-of-type(2) {
+      margin: 1rem 0 0 1rem;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    opacity: 100%;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 80%;
+    }
+  }
+}

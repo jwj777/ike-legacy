@@ -1,0 +1,7 @@
+ike_enhancements.migrate_donors:
+  path: '/admin/migrate_donor'
+  defaults:
+    _form: '\Drupal\ike_enhancements\Form\DonorForm'
+    _title: 'Migrate Donors'
+  requirements:
+    _role: 'administrator'

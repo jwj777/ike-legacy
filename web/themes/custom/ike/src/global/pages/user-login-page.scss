@@ -1,0 +1,130 @@
+@import '../utils/init';
+
+.user-login-content {
+  padding-top: 150px;
+
+  .user-login-form,
+  .user-form,
+  .user-pass,
+  .user-pass-reset {
+    max-width: 800px;
+    padding: 15px;
+    margin: 0 auto 30px;
+    background-color: $color-white;
+    box-shadow: 0 2px 4px 4px $color-box-shadow;
+    color: $color-black;
+
+    .form-item {
+      margin-bottom: 20px;
+    }
+
+    label {
+      color: $color-black;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .description {
+      color: $color-gray;
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    textarea {
+      width: 100%;
+    }
+  }
+
+  .user-login-form {
+    @include font-libre-baskerville;
+    margin-bottom: 4rem;
+    padding: 2rem;
+
+    .description {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+  }
+
+  .form-submit {
+    @include font-libre-baskerville;
+    background-color: $color-brand-secondary;
+    border: 0;
+    color: $color-white;
+    display: inline-block;
+    font-size: 16px;
+    padding: 14px 18px;
+    text-decoration: none;
+  }
+
+  .block-local-tasks-block {
+    margin: 0 auto 30px;
+    max-width: 800px;
+
+    a {
+      @include font-libre-baskerville;
+    }
+
+    > ul {
+      padding: 0 !important; //sass-lint:disable-line no-important
+    }
+  }
+
+  .user-register-form  {
+    display: flex;
+    flex-direction: column;
+
+    #edit-account { //sass-lint:disable-line no-ids
+      order: 0;
+    }
+
+    .field--name-field-first-name {
+      order: 1;
+    }
+
+    .field--name-field-last-name {
+      order: 2;
+    }
+
+    .field--name-field-classroom-description {
+      order: 3;
+    }
+
+    #edit-timezone { //sass-lint:disable-line no-ids
+      order: 4;
+    }
+
+    .captcha {
+      order: 5;
+      margin: 10px 0;
+    }
+
+    .form-actions {
+      order: 6;
+    }
+  }
+
+  .user-pass-reset {
+    .form-item {
+      margin: 10px 0;
+    }
+  }
+
+  .filter-guidelines {
+    color: $color-gray;
+    font-size: 14px;
+    margin: 5px 0;
+  }
+
+  #edit-timezone { //sass-lint:disable-line no-ids
+    summary {
+      display: none;
+    }
+  }
+
+  // hide fields on register form we don't care about
+  .field--name-user-picture,
+  #edit-contact { //sass-lint:disable-line no-ids
+    display: none;
+  }
+}

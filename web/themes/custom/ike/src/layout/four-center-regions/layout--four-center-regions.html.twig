@@ -1,0 +1,73 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a one-column layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+  'layout',
+  'layout--four-center-regions',
+  settings.margin_top,
+  settings.margin_bottom,
+  settings.layout_width,
+  settings.remove_top_bottom_padding ? 'remove-padding',
+  settings.layout_color
+]
+%}
+
+{% set title_classes = [
+  'layout__region',
+  'layout__region--title',
+] %}
+
+{{ attach_library('ike/four-center-regions') }}
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    {% if content.title %}
+      <div {{ region_attributes.title.addClass(title_classes) }}>
+        {{ content.title }}
+      </div>
+    {% endif %}
+
+    {% set inner_attributes = create_attribute() %}
+    {% set inner_classes = [
+      'layout--inner',
+      'flex-container',
+      'flex-dir-column',
+      'lg-flex-dir-row',
+      'flex-jc-center',
+      settings.remove_top_bottom_padding ? 'remove-padding',
+    ] %}
+
+    {% if settings.slider_on_mobile %}
+      {% set inner_classes = inner_classes|merge(['slider', 'mobile-only', 'slides-show-1', 'center-mode']) %}
+    {% endif %}
+
+    <div {{ inner_attributes.addClass(inner_classes) }}>
+      <div {{ region_attributes.left.addClass('layout__region', 'layout__region--left', 'flex-1-1', 'lg-flex-1-4', 'flex-grow-0', settings.left_region_color) }}>
+        {{ content.left }}
+      </div>
+
+      <div {{ region_attributes.center_left.addClass('layout__region', 'layout__region--center-left', 'flex-1-1', 'lg-flex-1-4', 'flex-grow-0', settings.left_center_region_color) }}>
+        {{ content.center_left }}
+      </div>
+
+      <div {{ region_attributes.center_right.addClass('layout__region', 'layout__region--center-left', 'flex-1-1', 'lg-flex-1-4', 'flex-grow-0', settings.right_center_region_color) }}>
+        {{ content.center_right }}
+      </div>
+
+      <div {{ region_attributes.right.addClass('layout__region', 'layout__region--right', 'flex-1-1', 'lg-flex-1-4', 'flex-grow-0', settings.right_region_color) }}>
+        {{ content.right }}
+      </div>
+    </div>
+
+
+  </div>
+{% endif %}

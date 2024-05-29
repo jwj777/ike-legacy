@@ -1,0 +1,71 @@
+// Youtube Video Block
+//
+// This is the Youtube Video Block component. It's an example.
+//
+// Markup: youtube-video-block.twig
+//
+// Style guide: Components.youtube-video-block
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.youtube-video-block {
+  display: inline-block;
+  color: $color-white;
+  background-color: $color-brand-primary;
+  max-width: 370px;
+  margin-bottom: 30px;
+
+  @include breakpoint($md) {
+    margin-bottom: 0;
+  }
+
+  .youtube-video-block__title {
+    margin-bottom: 5px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    font-style: italic;
+  }
+
+  img {
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .video-embed-field-launch-modal {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+    &::before {
+      content: url('../assets/yt-play.svg');
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 60px;
+      width: 60px;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .youtube-video-block__text-content {
+    padding: 8px 16px;
+  }
+
+  .youtube-video-block--link {
+    color: $color-white;
+
+    &:hover {
+      text-decoration: none;
+
+      h2 {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "ike",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "sasslintConfig": ".sass-lint.yml",
+  "scripts": {
+    "build": "gulp",
+    "compile": "gulp compile",
+    "watch": "gulp watch",
+    "styleguide": "gulp styleguide",
+    "compress": "gulp compress",
+    "lint": "gulp lint",
+    "clean": "gulp clean",
+    "gulp": "gulp"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-link": "^36.0.1",
+    "breakpoint-sass": "^2.7.1",
+    "gulp": "^4.0.2",
+    "gulp-eslint": "^6.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sass-lint": "^1.4.0",
+    "koality-flexbox-grid": "^1.0.3",
+    "massive-typo": "^0.1.0"
+  },
+  "devDependencies": {
+    "gulp-imagemin": "^7.1.0"
+  }
+}

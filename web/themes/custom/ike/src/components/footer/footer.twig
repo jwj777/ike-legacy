@@ -1,0 +1,41 @@
+<div class="footer-regions">
+  <div class="footer-regions__top--wrapper">
+    <div class="footer-regions__top flex-container row flex-dir-column flex-jc-space-between">
+      <div class="footer-regions__left flex-container flex-dir-row">
+        <div class="footer-regions__left--logo">
+          <div class="footer-regions__left--logo-top">
+            <a href="/" class="footer-regions__left--home-link">IKE Eisenhower Foundation</a>
+            <div class="footer-regions__left--logo--copyright">&copy; {{ 'now'|date('Y') }} Eisenhower Foundation</div>
+          </div>
+          <div class="footer-regions__left--logo-bottom">
+            {{ drupal_block('email_signup_block', wrapper=false) }}
+          </div>
+        </div>
+        <div class="footer-regions__left--blocks">
+          {{ page.footer_left }}
+        </div>
+      </div>
+      <div class="footer-regions__right flex-container flex-dir-row">
+        {{ page.footer_right }}
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-regions__bottom--wrapper">
+    <div class="footer-regions__bottom flex-container row flex-dir-column md-flex-dir-row flex-jc-space-between">
+      <div class="footer-regions__bottom--left flex-1-1 flex-grow-0">
+            {#blank div for flex#}
+      </div>
+      <div class="footer-regions__bottom--middle flex-1-1 flex-container flex-grow-0 flex-jc-center flex-dir-row flex-ai-center">
+        <div class="footer--social-facebook"><a href="https://facebook.com/eisenhowerfoundation" target="_blank">Facebook</a></div>
+        <div class="footer--social-twitter"><a href="https://twitter.com/eisenhowerfound" target="_blank">Twitter</a></div>
+        <div class="footer--social-youtube"><a href="https://www.youtube.com/user/EisenhowerMemorial" target="_blank">Youtube</a></div>
+        <div class="footer--social-instagram"><a href="https://instagram.com/eisenhowerfoundation/" target="_blank">Instagram</a></div>
+      </div>
+      <div class="footer-regions__bottom--right flex-1-1 flex-container flex-grow-0 flex-dir-row">
+        {{ page.footer_bottom }}
+      </div>
+       <div class="footer-regions__bottom--logo--copyright">&copy; {{ 'now'|date('Y') }} Eisenhower Foundation</div>
+    </div>
+  </div>
+</div>

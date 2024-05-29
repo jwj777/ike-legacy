@@ -1,0 +1,56 @@
+/*iframe*/
+span.text-white {
+  color: #c9c9c9;
+}
+
+span.text-red {
+  color: red;
+}
+
+span.text-blue {
+  color: blue !important;
+}
+
+span.text-black {
+  color: black;
+}
+
+.cke_panel_listItem.cke_selected a,
+.cke_panel_listItem a:focus,
+.cke_panel_listItem a:active {
+  background-color: white;
+}
+
+.cke_panel_listItem a:hover {
+  background-color: #e5e5e5;
+}
+
+.cke_panel_listItem.cke_selected a:after {
+  content: "✔";
+  margin-left: 10px;
+  color: #ffae9b;
+}
+
+
+span.button-red {
+  background-color: #c11f2a;
+  font-family: "Libre Baskerville";
+  color: #fff;
+  display: inline-block;
+  font-size: 18px;
+}
+
+span.button-blue {
+  background-color: #0f2043;
+  font-family: "Libre Baskerville";
+  color: #fff;
+  display: inline-block;
+}
+
+span.button {
+  background-color: #000;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}

@@ -1,0 +1,29 @@
+// Import site utilities.
+@import '../../global/utils/init';
+
+.block-spacer {
+  position: relative;
+
+  .text-marker {
+    display: none;
+  }
+
+  /**
+    Layout Builder Styles
+   */
+
+  &.layout-builder-block {
+    border: 2px dotted $color-black;
+
+    .text-marker {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      text-align: center;
+      font-size: 20px;
+      color: $color-black;
+    }
+  }
+}

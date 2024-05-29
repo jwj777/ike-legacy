@@ -1,0 +1,185 @@
+.tooltip {
+  padding: 10px 15px;
+  position: relative;
+  text-align: center;
+}
+.tooltip::after {
+  background-color: #0F2043;
+  border-radius: 10px;
+  color: #fff;
+  display: none;
+  padding: 10px 15px;
+  position: absolute;
+  text-align: center;
+  z-index: 999;
+}
+.tooltip::before {
+  background-color: #0F2043;
+  content: " ";
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 999;
+}
+.tooltip:hover::after {
+  display: block;
+}
+.tooltip:hover::before {
+  display: block;
+}
+.tooltip.top::after {
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 10px));
+}
+.tooltip.top::before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
+.tooltip.bottom::after {
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 10px));
+}
+.tooltip.bottom::before {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+}
+.tooltip.right::after {
+  content: "";
+  top: 0;
+  right: 0;
+  transform: translateX(calc(100% + 10px));
+}
+.tooltip.right::before {
+  top: 50%;
+  right: 0;
+  transform: translate(calc(100% + 5px), -50%) rotate(45deg);
+}
+.tooltip.left::after {
+  content: "";
+  top: 0;
+  left: 0;
+  transform: translateX(calc(-100% - 10px));
+}
+.tooltip.left::before {
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-100% - 5px), -50%) rotate(45deg);
+}
+
+.view--lesson-plans-full header {
+  flex: 1 1 60%;
+}
+.view--lesson-plans-full .view-header {
+  margin: 30px 0 60px;
+}
+.view--lesson-plans-full .exposed-filters {
+  flex: 1 1 35%;
+}
+.view--lesson-plans-full .views-exposed-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-top: 15px;
+  float: right;
+}
+@media (min-width: 768px) {
+  .view--lesson-plans-full .views-exposed-form {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-end;
+    float: none;
+  }
+}
+@media (min-width: 1200px) {
+  .view--lesson-plans-full .views-exposed-form {
+    margin-top: 0;
+  }
+}
+.view--lesson-plans-full .views-exposed-form input[type=checkbox] {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  color: #000;
+  background-color: #FFF;
+  border: 1px solid #0F2043;
+  border-radius: 4px;
+  appearance: none;
+  outline: 0;
+  cursor: pointer;
+  transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
+}
+.view--lesson-plans-full .views-exposed-form input[type=checkbox]::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 5px;
+  width: 8px;
+  height: 14px;
+  border-style: solid;
+  border-color: #0F2043;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+.view--lesson-plans-full .views-exposed-form input[type=checkbox]:checked {
+  color: #FFF;
+  border-color: #0F2043;
+  background-color: #FFF;
+}
+.view--lesson-plans-full .views-exposed-form input[type=checkbox]:checked::before {
+  opacity: 1;
+}
+.view--lesson-plans-full .views-exposed-form input[type=checkbox]:checked ~ label::before {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.view--lesson-plans-full .views-exposed-form input[type=submit] {
+  padding: 6px 8px;
+  margin-top: 10px;
+}
+@media (min-width: 768px) {
+  .view--lesson-plans-full .views-exposed-form input[type=submit] {
+    margin-top: 0;
+  }
+}
+.view--lesson-plans-full .views-exposed-form .form-actions {
+  margin-left: 10px;
+}
+.view--lesson-plans-full .views-exposed-form .form-item {
+  margin: 0;
+}
+.view--lesson-plans-full .views-exposed-form .form-checkboxes {
+  margin-top: 10px;
+}
+.view--lesson-plans-full .views-exposed-form .form-checkboxes ul:not(.contextual-links) {
+  list-style: none;
+  padding-inline-start: 15px;
+  margin: 0;
+}
+.view--lesson-plans-full .views-exposed-form .form-checkboxes li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.view--lesson-plans-full .views-exposed-form .form-checkboxes .option {
+  margin-left: 10px;
+}
+.view--lesson-plans-full .views-exposed-form .js-form-type-checkbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.view--lesson-plans-full [data-drupal-selector=edit-secondary] {
+  margin: 10px 0;
+}
+.view--lesson-plans-full .lesson-plan-header-description {
+  font-size: 20px;
+}

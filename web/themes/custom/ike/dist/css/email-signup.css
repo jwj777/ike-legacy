@@ -1,0 +1,174 @@
+.tooltip {
+  padding: 10px 15px;
+  position: relative;
+  text-align: center;
+}
+.tooltip::after {
+  background-color: #0F2043;
+  border-radius: 10px;
+  color: #fff;
+  display: none;
+  padding: 10px 15px;
+  position: absolute;
+  text-align: center;
+  z-index: 999;
+}
+.tooltip::before {
+  background-color: #0F2043;
+  content: " ";
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 999;
+}
+.tooltip:hover::after {
+  display: block;
+}
+.tooltip:hover::before {
+  display: block;
+}
+.tooltip.top::after {
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 10px));
+}
+.tooltip.top::before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
+.tooltip.bottom::after {
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 10px));
+}
+.tooltip.bottom::before {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+}
+.tooltip.right::after {
+  content: "";
+  top: 0;
+  right: 0;
+  transform: translateX(calc(100% + 10px));
+}
+.tooltip.right::before {
+  top: 50%;
+  right: 0;
+  transform: translate(calc(100% + 5px), -50%) rotate(45deg);
+}
+.tooltip.left::after {
+  content: "";
+  top: 0;
+  left: 0;
+  transform: translateX(calc(-100% - 10px));
+}
+.tooltip.left::before {
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-100% - 5px), -50%) rotate(45deg);
+}
+
+.block-email-signup .block-email-signup__form {
+  padding: 10px;
+}
+@media (min-width: 768px) {
+  .block-email-signup .block-email-signup__form {
+    padding: 50px;
+  }
+}
+.block-email-signup .block-email-signup__form:not(.hidden) {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 49;
+  overflow-y: auto;
+}
+@media (min-width: 768px) {
+  .block-email-signup .block-email-signup__form:not(.hidden) {
+    overflow-y: hidden;
+  }
+}
+.block-email-signup .block-email-signup__form:not(.hidden) .block-email-signup__overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.block-email-signup .block-email-signup__overlay {
+  transition: background-color 300ms linear;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+  z-index: 50;
+}
+.block-email-signup .ctct-inline-form {
+  z-index: 51;
+  position: relative;
+  margin: auto;
+  max-width: 525px;
+  padding-top: 40px;
+}
+.block-email-signup .ctct-inline-form::before {
+  content: "";
+  background: url("../../images/star.png") center center no-repeat;
+  background-size: 100%;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 50%;
+  transform: translateY(-9%) translateX(-50%);
+}
+@media (min-width: 768px) {
+  .block-email-signup .ctct-inline-form::before {
+    width: 150px;
+    height: 150px;
+    transform: translateY(-40%) translateX(-50%);
+  }
+}
+.block-email-signup .ctct-form-custom > * {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.block-email-signup .ctct-form-custom .ctct-form-field {
+  margin-bottom: 10px !important;
+}
+.block-email-signup .ctct-form-custom .ctct-form-label {
+  font-weight: normal !important;
+}
+.block-email-signup .ctct-form-defaults {
+  padding: 0 !important;
+  border-radius: 0 !important;
+  border: 1px solid #C11F2A !important;
+}
+.block-email-signup .ctct-form-header {
+  text-align: center !important;
+  background-color: #0F2043 !important;
+  padding: 50px 20px 10px !important;
+  margin: 0 !important;
+  color: #FFF !important;
+}
+.block-email-signup .ctct-form-text {
+  text-align: center !important;
+  background-color: #0F2043 !important;
+  padding: 0 20px 20px !important;
+  color: #FFF !important;
+  border-bottom: 1px solid #C11F2A !important;
+}
+.block-email-signup .ctct-form-button {
+  width: calc(100% - 40px) !important;
+  margin: 0 auto 20px !important;
+}
+.block-email-signup #list_memberships_label_1 {
+  left: 5px;
+}

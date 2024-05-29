@@ -1,0 +1,29 @@
+// Support Ike Block
+//
+// This is the Support Ike Block component.
+//
+// Markup: support-ike-block.twig
+//
+// Style guide: Components.support-ike-block
+
+// Import site utilities.
+@import '../../global/utils/init';
+@import '../stylized-title/stylized-title';
+@import '../../global/common/buttons';
+
+.support-ike-block {
+  color: $color-white;
+
+  .stylized-title__link {
+    a {
+      margin-left: 10px;
+    }
+  }
+
+  .support-ike-block__text-content--link {
+    a {
+      @extend .button; // sass-lint:disable-line no-extends placeholder-in-extend
+      @extend .button-red; // sass-lint:disable-line no-extends placeholder-in-extend
+    }
+  }
+}

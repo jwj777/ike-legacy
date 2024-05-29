@@ -1,0 +1,90 @@
+// Youtube Video Block
+//
+// This is the Youtube Video Block component. It's an example.
+//
+// Markup: ikes-soldiers-home-teaser.twig
+//
+// Style guide: Components.ikes-soldiers-home-teaser
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.ikes-soldiers-home-teaser {
+  display: inline-block;
+  color: $color-white;
+  background-color: $color-brand-primary;
+  max-width: 370px;
+  margin-bottom: 30px;
+
+  @include breakpoint($md) {
+    margin-bottom: 0;
+  }
+
+  .ikes-soldiers-home-teaser__title {
+    margin-bottom: 5px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    font-style: italic;
+  }
+
+  .field--name-field-ikes-soldiers-image {
+    height: auto;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      cursor: pointer;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      filter: grayscale(40%);
+      transition: transform 0.5s ease, filter 0.5s ease;
+      background-color: $color-black;
+    }
+  }
+
+  .video-embed-field-launch-modal {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+    &::before {
+      content: url('../assets/yt-play.svg');
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 60px;
+      width: 60px;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .ikes-soldiers-home-teaser__text-content {
+    padding: 8px 16px;
+  }
+
+  .ikes-soldiers-home-teaser--link {
+    color: $color-white;
+
+    &:hover {
+      text-decoration: none;
+
+      h2 {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &:hover {
+    .field--name-field-ikes-soldiers-image {
+      img {
+        filter: grayscale(0);
+        transform: scale(1.15);
+        transition: transform 0.5s ease, filter 0.5s ease;
+      }
+    }
+  }
+}

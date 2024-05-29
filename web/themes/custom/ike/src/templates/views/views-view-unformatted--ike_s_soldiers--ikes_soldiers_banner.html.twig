@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+<div class="soldiers-banner--wrap">
+  <div class="soldiers-banner--intro">
+    <div class="soldiers-banner--intro-logo"></div>
+    <div class="soldiers-banner--intro-text">Visit the Ike's Soldiers section of our website to hear and read stories from veterans and others who experienced World War II.</div>
+    <a href="/ikes-soldiers"><button class="button-red soldiers-banner--intro-button">Learn More!</button></a>
+  </div>
+  <div class="soldiers-banner--results">
+    {% for row in rows %}
+      {%
+        set row_classes = [
+        default_row_class ? 'views-row',
+      ]
+      %}
+      <div{{ row.attributes.addClass(row_classes).setAttribute('data-index', loop.index0) }}>
+        {{- row.content -}}
+      </div>
+    {% endfor %}
+  </div>
+</div>

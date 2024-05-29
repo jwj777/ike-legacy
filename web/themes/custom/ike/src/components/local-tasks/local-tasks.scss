@@ -1,0 +1,40 @@
+@import '../../global/utils/init';
+
+// The header overlaps the buttons if we don't add padding.
+.block-local-tasks-block {
+  padding-top: 180px;
+
+  ul {
+    &:not(.contextual-links) {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      list-style: none;
+      padding-inline-start: 25px; // Since it's a URL it uses a funny type of padding.
+
+      a {
+        display: block;
+        padding: 8px 20px;
+        color: $color-black;
+        background-color: $color-white;
+        border: 2px solid $color-black;
+        transition: background-color 100ms ease-in-out, color 100ms ease-in-out;
+      }
+
+      li {
+        &:not(:first-child) {
+          margin-left: 10px;
+        }
+
+        &:hover {
+          a {
+            color: $color-white;
+            background-color: $color-black;
+            transition: background-color 100ms ease-in, color 100ms ease-in;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,205 @@
+.tooltip {
+  padding: 10px 15px;
+  position: relative;
+  text-align: center;
+}
+.tooltip::after {
+  background-color: #0F2043;
+  border-radius: 10px;
+  color: #fff;
+  display: none;
+  padding: 10px 15px;
+  position: absolute;
+  text-align: center;
+  z-index: 999;
+}
+.tooltip::before {
+  background-color: #0F2043;
+  content: " ";
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 999;
+}
+.tooltip:hover::after {
+  display: block;
+}
+.tooltip:hover::before {
+  display: block;
+}
+.tooltip.top::after {
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 10px));
+}
+.tooltip.top::before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
+.tooltip.bottom::after {
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 10px));
+}
+.tooltip.bottom::before {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+}
+.tooltip.right::after {
+  content: "";
+  top: 0;
+  right: 0;
+  transform: translateX(calc(100% + 10px));
+}
+.tooltip.right::before {
+  top: 50%;
+  right: 0;
+  transform: translate(calc(100% + 5px), -50%) rotate(45deg);
+}
+.tooltip.left::after {
+  content: "";
+  top: 0;
+  left: 0;
+  transform: translateX(calc(-100% - 10px));
+}
+.tooltip.left::before {
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-100% - 5px), -50%) rotate(45deg);
+}
+
+.lesson-plan--detail .block-field-blocknodelesson-plantitle {
+  position: relative;
+  top: -10px;
+  margin-bottom: 40px;
+}
+.lesson-plan--detail .block-field-blocknodelesson-plantitle span {
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
+  position: relative;
+  display: block;
+  font-size: 32px;
+  margin: 2rem 0 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  z-index: 10;
+}
+@media (min-width: 768px) {
+  .lesson-plan--detail .block-field-blocknodelesson-plantitle span {
+    font-size: 48px;
+    z-index: 0;
+  }
+}
+.lesson-plan--detail .layout--one-center-region {
+  margin: 30px auto;
+  width: 94%;
+  padding: 0;
+}
+@media (min-width: 1200px) {
+  .lesson-plan--detail .layout--one-center-region {
+    max-width: 1400px;
+  }
+}
+.lesson-plan--detail .field--name-field-lesson-plan-description {
+  padding: 20px;
+}
+.lesson-plan--detail .field--name-field-lesson-plan-description h2,
+.lesson-plan--detail .field--name-field-lesson-plan-description h3 {
+  font-family: "Arial";
+  font-weight: 700;
+}
+.lesson-plan--detail .field--name-field-lesson-plan-description h3 {
+  margin-bottom: 0.5rem;
+}
+.lesson-plan--detail .field--name-field-lesson-plan-description p {
+  font-size: 22px;
+}
+.lesson-plan--detail .field--name-field-lesson-plan-description .align-left img {
+  margin: 0 12px 12px 0;
+}
+.lesson-plan--detail .field--name-field-lesson-plan-description .align-right img {
+  margin: 12px 0 0 12px;
+}
+.lesson-plan--detail .field--name-field-lesson-plan-description figure.align-left {
+  margin-inline-start: 0;
+  margin-inline-end: 12px;
+  margin-block-start: 0;
+  margin-block-end: 18px;
+}
+.lesson-plan--detail .field--name-field-lesson-plan-description figure.align-left img {
+  margin-bottom: 8px;
+}
+.lesson-plan--detail .field--name-field-lesson-plan-description figure.align-right {
+  margin-inline-end: 0;
+  margin-inline-start: 10px;
+  margin-block-start: 0;
+  margin-block-end: 18px;
+}
+.lesson-plan--detail .field--name-field-lesson-plan-description figcaption {
+  font-size: 0.85rem;
+  font-style: italic;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .lesson-plan--detail .field--name-field-lesson-plan-description {
+    padding: 30px;
+  }
+}
+.lesson-plan--detail .field--name-field-resource-topic a,
+.lesson-plan--detail .field--name-field-resource-subject a,
+.lesson-plan--detail .field--name-field-resource-grade-level a {
+  background-color: #0F2043;
+  text-transform: uppercase;
+  color: #FFF;
+  padding: 5px;
+  margin-right: 10px;
+  float: left;
+}
+@media (min-width: 1200px) {
+  .lesson-plan--detail .field--name-field-resource-topic a,
+  .lesson-plan--detail .field--name-field-resource-subject a,
+  .lesson-plan--detail .field--name-field-resource-grade-level a {
+    margin-left: 10px;
+    margin-right: 0;
+  }
+}
+.lesson-plan--detail .field--name-field-resource-topic a:hover,
+.lesson-plan--detail .field--name-field-resource-subject a:hover,
+.lesson-plan--detail .field--name-field-resource-grade-level a:hover {
+  background-color: #C11F2A;
+}
+.lesson-plan--detail .block-field-blocknodelesson-planfield-lesson-plan-image {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .lesson-plan--detail .block-field-blocknodelesson-planfield-lesson-plan-image {
+    float: left;
+    margin: 2rem;
+    width: 40%;
+  }
+}
+.lesson-plan--detail .block-field-blocknodelesson-planfield-lesson-plan-image img {
+  height: auto;
+  width: 100%;
+}
+.lesson-plan--detail .block-field-blocknodelesson-planfield-lesson-plan-file {
+  padding: 0 30px 30px;
+}
+.lesson-plan--detail .block-field-blocknodelesson-planfield-lesson-plan-file .field--name-field-lesson-plan-file {
+  padding-bottom: 0.5rem;
+}
+
+.flag-lists {
+  text-align: center;
+}
+.flag-lists a {
+  color: #FFF;
+  display: block;
+  margin: 0.5rem 0;
+}

@@ -1,0 +1,54 @@
+{%
+  set classes = [
+  'page',
+  'teacher-collections'
+]
+%}
+{{ attach_library('ike/teacher-collections') }}
+{{ attach_library('ike/lesson-plan-listing') }}
+{{ attach_library('ike/hero-image') }}
+<div{{ attributes.addClass(classes) }}>
+  <div class="block block--hero-image">
+    <div class="block block-layout-builder block-inline-blockhero-image block--hero-image">
+      <div class="field--name-field-hero-image-image field--type-entity-reference field__item">
+        {{ hero_image }}
+      </div>
+    </div>
+    {{ drupal_block('fixed_block_content:social_share_grid') }}
+    <div class="block--page-title">
+      <div class="field--name-field-hero-image-title field--type-string field__item">{{ title }}</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="teacher-collections__header-buttons flex-container">
+      <div class="teacher-collections__header-edit-button">
+        {% if content.user_id == content.current_user_id %}
+          <a class="button button-red" href="/user/{{ content.user_id }}/edit">Edit User Account</a>
+        {% endif %}
+      </div>
+      {{ drupal_block('create_teacher_collection_block') }}
+    </div>
+    <div class="teacher-collections__body">
+      {{ body|raw }}
+    </div>
+    <div class="lesson-plans-listing">
+      {% for collection in collections %}
+      <div class="lesson-plans__rows flex-container flex-dir-column flex-ai-stretch">
+        {% set comp_info = {
+          "title": collection.title,
+          "description": collection.subtitle|raw
+        } %}
+        {% include "@ike/stylized-title/stylized-title.twig" with comp_info %}
+        <div class="view--lesson-plans-full--inner flex-container flex-jc-start flex-dir-column md-flex-dir-row flex-wrap">
+          {% for node in collection.flagged_nodes %}
+            <div class="flex-1-1 md-flex-1-2 lg-flex-1-4 views-row">
+              {{ node }}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+

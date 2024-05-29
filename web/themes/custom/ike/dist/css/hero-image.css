@@ -1,0 +1,137 @@
+.tooltip {
+  padding: 10px 15px;
+  position: relative;
+  text-align: center;
+}
+.tooltip::after {
+  background-color: #0F2043;
+  border-radius: 10px;
+  color: #fff;
+  display: none;
+  padding: 10px 15px;
+  position: absolute;
+  text-align: center;
+  z-index: 999;
+}
+.tooltip::before {
+  background-color: #0F2043;
+  content: " ";
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 999;
+}
+.tooltip:hover::after {
+  display: block;
+}
+.tooltip:hover::before {
+  display: block;
+}
+.tooltip.top::after {
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 10px));
+}
+.tooltip.top::before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
+.tooltip.bottom::after {
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 10px));
+}
+.tooltip.bottom::before {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+}
+.tooltip.right::after {
+  content: "";
+  top: 0;
+  right: 0;
+  transform: translateX(calc(100% + 10px));
+}
+.tooltip.right::before {
+  top: 50%;
+  right: 0;
+  transform: translate(calc(100% + 5px), -50%) rotate(45deg);
+}
+.tooltip.left::after {
+  content: "";
+  top: 0;
+  left: 0;
+  transform: translateX(calc(-100% - 10px));
+}
+.tooltip.left::before {
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-100% - 5px), -50%) rotate(45deg);
+}
+
+.block--hero-image .field--name-field-hero-image-image,
+.block--hero-image .field--name-field-hero-image-mobile-image {
+  overflow: hidden;
+}
+.block--hero-image .field--name-field-hero-image-image img,
+.block--hero-image .field--name-field-hero-image-mobile-image img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.block--hero-image .field--hero-has-mobile-image {
+  display: none;
+}
+.block--hero-image .block--page-title {
+  position: relative;
+  top: -10px;
+  margin-bottom: 40px;
+}
+@media (min-width: 992px) {
+  .block--hero-image .block--page-title {
+    margin-bottom: 80px;
+  }
+}
+.block--hero-image .block--page-title .field--name-field-hero-image-title {
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
+  position: relative;
+  display: block;
+  font-size: 32px;
+  margin: 2rem 0 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  line-height: 1.4;
+  z-index: 10;
+}
+@media (min-width: 768px) {
+  .block--hero-image .block--page-title .field--name-field-hero-image-title {
+    font-size: 48px;
+    padding: 0 120px;
+  }
+}
+.block--hero-image .social-grid {
+  top: 0;
+}
+.block--hero-image .block-field-blocknodecomponent-pagetitle {
+  font-size: 32px;
+  margin: 2rem 0 0;
+}
+@media (min-width: 768px) {
+  .block--hero-image .block-field-blocknodecomponent-pagetitle {
+    font-size: 48px;
+  }
+}
+@media (max-width: 768px) {
+  .block--hero-image .field--hero-image.with-mobile-hero {
+    display: none;
+  }
+  .block--hero-image .field--hero-has-mobile-image {
+    display: block;
+  }
+}

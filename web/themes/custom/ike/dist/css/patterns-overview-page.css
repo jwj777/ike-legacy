@@ -1,0 +1,176 @@
+.tooltip {
+  padding: 10px 15px;
+  position: relative;
+  text-align: center;
+}
+.tooltip::after {
+  background-color: #0F2043;
+  border-radius: 10px;
+  color: #fff;
+  display: none;
+  padding: 10px 15px;
+  position: absolute;
+  text-align: center;
+  z-index: 999;
+}
+.tooltip::before {
+  background-color: #0F2043;
+  content: " ";
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 999;
+}
+.tooltip:hover::after {
+  display: block;
+}
+.tooltip:hover::before {
+  display: block;
+}
+.tooltip.top::after {
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 10px));
+}
+.tooltip.top::before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
+.tooltip.bottom::after {
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 10px));
+}
+.tooltip.bottom::before {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+}
+.tooltip.right::after {
+  content: "";
+  top: 0;
+  right: 0;
+  transform: translateX(calc(100% + 10px));
+}
+.tooltip.right::before {
+  top: 50%;
+  right: 0;
+  transform: translate(calc(100% + 5px), -50%) rotate(45deg);
+}
+.tooltip.left::after {
+  content: "";
+  top: 0;
+  left: 0;
+  transform: translateX(calc(-100% - 10px));
+}
+.tooltip.left::before {
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-100% - 5px), -50%) rotate(45deg);
+}
+
+.patterns-list {
+  position: fixed;
+  max-width: 250px;
+  width: 100%;
+}
+.patterns-list li > a {
+  display: block;
+  padding: 5px 10px 5px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #C11F2A;
+  text-decoration: none;
+}
+.patterns-list li > a:hover {
+  padding-left: 9px;
+  color: #0F2043;
+  text-decoration: none;
+  background-color: transparent;
+  border-left: 1px solid #0F2043;
+}
+
+.patterns-preview-list {
+  margin-left: 300px;
+}
+.patterns-preview-list hr {
+  margin: 3rem 0;
+}
+
+.pattern-preview__preview {
+  margin-top: 1rem;
+  padding: 40px;
+  border: 10px solid #464646;
+  overflow-x: hidden;
+}
+.pattern-preview__preview legend {
+  display: none;
+}
+
+.pattern-preview__description {
+  margin-bottom: 1rem;
+}
+
+.pattern-preview__fields {
+  border: 1px solid #464646;
+  border-collapse: collapse;
+}
+.pattern-preview__fields tr {
+  border: 1px solid #464646;
+}
+.pattern-preview__fields tr th {
+  background-color: #000;
+  color: #FFF;
+}
+.pattern-preview__fields th,
+.pattern-preview__fields td {
+  border: 1px solid #464646;
+  padding: 4px 8px;
+}
+
+.pattern-preview__markup {
+  display: flex;
+  flex-direction: row;
+}
+
+.pattern-preview__view {
+  display: inline-block;
+  width: auto;
+  margin-top: 2rem;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #0F2043;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.pattern-preview__stylized_title .pattern-preview__preview {
+  background-color: #0F2043;
+}
+
+.pattern-preview__quote_banner .quote-banner {
+  height: 600px;
+}
+.pattern-preview__quote_banner .placeholder-image {
+  background-image: url("../assets/eisenhower-sig.png");
+  background-size: 400px 62px;
+  background-repeat: no-repeat;
+  height: 62px;
+  width: 400px;
+}
+
+.pattern-preview__icon_text_card .pattern-preview__preview {
+  padding: 70px 20px;
+  background-color: #0F2043;
+}
+.pattern-preview__icon_text_card .placeholder-image {
+  background-image: url("../assets/star.png");
+  background-size: 120px 110px;
+  background-repeat: no-repeat;
+  height: 110px;
+  width: 120px;
+}

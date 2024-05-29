@@ -1,0 +1,389 @@
+// Import site utilities.
+@import '../../global/utils/init';
+
+.layout--one-center-region {
+  max-width: 1440px;
+}
+
+.layout--onecol:nth-of-type(2) {
+  float: right;
+}
+
+.layout--two-center-regions {
+  margin: 0 auto 40px;
+  max-width: 1440px;
+  font-family: $font-helv-neue;
+
+  .block-field-blocknodeprimary-sourcetitle {
+    font-size: 38px;
+    margin-bottom: 20px;
+  }
+
+  .layout__region--left {
+    padding: 15px;
+
+    p {
+      font-size: 30px;
+      margin-top: 20px;
+      line-height: 1.1;
+    }
+
+    .field--name-field-psl-image {
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .field--name-field-3d-preview-image.field--type-image {
+      display: none;
+    }
+
+    .field--name-field-video-media {
+      iframe {
+        width: 100%;
+        height: auto;
+        min-height: 480px;
+      }
+    }
+  }
+
+  .layout__region--right {
+    background-color: $color-brand-primary;
+    padding: 15px;
+    font-family: $header-font-family;
+    letter-spacing: 0.035em;
+
+    .block {
+      margin: 0 0 1.75em 34px;
+    }
+
+    .primary-source--detail-header {
+      font-family: $font-helv-neue;
+      font-size: 32px;
+      padding: 0 5px 2px 0;
+      border-bottom: solid 1px $color-brand-secondary;
+      font-style: normal;
+      margin: 0 0 14px -34px;
+    }
+
+    .field__label {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1.2em;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .field__item,
+    .field__item p {
+      font-style: italic;
+      font-size: 22px;
+      margin-block-end: 0;
+      line-height: 1.3em;
+      text-transform: capitalize;
+    }
+
+    .field--name-field-psl-manufactured-dates::before {
+      content: '';
+      width: 25px;
+      height: 25px;
+      display: block;
+      float: left;
+      margin-left: -34px;
+      margin-top: -2px;
+      background-image: url('/themes/custom/ike/images/artifact-icons/calendar_today-24px.png');
+    }
+
+    .field--name-field-psl-manufactured-by::before {
+      content: '';
+      width: 25px;
+      height: 25px;
+      display: block;
+      float: left;
+      margin-left: -34px;
+      margin-top: -2px;
+      background-image: url('/themes/custom/ike/images/artifact-icons/business-24px.png');
+    }
+
+    .field--name-field-psl-type::before {
+      content: '';
+      width: 25px;
+      height: 25px;
+      display: block;
+      float: left;
+      margin-left: -34px;
+      margin-top: -2px;
+      background-image: url('/themes/custom/ike/images/artifact-icons/description-24px.png');
+    }
+
+    .field--name-field-psl-original::before {
+      content: '';
+      width: 25px;
+      height: 25px;
+      display: block;
+      float: left;
+      margin-left: -34px;
+      margin-top: -2px;
+      background-image: url('/themes/custom/ike/images/artifact-icons/online_prediction-24px.png');
+    }
+
+    .field--name-field-psl-timeframe::before {
+      content: '';
+      width: 25px;
+      height: 25px;
+      display: block;
+      float: left;
+      margin-left: -34px;
+      margin-top: -2px;
+      background-image: url('/themes/custom/ike/images/artifact-icons/query_builder-24px.png');
+    }
+
+    .field--name-field-psl-subject::before {
+      content: '';
+      width: 25px;
+      height: 25px;
+      display: block;
+      float: left;
+      margin-left: -34px;
+      margin-top: -2px;
+      background-image: url('/themes/custom/ike/images/artifact-icons/more-24px.png');
+    }
+
+    .field--name-field-psl-collection::before {
+      content: '';
+      width: 25px;
+      height: 25px;
+      display: block;
+      float: left;
+      margin-left: -34px;
+      margin-top: -2px;
+      background-image: url('/themes/custom/ike/images/artifact-icons/location_on-24px.png');
+    }
+
+    .field--name-field-psl-citations {
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .field__label::after {
+        content: ' (click to expand)';
+        font-style: italic;
+        font-size: 18px;
+        text-transform: lowercase;
+      }
+
+      .field__item {
+        display: none;
+      }
+
+      a {
+        color: $color-white;
+        font-size: 18px;
+        text-transform: none;
+      }
+
+      &::before {
+        content: '';
+        width: 25px;
+        height: 25px;
+        display: block;
+        float: left;
+        margin-left: -34px;
+        margin-top: -2px;
+        background-image: url('/themes/custom/ike/images/artifact-icons/photo_album-24px.png');
+      }
+    }
+  }
+}
+
+.node__primary-source {
+  .layout--one-center-region {
+
+    .layout__region--content {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      p {
+        margin-block-end: 0;
+      }
+    }
+  }
+
+  .block-spacer {
+    z-index: -1;
+  }
+
+  .block-ike-teacher-collections {
+    display: inline-block;
+    margin: 43px 0 4px 8px;
+    vertical-align: top;
+
+    position: absolute;
+
+    .teacher-collection__add {
+      padding: 17px;
+    }
+
+    @include breakpoint($md) {
+      margin: 43px 0 4px 15px;
+    }
+  }
+
+  .block-addtoany { // sass-lint:disable-line class-name-format
+    display: inline-block;
+    margin: 43px 0 4px;
+    vertical-align: top;
+  }
+
+  .addtoany_share { // sass-lint:disable-line class-name-format
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-white;
+
+    height: 55px;
+    width: 55px;
+
+    &:hover {
+      span {
+        opacity: 1;
+      }
+    }
+
+    .a2a_svg { // sass-lint:disable-line class-name-format
+      position: relative;
+      left: -1px;
+      background-color: unset !important; // sass-lint:disable-line no-important
+      background: url('../../images/share.svg') no-repeat center center;
+      background-size: 30px 30px;
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  .block-fixed-block-contentsocial-share-grid {
+    display: none;
+    width: 123px;
+
+    @include breakpoint($lg) {
+      display: block;
+    }
+
+    .social-grid {
+      float: unset;
+      width: 160px;
+      padding: 12px;
+      position: unset;
+      top: unset;
+      z-index: 15;
+      right: unset;
+    }
+  }
+
+  .block-inline-blockwysiwyg {
+    display: inline-block;
+    margin: 43px 8px 20px 0;
+
+    @include breakpoint($sm) {
+      margin: 43px 15px 4px 0;
+    }
+  }
+
+  .block-field-blocknodeprimary-sourcefield-psl-file a {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    background-color: $color-brand-secondary;
+    background-image: url('/themes/custom/ike/images/cloud_download-24px.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 43px 8px 4px 0;
+    text-indent: -9999px;
+
+    @include breakpoint($md) {
+      margin: 43px 15px 4px 0;
+    }
+
+    &[href$='.mp3'] {
+      background-image: url('/themes/custom/ike/images/play-24.png');
+      display: none;
+
+      @include breakpoint($md) {
+        display: inline-block;
+      }
+    }
+  }
+
+  audio {
+    border: solid 3px $color-brand-secondary;
+    width: 100%;
+    margin-bottom: -2px;
+    background: #efefef;
+  }
+}
+
+.back-to-search-button {
+  margin-right: 8px;
+  padding: 12px 24px  14px !important; //sass-lint:disable-line no-important
+  width: 55px;
+  content: 'Back to Search';
+  text-indent: -9999px;
+  background-image: url('/themes/custom/ike/images/back-arrow-24.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: none;
+
+  @include breakpoint($sm) {
+    display: inline-block;
+  }
+
+  @include breakpoint($md) {
+    margin-right: 15px;
+    text-indent: 0;
+    background-image: none;
+    width: auto;
+  }
+}
+
+.my-collections-button {
+  //vertical-align: top;
+  background-color: #fff;
+  border: 0;
+  padding: 18px 10px 19px;
+  color: #000;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  white-space: nowrap;
+
+  &:hover {
+    color: #000;
+    text-decoration: none;
+  }
+
+  @include breakpoint($md) {
+    padding: 18px 18px 19px 40px;
+    background-image: url('/themes/custom/ike/images/library_books-24px.png');
+  }
+}
+
+.tooltip.top.add-to-collection::after {
+  content: 'Add to collection';
+}
+
+.tooltip.top.download::after {
+  content: 'Download';
+  text-indent: 0;
+}
+
+.tooltip.top.play::after {
+  content: 'Play Audio';
+  text-indent: 0;
+}

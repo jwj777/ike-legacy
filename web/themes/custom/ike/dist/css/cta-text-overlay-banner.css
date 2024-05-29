@@ -1,0 +1,132 @@
+.tooltip {
+  padding: 10px 15px;
+  position: relative;
+  text-align: center;
+}
+.tooltip::after {
+  background-color: #0F2043;
+  border-radius: 10px;
+  color: #fff;
+  display: none;
+  padding: 10px 15px;
+  position: absolute;
+  text-align: center;
+  z-index: 999;
+}
+.tooltip::before {
+  background-color: #0F2043;
+  content: " ";
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 999;
+}
+.tooltip:hover::after {
+  display: block;
+}
+.tooltip:hover::before {
+  display: block;
+}
+.tooltip.top::after {
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 10px));
+}
+.tooltip.top::before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
+.tooltip.bottom::after {
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 10px));
+}
+.tooltip.bottom::before {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+}
+.tooltip.right::after {
+  content: "";
+  top: 0;
+  right: 0;
+  transform: translateX(calc(100% + 10px));
+}
+.tooltip.right::before {
+  top: 50%;
+  right: 0;
+  transform: translate(calc(100% + 5px), -50%) rotate(45deg);
+}
+.tooltip.left::after {
+  content: "";
+  top: 0;
+  left: 0;
+  transform: translateX(calc(-100% - 10px));
+}
+.tooltip.left::before {
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-100% - 5px), -50%) rotate(45deg);
+}
+
+.cta-text-overlay-banner {
+  position: relative;
+  background-color: #FFF;
+  margin: 0 0 30px;
+}
+.cta-text-overlay-banner .cta-text-overlay-banner__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+.cta-text-overlay-banner .cta-text-overlay-banner__heading {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.cta-text-overlay-banner .cta-text-overlay-banner__image {
+  font-size: 0;
+}
+.cta-text-overlay-banner .cta-text-overlay-banner__image, .cta-text-overlay-banner .cta-text-overlay-banner__image *:not(.contextual),
+.cta-text-overlay-banner .cta-text-overlay-banner__image img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+}
+.cta-text-overlay-banner .cta-text-overlay-banner__content {
+  position: relative;
+  z-index: 1;
+  min-height: 100%;
+  color: #FFF;
+  background-color: rgba(15, 32, 67, 0.85);
+  border-right: solid 2px #C11F2A;
+  padding: 14px 20px;
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .cta-text-overlay-banner .cta-text-overlay-banner__content {
+    width: 55%;
+  }
+}
+.cta-text-overlay-banner .cta-text-overlay-banner__content p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+.cta-text-overlay-banner .cta-text-overlay-banner__content a {
+  color: #FFF;
+}

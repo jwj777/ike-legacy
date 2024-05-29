@@ -1,0 +1,102 @@
+.tooltip {
+  padding: 10px 15px;
+  position: relative;
+  text-align: center;
+}
+.tooltip::after {
+  background-color: #0F2043;
+  border-radius: 10px;
+  color: #fff;
+  display: none;
+  padding: 10px 15px;
+  position: absolute;
+  text-align: center;
+  z-index: 999;
+}
+.tooltip::before {
+  background-color: #0F2043;
+  content: " ";
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 999;
+}
+.tooltip:hover::after {
+  display: block;
+}
+.tooltip:hover::before {
+  display: block;
+}
+.tooltip.top::after {
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 10px));
+}
+.tooltip.top::before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
+.tooltip.bottom::after {
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 10px));
+}
+.tooltip.bottom::before {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+}
+.tooltip.right::after {
+  content: "";
+  top: 0;
+  right: 0;
+  transform: translateX(calc(100% + 10px));
+}
+.tooltip.right::before {
+  top: 50%;
+  right: 0;
+  transform: translate(calc(100% + 5px), -50%) rotate(45deg);
+}
+.tooltip.left::after {
+  content: "";
+  top: 0;
+  left: 0;
+  transform: translateX(calc(-100% - 10px));
+}
+.tooltip.left::before {
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-100% - 5px), -50%) rotate(45deg);
+}
+
+.filter-page-content {
+  padding-top: 150px;
+}
+.filter-page-content .block-system-main-block {
+  max-width: 800px;
+  padding: 15px;
+  margin: 0 auto 30px;
+  background-color: #FFF;
+  box-shadow: 0 2px 4px 4px rgba(0, 0, 0, 0.33);
+  color: #000;
+}
+.filter-page-content .block-system-main-block .form-item {
+  margin-bottom: 20px;
+}
+.filter-page-content .block-system-main-block label {
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.filter-page-content .block-system-main-block .description {
+  color: #464646;
+  font-size: 14px;
+  margin: 5px 0;
+}
+.filter-page-content .block-system-main-block textarea {
+  width: 100%;
+}

@@ -1,0 +1,445 @@
+// Ike's Soldiers Details
+//
+// This is the Details component for Ike's Soldiers.
+//
+// Markup: ikes-soldiers-detail.twig
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.ikes-soldiers-detail--full-view {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+  font-family: $font-secondary;
+
+  h4 {
+    font-family: $font-secondary;
+  }
+
+  .close-snapshot {
+    display: none;
+  }
+
+  .ikes-soldiers-detail--buttons {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin: 5rem 0 -3rem;
+    text-decoration: unset;
+
+    @include breakpoint($md) {
+      flex-direction: row;
+      margin: 0 0 1rem;
+      position: relative;
+    }
+
+    .addtoany_list {// sass-lint:disable-line class-name-format
+      display: inline-block;
+    }
+
+    .addtoany_share {// sass-lint:disable-line class-name-format
+      margin: 0 0 0 1rem;
+      height: 50px;
+      width: 50px;
+    }
+
+    .add-to-collection {
+      margin: 0 0 0 1rem;
+    }
+
+    .ikes-soldiers-detail--buttons__generic {
+      vertical-align: top;
+      margin: 0 0 0 1rem;
+      height: 50px;
+      width: 50px;
+      padding: 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .ikes-soldiers-detail--buttons__soldiers {
+      margin-top: 0;
+    }
+
+    .teacher-collection .teacher-collection__add {
+      width: 50px;
+      height: 50px;
+      padding: 0;
+    }
+  }
+
+  .add-teacher-collection__form-wrapper {
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+    right: 0;
+    box-shadow: 0 0 4px 0 $color-gray-606060;
+    max-width: none;
+  }
+}
+
+.ikes-soldiers-detail--hero {
+  width: 100%;
+  height: auto;
+  position: relative;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+
+  .social-grid {
+    position: relative;
+  }
+}
+
+.ikes-soldiers-detail--title {
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0 3rem;
+}
+
+.ikes-soldiers-detail--buttons__soldiers {
+  color: $color-white;
+  background: $color-brand-secondary;
+  border: 0;
+  padding: 1rem;
+  width: 100%;
+
+  @include breakpoint($md) {
+    width: auto;
+    margin-top: 1rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.ikes-soldiers-detail--buttons__bottom {
+  background: $color-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  margin-bottom: 1rem;
+}
+
+.ikes-soldiers-detail--wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background: $color-white;
+  color: $color-black;
+
+  @include breakpoint($md) {
+    flex-direction: row;
+  }
+}
+
+.ikes-soldiers-detail--image-container {
+  max-width: 185px;
+  min-width: 18%;
+
+  .ikes-soldiers-detail--image {
+    min-height: 242px;
+    width: 100%;
+    background-image: url('/themes/custom/ike/dist/assets/male-soldier.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.female {
+      background-image: url('/themes/custom/ike/dist/assets/female-soldier.jpg');
+    }
+
+    img,
+    picture {
+      width: 100%;
+      height: auto;
+      margin-bottom: -2px;
+    }
+  }
+
+  .ikes-soldiers-detail--image-text {
+    background-color: $color-brand-secondary;
+    color: $color-white;
+    border-top: solid 2px $color-white;
+    text-align: center;
+    padding: 10px 6px;
+    margin-top: -3px;
+    min-height: 102px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h4 {
+      font-size: 22px;
+      font-family: $font-secondary;
+      margin-bottom: 6px;
+      line-height: 1.2em;
+    }
+
+    .ikes-soldiers-detail--image-text__unit {
+      font-size: 20px;
+      font-family: $body-font-family;
+      font-style: italic;
+      line-height: 1.1em;
+    }
+  }
+}
+
+.ikes-soldiers-detail--content {
+  min-width: 50%;
+  margin-top: 0;
+
+  @include breakpoint($md) {
+    margin-left: 4rem;
+    flex-direction: row;
+  }
+
+  @include breakpoint($xl) {
+    margin-left: 3rem;
+  }
+
+  .ikes-soldiers-detail--content__top {
+    margin-bottom: 1rem;
+
+    h4 {
+      margin-bottom: 0.5rem;
+    }
+
+    div {
+      margin-top: 0.75rem;
+
+      &:first-of-type {
+        margin-top: 0.5rem;
+      }
+
+      &:empty {
+        display: none;
+      }
+    }
+  }
+
+  .ikes-soldiers-detail--content__section {
+    margin-bottom: 1rem;
+
+    div {
+      margin-top: 0.75rem;
+      line-height: 1.5em;
+
+      &:empty {
+        margin: 0;
+        line-height: 0;
+      }
+    }
+
+    a {
+      color: $color-brand-primary;
+      text-decoration: underline;
+
+      &:hover {
+        color: $color-black;
+      }
+    }
+
+    .ikes-soldiers-detail--branch {
+      display: inline-block;
+
+      .field__item {
+        display: inline-block;
+        margin-top: 0;
+      }
+    }
+
+    .field--name-field-ikes-soldiers-theater-op {
+      display: inline-block;
+      margin-top: 0;
+
+      .field__item {
+        display: inline-block;
+        margin-top: 0;
+      }
+    }
+
+    .ikes-soldiers-detail--content__section-header {
+      display: table;
+      margin-bottom: 5px;
+
+      h4 {
+        margin-bottom: 0;
+        padding-bottom: 1px;
+        border-bottom: solid 2px $color-brand-secondary;
+      }
+    }
+
+    .ikes-soldiers-detail--content__video-container {
+
+      .video-embed-field-launch-modal {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+          content: url('../assets/yt-play.svg');
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          height: 60px;
+          width: 60px;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      img,
+      picture {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .ikes-soldiers-detail--docs-wrap {
+    display: none;
+  }
+}
+
+// Snapshot block overrides
+#ikes-soldiers-snapshot-item { //sass-lint:disable-line no-ids
+  font-family: $font-secondary;
+  width: 100%;
+  margin: 0 auto 20px;
+  position: relative;
+
+  h4 {
+    font-family: $font-secondary;
+    text-transform: uppercase;
+  }
+
+  .inline {
+    margin-top: 0 !important; //sass-lint:disable-line no-important
+  }
+
+  .nudge {
+    margin-left: -2px;
+  }
+
+  @include breakpoint($md) {
+    width: 96%;
+    margin: -45px 0 2rem 3%;
+  }
+
+  .ikes-soldiers-detail--wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+
+    @include breakpoint($md) {
+      width: 88%;
+      float: left;
+    }
+
+    .ikes-soldiers-detail--image-container {
+      display: none;
+    }
+
+    .ikes-soldiers-detail--content {
+      margin: 0;
+      padding: 0;
+    }
+
+    .ikes-soldiers-detail--docs-wrap {
+      display: block;
+
+      ul {
+        list-style: none;
+        padding-inline-start: 10px;
+
+        li {
+          margin-top: 10px;
+        }
+      }
+
+      .ikes-soldiers-detail--other-docs a::after {
+        content: '';
+        clear: both;
+        display: table;
+      }
+    }
+  }
+
+  .ikes-soldiers-detail--buttons {
+    display: none;
+    vertical-align: top;
+    position: absolute;
+    top: -90px;
+    left: 25%;
+
+    @include breakpoint($md) {
+      display: inline-block;
+      width: 60px;
+      margin: 0;
+      position: unset;
+    }
+
+    .ikes-soldiers-detail--buttons__generic {
+      height: 55px;
+      width: 55px;
+      padding: 1rem;
+      background-color: $color-white;
+      margin: 0 0 1rem 1rem;
+    }
+  }
+
+  .ikes-soldiers-detail--buttons__bottom {
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+  }
+
+  .close-snapshot {
+    display: block;
+    border: 0;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+
+    &.min {
+      display: none;
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      padding: 0.5rem 0.75rem;
+
+      @include breakpoint($sm) {
+        display: block;
+      }
+    }
+  }
+}
+
+.ikes-soldiers-detail--unit {
+  margin-top: 0 !important; //sass-lint:disable-line no-important
+
+  &::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+}
+
+.tooltip.top.add-to-collection {
+
+  &::before {
+    background-color: $color-white;
+  }
+
+  &::after {
+    content: 'Add to collection';
+    background-color: $color-white;
+    color: $color-brand-primary;
+  }
+}

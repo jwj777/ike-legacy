@@ -1,0 +1,26 @@
+flat_image_text_card_overlay:
+  label: Flat Image Text Card Overlay
+  description: An image with text below with an overlay in a flat card format.
+  template: flat-image-text-card-overlay
+  use: "@ike/flat-image-text-card-overlay/flat-image-text-card-overlay.twig"
+  fields:
+    title:
+      type: text
+      label: Title
+      description: A text string.
+      preview: 'Ike Insight'
+    image:
+      type: renderable
+      label: Image
+      description: An image to display.
+      preview: '<img src="https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260">'
+    link:
+      type: renderable
+      label: Link
+      description: A link to another page.
+      preview: 'https://google.com'
+    category:
+      type: renderable
+      label: Category
+      description: A group of categories.
+      preview: '<ul><li>3-5</li><li>K-2</li></ul>'

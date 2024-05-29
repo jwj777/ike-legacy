@@ -1,0 +1,500 @@
+@import '../../global/utils/init';
+
+form {
+  label {
+    display: block;
+  }
+
+  input {
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+
+    &[type='radio'],
+    &[type='checkbox'],
+    &[type='reset'],
+    &[type='submit'] {
+      width: auto;
+      min-width: 20px;
+    }
+  }
+
+  &.views-exposed-form {
+
+    .form-item {
+      margin-bottom: 10px;
+    }
+
+    .form-item-search {
+      display: inline-block;
+      vertical-align: top;
+
+      label {
+        display: none;
+      }
+
+      input {
+        max-width: 150px;
+        border: solid 1px $color-white;
+        height: 32px;
+
+        &::placeholder {
+          color: $color-black;
+          text-transform: uppercase;
+          font-size: 1rem;
+          font-weight: 400;
+        }
+      }
+
+      &::before {
+        content: '';
+        background: url('../../images/search.svg') no-repeat center center $color-brand-primary;
+        border: solid 1px $color-white;
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background-size: 60%;
+        margin-right: -5px;
+        vertical-align: top;
+      }
+    }
+
+    details {
+      &[data-drupal-selector='edit-secondary'] {
+        background-color: $color-white;
+        max-width: none;
+        color: $color-black;
+        display: inline-block;
+        font-size: 1rem;
+        font-weight: 400;
+        margin: 12px 0 0;
+
+        @include breakpoint($md) {
+          margin: 0 0 0 12px;
+          max-width: 150px;
+        }
+
+        summary {
+          cursor: pointer;
+          padding: 8px;
+          text-transform: uppercase;
+
+          &::before {
+            content: url('../../images/filter_list-24px.svg');
+            margin: -4px 4px 0 -4px;
+            float: left;
+          }
+
+          &::marker {
+            display: none;
+          }
+        }
+
+        &[open] {
+          > fieldset {
+            display: block;
+            position: static;
+            left: 0;
+            width: auto;
+            min-width: 200px;
+            padding: 18px 10px 10px;
+            margin: 0;
+            background-color: $color-brand-primary;
+            color: $color-white;
+            transform: none;
+
+            @include breakpoint($md) {
+              transform: translateX(calc(-100% + 150px));
+              min-width: 325px;
+            }
+
+            legend {
+              position: absolute;
+              top: 80px;
+              left: 10px;
+              font-size: 18px;
+              font-weight: 600;
+
+              @include breakpoint($md) {
+                top: 10px;
+                font-size: 20px;
+              }
+            }
+
+            > .fieldset-wrapper {
+              padding: 10px;
+            }
+          }
+
+          input[type='submit'] {
+            display: block;
+          }
+
+          > summary {
+            background-color: $color-brand-primary;
+            color: $color-white;
+
+            &::before {
+              filter: invert(99%) sepia(100%) saturate(3%) hue-rotate(256deg) brightness(108%) contrast(100%);
+            }
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          details summary {
+            text-align: left;
+            text-transform: none;
+
+            &::before {
+              filter: invert(99%) sepia(100%) saturate(3%) hue-rotate(256deg) brightness(108%) contrast(100%);
+            }
+          }
+
+          details {
+            &[open] {
+              max-width: 400px;
+              width: 100%;
+              margin: 0;
+              background-color: transparent;
+              color: $color-white;
+              border-bottom: 0;
+              padding-bottom: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    input[type='submit'] {
+      background-color: $color-brand-secondary;
+      font-family: 'Libre Baskerville', Arial, sans-serif;
+      color: $color-white;
+      font-size: 1rem;
+    }
+
+    .bef-links a {
+      padding: 8px 12px;
+      text-transform: none;
+      color: $color-white;
+      line-height: 1.6em;
+
+      &:hover {
+        color: $color-brand-secondary;
+      }
+    }
+  }
+}
+
+//Webforms
+
+.webform-submission-form {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: $color-white;
+  border: solid 2px $color-brand-secondary;
+  color: $color-black;
+
+  &.two-column {
+    max-width: 800px;
+  }
+
+  .webform-type-fieldset {
+    padding: 25px 20px 20px;
+    border: 0;
+
+    legend {
+      display: none;
+    }
+
+    label {
+      color: $color-black;
+      margin: 0 0 5px;
+    }
+
+    .form-item {
+      margin: 10px 0;
+    }
+  }
+
+  .form-item-form-header {
+    background-color: $color-brand-primary;
+    color: $color-white;
+    padding: 20px;
+    text-align: center;
+    line-height: 1.2em;
+    border-bottom: solid 2px $color-brand-secondary;
+    position: relative;
+
+    h1,
+    h3 {
+      font-family: $body-font-family;
+      font-size: 10rem;
+      margin-bottom: -1rem;
+      line-height: 1.2em;
+
+      &::before {
+        content: '';
+        background: url('../../images/star.png') center center no-repeat;
+        background-size: 100%;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 50%;
+        transform: translateY(-9%) translateX(-50%);
+
+        @include breakpoint($md) {
+          width: 150px;
+          height: 150px;
+          transform: translateY(-55%) translateX(-50%);
+        }
+      }
+    }
+
+    h2 {
+      font-family: $body-font-family;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 6rem;
+      margin-top: 2rem;
+    }
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  select {
+    max-width: 600px;
+    width: 100%;
+  }
+
+  .webform-button--submit {
+    background-color: $color-brand-secondary;
+    color: $color-white;
+    font-family: $font-secondary;
+    margin: 0 auto 20px;
+    display: block;
+    padding: 10px 25px;
+    cursor: pointer;
+  }
+
+  .js-form-type-datetime  {
+    .container-inline {
+      display: flex;
+      justify-content: space-between;
+
+      > div {
+        flex: 0 0 45%;
+      }
+    }
+
+  }
+
+  .js-form-type-checkbox {
+    input {
+      float: left;
+      margin-right: 10px;
+    }
+  }
+
+  .description {
+    margin-top: 5px;
+    color: $color-black;
+  }
+
+  .webform-type-radios {
+    legend {
+      display: block;
+    }
+
+    .js-form-type-radio {
+      input {
+        float: left;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &.form-show-fieldset-labels {
+    padding: 20px 0;
+
+    fieldset {
+      legend {
+        display: block;
+      }
+    }
+
+    .webform-type-fieldset {
+      > legend {
+        font-size: 1.7rem;
+        font-weight: bold;
+      }
+    }
+  }
+
+  // Ike's Soldiers Submission page
+  &.soldier-submission-form {
+    max-width: 1200px;
+    font-family: $font-secondary;
+
+    input,
+    textarea,
+    select {
+      border: solid 1px $color-gray;
+    }
+
+    #edit-form-title { //sass-lint:disable-line no-ids
+      margin: 20px;
+
+      h2 {
+        font-size: 30px;
+        display: inline-block;
+        margin-right: 12px;
+      }
+
+      .text-red {
+        color: $color-brand-secondary;
+      }
+    }
+
+    .form-required::after {
+      content: '*';
+      font-size: 20px;
+      color: $color-brand-secondary;
+      margin-left: 2px;
+    }
+
+    label {
+      line-height: 1.2em;
+    }
+
+    .label-with-desc {
+      display: inline-block;
+      vertical-align: top;
+
+      & + div {
+        display: inline-block;
+      }
+    }
+
+    .js-form-type-checkbox input {
+      float: unset;
+      margin-right: 4px;
+    }
+
+    .form-select {
+      font-size: 16px;
+      padding: 8px 6px;
+      appearance: none;
+    }
+
+    .form-managed-file {
+
+      .form-file {
+        max-width: 265px;
+        border: 0;
+        padding-left: 0;
+      }
+
+      .js-form-type-checkbox {
+
+        input,
+        label {
+          display: inline-block;
+        }
+      }
+    }
+
+    .webform-element-description {
+      font-style: italic;
+      font-size: 14px;
+      line-height: 1.4em;
+    }
+
+    .fieldset-with-desc {
+
+      .webform-element-description {
+        line-height: 1.4em;
+        margin-top: 10px;
+      }
+    }
+
+    .webform-managed-file-placeholder {
+      color: #747474;
+    }
+
+    .webform-type-fieldset {
+
+      legend {
+        display: block;
+        margin-bottom: -20px;
+
+        .fieldset-legend {
+          text-transform: uppercase;
+          font-size: 22px;
+          border-bottom: solid 2px $color-brand-secondary;
+          margin-left: 2px;
+          line-height: 1.4em;
+        }
+      }
+    }
+
+    .disclaimer {
+      font-family: $body-font-family;
+      padding: 20px;
+      width: 85%;
+    }
+
+    .webform-button--submit {
+      margin: 0 20px 20px;
+    }
+  }
+}
+
+.page-webform,
+.page-submit-a-soldier {
+  article.node__component-page { //sass-lint:disable-line no-qualifying-elements
+    background-color: $color-black;
+  }
+
+  .webform-submission-form {
+    margin-top: 200px;
+
+    &.soldier-submission-form {
+      margin-top: 0;
+
+      .placeholder-mock {
+        font-family: $header-font-family;
+        color: #747474;
+        font-style: normal;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.page-soldier-confirmation,
+.page-learning-experience-confirmation {
+  main {
+    margin-top: 50px;
+
+    @include breakpoint($md) {
+      margin-top: 200px;
+    }
+  }
+
+  .a2a_kit { //sass-lint:disable-line class-name-format
+    display: none;
+  }
+}
+
+.captcha {
+  margin: 0 0 20px 20px;
+}

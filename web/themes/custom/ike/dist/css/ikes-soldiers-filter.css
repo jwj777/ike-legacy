@@ -1,0 +1,253 @@
+.tooltip {
+  padding: 10px 15px;
+  position: relative;
+  text-align: center;
+}
+.tooltip::after {
+  background-color: #0F2043;
+  border-radius: 10px;
+  color: #fff;
+  display: none;
+  padding: 10px 15px;
+  position: absolute;
+  text-align: center;
+  z-index: 999;
+}
+.tooltip::before {
+  background-color: #0F2043;
+  content: " ";
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 999;
+}
+.tooltip:hover::after {
+  display: block;
+}
+.tooltip:hover::before {
+  display: block;
+}
+.tooltip.top::after {
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 10px));
+}
+.tooltip.top::before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
+.tooltip.bottom::after {
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 10px));
+}
+.tooltip.bottom::before {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+}
+.tooltip.right::after {
+  content: "";
+  top: 0;
+  right: 0;
+  transform: translateX(calc(100% + 10px));
+}
+.tooltip.right::before {
+  top: 50%;
+  right: 0;
+  transform: translate(calc(100% + 5px), -50%) rotate(45deg);
+}
+.tooltip.left::after {
+  content: "";
+  top: 0;
+  left: 0;
+  transform: translateX(calc(-100% - 10px));
+}
+.tooltip.left::before {
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-100% - 5px), -50%) rotate(45deg);
+}
+
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view {
+  font-family: "Libre Baskerville";
+  color: #000;
+  background-color: #f7f7f7;
+  padding-top: 15px;
+  margin-top: 20px;
+  display: none;
+}
+@media (min-width: 992px) {
+  #views-exposed-form-ike-s-soldiers-ikes-soldiers-view {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .js-form-item {
+  background-color: #FFF;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .form-item-field-ikes-soldiers-k-i-a-value {
+  order: 10;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .form-item-field-ikes-soldiers-p-o-w-value {
+  order: 11;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .form-actions {
+  order: 12;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view h4 {
+  color: #FFF;
+  margin: 0;
+  padding: 0.5rem 0;
+  font-family: "Libre Baskerville";
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .ikes-soldiers-search-container {
+  width: 95%;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding-bottom: 10px;
+  border: 1px solid #e3e3e3;
+  margin-bottom: 0.5rem;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .ikes-soldiers-search-container .ikes-soldiers-search-header {
+  background-color: #0f2043;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .ikes-soldiers-search-container .form-item-ikes-soldiers-combine-filter,
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .ikes-soldiers-search-container .form-item-field-ikes-soldiers-first-name,
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .ikes-soldiers-search-container .form-item-field-ikes-soldiers-last-name {
+  margin: 0.7rem 0.5rem 0;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .ikes-soldiers-search-container .form-item-ikes-soldiers-combine-filter > label,
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .ikes-soldiers-search-container .form-item-field-ikes-soldiers-first-name > label,
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .ikes-soldiers-search-container .form-item-field-ikes-soldiers-last-name > label {
+  margin-bottom: 0.25rem;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .ikes-soldiers-search-container input[type=text] {
+  height: 30px;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .form-item {
+  margin-bottom: 0;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .ikes-soldiers-filter-header {
+  background-color: #0f2043;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  margin: 0 auto;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .details-container {
+  width: 95%;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 12px 2px;
+  padding-left: 5px;
+  border: 1px solid #e3e3e3;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .details-container details.form-item {
+  background-color: #FFF;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .details-container details.form-item.odd {
+  border-left: 3px solid #C11F2A;
+  padding-left: 0.5rem;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .details-container details.form-item.even {
+  border-left: 3px solid #0F2043;
+  padding-left: 0.5rem;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .details-container details.form-item > summary {
+  list-style: none;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .details-container details.form-item > summary:focus {
+  outline: none;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .details-container details.form-item > summary:hover {
+  cursor: pointer;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .details-container details.form-item > summary::marker {
+  display: none;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .details-container details.form-item > summary::after {
+  content: "+";
+  float: right;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .details-container details[open] summary::after {
+  content: "-";
+  float: right;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .form-item-field-ikes-soldiers-k-i-a-value,
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .form-item-field-ikes-soldiers-p-o-w-value {
+  width: 95%;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 12px 2px;
+  padding-left: 5px;
+  border: 1px solid #e3e3e3;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .form-item-field-ikes-soldiers-k-i-a-value input[type=checkbox],
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .form-item-field-ikes-soldiers-p-o-w-value input[type=checkbox] {
+  margin-left: 8px;
+}
+@media (min-width: 992px) {
+  #views-exposed-form-ike-s-soldiers-ikes-soldiers-view .form-item-field-ikes-soldiers-k-i-a-value input[type=checkbox],
+  #views-exposed-form-ike-s-soldiers-ikes-soldiers-view .form-item-field-ikes-soldiers-p-o-w-value input[type=checkbox] {
+    margin-left: 25px;
+  }
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .js-form-type-checkbox {
+  display: flex;
+  padding: 0.5rem 0;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .js-form-type-checkbox .form-checkbox {
+  margin: 0 10px;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .js-form-type-checkbox .option {
+  font-size: 0.85rem;
+  line-height: 1.2em;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .form-submit {
+  width: 100%;
+  border: 1px solid #FFF;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view .form-submit:hover {
+  cursor: pointer;
+}
+#views-exposed-form-ike-s-soldiers-ikes-soldiers-view #edit-submit-ike-s-soldiers {
+  background-color: #0F2043;
+}
+
+.filter-mobile-toggle {
+  display: block;
+  background-color: #0F2043;
+  background-image: url("../../images/filter.png");
+  background-repeat: no-repeat;
+  background-position: 50% 55%;
+  background-size: 50%;
+  width: 75px;
+  height: 75px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 10;
+  right: 10px;
+  bottom: 20px;
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+  .filter-mobile-toggle {
+    display: none;
+  }
+}

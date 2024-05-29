@@ -1,0 +1,158 @@
+ikes_soldiers_detail:
+  label: Ike's Soldiers Detail
+  description: Shows the details of an Ike's Soldier
+  template: ikes-soldiers-detail
+  use: "@ike/ikes-soldiers-detail/ikes-soldiers-detail.twig"
+  fields:
+    first_name:
+      type: text
+      label: First Name
+      description: First Name
+      preview: Robert
+    middle_name:
+      type: text
+      label: Middle Name
+      description: Middle Name
+      preview: Joseph
+    last_name:
+      type: text
+      label: Last Name
+      description: Last Name
+      preview: Dole
+    suffix:
+      type: text
+      label: Suffix
+      description: Suffix
+      preview: Mr.
+    description:
+      type: text
+      label: Description
+      description: Description
+      preview: Landed on Omaha Beach on D-Day, fought at the Battle of the Bulge, and witnessed the signing of the Instrument of Surrender in Rheims, France.
+    primary_source_type:
+      type: text
+      label: Primary Source Type
+      description: Primary Source Type
+      preview: <img src="http://eisenhower-foundation.docksal/sites/default/files/styles/ikes_soldiers_portrait/bob-dole.png">
+    soldier_image:
+      type: renderable
+      label: Image
+      description: The soldiers portrait.
+      preview: <img src="http://eisenhower-foundation.docksal/sites/default/files/styles/ikes_soldiers_portrait/bob-dole.png">
+    video:
+      type: renderable
+      label: Video
+      description: Video of soldier.
+      preview: <img src="http://eisenhower-foundation.docksal/sites/default/files/styles/ikes_soldiers_portrait/bob-dole.png">
+    date_of_birth:
+      type: text
+      label: Date of Birth
+      description: Soldier's birth date.
+      preview: 02/01/1915
+    home_town:
+      type: text
+      label: Home Town
+      description: Soldier's home town.
+      preview: Kansas City, MO
+    date_of_death:
+      type: text
+      label: Date of Death
+      description: Date of soldier's death.
+      preview: 02/01/2012
+    birthplace:
+      type: text
+      label: Birthplace
+      description: Place of birth
+      preview: Russell, KS
+    gender:
+      type: text
+      label: Gender
+      description: Gender
+      preview: Male
+    branch_of_service:
+      type: text
+      label: Branch of Service
+      description: Branch of Service
+      preview: Army
+    unit:
+      type: text
+      label: Unit
+      description: Branch of Service
+      preview: 101st Squadron
+    theater_of_operation:
+      type: text
+      label: Theater of Operation
+      description: Theater of Operation
+      preview: Theater 1
+    enlisted_date:
+      type: text
+      label: Enlisted/Commissioned Date
+      description: Date of enlistment/commission.
+      preview: 02/21/1940
+    discharge_date:
+      type: text
+      label: Discharge Date
+      description: Date of Discharge.
+      preview: 02/21/1945
+    battle:
+      type: text
+      label: Battle
+      description: Battles
+      preview: Landed on Omaha Beach on D-Day, fought at the Battle of the Bulge, and witnessed the signing of the Instrument of Surrender in Rheims, France.
+    highest_rank:
+      type: text
+      label: Highest Rank
+      description: Highest Rank Achieved
+      preview: Second Lieutenant
+    military_honors:
+      type: text
+      label: Military Honors
+      description: Military Honors
+      preview: Purple Heart
+    honored_by:
+      type: text
+      label: Honored By
+      description: Who bestowed their honors.
+      preview: United States Government
+    killed_in_action:
+      type: boolean
+      label: Killed in Action
+      description: Killed in Action.
+      preview: false
+    prisoner_of_war:
+      type: boolean
+      label: Prisoner of War
+      description: Prisoner of War.
+      preview: true
+    biographical_information:
+      type: text
+      label: Biographical Information
+      description: Biographical Information.
+      preview: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquamnihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdamrecusandae alias error harum maxime adipisci amet laborum. Perspiciatis minima nesciunt dolorem! Officiis iure rerum voluptates a cumque velit quibusdam sed amet tempora. Sit laborum ab, eius fugit doloribus tenetur 
+        fugiat, temporibus enim commodi iusto libero magni deleniti quod quam consequuntur! Commodi minima excepturi repudiandae velit hic maximedoloremque. Quaerat provident commodi consectetur veniam similique ad earum omnis ipsum saepe, voluptas, hic voluptates pariatur est explicabo fugiat, dolorum eligendi quam cupiditate excepturi mollitia maiores labore suscipit quas? Nulla, placeat. Voluptatem quaerat non architecto ab laudantiummodi minima sunt esse temporibus sint culpa, recusandae aliquam numquam 
+        totam ratione voluptas quod exercitationem fuga. Possimus quis earum veniam quasi aliquam eligendi, placeat qui corporis!
+    recollections:
+      type: text
+      label: Recollections
+      description: Recollections.
+      preview: Landed on Omaha Beach on D-Day, fought at the Battle of the Bulge, and witnessed the signing of the Instrument of Surrender in Rheims, France.
+    email:
+      type: text
+      label: Email
+      description: Email.
+      preview: memorial@eisenhower.gov
+    other_service_documents:
+      type: text
+      label: Email
+      description: Email.
+      preview: memorial@eisenhower.gov
+    approved:
+      type: boolean
+      label: Approved
+      description: Soldier approved for publishing.
+      preview: TRUE
+    published:
+      type: boolean
+      label: Published
+      description: Soldier published.
+      preview: TRUE

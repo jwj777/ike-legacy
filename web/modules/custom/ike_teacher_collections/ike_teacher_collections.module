@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Contains ike_teacher_collections.module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function ike_teacher_collections_theme($existing, $type, $theme, $path) {
+  return [
+    'teacher_collections' => [
+      'variables' => [
+        'content' => NULL,
+        'collections' => NULL,
+        'title' => NULL,
+        'body' => NULL,
+        'hero_image' => NULL,
+      ],
+    ],
+    'add_to_classroom_block' => [
+      'variables' => [
+        'content' => NULL,
+      ],
+      'render element' => 'children',
+    ],
+  ];
+}

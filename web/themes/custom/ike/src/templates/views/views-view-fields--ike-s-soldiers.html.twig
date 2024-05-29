@@ -1,0 +1,108 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ *
+ * Available variables:
+ * - node: The node entity with limited access to object properties and methods.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - node.getCreatedTime() will return the node creation timestamp.
+ *   - node.hasField('field_example') returns TRUE if the node bundle includes
+ *     field_example. (This does not indicate the presence of a value in this
+ *     field.)
+ *   - node.isPublished() will return whether the node is published or not.
+ *   Calling other methods, such as node.delete(), will result in an exception.
+ *   See \Drupal\node\Entity\Node for a full list of public properties and
+ *   methods for the node object.
+ * - label: The title of the node.
+ * - content: All node items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - author_picture: The node author user entity, rendered using the "compact"
+ *   view mode.
+ * - metadata: Metadata for this node.
+ * - date: Themed creation date field.
+ * - author_name: Themed author name field.
+ * - url: Direct URL of the current node.
+ * - display_submitted: Whether submission information should be displayed.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - node: The current template type (also known as a "theming hook").
+ *   - node--type-[type]: The current node type. For example, if the node is an
+ *     "Article" it would result in "node--type-article". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+ *     teaser would result in: "node--view-mode-teaser", and
+ *     full: "node--view-mode-full".
+ *   The following are controlled through the node publishing options.
+ *   - node--promoted: Appears on nodes promoted to the front page.
+ *   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+ *     teaser listings.
+ *   - node--unpublished: Appears on unpublished nodes visible only to site
+ *     admins.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main
+ *   content tag that appears in the template.
+ * - author_attributes: Same as attributes, except applied to the author of
+ *   the node tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ * - view_mode: View mode; for example, "teaser" or "full".
+ * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+ * - page: Flag for the full page state. Will be true if view_mode is 'full'.
+ * - readmore: Flag for more state. Will be true if the teaser content of the
+ *   node cannot hold the main body content.
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_node()
+ *
+ * @todo Remove the id attribute (or make it a class), because if that gets
+ *   rendered twice on a page this is invalid CSS for example: two lists
+ *   in different view modes.
+ */
+#}
+
+  {% set comp_info = {
+    "soldier_image": fields.field_ikes_soldiers_image.content,
+    "first_name": row._entity.field_ikes_soldiers_first_name.value,
+    "middle_name": row._entity.field_ikes_soldiers_middle_name.value,
+    "last_name": row._entity.field_ikes_soldiers_last_name.value,
+    "suffix": row._entity.field_ikes_soldiers_suffix.value,
+    "highest_rank": row._entity.fields.field_ikes_soldiers_highest_rank.value,
+    "branch_of_service": fields.field_ikes_soldiers_serv_branch.content,
+    "birthplace": row._entity.field_ikes_soldiers_birthplace.value,
+    "unit": row._entity.fields.field_ikes_soldiers_unit.value,
+    "gender": fields.field_ikes_soldiers_gender.content,
+    "battle": row._entity.field_ikes_soldiers_battle.value,
+    "military_honors": row._entity.fields.field_ikes_soldiers_mil_honors.value,
+    "honored_by": row._entity.fields.field_ikes_soldiers_honored_by.value,
+    "biographical_information": fields.field_ikes_soldiers_biography.content,
+    "bio_check": row._entity.fields.field_ikes_soldiers_biography.value,
+    "date_of_birth": row._entity.fields.field_ikes_soldiers_birth_date.value,
+    "date_of_death": row._entity.fields.field_ikes_soldiers_death_date.value,
+    "theater_check": row._entity.fields.field_ikes_soldiers_theater_op.value,
+    "theater_of_operation": fields.field_ikes_soldiers_theater_op.content,
+    "pow": row._entity.fields.field_ikes_soldiers_p_o_w.value,
+    "kia": row._entity.fields.field_ikes_soldiers_k_i_a.value,
+    "docs_check": row._entity.field_ikes_soldiers_other_docs.target_id,
+    "other_docs": fields.field_ikes_soldiers_other_docs.content,
+    "video_check": row._entity.fields.field_ikes_soldiers_video.value,
+    "video": fields.field_ikes_soldiers_video.content,
+    "enlisted_date": row._entity.fields.field_ikes_soldiers_enlistment.value,
+    "enlisted_approx": row._entity.field_ikes_soldiers_approx_enlis.value,
+    "discharge_date": row._entity.fields.field_ikes_soldiers_discharge.value,
+    "discharge_approx": row._entity.field_ikes_soldiers_approx_disch.value,
+    "link": row._entity.nid.value,
+    "addtoany": fields.addtoany_share.content
+  } %}
+
+  {% include "@ike/ikes-soldiers-teaser/ikes-soldiers-teaser.twig" with comp_info %}

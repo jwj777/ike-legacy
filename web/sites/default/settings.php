@@ -6,7 +6,7 @@
 $settings['container_yamls'][] = __DIR__ . '/services.yml';
 
 $settings['update_free_access'] = FALSE;
-$settings['file_private_path'] = '../private';
+
 $settings['entity_update_batch_size'] = 50;
 
 $settings['hash_salt'] = 'asotenuarchqewsmaoeuSNTH56654+';
@@ -52,6 +52,9 @@ switch ($site_environment) {
  *      the site settings remain consistent.
  */
 include __DIR__ . "/settings.pantheon.php";
+
+// override the setting from pantheon
+$settings['file_private_path'] = '../private';
 
 /**
  * Skipping permissions hardening will make scaffolding

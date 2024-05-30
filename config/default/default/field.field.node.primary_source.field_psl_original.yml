@@ -1,0 +1,29 @@
+uuid: 893f8648-fd7e-485a-aa69-63f829c02083
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_psl_original
+    - node.type.primary_source
+    - taxonomy.vocabulary.psl_artifact_original
+id: node.primary_source.field_psl_original
+field_name: field_psl_original
+entity_type: node
+bundle: primary_source
+label: 'Original or Replica:'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      psl_artifact_original: psl_artifact_original
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,8 @@
+uuid: 9ec1985b-1b5b-4369-ab4a-0bfa548d126b
+langcode: en
+status: true
+dependencies: {  }
+id: cta_banner
+label: 'CTA Banner'
+revision: 0
+description: 'Creates a banner that links to another page.'

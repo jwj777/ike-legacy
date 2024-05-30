@@ -1,0 +1,8 @@
+uuid: ee26c0f3-e54e-4044-98c9-4a64c1d7cf32
+langcode: en
+status: true
+dependencies: {  }
+id: alert_banner
+label: 'Alert Banner'
+revision: 0
+description: 'Sitewide Alert Banner'

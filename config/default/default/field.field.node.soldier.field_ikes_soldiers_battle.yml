@@ -1,0 +1,19 @@
+uuid: 0dde51bb-2024-4137-8823-73d2e9683616
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ikes_soldiers_battle
+    - node.type.soldier
+id: node.soldier.field_ikes_soldiers_battle
+field_name: field_ikes_soldiers_battle
+entity_type: node
+bundle: soldier
+label: Battle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

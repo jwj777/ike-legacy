@@ -1,0 +1,17 @@
+uuid: dc07fb7e-3cb0-47c5-a142-a708e6a57b18
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: psl_image
+label: 'PSL Image'
+effects:
+  308d8bc0-1ac9-426a-a4cd-e66666c8d413:
+    uuid: 308d8bc0-1ac9-426a-a4cd-e66666c8d413
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 480
+      crop_type: focal_point

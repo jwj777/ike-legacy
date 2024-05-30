@@ -1,0 +1,20 @@
+uuid: 72924cb9-ada0-4e80-af20-6b69a88c3e96
+langcode: en
+status: true
+dependencies:
+  theme:
+    - ike
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: ike_local_actions
+theme: ike
+region: content
+weight: -13
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,101 @@
+uuid: b06c8052-2493-4798-9380-82ea2729dd42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_cost
+    - field.storage.node.field_event_date
+    - field.storage.node.field_event_description
+    - field.storage.node.field_event_category
+    - field.storage.node.field_event_location_title
+    - search_api.server.temp_database_server
+  module:
+    - node
+    - search_api
+id: events
+name: Events
+description: ''
+read_only: false
+field_settings:
+  field_event_category:
+    label: 'Event Category'
+    datasource_id: 'entity:node'
+    property_path: field_event_category
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_event_category
+  field_event_cost:
+    label: Cost
+    datasource_id: 'entity:node'
+    property_path: field_event_cost
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_event_cost
+  field_event_date:
+    label: Date
+    datasource_id: 'entity:node'
+    property_path: field_event_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_event_date
+  field_event_description:
+    label: Description
+    datasource_id: 'entity:node'
+    property_path: field_event_description
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_event_description
+  field_event_location_title:
+    label: 'Location Title'
+    datasource_id: 'entity:node'
+    property_path: field_event_location_title
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_event_location_title
+  status:
+    label: Published
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - node
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
+  url:
+    label: URI
+    property_path: search_api_url
+    type: string
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - event
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
+server: temp_database_server

@@ -1,0 +1,22 @@
+uuid: cbd9e40b-1e43-43cc-a3f7-b005d5428a21
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: ike_soldier
+label: 'IKE Soldier'
+type: 'canonical_entities:node'
+pattern: '/ikessoldiers/[node:title]'
+selection_criteria:
+  8bccfe24-29c1-47ab-a65c-6687152f1001:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 8bccfe24-29c1-47ab-a65c-6687152f1001
+    context_mapping:
+      node: node
+    bundles:
+      soldier: soldier
+selection_logic: and
+weight: -5
+relationships: {  }

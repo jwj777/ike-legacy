@@ -1,0 +1,7 @@
+uuid: 4cf0592c-d12e-40b2-a96d-8f184242f64d
+langcode: en
+status: false
+dependencies: {  }
+formId: node_sponsors_form
+captchaType: default
+label: node_sponsors_form

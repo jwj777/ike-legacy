@@ -1,0 +1,15 @@
+uuid: 3d2aa14e-601c-4056-b163-2f09f4c21240
+langcode: en
+status: true
+dependencies: {  }
+name: thumbnail_200_200
+label: Thumbnail
+effects:
+  89cf8d3b-e95c-41ff-8486-e6f9f345d0ca:
+    uuid: 89cf8d3b-e95c-41ff-8486-e6f9f345d0ca
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 200
+      height: 200
+      anchor: center-center

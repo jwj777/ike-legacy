@@ -1,0 +1,11 @@
+uuid: e8c47acd-c6ed-42a9-ae9b-b74d38dbc573
+langcode: en
+status: true
+dependencies: {  }
+id: field_blockuseruserlogin
+block_id: 'field_block:user:user:login'
+category: user_fields
+label: 'Last login'
+image_path: ''
+image_alt: ''
+weight: 0

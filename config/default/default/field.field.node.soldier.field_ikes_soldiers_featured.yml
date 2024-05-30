@@ -1,0 +1,23 @@
+uuid: ccd69dc0-0cfa-4396-9ed1-7f71cd9d36b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ikes_soldiers_featured
+    - node.type.soldier
+id: node.soldier.field_ikes_soldiers_featured
+field_name: field_ikes_soldiers_featured
+entity_type: node
+bundle: soldier
+label: Featured
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

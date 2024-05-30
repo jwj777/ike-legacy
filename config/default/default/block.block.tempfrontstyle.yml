@@ -1,0 +1,30 @@
+uuid: 4fb516b5-155e-4f07-a84d-0a3aafaea998
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a494e08e-d312-4975-96de-dbc6fa0af562'
+  module:
+    - block_content
+    - system
+  theme:
+    - ike
+id: tempfrontstyle
+theme: ike
+region: header
+weight: -11
+provider: null
+plugin: 'block_content:a494e08e-d312-4975-96de-dbc6fa0af562'
+settings:
+  id: 'block_content:a494e08e-d312-4975-96de-dbc6fa0af562'
+  label: 'temp front style'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

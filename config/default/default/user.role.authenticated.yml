@@ -1,0 +1,30 @@
+uuid: a435c0af-5fc8-42fa-af53-c28bb22d0375
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+  module:
+    - captcha
+    - contact
+    - filter
+    - google_analytics
+    - media
+    - search
+    - shortcut
+    - system
+_core:
+  default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
+id: authenticated
+label: 'Authenticated user'
+weight: -9
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'opt-in or out of google analytics tracking'
+  - 'search content'
+  - 'skip CAPTCHA'
+  - 'use text format basic_html'
+  - 'view media'

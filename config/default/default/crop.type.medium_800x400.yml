@@ -1,0 +1,12 @@
+uuid: 870fab17-f11b-4732-9083-34dece2e5e6b
+langcode: en
+status: true
+dependencies: {  }
+label: 'Medium 800x550'
+id: medium_800x400
+description: 'Crop Type used for the Lesson Plan images.'
+aspect_ratio: '16:11'
+soft_limit_width: 800
+soft_limit_height: 550
+hard_limit_width: null
+hard_limit_height: null

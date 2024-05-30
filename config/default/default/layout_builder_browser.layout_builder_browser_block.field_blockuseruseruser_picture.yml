@@ -1,0 +1,11 @@
+uuid: 5710c8cf-232a-47fb-8a69-55a324a3776a
+langcode: en
+status: true
+dependencies: {  }
+id: field_blockuseruseruser_picture
+block_id: 'field_block:user:user:user_picture'
+category: user_fields
+label: Picture
+image_path: ''
+image_alt: ''
+weight: 0

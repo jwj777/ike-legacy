@@ -1,0 +1,8 @@
+uuid: eb304757-7672-49ac-967b-1b5ef3b3b06b
+langcode: en
+status: true
+dependencies: {  }
+name: 'PSL Type'
+vid: psl_type
+description: 'Primary Source Type (for PSL Library)'
+weight: 0

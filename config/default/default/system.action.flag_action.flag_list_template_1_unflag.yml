@@ -1,0 +1,17 @@
+uuid: f2680fde-aa1d-4145-b191-85ffcb453717
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.flag_list_template_1
+  module:
+    - flag
+_core:
+  default_config_hash: dkSOtOrwdYQJVIAi2LOYl8XRZCqSIIIb0Hb9J-2NNug
+id: flag_action.flag_list_template_1_unflag
+label: 'Remove this item from the list'
+type: node
+plugin: 'flag_action:flag_list_template_1_unflag'
+configuration:
+  flag_id: flag_list_template_1
+  flag_action: unflag

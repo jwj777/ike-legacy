@@ -1,0 +1,11 @@
+uuid: eec0c255-9136-4cb9-9272-cec1ca06b1a4
+langcode: en
+status: true
+dependencies: {  }
+id: field_blockuseruserpreferred_admin_langcode
+block_id: 'field_block:user:user:preferred_admin_langcode'
+category: user_fields
+label: 'Preferred admin language code'
+image_path: ''
+image_alt: ''
+weight: 0

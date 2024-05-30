@@ -1,0 +1,28 @@
+uuid: fe8b54fc-f79f-4919-b672-6048fd4f2fad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slide_media
+    - media.type.image
+    - paragraphs.paragraphs_type.slide
+id: paragraph.slide.field_slide_media
+field_name: field_slide_media
+entity_type: paragraph
+bundle: slide
+label: Media
+description: 'Images 1200px x 510px or larger work best.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

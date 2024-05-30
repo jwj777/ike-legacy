@@ -1,0 +1,21 @@
+uuid: 8b0f66e4-0d97-409f-a485-048e392fa7e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_credit_special_thanks
+    - node.type.about_and_credit
+  module:
+    - text
+id: node.about_and_credit.field_credit_special_thanks
+field_name: field_credit_special_thanks
+entity_type: node
+bundle: about_and_credit
+label: Advisors
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

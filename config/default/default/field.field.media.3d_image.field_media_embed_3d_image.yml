@@ -1,0 +1,24 @@
+uuid: d26c8279-7c3f-459b-8c9d-bf47af58b632
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_embed_3d_image
+    - media.type.3d_image
+  module:
+    - text
+id: media.3d_image.field_media_embed_3d_image
+field_name: field_media_embed_3d_image
+entity_type: media
+bundle: 3d_image
+label: 'Media embed 3D image'
+description: '<em>Embed script for the 3D object</em>'
+required: false
+translatable: false
+default_value:
+  -
+    value: '  '
+    format: raw_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,33 @@
+uuid: ada015c1-7701-4235-b461-094b4669157c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cta.field_cta__cta_image
+    - field.field.paragraph.cta.field_cta__cta_title
+    - paragraphs.paragraphs_type.cta
+  module:
+    - media_library
+id: paragraph.cta.default
+targetEntityType: paragraph
+bundle: cta
+mode: default
+content:
+  field_cta__cta_image:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_cta__cta_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

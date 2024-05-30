@@ -1,0 +1,23 @@
+uuid: 0c05307d-7908-49a6-acc3-4a99b9a66deb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_submission_id
+    - node.type.soldier
+id: node.soldier.field_submission_id
+field_name: field_submission_id
+entity_type: node
+bundle: soldier
+label: 'Submission ID'
+description: 'Autofilled form submission ID'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

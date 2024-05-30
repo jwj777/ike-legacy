@@ -1,0 +1,11 @@
+uuid: 120b698b-8a99-4a7b-8767-39022d6933eb
+langcode: en
+status: true
+dependencies: {  }
+id: inline_blockbasic
+block_id: 'inline_block:basic'
+category: add_a_new_custom_block
+label: 'Basic block'
+image_path: /themes/custom/ike/images/lb_browser/basic_block_wysiwyg.png
+image_alt: 'Basic Block'
+weight: 0

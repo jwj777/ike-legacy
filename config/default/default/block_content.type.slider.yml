@@ -1,0 +1,8 @@
+uuid: 7ced1580-5a9c-4ec4-8508-553e1001ecb7
+langcode: en
+status: true
+dependencies: {  }
+id: slider
+label: Slider
+revision: 0
+description: 'Slider that animates slides.'

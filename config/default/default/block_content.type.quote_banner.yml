@@ -1,0 +1,8 @@
+uuid: 6930e6e1-5ee8-480d-86b2-7f9c2fe3fa58
+langcode: en
+status: true
+dependencies: {  }
+id: quote_banner
+label: 'Quote Banner'
+revision: 0
+description: 'A block that renders the Quote Banner paragraph type.'

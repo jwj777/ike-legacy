@@ -1,0 +1,18 @@
+uuid: a441ced5-b206-4d79-a98b-e9013a075acf
+langcode: en
+status: true
+dependencies:
+  module:
+    - flag_lists
+    - serialization
+    - user
+id: entity.flagging_collection
+plugin_id: 'entity:flagging_collection'
+granularity: resource
+configuration:
+  methods:
+    - POST
+  formats:
+    - json
+  authentication:
+    - cookie

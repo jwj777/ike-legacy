@@ -1,0 +1,19 @@
+uuid: bfd21533-115e-4b6b-a3b3-eceda6a33a95
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.youtube_video_block
+    - field.storage.block_content.field_yt_video_block_description
+id: block_content.youtube_video_block.field_yt_video_block_description
+field_name: field_yt_video_block_description
+entity_type: block_content
+bundle: youtube_video_block
+label: 'Video Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

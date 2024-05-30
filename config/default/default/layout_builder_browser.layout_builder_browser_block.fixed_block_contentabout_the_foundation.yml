@@ -1,0 +1,11 @@
+uuid: e1bf668f-1a2f-448e-aec7-194635c34103
+langcode: en
+status: true
+dependencies: {  }
+id: fixed_block_contentabout_the_foundation
+block_id: 'fixed_block_content:about_the_foundation'
+category: fixed_custom
+label: 'About The Foundation'
+image_path: /themes/custom/ike/images/lb_browser/about_the_foundation.png
+image_alt: 'About the Foundation'
+weight: 0

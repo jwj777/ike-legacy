@@ -1,0 +1,11 @@
+uuid: 0cda9b7a-5a4f-4b3f-bb14-9b698fd0d557
+langcode: en
+status: true
+dependencies: {  }
+id: inline_blockyoutube_video_block
+block_id: 'inline_block:youtube_video_block'
+category: add_a_new_custom_block
+label: 'YouTube Video Block'
+image_path: /themes/custom/ike/images/lb_browser/youtube_video_block.png
+image_alt: 'YouTube Video block'
+weight: 0

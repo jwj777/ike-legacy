@@ -1,0 +1,19 @@
+uuid: 21e63c5e-d6fa-46c0-aca6-85e1e8b672b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ikes_soldiers_first_name
+    - node.type.soldier
+id: node.soldier.field_ikes_soldiers_first_name
+field_name: field_ikes_soldiers_first_name
+entity_type: node
+bundle: soldier
+label: 'First Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

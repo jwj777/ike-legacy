@@ -1,0 +1,17 @@
+uuid: d7c6aedf-1ba3-45c5-9720-16c2037ce01e
+langcode: en
+status: true
+dependencies: {  }
+id: production
+label: Production
+description: ''
+weight: 0
+folder: ../config/default/production
+module:
+  smtp: 0
+theme: {  }
+blacklist:
+  - system.performance
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

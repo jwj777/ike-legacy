@@ -1,0 +1,359 @@
+uuid: dba6d759-de2c-4731-9625-3b218baff865
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.soldier.field_ikes_soldiers_approved
+    - field.field.node.soldier.field_ikes_soldiers_approx_disch
+    - field.field.node.soldier.field_ikes_soldiers_approx_enlis
+    - field.field.node.soldier.field_ikes_soldiers_battle
+    - field.field.node.soldier.field_ikes_soldiers_biography
+    - field.field.node.soldier.field_ikes_soldiers_birth_date
+    - field.field.node.soldier.field_ikes_soldiers_birthplace
+    - field.field.node.soldier.field_ikes_soldiers_death_date
+    - field.field.node.soldier.field_ikes_soldiers_description
+    - field.field.node.soldier.field_ikes_soldiers_discharge
+    - field.field.node.soldier.field_ikes_soldiers_email
+    - field.field.node.soldier.field_ikes_soldiers_enlistment
+    - field.field.node.soldier.field_ikes_soldiers_featured
+    - field.field.node.soldier.field_ikes_soldiers_first_name
+    - field.field.node.soldier.field_ikes_soldiers_gender
+    - field.field.node.soldier.field_ikes_soldiers_highest_rank
+    - field.field.node.soldier.field_ikes_soldiers_home_town
+    - field.field.node.soldier.field_ikes_soldiers_honored_by
+    - field.field.node.soldier.field_ikes_soldiers_image
+    - field.field.node.soldier.field_ikes_soldiers_k_i_a
+    - field.field.node.soldier.field_ikes_soldiers_last_name
+    - field.field.node.soldier.field_ikes_soldiers_middle_name
+    - field.field.node.soldier.field_ikes_soldiers_mil_honors
+    - field.field.node.soldier.field_ikes_soldiers_other_docs
+    - field.field.node.soldier.field_ikes_soldiers_p_o_w
+    - field.field.node.soldier.field_ikes_soldiers_recollection
+    - field.field.node.soldier.field_ikes_soldiers_serv_branch
+    - field.field.node.soldier.field_ikes_soldiers_source
+    - field.field.node.soldier.field_ikes_soldiers_suffix
+    - field.field.node.soldier.field_ikes_soldiers_theater_op
+    - field.field.node.soldier.field_ikes_soldiers_unit
+    - field.field.node.soldier.field_ikes_soldiers_video
+    - field.field.node.soldier.field_submission_id
+    - node.type.soldier
+  module:
+    - datetime
+    - media_library
+    - path
+    - text
+    - video_embed_field
+id: node.soldier.default
+targetEntityType: node
+bundle: soldier
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 35
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ikes_soldiers_approved:
+    type: boolean_checkbox
+    weight: 33
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_ikes_soldiers_approx_disch:
+    type: boolean_checkbox
+    weight: 21
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_ikes_soldiers_approx_enlis:
+    type: boolean_checkbox
+    weight: 19
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_ikes_soldiers_battle:
+    type: string_textarea
+    weight: 22
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_ikes_soldiers_biography:
+    type: text_textarea
+    weight: 28
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_ikes_soldiers_birth_date:
+    type: datetime_default
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ikes_soldiers_birthplace:
+    type: string_textfield
+    weight: 13
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ikes_soldiers_death_date:
+    type: datetime_default
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ikes_soldiers_description:
+    type: text_textarea_with_summary
+    weight: 6
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_ikes_soldiers_discharge:
+    type: datetime_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ikes_soldiers_email:
+    type: email_default
+    weight: 30
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_ikes_soldiers_enlistment:
+    type: datetime_default
+    weight: 18
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ikes_soldiers_featured:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_ikes_soldiers_first_name:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ikes_soldiers_gender:
+    type: options_select
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ikes_soldiers_highest_rank:
+    type: string_textfield
+    weight: 23
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ikes_soldiers_home_town:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ikes_soldiers_honored_by:
+    type: string_textfield
+    weight: 25
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ikes_soldiers_image:
+    type: media_library_widget
+    weight: 8
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_ikes_soldiers_k_i_a:
+    type: boolean_checkbox
+    weight: 26
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_ikes_soldiers_last_name:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ikes_soldiers_middle_name:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ikes_soldiers_mil_honors:
+    type: string_textarea
+    weight: 24
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_ikes_soldiers_other_docs:
+    type: media_library_widget
+    weight: 31
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_ikes_soldiers_p_o_w:
+    type: boolean_checkbox
+    weight: 27
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_ikes_soldiers_recollection:
+    type: text_textarea
+    weight: 29
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_ikes_soldiers_serv_branch:
+    type: options_select
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ikes_soldiers_source:
+    type: entity_reference_autocomplete
+    weight: 7
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ikes_soldiers_suffix:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ikes_soldiers_theater_op:
+    type: entity_reference_autocomplete
+    weight: 17
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ikes_soldiers_unit:
+    type: string_textfield
+    weight: 16
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ikes_soldiers_video:
+    type: video_embed_field_textfield
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_submission_id:
+    type: number
+    weight: 32
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  flag:
+    weight: 41
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 38
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 36
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 39
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 37
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 34
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 40
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

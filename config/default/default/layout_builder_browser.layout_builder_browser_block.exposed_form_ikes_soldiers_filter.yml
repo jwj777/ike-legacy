@@ -1,0 +1,11 @@
+uuid: 9155716f-317c-4f84-80ed-601a88caf9d0
+langcode: en
+status: true
+dependencies: {  }
+id: exposed_form_ikes_soldiers_filter
+block_id: 'views_exposed_filter_block:ike_s_soldiers-ikes_soldiers_view'
+category: fixed_custom
+label: 'Exposed form: Ikes Soldiers Filter'
+image_path: ''
+image_alt: ''
+weight: null

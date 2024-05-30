@@ -1,0 +1,12 @@
+uuid: 86f479a5-bda2-48e6-99ec-7313575002c2
+langcode: en
+status: true
+dependencies: {  }
+label: "Ike's Soldier Manual Crop"
+id: ikes_soldier_manual_crop
+description: ''
+aspect_ratio: ''
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: 185
+hard_limit_height: 240

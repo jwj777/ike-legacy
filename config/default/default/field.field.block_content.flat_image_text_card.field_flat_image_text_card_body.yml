@@ -1,0 +1,21 @@
+uuid: dffab23c-74de-4c0c-aaca-8aa5c645a3b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.flat_image_text_card
+    - field.storage.block_content.field_flat_image_text_card_body
+  module:
+    - text
+id: block_content.flat_image_text_card.field_flat_image_text_card_body
+field_name: field_flat_image_text_card_body
+entity_type: block_content
+bundle: flat_image_text_card
+label: Body
+description: 'The content of this card that goes below the image. Keep it short; around 40 characters.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

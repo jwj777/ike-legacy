@@ -1,0 +1,48 @@
+uuid: 1bcec3e7-0a49-4473-87a2-6dca09b91fff
+langcode: en
+status: true
+dependencies: {  }
+id: ike_psl_migrations_psl_convert_teaser_to_media_type
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: psl_migrations
+label: 'Conver Imported Teaser image files to Media for Primary Sources'
+source:
+  plugin: csv
+  path: /var/www/html/docroot/modules/custom/ike_psl_migrations/files/import.csv
+  delimiter: ','
+  enclosure: '"'
+  header_offset: 0
+  ids:
+    - id
+  fields:
+    -
+      name: id
+      label: 'Unique Id'
+    -
+      name: title
+      label: Title
+    -
+      name: image
+      label: Image
+process:
+  bundle:
+    plugin: default_value
+    default_value: image
+  field_media_image/target_id:
+    plugin: migration_lookup
+    migration: ike_psl_migrations_psl_images
+    source: id
+  field_media_image/alt: title
+  name: title
+  uid:
+    plugin: default_value
+    default_value: 1
+destination:
+  plugin: 'entity:media'
+migration_dependencies:
+  required: {  }
+  optional:
+    - ike_psl_migrations_psl_images

@@ -1,0 +1,21 @@
+uuid: 25d075e4-a577-47da-b02b-a3cd3c39106d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_classroom_description
+  module:
+    - text
+    - user
+id: user.user.field_classroom_description
+field_name: field_classroom_description
+entity_type: user
+bundle: user
+label: 'Classroom Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

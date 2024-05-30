@@ -1,0 +1,23 @@
+uuid: 834637d5-48c2-4543-9d14-00b93fd50580
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.memorial_info
+    - field.storage.block_content.field_donors_link
+  module:
+    - link
+id: block_content.memorial_info.field_donors_link
+field_name: field_donors_link
+entity_type: block_content
+bundle: memorial_info
+label: 'Donors Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 1
+field_type: link

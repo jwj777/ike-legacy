@@ -1,0 +1,11 @@
+uuid: 016e50ef-8456-4553-b5b9-80d0ca62f515
+langcode: en
+status: true
+dependencies: {  }
+id: addtoany_block
+block_id: addtoany_block
+category: addtoany_
+label: 'AddToAny buttons'
+image_path: /themes/custom/ike/images/lb_browser/addtoany_buttons.png
+image_alt: AddToAnyButtons
+weight: 0

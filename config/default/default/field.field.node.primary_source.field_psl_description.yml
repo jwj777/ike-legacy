@@ -1,0 +1,21 @@
+uuid: 3b5e1939-76ea-40df-937b-996173476aa9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_psl_description
+    - node.type.primary_source
+  module:
+    - text
+id: node.primary_source.field_psl_description
+field_name: field_psl_description
+entity_type: node
+bundle: primary_source
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

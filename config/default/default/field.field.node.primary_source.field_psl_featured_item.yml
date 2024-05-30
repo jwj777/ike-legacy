@@ -1,0 +1,23 @@
+uuid: 2ed823d2-f928-4b0d-87ee-30dae8a55a19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_psl_featured_item
+    - node.type.primary_source
+id: node.primary_source.field_psl_featured_item
+field_name: field_psl_featured_item
+entity_type: node
+bundle: primary_source
+label: 'Featured Item?'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

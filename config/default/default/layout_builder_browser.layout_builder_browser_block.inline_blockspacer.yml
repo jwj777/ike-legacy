@@ -1,0 +1,11 @@
+uuid: 994b76eb-d88c-4f63-8477-c970eba02f10
+langcode: en
+status: true
+dependencies: {  }
+id: inline_blockspacer
+block_id: 'inline_block:spacer'
+category: add_a_new_custom_block
+label: Spacer
+image_path: /themes/custom/ike/images/lb_browser/spacer.png
+image_alt: Spacer
+weight: 0

@@ -1,0 +1,18 @@
+uuid: 8e4f2204-da7d-4fc5-8c9b-d125ada65a0b
+langcode: en
+status: true
+dependencies:
+  module:
+    - ike_teacher_collections
+    - serialization
+    - user
+id: teacher_collection_flag_delete_rest_resource
+plugin_id: teacher_collection_flag_delete_rest_resource
+granularity: resource
+configuration:
+  methods:
+    - POST
+  formats:
+    - json
+  authentication:
+    - cookie

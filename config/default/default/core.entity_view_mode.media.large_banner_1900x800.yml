@@ -1,0 +1,11 @@
+uuid: ee5b5dd1-59be-4525-b8fa-3f886507eb9f
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.large_banner_1900x800
+label: 'Large Banner 1900x800'
+description: ''
+targetEntityType: media
+cache: true

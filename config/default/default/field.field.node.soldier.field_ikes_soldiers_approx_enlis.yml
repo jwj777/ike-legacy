@@ -1,0 +1,23 @@
+uuid: 6badee80-8e8e-4349-b099-d58afcd76f9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ikes_soldiers_approx_enlis
+    - node.type.soldier
+id: node.soldier.field_ikes_soldiers_approx_enlis
+field_name: field_ikes_soldiers_approx_enlis
+entity_type: node
+bundle: soldier
+label: 'This is an approximate date'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

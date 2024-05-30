@@ -1,0 +1,15 @@
+uuid: 548a5c28-9f74-4b34-91ed-9d90de52e610
+langcode: en
+status: true
+dependencies: {  }
+name: medium_height_banner_1900x600
+label: 'Medium Height Banner (1900x600)'
+effects:
+  20f62072-74ed-4e66-8b00-125bf2100eb3:
+    uuid: 20f62072-74ed-4e66-8b00-125bf2100eb3
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1900
+      height: 600
+      anchor: center-center

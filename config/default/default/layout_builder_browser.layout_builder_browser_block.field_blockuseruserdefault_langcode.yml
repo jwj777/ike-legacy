@@ -1,0 +1,11 @@
+uuid: d07f508f-ffef-4a5e-957d-d4fceb6097e2
+langcode: en
+status: true
+dependencies: {  }
+id: field_blockuseruserdefault_langcode
+block_id: 'field_block:user:user:default_langcode'
+category: user_fields
+label: 'Default translation'
+image_path: ''
+image_alt: ''
+weight: 0

@@ -1,0 +1,11 @@
+uuid: a420f7e5-11be-4bf4-aa09-207e9aa07600
+langcode: en
+status: true
+dependencies: {  }
+id: field_blockuseruserpreferred_langcode
+block_id: 'field_block:user:user:preferred_langcode'
+category: user_fields
+label: 'Preferred language code'
+image_path: ''
+image_alt: ''
+weight: 0

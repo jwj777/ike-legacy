@@ -1,0 +1,11 @@
+uuid: a2574963-eb9f-4c95-84f9-6aedf4944932
+langcode: en
+status: true
+dependencies: {  }
+id: inline_blockslider
+block_id: 'inline_block:slider'
+category: add_a_new_custom_block
+label: Slider
+image_path: /themes/custom/ike/images/lb_browser/slider.png
+image_alt: 'Hero Slider'
+weight: 0

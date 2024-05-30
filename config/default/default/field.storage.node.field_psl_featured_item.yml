@@ -1,0 +1,18 @@
+uuid: 1f0369a4-f26b-4960-b564-a8404c2aabd9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_psl_featured_item
+field_name: field_psl_featured_item
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

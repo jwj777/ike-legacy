@@ -1,0 +1,21 @@
+uuid: 932edf68-a4ce-4150-b004-8c0698eec86d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.menu_link_content.field_menu_dropdown_text
+    - system.menu.main
+  module:
+    - text
+id: menu_link_content.main.field_menu_dropdown_text
+field_name: field_menu_dropdown_text
+entity_type: menu_link_content
+bundle: main
+label: 'Menu Dropdown Text'
+description: 'This is the text that will appear when this menu is hovered on the right side of the dropdown menu. This will only work when added to parent menu items.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

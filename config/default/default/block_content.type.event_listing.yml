@@ -1,0 +1,8 @@
+uuid: 1e277871-2112-4d2d-9ba3-9d71690ca9f2
+langcode: en
+status: true
+dependencies: {  }
+id: event_listing
+label: 'Event Listing'
+revision: 0
+description: 'Displays events'

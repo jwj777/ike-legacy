@@ -1,0 +1,19 @@
+uuid: 8815a933-b7f6-43fd-bd83-d5ceff7d5b5e
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.field_design_credits
+field_name: field_design_credits
+entity_type: media
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,57 @@
+uuid: 6122b668-fc10-40dd-8122-1240ea1378c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.view_embed
+    - field.storage.block_content.field_view_embed
+  module:
+    - viewfield
+id: block_content.view_embed.field_view_embed
+field_name: field_view_embed
+entity_type: block_content
+bundle: view_embed
+label: 'View Embed'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  force_default: false
+  allowed_views:
+    donors: donors
+    events: events
+    ike_s_soldiers: ike_s_soldiers
+    ikeducation: ikeducation
+    duplicate_of_ikeslife: duplicate_of_ikeslife
+    ikeslife: ikeslife
+    lesson_plan_full: lesson_plan_full
+    news: news
+    psl_list_view: psl_list_view
+    soldiers: soldiers
+    sponsors: sponsors
+    content: '0'
+    block_content: '0'
+    files: '0'
+    frontpage: '0'
+    media: '0'
+    media_library: '0'
+    newsletter_view: '0'
+    user_admin_people: '0'
+    content_recent: '0'
+    redirect: '0'
+    taxonomy_term: '0'
+    watchdog: '0'
+    webform_submissions: '0'
+    who_s_new: '0'
+    who_s_online: '0'
+  allowed_display_types:
+    block: block
+    embed: '0'
+    feed: '0'
+    default: '0'
+    page: '0'
+  handler: 'default:view'
+  handler_settings: {  }
+field_type: viewfield

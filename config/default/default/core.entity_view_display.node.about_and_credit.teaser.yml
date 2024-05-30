@@ -1,0 +1,45 @@
+uuid: 628ae67c-f227-462e-9d0f-5bfc633db7cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.about_and_credit.body
+    - field.field.node.about_and_credit.field_credit_filmfootage
+    - field.field.node.about_and_credit.field_credit_firm_logo
+    - field.field.node.about_and_credit.field_credit_images
+    - field.field.node.about_and_credit.field_credit_special_thanks
+    - field.field.node.about_and_credit.field_credit_theme
+    - field.field.node.about_and_credit.field_credit_translation
+    - node.type.about_and_credit
+  module:
+    - text
+    - user
+id: node.about_and_credit.teaser
+targetEntityType: node
+bundle: about_and_credit
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  field_credit_filmfootage: true
+  field_credit_firm_logo: true
+  field_credit_images: true
+  field_credit_special_thanks: true
+  field_credit_theme: true
+  field_credit_translation: true
+  search_api_excerpt: true
+  uuid: true

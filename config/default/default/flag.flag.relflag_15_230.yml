@@ -1,0 +1,33 @@
+uuid: 5dda6894-f21b-41c7-98b4-d8f61aed29f4
+langcode: en
+status: true
+dependencies:
+  module:
+    - flag_lists
+    - node
+id: relflag_15_230
+label: 'New Collection'
+bundles:
+  - article
+  - lesson_plan
+  - primary_source
+entity_type: node
+global: false
+weight: 0
+flag_short: 'Add this item to the [flagging_collection:name] list'
+flag_long: 'Add this to your flag list'
+flag_message: 'Added to the flag list'
+unflag_short: 'Remove this item from the [flagging_collection:name] list'
+unflag_long: 'Remove this item from your flag list'
+unflag_message: 'Removed from the flag list'
+unflag_denied_text: ''
+flag_type: 'entity:node'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links: {  }
+  show_as_field: false
+  show_on_form: true
+  show_contextual_link: false
+  extra_permissions:
+    owner: '0'
+linkTypeConfig: {  }

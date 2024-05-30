@@ -1,0 +1,11 @@
+uuid: 58c32eeb-1319-4e60-ab3a-1c15cd0ffb2e
+langcode: en
+status: true
+dependencies: {  }
+id: inline_blockinfo
+block_id: 'inline_block:info'
+category: add_a_new_custom_block
+label: Info
+image_path: /themes/custom/ike/images/lb_browser/info.png
+image_alt: Info
+weight: 0

@@ -1,0 +1,15 @@
+uuid: 85710ed3-411a-4d09-9858-04293c9d23b3
+langcode: en
+status: true
+dependencies: {  }
+name: large_banner_1900x800
+label: 'Large Banner 1900x800'
+effects:
+  c752860e-bf1a-4492-91e3-b77cfce67440:
+    uuid: c752860e-bf1a-4492-91e3-b77cfce67440
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1900
+      height: 800
+      anchor: center-center

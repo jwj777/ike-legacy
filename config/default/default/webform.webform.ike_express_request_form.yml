@@ -1,0 +1,465 @@
+uuid: c39f38c2-7cc6-40f4-a655-74a23c3d6c64
+langcode: en
+status: closed
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: ike_express_request_form
+title: 'Ike Express Request Form'
+description: ''
+categories: {  }
+elements: |-
+  form_header:
+    '#type': webform_markup
+    '#markup': 'Questions? Contact Brooke Woodworth, IKEducation Coordinator &bull; BWoodworth@EisenhowerFoundation.net &bull; 785-263-6771'
+  main_fields:
+    '#type': fieldset
+    '#title': 'main fields'
+    is_your_school_within_the_dane_hansen_region_of_northwest_kansas:
+      '#type': select
+      '#title': 'Is your school within the Dane Hansen region of Northwest Kansas?'
+      '#description': 'If so, check your county below. If not, simply check no. Note: The Dane Hansen Foundation covers the expense of Ike Express coming schools in their region. If your school is not in that region, there is a cost associated. Schools within a two hour drive from Abilene = $350. All other areas of Kansas = $700.'
+      '#options':
+        'No, my school is NOT in the Dane Hansen region.': 'No, my school is NOT in the Dane Hansen region.'
+        Cheyenne: Cheyenne
+        Cloud: Cloud
+        Decatur: Decatur
+        Ellis: Ellis
+        Ellsworth: Ellsworth
+        Gove: Gove
+        Graham: Graham
+        Jewell: Jewell
+        Lincoln: Lincoln
+        Logan: Logan
+        Mitchell: Mitchell
+        Norton: Norton
+        Osborne: Osborne
+        Ottawa: Ottawa
+        Phillips: Phillips
+        Rawlins: Rawlins
+        Republic: Republic
+        Rooks: Rooks
+        Russell: Russell
+        Saline: Saline
+        Sheridan: Sheridan
+        Sherman: Sherman
+        Smith: Smit
+        Thomas: Thomas
+        Trego: Trego
+        Wallace: Wallace
+    flexbox:
+      '#type': webform_flexbox
+      school_name:
+        '#type': textfield
+        '#title': 'School Name'
+        '#required': true
+      usd_:
+        '#type': textfield
+        '#title': 'USD #'
+        '#description': 'If you are not associated with a district, please enter 000.'
+        '#required': true
+    flexbox_01:
+      '#type': webform_flexbox
+      school_address:
+        '#type': webform_address
+        '#title': 'School Address'
+        '#address__title': 'School Address'
+        '#address_2__access': false
+        '#city__title': City
+        '#state_province__title': State
+        '#postal_code__title': 'Zip Code'
+        '#country__access': false
+        '#required': true
+    school_phone:
+      '#type': tel
+      '#title': 'School Phone'
+      '#required': true
+    flexbox_02:
+      '#type': webform_flexbox
+      contact_teacher_name:
+        '#type': textfield
+        '#title': 'Contact Teacher Name'
+        '#required': true
+      contact_teacher_email:
+        '#type': email
+        '#title': 'Contact Teacher Email'
+        '#required': true
+    flexbox_03:
+      '#type': webform_flexbox
+      contact_teacher_phone:
+        '#type': tel
+        '#title': 'Contact Teacher Phone'
+        '#required': true
+      best_time_to_call_if_necessary_is:
+        '#type': textfield
+        '#title': 'Best time to call if necessary is'
+    flexbox_04:
+      '#type': webform_flexbox
+      preferred_field_trip_date:
+        '#type': date
+        '#title': 'Preferred Field Trip Date'
+        '#date_date_format': ''
+        '#required': true
+      2nd_date_preference:
+        '#type': date
+        '#title': '2nd Date Preference'
+        '#date_date_format': ''
+      arrival_time:
+        '#type': webform_time
+        '#title': 'Arrival Time'
+        '#time_format': 'g:i A'
+        '#required': true
+      departure_time:
+        '#type': webform_time
+        '#title': 'Departure Time'
+        '#time_format': 'g:i A'
+        '#required': true
+    horizontal_rule:
+      '#type': webform_horizontal_rule
+    flexbox_05:
+      '#type': webform_flexbox
+      number_of_students:
+        '#type': textfield
+        '#title': 'Number of Students'
+        '#description': 'Please enter the number of students who will be attending the field trip.'
+        '#required': true
+      grade_level_of_students:
+        '#type': textfield
+        '#title': 'Grade level of students'
+        '#description': '<p class="tip" style="font-family:Arial;font-size:10pt;color:#311A16;font-weight:normal">Please enter the grade level(s) of the students attending the field trip.</p>'
+        '#required': true
+      ikeducation_program:
+        '#type': select
+        '#title': 'IKEducation Program'
+        '#description': 'Please select one program for your Ike Express Reverse Field Trip. Programs are designed for multiple grade levels and vary in length of time required.'
+        '#options':
+          'All About Ike Story Time (Grades K-2, 30 minutes)': 'All About Ike Story Time (Grades K-2, 30 minutes)'
+          'Rosie the Riveter (Grades 3-5, 1 hour)': 'Rosie the Riveter (Grades 3-5, 1 hour)'
+          'Dear Mr. President (Grades 3-8, 1 hour)': 'Dear Mr. President (Grades 3-8, 1 hour)'
+          'Attic Artifacts: 101st Airborne (Grades 6-8, 1 hour)': 'Attic Artifacts: 101st Airborne (Grades 6-8, 1 hour)'
+          'Code Talkers (Grades 6-8, 1 hour)': 'Code Talkers (Grades 6-8, 1 hour)'
+          'Holocaust: From a Name to a Number (Grades 7-12, 1 hour)': 'Holocaust: From a Name to a Number (Grades 7-12, 1 hour)'
+          'Primarily Omaha Beach (Grades 9-12, 1 hour)': 'Primarily Omaha Beach (Grades 9-12, 1 hour)'
+          'Desegregation in Little Rock (Grades 11-12, 2 hours)': 'Desegregation in Little Rock (Grades 11-12, 2 hours)'
+    flexbox_10:
+      '#type': webform_flexbox
+      photo_permissions:
+        '#type': radios
+        '#title': 'Photo Permissions'
+        '#description': 'I consent to the Eisenhower Foundation taking photographs/video during the course of the reverse field trip for publicity, promotional, and/or educational purposes (including publications, presentation or broadcast via newspaper, internet or other media sources) by the Eisenhower Foundation and/or Eisenhower Presidential Library. I do this with full knowledge that this consent abides by the photo consent policy of my school district. I waive all claims for compensation for use or damages.'
+        '#options': yes_no
+        '#required': true
+      social_media:
+        '#type': textfield
+        '#title': 'Social Media'
+        '#description': 'If you answered yes to the previous photo permissions question, does your school have social media accounts or hashtags that you would like tagged in any posts we may make?'
+    flexbox_11:
+      '#type': webform_flexbox
+      special_accommodations:
+        '#type': textarea
+        '#title': 'Special Accommodations'
+        '#description': 'Please use this space to describe any special accommodations or needs your group may have.'
+      additional_notes:
+        '#type': textarea
+        '#title': 'Additional Notes'
+        '#description': 'Please use this space to add any additional notes that might help our staff serve you better. For example, do you have a specific goal or objective for your students on this field trip?'
+    flexbox_12:
+      '#type': webform_flexbox
+      how_did_you_hear_about_ikeducation_:
+        '#type': checkboxes
+        '#title': 'How did you hear about IKEducation?'
+        '#options':
+          www.eisenhowerfoundation.net: www.eisenhowerfoundation.net
+          'IKEducation Educator''s Guide': 'IKEducation Educator''s Guide'
+          'Email Blast': 'Email Blast'
+          Mailer: Mailer
+          'Another Educator ': 'Another Educator '
+          'Social Media': 'Social Media'
+          Other: Other
+      have_you_ever_visited_the_dwight_d_eisenhower_presidential_libra:
+        '#type': select
+        '#title': 'Have you ever visited the Dwight D. Eisenhower Presidential Library, Museum, and Boyhood Home?'
+        '#options':
+          'Yes, I have visited as part of a school field trip.': 'Yes, I have visited as part of a school field trip.'
+          'Yes, but not as part of a school field trip.': 'Yes, but not as part of a school field trip.'
+          'No': 'No'
+      why_did_you_book_ike_express_rather_than_visiting_the_eisenhower:
+        '#type': textarea
+        '#title': 'Why did you book Ike Express rather than visiting the Eisenhower Center?'
+    receive_an_email_copy_of_this_form_:
+      '#type': checkbox
+      '#title': 'Receive an email copy of this form.'
+    email_address:
+      '#type': email
+      '#title': 'Email Address'
+      '#description': 'This field is not part of the form submission.'
+      '#states':
+        visible:
+          ':input[name="receive_an_email_copy_of_this_form_"]':
+            checked: true
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: both
+  form_submit_once: false
+  form_open_message: ''
+  form_close_message: ''
+  form_exception_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_reset: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  email:
+    id: email
+    handler_id: email
+    label: Email
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="receive_an_email_copy_of_this_form_"]':
+          checked: true
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:email_address:raw]'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: _default
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_1:
+    id: email
+    handler_id: email_1
+    label: Email
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: 'bwoodworth@eisenhowerfoundation.net,mbgose@eisenhowerfoundation.net,hunruh@eisenhowerfoundation.net'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: _default
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

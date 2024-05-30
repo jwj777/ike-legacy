@@ -1,0 +1,21 @@
+uuid: 4977c7a2-f64f-4c67-9b27-099e8f9b5e73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ikes_soldiers_biography
+    - node.type.soldier
+  module:
+    - text
+id: node.soldier.field_ikes_soldiers_biography
+field_name: field_ikes_soldiers_biography
+entity_type: node
+bundle: soldier
+label: 'Biographical Information'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

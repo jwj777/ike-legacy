@@ -1,0 +1,25 @@
+uuid: f84bdd6a-acf9-4e73-8e5d-aaa4a84fb9f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.youtube_video_block
+    - field.storage.block_content.field_yt_video_block_video
+  module:
+    - video_embed_field
+id: block_content.youtube_video_block.field_yt_video_block_video
+field_name: field_yt_video_block_video
+entity_type: block_content
+bundle: youtube_video_block
+label: 'Video Link'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    youtube: youtube
+    vimeo: '0'
+    youtube_playlist: '0'
+field_type: video_embed_field

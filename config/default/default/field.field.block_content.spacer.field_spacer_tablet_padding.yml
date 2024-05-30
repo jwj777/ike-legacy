@@ -1,0 +1,19 @@
+uuid: c2c02686-7a89-4633-9cf1-60c303b9aecb
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.spacer
+    - field.storage.block_content.field_spacer_tablet_padding
+id: block_content.spacer.field_spacer_tablet_padding
+field_name: field_spacer_tablet_padding
+entity_type: block_content
+bundle: spacer
+label: 'Tablet Padding'
+description: 'How much padding should there be on tablets? (This should be a whole value, and <b>not</b> a decimal or percent). I.e. 15, 50'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

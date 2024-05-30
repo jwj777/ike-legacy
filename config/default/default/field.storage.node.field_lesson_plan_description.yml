@@ -1,0 +1,19 @@
+uuid: 0b5fc27f-c9ad-4685-9dce-f48d796c0222
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_lesson_plan_description
+field_name: field_lesson_plan_description
+entity_type: node
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

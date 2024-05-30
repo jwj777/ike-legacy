@@ -1,0 +1,41 @@
+uuid: 3836623b-9983-4fef-9ccf-2db8e730845c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.large_banner_1900x800
+    - field.field.media.image.field_media_image
+    - image.style.large_banner_1900x800
+    - media.type.image
+  module:
+    - image
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: B1a2aBHmUulUZN6HrxITEH1tSResuVjXMBEv1lUBtOo
+id: media.image.large_banner_1900x800
+targetEntityType: media
+bundle: image
+mode: large_banner_1900x800
+content:
+  field_media_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: large_banner_1900x800
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true
+  uuid: true

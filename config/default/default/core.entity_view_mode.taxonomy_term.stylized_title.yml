@@ -1,0 +1,11 @@
+uuid: 4649e9d4-ad36-45eb-a61a-ca741476ae8c
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.stylized_title
+label: 'Stylized Title'
+description: ''
+targetEntityType: taxonomy_term
+cache: true

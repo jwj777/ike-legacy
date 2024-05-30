@@ -1,0 +1,56 @@
+uuid: 1b7c47e0-4a06-4725-a357-5734ea6364b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.spacer
+    - field.field.block_content.spacer.field_spacer_desktop_padding
+    - field.field.block_content.spacer.field_spacer_lg_desktop_padding
+    - field.field.block_content.spacer.field_spacer_mobile_padding
+    - field.field.block_content.spacer.field_spacer_tablet_padding
+id: block_content.spacer.default
+targetEntityType: block_content
+bundle: spacer
+mode: default
+content:
+  field_spacer_desktop_padding:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_spacer_lg_desktop_padding:
+    type: string_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_spacer_mobile_padding:
+    type: string_textfield
+    weight: 29
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_spacer_tablet_padding:
+    type: string_textfield
+    weight: 28
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

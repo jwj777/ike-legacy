@@ -1,0 +1,8 @@
+uuid: 2ceca7a4-e5b8-496c-8c39-395f2a8f88df
+langcode: en
+status: true
+dependencies: {  }
+id: stylized_title
+label: 'Stylized Title'
+revision: 0
+description: 'A title with stars and a red gradient underline.'

@@ -1,0 +1,21 @@
+uuid: fe86a2b1-27b7-480d-9a0c-d558cbf18c1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ikes_soldiers_recollection
+    - node.type.soldier
+  module:
+    - text
+id: node.soldier.field_ikes_soldiers_recollection
+field_name: field_ikes_soldiers_recollection
+entity_type: node
+bundle: soldier
+label: Recollections
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

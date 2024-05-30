@@ -1,0 +1,23 @@
+uuid: f7927038-eb7d-4747-86a7-d6a1eb850686
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.about_and_credit
+  module:
+    - text
+id: node.about_and_credit.body
+field_name: body
+entity_type: node
+bundle: about_and_credit
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

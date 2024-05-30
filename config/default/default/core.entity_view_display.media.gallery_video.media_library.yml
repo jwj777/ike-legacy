@@ -1,0 +1,40 @@
+uuid: ceed63d8-31b6-45a2-89e0-e999a3b089e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.gallery_video.field_credits
+    - field.field.media.gallery_video.field_description
+    - field.field.media.gallery_video.field_design_credits
+    - field.field.media.gallery_video.field_media_oembed_video_1
+    - image.style.medium
+    - media.type.gallery_video
+  module:
+    - image
+id: media.gallery_video.media_library
+targetEntityType: media
+bundle: gallery_video
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_credits: true
+  field_description: true
+  field_design_credits: true
+  field_media_oembed_video_1: true
+  name: true
+  search_api_excerpt: true
+  uid: true
+  uuid: true

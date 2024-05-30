@@ -1,0 +1,8 @@
+uuid: dd8bd8c5-a0c8-4139-95b1-5843ea4de0c9
+langcode: en
+status: true
+dependencies: {  }
+id: node_embed
+label: 'Node Embed'
+revision: 0
+description: ''

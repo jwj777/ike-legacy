@@ -1,0 +1,11 @@
+uuid: 37ad5edd-80ca-4032-9341-44426fe0db59
+langcode: en
+status: true
+dependencies: {  }
+id: memorial_info
+block_id: 'fixed_block_content:dwight_d_eisenhower_memorial'
+category: fixed_custom
+label: 'Memorial Info'
+image_path: ''
+image_alt: ''
+weight: -5

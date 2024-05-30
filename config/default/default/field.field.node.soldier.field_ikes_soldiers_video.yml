@@ -1,0 +1,25 @@
+uuid: 67c58221-5544-438a-8d11-322077169e1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ikes_soldiers_video
+    - node.type.soldier
+  module:
+    - video_embed_field
+id: node.soldier.field_ikes_soldiers_video
+field_name: field_ikes_soldiers_video
+entity_type: node
+bundle: soldier
+label: Video
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    vimeo: vimeo
+    youtube: youtube
+    youtube_playlist: '0'
+field_type: video_embed_field

@@ -1,0 +1,21 @@
+uuid: 56ba94d0-42ed-4ed2-8741-6ab0d4e6e4b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quote_banner_attribution
+    - paragraphs.paragraphs_type.quote_banner
+  module:
+    - text
+id: paragraph.quote_banner.field_quote_banner_attribution
+field_name: field_quote_banner_attribution
+entity_type: paragraph
+bundle: quote_banner
+label: Attribution
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

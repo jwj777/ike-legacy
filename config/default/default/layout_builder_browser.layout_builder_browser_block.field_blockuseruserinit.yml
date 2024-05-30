@@ -1,0 +1,11 @@
+uuid: 28d2aa9a-1b77-4fba-9ec3-2feb91390726
+langcode: en
+status: true
+dependencies: {  }
+id: field_blockuseruserinit
+block_id: 'field_block:user:user:init'
+category: user_fields
+label: 'Initial email'
+image_path: ''
+image_alt: ''
+weight: 0

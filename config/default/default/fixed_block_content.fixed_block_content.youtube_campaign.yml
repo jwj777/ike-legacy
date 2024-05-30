@@ -1,0 +1,12 @@
+uuid: 8e800d67-2bd6-4235-a6e6-b6362c5cb896
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.youtube_video_block
+id: youtube_campaign
+title: 'Youtube Campaign'
+block_content_bundle: youtube_video_block
+default_content: null
+auto_export: 1
+protected: true

@@ -1,0 +1,12 @@
+uuid: 6108c3e1-435e-42e8-95e8-669869bff48b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.support_ike_block
+  content:
+    - 'block_content:support_ike_block:0e696981-12d1-4201-9fac-853e69fe149e'
+id: hp_support_ike_block
+title: 'HP Support IKE Block'
+block_content_bundle: support_ike_block
+default_content: '{"_links":{"self":{"href":"http:\/\/eisenhower-foundation.docksal\/block\/6?_format=hal_json"},"type":{"href":"http:\/\/fixed_block_content.drupal.org\/rest\/type\/block_content\/support_ike_block"},"http:\/\/fixed_block_content.drupal.org\/rest\/relation\/block_content\/support_ike_block\/field_support_ike_block_title":[{"href":""}]},"langcode":[{"value":"en","lang":"en"}],"type":[{"target_id":"support_ike_block"}],"status":[{"value":true,"lang":"en"}],"info":[{"value":"HP Support IKE Block","lang":"en"}],"reusable":[{"value":true}],"default_langcode":[{"value":true,"lang":"en"}],"revision_translation_affected":[{"value":true,"lang":"en"}],"body":[{"value":"\u003Cp\u003EEstablished in 1945, the mission of the Eisenhower Foundation is to honor and champion the relevance today of the life and leadership of Dwight D. Eisenhower through compelling programs and events that celebrate his legacy.\u003C\/p\u003E\r\n\r\n\u003Cp\u003EWe accomplish this mission by providing funding to the Eisenhower Presidential Library, Museum, and Boyhood Home. The generosity of donors like you allows the Foundation to provide exhibits, programs, and events for thousands of people.\u003C\/p\u003E\r\n","format":"basic_html","processed":"\u003Cp\u003EEstablished in 1945, the mission of the Eisenhower Foundation is to honor and champion the relevance today of the life and leadership of Dwight D. Eisenhower through compelling programs and events that celebrate his legacy.\u003C\/p\u003E\n\n\u003Cp\u003EWe accomplish this mission by providing funding to the Eisenhower Presidential Library, Museum, and Boyhood Home. The generosity of donors like you allows the Foundation to provide exhibits, programs, and events for thousands of people.\u003C\/p\u003E","summary":"","lang":"en"}],"field_support_ike_block_link":[{"uri":"internal:\/","title":"Donate","options":[]}],"_embedded":{"http:\/\/fixed_block_content.drupal.org\/rest\/relation\/block_content\/support_ike_block\/field_support_ike_block_title":[{"_links":{"self":{"href":""},"type":{"href":"http:\/\/fixed_block_content.drupal.org\/rest\/type\/paragraph\/stylized_title"}},"uuid":[{"value":"00e8077f-f938-4447-a5ec-5711a5cdaead"}],"target_revision_id":"2"}]}}'

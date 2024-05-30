@@ -1,0 +1,553 @@
+uuid: 5bd5d685-d2af-47e0-bebc-7faa40b525c0
+langcode: en
+status: closed
+dependencies:
+  module:
+    - antibot
+    - honeypot
+third_party_settings:
+  antibot:
+    antibot: true
+  honeypot:
+    honeypot: true
+    time_restriction: true
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: learning_exp_request
+title: 'Learning Experience Request'
+description: ''
+categories: {  }
+elements: |-
+  form_header:
+    '#type': webform_markup
+    '#markup': |
+      <h2>Learning Experience Request</h2>
+      Please choose the type of experience you want, and the rest of the form will appear.
+      
+  step_one:
+    '#type': fieldset
+    '#title': 'step one'
+    learning_experience_preferred_:
+      '#type': radios
+      '#title': 'Learning Experience Preferred:'
+      '#options':
+        online: 'Ike Online'
+        express: 'Ike Express'
+        on-site: 'On-Site Field Trip'
+      '#required': true
+  ike_online:
+    '#type': fieldset
+    '#title': 'Ike Online'
+    '#description': |
+      <h4>Ike Online</h4>
+      
+      <p>IKEducators will provide live, interactive, online programs to your classroom. In many cases, materials will be sent ahead of time for the teachers and students to use during the live program. We will provide the programs both on-demand and at pre-scheduled times.</p>
+      
+    '#description_display': before
+    '#states':
+      visible:
+        ':input[name="learning_experience_preferred_"]':
+          value: online
+    please_choose_the_program_you_prefer_:
+      '#type': radios
+      '#title': 'Please choose the program you prefer:'
+      '#title_display': before
+      '#description_display': before
+      '#options':
+        'I is for Ike Story Time (K-2)': 'I is for Ike Story Time (K-2)'
+        'Little Ike Artifacts (3-5)': 'Little Ike Artifacts (3-5)'
+        'Dogs for Defense (K-5)': 'Dogs for Defense (K-5)'
+        'Rosie the Riveter (3-5)': 'Rosie the Riveter (3-5)'
+        'Attic Artifacts: World War II Kids (3-5)': 'Attic Artifacts: World War II Kids (3-5)'
+        'Constitution Day (4-5)': 'Constitution Day (4-5)'
+        'Dear Mr. President (3-8)': 'Dear Mr. President (3-8)'
+        'Attic Artifacts: 101st Airborne (6-8)': 'Attic Artifacts: 101st Airborne (6-8)'
+        'Use it Up, Wear it Out, Make it Do, or Do Without (6-8)': 'Use it Up, Wear it Out, Make it Do, or Do Without (6-8)'
+        'Code Talkers (6-8)': 'Code Talkers (6-8)'
+        'Paint Like Ike (5-12)': 'Paint Like Ike (5-12)'
+        'Holocaust: From a Name to a Number (7-12)': 'Holocaust: From a Name to a Number (7-12)'
+        'inHumanity and the Holocaust (7-12)': 'inHumanity and the Holocaust (7-12)'
+        'Advise the President: Project Solarium (9-12)': 'Advise the President: Project Solarium (9-12)'
+        'The Red Scare: Spies Among Us? (11-12)': 'The Red Scare: Spies Among Us? (11-12)'
+  ike_express:
+    '#type': fieldset
+    '#title': 'Ike Express'
+    '#description': |
+      <h4>Ike Express</h4>
+      
+      <p>IKEducators will travel to accredited Kansas K-12 schools to provide a program for 15+ students.</p>
+      
+    '#description_display': before
+    '#states':
+      visible:
+        ':input[name="learning_experience_preferred_"]':
+          value: express
+    please_choose_the_express_you_prefer_:
+      '#type': radios
+      '#title': 'Please choose the program you prefer:'
+      '#options':
+        'I is for Ike Story Time (K-2)': 'I is for Ike Story Time (K-2)'
+        'Little Ike Artifacts (3-5)': 'Little Ike Artifacts (3-5)'
+        'Dogs for Defense (K-5)': 'Dogs for Defense (K-5)'
+        'Rosie the Riveter (3-5)': 'Rosie the Riveter (3-5)'
+        'Attic Artifacts: World War II Kids (3-5)': 'Attic Artifacts: World War II Kids (3-5)'
+        'Duck & Cover (4-5)': 'Duck & Cover (4-5)'
+        'Constitution Day (4-5)': 'Constitution Day (4-5)'
+        'Dear Mr. President (3-8)': 'Dear Mr. President (3-8)'
+        'Attic Artifacts: 101st Airborne (6-8)': 'Attic Artifacts: 101st Airborne (6-8)'
+        'Use it Up, Wear it Out, Make it Do, or Do Without (6-8)': 'Use it Up, Wear it Out, Make it Do, or Do Without (6-8)'
+        'Code Talkers (6-8)': 'Code Talkers (6-8)'
+        'Paint Like Ike (5-12)': 'Paint Like Ike (5-12)'
+        'Holocaust: From a Name to a Number (7-12)': 'Holocaust: From a Name to a Number (7-12)'
+        'inHumanity and the Holocaust (7-12)': 'inHumanity and the Holocaust (7-12)'
+        'Primarily Omaha Beach (9-12)': 'Primarily Omaha Beach (9-12)'
+        'Advise the President: Project Solarium (9-12)': 'Advise the President: Project Solarium (9-12)'
+        'Student Document Research: In Conclusion (9-12)': 'Student Document Research: In Conclusion (9-12)'
+        'Desegregation in Little Rock (11-12)': 'Desegregation in Little Rock (11-12)'
+        'D-Day Deception (10-12)': 'D-Day Deception (10-12)'
+        'The Red Scare: Spies Among Us? (11-12)': 'The Red Scare: Spies Among Us? (11-12)'
+  on_site:
+    '#type': fieldset
+    '#title': On-Site
+    '#description': |
+      <h4>On-Site Waitlist Contact Form</h4>
+      Please complete the form below to be contacted when onsite field trips are allowed.
+      
+    '#description_display': before
+    '#states':
+      visible:
+        ':input[name="learning_experience_preferred_"]':
+          value: on-site
+    flexbox_07:
+      '#type': webform_flexbox
+      name:
+        '#type': textfield
+        '#title': 'Teacher Name'
+      contact_teacher_email_onsite:
+        '#type': email
+        '#title': 'Teacher Email'
+        '#required': true
+    flexbox_08:
+      '#type': webform_flexbox
+      school_name_onsite:
+        '#type': textfield
+        '#title': 'School Name'
+      waitlist_grade_level:
+        '#type': textfield
+        '#title': 'What grade level do you teach?'
+    added_comments_or_info_waitlist:
+      '#type': textarea
+      '#title': 'Added Comments or Information'
+      '#description_display': before
+  main_fields:
+    '#type': fieldset
+    '#title': 'main fields'
+    '#states':
+      visible:
+        - ':input[name="please_choose_the_program_you_prefer_"]':
+            checked: true
+        - or
+        - ':input[name="please_choose_the_express_you_prefer_"]':
+            checked: true
+    flexbox:
+      '#type': webform_flexbox
+      school_name:
+        '#type': textfield
+        '#title': 'School Name'
+        '#required': true
+      usd_:
+        '#type': textfield
+        '#title': 'USD #'
+        '#description': 'If you are not associated with a district, please enter 000.'
+        '#required': true
+    flexbox_01:
+      '#type': webform_flexbox
+      school_address:
+        '#type': webform_address
+        '#title': 'School Address'
+        '#address__title': 'School Address'
+        '#address_2__access': false
+        '#city__title': City
+        '#state_province__title': State
+        '#postal_code__title': 'Zip Code'
+        '#country__access': false
+        '#required': true
+    school_phone:
+      '#type': tel
+      '#title': 'School Phone'
+      '#required': true
+    flexbox_02:
+      '#type': webform_flexbox
+      contact_teacher_name:
+        '#type': textfield
+        '#title': 'Contact Teacher Name'
+        '#required': true
+      contact_teacher_email:
+        '#type': email
+        '#title': 'Contact Teacher Email'
+        '#required': true
+    flexbox_03:
+      '#type': webform_flexbox
+      contact_teacher_phone:
+        '#type': tel
+        '#title': 'Contact Teacher Phone'
+        '#required': true
+      best_time_to_call_if_necessary_is:
+        '#type': textfield
+        '#title': 'Best time to call if necessary is'
+    flexbox_04:
+      '#type': webform_flexbox
+      preferred_field_trip_date:
+        '#type': date
+        '#title': 'Preferred Field Trip Date'
+        '#date_date_format': ''
+        '#required': true
+      2nd_date_preference:
+        '#type': date
+        '#title': '2nd Date Preference'
+        '#date_date_format': ''
+      arrival_time:
+        '#type': webform_time
+        '#title': 'Arrival/Start Time'
+        '#required': true
+        '#time_format': 'g:i A'
+      departure_time:
+        '#type': webform_time
+        '#title': 'Departure/Finish Time'
+        '#required': true
+        '#time_format': 'g:i A'
+    flexbox_05:
+      '#type': webform_flexbox
+      number_of_students:
+        '#type': textfield
+        '#title': 'Number of Students'
+        '#description': 'Please enter the number of students who will be attending the field trip.'
+        '#required': true
+      grade_level_of_students:
+        '#type': textfield
+        '#title': 'Grade level of students'
+        '#description': '<p class="tip" style="font-family:Arial;font-size:10pt;color:#311A16;font-weight:normal">Please enter the grade level(s) of the students attending the field trip.</p>'
+        '#required': true
+    flexbox_06:
+      '#type': webform_flexbox
+      '#align_items': center
+      added_comments_or_information:
+        '#type': textarea
+        '#title': 'Added Comments or Information'
+        '#description': |
+          <br />
+          We use Zoom for our programs. Please let us know if we need to discuss other options.
+          
+        '#description_display': before
+  captcha:
+    '#type': captcha
+    '#captcha_type': recaptcha/reCAPTCHA
+css: ''
+javascript: 'document.querySelector(''.layout-container'').className += "blue-bg";'
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: /form/learning_exp_request_old
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: source_entity_webform
+  form_submit_once: false
+  form_open_message: ''
+  form_close_message: ''
+  form_exception_message: ''
+  form_previous_submissions: false
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_reset: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: true
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: url
+  confirmation_url: learning-experience-confirmation
+  confirmation_title: ''
+  confirmation_message: 'Your request has been submitted. We will get back with you shortly.'
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: true
+  confirmation_exclude_token: true
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  email:
+    id: email
+    handler_id: email
+    label: 'Email Confirmation'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        -
+          ':input[name="learning_experience_preferred_"]':
+            value: express
+        - or
+        -
+          ':input[name="learning_experience_preferred_"]':
+            value: online
+    weight: -50
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:contact_teacher_email:raw]'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Your IKEducation Learning Experience Request'
+      body: 'Thank you for submitting a Learning Experience Request! IKEducation will be in contact with you shortly.'
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_1:
+    id: email
+    handler_id: email_1
+    label: 'Email Notification'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: -48
+    settings:
+      states:
+        - completed
+      to_mail: 'mbgose@eisenhowerfoundation.net,hpugh@eisenhowerfoundation.net'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'IKEducation Learning Experience Request'
+      body: "Submitted on [webform_submission:completed:long]<br />\r\n<br />\r\n[webform_submission:values]<br />\r\n<br />\r\nThe results of this submission may be viewed at:<br />\r\n[webform_submission:url]"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_confirmation:
+    id: email
+    handler_id: email_confirmation
+    label: 'Email Confirmation - Wait List'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="learning_experience_preferred_"]':
+          value: on-site
+    weight: -49
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:contact_teacher_email_onsite:raw]'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Your IKEducation Learning Experience Request'
+      body: 'Thank you for your interest in a field trip to the Eisenhower Presidential Museum! &nbsp;IKEducation will be in contact with you as soon as COVID restrictions are lifted for school groups.'
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

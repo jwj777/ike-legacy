@@ -1,0 +1,22 @@
+uuid: 98d366cb-d0ce-4dcf-98bf-69df67ec2703
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ike
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: ike_content
+theme: ike
+region: content
+weight: -12
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

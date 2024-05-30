@@ -1,0 +1,147 @@
+uuid: 9a55d3b0-ef6b-4fa8-a19e-79ecef3553a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_image
+    - field.field.node.news.body
+    - field.field.node.news.field_image
+    - field.field.node.news.field_news_body
+    - field.field.node.news.field_news_image
+    - field.field.node.news.field_news_sub_title
+    - field.field.node.news.field_newsletter_date
+    - field.field.node.news.field_tags
+    - node.type.news
+  module:
+    - koality_layout_builder_layouts
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          fe2046a1-566a-40fb-acb1-8a0fce4f93fb:
+            uuid: fe2046a1-566a-40fb-acb1-8a0fce4f93fb
+            region: content
+            configuration:
+              id: 'inline_block:hero_image'
+              label: 'News Hero'
+              label_display: ''
+              provider: layout_builder
+              view_mode: full
+              block_revision_id: 1328
+              block_serialized: null
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+          1b52de3b-5a25-4bf7-9e15-d2ebbc23648d:
+            uuid: 1b52de3b-5a25-4bf7-9e15-d2ebbc23648d
+            region: content
+            configuration:
+              id: 'field_block:node:news:title'
+              label: Title
+              label_display: ''
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: one_center_region
+        layout_settings:
+          label: ''
+          margin_top: ''
+          margin_bottom: ''
+          overlay_top: null
+          overlay_bottom: null
+          layout_width: row
+          remove_top_bottom_padding: 0
+          region_color: ''
+          layout_color: white-background
+          context_mapping: {  }
+        components:
+          2c9cfe1c-9252-4b93-bce3-c1b982dba2bd:
+            uuid: 2c9cfe1c-9252-4b93-bce3-c1b982dba2bd
+            region: content
+            configuration:
+              id: 'field_block:node:news:field_news_body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: null
+id: node.news.default
+targetEntityType: node
+bundle: news
+mode: default
+content:
+  field_news_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_news_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_news_sub_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  body: true
+  field_image: true
+  field_newsletter_date: true
+  field_tags: true
+  search_api_excerpt: true
+  uuid: true

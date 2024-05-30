@@ -1,0 +1,11 @@
+uuid: da263b23-ced0-4c74-babb-1ae199614174
+langcode: en
+status: true
+dependencies: {  }
+id: field_blockuseruseruid
+block_id: 'field_block:user:user:uid'
+category: user_fields
+label: 'User ID'
+image_path: ''
+image_alt: ''
+weight: 0

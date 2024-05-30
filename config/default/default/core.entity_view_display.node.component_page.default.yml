@@ -1,0 +1,94 @@
+uuid: 5e646829-032b-4d20-9285-54ed3995fbbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.component_page.field_blue_background
+    - field.field.node.component_page.layout_builder__layout
+    - node.type.component_page
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          b67f9f86-3396-469c-8873-4deda75c74eb:
+            uuid: b67f9f86-3396-469c-8873-4deda75c74eb
+            region: content
+            configuration:
+              id: 'extra_field_block:node:component_page:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          7fb1c8c2-7921-4a29-a73f-3c7de16ee5aa:
+            uuid: 7fb1c8c2-7921-4a29-a73f-3c7de16ee5aa
+            region: content
+            configuration:
+              id: 'field_block:node:component_page:field_blue_background'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: boolean
+                label: above
+                settings:
+                  format: default
+                  format_custom_false: ''
+                  format_custom_true: ''
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    entity_view_mode_restriction:
+      allowed_layouts:
+        - layout_onecol
+        - one_center_region
+        - two_center_regions
+        - three_center_regions
+        - four_center_regions
+      denylisted_blocks: {  }
+      allowlisted_blocks:
+        'Chaos Tools': {  }
+        Devel: {  }
+        Help: {  }
+        User: {  }
+        'User fields': {  }
+    allowed_block_categories: {  }
+id: node.component_page.default
+targetEntityType: node
+bundle: component_page
+mode: default
+content:
+  field_blue_background:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  layout_builder__layout: true
+  search_api_excerpt: true
+  uuid: true

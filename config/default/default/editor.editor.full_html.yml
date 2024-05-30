@@ -1,0 +1,85 @@
+uuid: 9815b243-69b7-404b-ae42-1c2f69ac2b82
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - ckeditor
+_core:
+  default_config_hash: 967ijj7p6i7rwrYl7r08WQFeCY_c23YAh0h8u-w_CXM
+format: full_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - Strike
+            - Underline
+            - Superscript
+            - Subscript
+            - '-'
+            - RemoveFormat
+            - TextColor
+        -
+          name: Linking
+          items:
+            - Link
+            - Unlink
+            - Anchor
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - Blockquote
+            - DrupalImage
+            - video_embed
+            - Table
+            - HorizontalRule
+        -
+          name: 'Block Formatting'
+          items:
+            - Format
+            - Styles
+        -
+          name: Tools
+          items:
+            - ShowBlocks
+            - Source
+            - FontSize
+        -
+          name: 'Media Library'
+          items:
+            - DrupalMediaLibrary
+  plugins:
+    stylescombo:
+      styles: "div.true-size-image|Keep Image Size\r\nspan.text-white|White Text\r\nspan.text-black|Black Text\r\nspan.text-blue|Blue Text\r\nspan.text-red|Red Text\r\nspan.button|Button\r\nspan.button-red|Red Button\r\nspan.button-blue|Button Blue"
+    font:
+      font_names: ''
+      font_sizes: ''
+    colorbutton:
+      colors: '0F2043,C11F2A,FFFFFF,000000,464646,CCCCCC'
+    video_embed:
+      defaults:
+        children:
+          autoplay: true
+          responsive: true
+          width: '854'
+          height: '480'
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

@@ -1,0 +1,15 @@
+uuid: 669f1d03-797f-419c-b74a-bd6595fbf2b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.relflag_18_275
+  module:
+    - flag
+id: flag_action.relflag_18_275_unflag
+label: 'Remove this item from the [flagging_collection:name] list'
+type: node
+plugin: 'flag_action:relflag_18_275_unflag'
+configuration:
+  flag_id: relflag_18_275
+  flag_action: unflag

@@ -1,0 +1,11 @@
+uuid: b001d42f-7604-47af-a008-40547646f82c
+langcode: en
+status: true
+dependencies: {  }
+id: field_blockuseruserfield_classroom_description
+block_id: 'field_block:user:user:field_classroom_description'
+category: user_fields
+label: 'Classroom Description'
+image_path: ''
+image_alt: ''
+weight: 0

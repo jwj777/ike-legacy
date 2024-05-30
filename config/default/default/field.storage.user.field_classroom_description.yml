@@ -1,0 +1,19 @@
+uuid: 859f140d-d22d-49ef-adde-5f28de5f6815
+langcode: en
+status: true
+dependencies:
+  module:
+    - text
+    - user
+id: user.field_classroom_description
+field_name: field_classroom_description
+entity_type: user
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,11 @@
+uuid: af9a7268-f028-4af0-bae3-70d49d51351f
+langcode: en
+status: true
+dependencies: {  }
+id: field_blockuseruserlangcode
+block_id: 'field_block:user:user:langcode'
+category: user_fields
+label: 'Language code'
+image_path: ''
+image_alt: ''
+weight: 0

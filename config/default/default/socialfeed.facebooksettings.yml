@@ -1,0 +1,22 @@
+page_name: eisenhowerfoundation
+app_id: '511729989534961'
+secret_key: c6c46c7c8f9b3456703c9756f7198bc4
+user_token: EAAHRamwZCRPEBAHzeZAsyCClp3zzJaNx9ynKDLTwAeYQfev38JHpSbgeCCNZCzwoDTQLOUjiD9xG5QIL02OQTAYpLJ6JijESdk300GIg997mEcx348HusxXwLqDlv3MoZBwJ2u61ehfNbuCSQk5MbgHsZCimShuCfQC3NF3ZCeluut4OU3ZAF8RjEd3knwsQ1vi40MyUn7YNHU8ZCKJcfJ8c
+page_permanent_token: EAAHRamwZCRPEBAFKaN8YAFjgQX4ZCU7ePC7bhZBAr2cAW35OfZC2iTXoHF9kGOTnW5NBZCdwQcdR2Swc5oiMKtyAXlwmF4nLrNa29aG8RMkc4ZC0cOaOmQ1CVKgVe0OAOBLqBcWtZB9ieeUlNsuMXcPoJCHEA3yFsht2YBud72z5vqFzOXQZB3vTd0t8GotX9uUZD
+no_feeds: '3'
+all_types: 1
+post_type: link
+display_pic: 0
+display_video: 0
+trim_length: '130'
+teaser_text: 'Read More'
+hashtag: 1
+time_stamp: 0
+time_format: 'F j, Y'
+_core:
+  default_config_hash: ZhNTf4xDv-EnuWETsfQXiexaGv1UvVZpUzngGRVaczA
+submit: 'Save configuration'
+form_build_id: form-BcgKaSSr-U1s9Mp-u5-mXshhm9QZJtyZbHEJkPu61Fw
+form_token: O-tcjVfKaUe6mRaB74UC8F4R3yyqqAQupcByzHJXpDA
+form_id: facebook_settings_form
+op: 'Save configuration'

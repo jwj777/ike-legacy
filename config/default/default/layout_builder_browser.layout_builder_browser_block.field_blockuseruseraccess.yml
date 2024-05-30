@@ -1,0 +1,11 @@
+uuid: d41a50cc-f929-4fe7-8158-2cc17bf8727b
+langcode: en
+status: true
+dependencies: {  }
+id: field_blockuseruseraccess
+block_id: 'field_block:user:user:access'
+category: user_fields
+label: 'Last access'
+image_path: ''
+image_alt: ''
+weight: 0

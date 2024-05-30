@@ -1,0 +1,8 @@
+uuid: 5f6001a0-0027-4343-bd6d-cb2d1de7b7d2
+langcode: en
+status: true
+dependencies: {  }
+id: hero_image
+label: 'Hero Image'
+revision: 0
+description: 'Places a hero image on a page.'

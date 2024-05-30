@@ -1,0 +1,54 @@
+uuid: e409488d-b515-4c61-b326-1c3748892302
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_image
+    - field.field.block_content.hero_image.field_hero_image_image
+    - field.field.block_content.hero_image.field_hero_image_mobile_image
+    - field.field.block_content.hero_image.field_hero_image_social_block
+    - field.field.block_content.hero_image.field_hero_image_title
+id: block_content.hero_image.default
+targetEntityType: block_content
+bundle: hero_image
+mode: default
+content:
+  field_hero_image_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: medium_height_banner_1900x600
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_hero_image_mobile_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: mobile_hero_450x140_
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_hero_image_social_block:
+    type: boolean
+    label: hidden
+    settings:
+      format: true-false
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_hero_image_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  search_api_excerpt: true
+  uuid: true

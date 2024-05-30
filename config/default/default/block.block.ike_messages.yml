@@ -1,0 +1,22 @@
+uuid: 9037a984-1ca4-470f-82e1-d43c5c573c18
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ike
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: ike_messages
+theme: ike
+region: utility_header
+weight: -11
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

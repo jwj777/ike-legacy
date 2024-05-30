@@ -1,0 +1,19 @@
+uuid: d668d649-54bd-46fc-bd6a-cf5dcde80d70
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ikes_soldiers_birthplace
+    - node.type.soldier
+id: node.soldier.field_ikes_soldiers_birthplace
+field_name: field_ikes_soldiers_birthplace
+entity_type: node
+bundle: soldier
+label: Birthplace
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

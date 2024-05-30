@@ -1,0 +1,19 @@
+uuid: 5e901d5e-5bd5-4f16-9c6a-ed2f3a9d80ab
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_slide_body
+field_name: field_slide_body
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

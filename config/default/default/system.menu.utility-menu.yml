@@ -1,0 +1,8 @@
+uuid: 8947d89c-dc9a-43b6-b085-754146bec6be
+langcode: en
+status: true
+dependencies: {  }
+id: utility-menu
+label: 'Utility Menu'
+description: 'Menu that show in the very top sliver on the site'
+locked: false

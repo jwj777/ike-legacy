@@ -1,0 +1,8 @@
+uuid: eb2d41c9-c341-4fdc-a3c6-0ffd6ad8cf90
+langcode: en
+status: true
+dependencies: {  }
+id: wysiwyg
+label: Wysiwyg
+revision: 0
+description: 'This is a block to drop a WYSIWYG on a page.'

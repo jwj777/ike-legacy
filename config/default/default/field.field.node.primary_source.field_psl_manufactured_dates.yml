@@ -1,0 +1,21 @@
+uuid: 9dc6ba9d-9e18-4159-a1f4-e8a2d120276f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_psl_manufactured_dates
+    - node.type.primary_source
+  module:
+    - text
+id: node.primary_source.field_psl_manufactured_dates
+field_name: field_psl_manufactured_dates
+entity_type: node
+bundle: primary_source
+label: 'Date Created:'
+description: '<em>Ex: Circa 1952-1956</em>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

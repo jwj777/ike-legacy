@@ -1,0 +1,11 @@
+uuid: 4a16687a-93e4-4a88-8f12-19cbf65d20f0
+langcode: en
+status: true
+dependencies: {  }
+id: system_breadcrumb_block
+block_id: system_breadcrumb_block
+category: system
+label: Breadcrumbs
+image_path: ''
+image_alt: ''
+weight: 0

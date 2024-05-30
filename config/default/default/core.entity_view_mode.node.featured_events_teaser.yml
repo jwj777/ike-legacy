@@ -1,0 +1,11 @@
+uuid: 723eaa72-445e-44ff-adfe-d4157e0b321a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.featured_events_teaser
+label: 'Featured Events Teaser'
+description: ''
+targetEntityType: node
+cache: true

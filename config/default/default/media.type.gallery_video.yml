@@ -1,0 +1,17 @@
+uuid: c5da5fe6-125a-44b3-aff7-df73e74a3131
+langcode: en
+status: true
+dependencies: {  }
+id: gallery_video
+label: 'Gallery Video'
+description: ''
+source: 'oembed:video'
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_oembed_video_1
+  thumbnails_directory: 'public://oembed_thumbnails'
+  providers:
+    - YouTube
+    - Vimeo
+field_map: {  }

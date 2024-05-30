@@ -1,0 +1,8 @@
+uuid: 712071ee-c55b-4635-8b1d-96150755adb3
+langcode: en
+status: true
+dependencies: {  }
+id: info
+label: Info
+revision: 0
+description: 'A block that displays a title, body and link.'

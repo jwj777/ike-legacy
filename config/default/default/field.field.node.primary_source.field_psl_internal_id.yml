@@ -1,0 +1,19 @@
+uuid: 52d8110c-cdc3-424c-8d0f-dadf5ef95e78
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_psl_internal_id
+    - node.type.primary_source
+id: node.primary_source.field_psl_internal_id
+field_name: field_psl_internal_id
+entity_type: node
+bundle: primary_source
+label: 'Internal ID'
+description: 'Internal for IKEd records only'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

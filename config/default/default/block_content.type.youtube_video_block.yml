@@ -1,0 +1,8 @@
+uuid: af6648e2-9a72-4427-a889-d44d3ca6e7fb
+langcode: en
+status: true
+dependencies: {  }
+id: youtube_video_block
+label: 'YouTube Video Block'
+revision: 0
+description: 'Add a YouTube video that will display in a block with thumbnail displayed and a play icon.'

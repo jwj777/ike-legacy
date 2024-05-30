@@ -1,0 +1,29 @@
+uuid: 2a7a1a1f-36be-4934-abf4-3cd527b2ed51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_grade_level
+    - node.type.lesson_plan
+    - taxonomy.vocabulary.resource_grade_level
+id: node.lesson_plan.field_resource_grade_level
+field_name: field_resource_grade_level
+entity_type: node
+bundle: lesson_plan
+label: 'Resource Grade Level'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      resource_grade_level: resource_grade_level
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

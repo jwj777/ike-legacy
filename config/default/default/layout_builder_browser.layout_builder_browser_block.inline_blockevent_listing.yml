@@ -1,0 +1,11 @@
+uuid: fef40743-7444-4470-8754-7f3ce471e8a9
+langcode: en
+status: true
+dependencies: {  }
+id: inline_blockevent_listing
+block_id: 'inline_block:event_listing'
+category: add_a_new_custom_block
+label: 'Event Listing'
+image_path: /themes/custom/ike/images/lb_browser/event_listing.png
+image_alt: 'Event Listing'
+weight: 0

@@ -1,0 +1,23 @@
+uuid: 4cd61533-954e-418e-bd38-39a673f5f616
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_psl_type_hide_from_search
+    - taxonomy.vocabulary.psl_type
+id: taxonomy_term.psl_type.field_psl_type_hide_from_search
+field_name: field_psl_type_hide_from_search
+entity_type: taxonomy_term
+bundle: psl_type
+label: 'Hide from Search'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

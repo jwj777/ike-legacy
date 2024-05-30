@@ -1,0 +1,28 @@
+uuid: 25f52c95-e6f0-4bda-aa97-93c32a4013a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.icon_text_card
+    - field.storage.block_content.field_icon_text_card_icon
+    - media.type.image
+id: block_content.icon_text_card.field_icon_text_card_icon
+field_name: field_icon_text_card_icon
+entity_type: block_content
+bundle: icon_text_card
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

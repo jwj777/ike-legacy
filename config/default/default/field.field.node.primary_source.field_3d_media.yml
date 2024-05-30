@@ -1,0 +1,29 @@
+uuid: 2f43e51b-50ac-4f3b-96fe-6b43268b17e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_3d_media
+    - media.type.3d_image
+    - node.type.primary_source
+id: node.primary_source.field_3d_media
+field_name: field_3d_media
+entity_type: node
+bundle: primary_source
+label: '3D Media'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      3d_image: 3d_image
+    sort:
+      field: created
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

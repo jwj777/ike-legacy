@@ -1,0 +1,6 @@
+login_redirection:
+  anonymous: null
+  authenticated: /
+  teacher: /my-classroom
+  administrator: /my-classroom
+exclude_urls: ''

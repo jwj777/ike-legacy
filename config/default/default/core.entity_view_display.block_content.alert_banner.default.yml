@@ -1,0 +1,24 @@
+uuid: 289754c0-c713-438e-8559-eaccf7d011a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.alert_banner
+    - field.field.block_content.alert_banner.body
+  module:
+    - text
+id: block_content.alert_banner.default
+targetEntityType: block_content
+bundle: alert_banner
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true
+  uuid: true

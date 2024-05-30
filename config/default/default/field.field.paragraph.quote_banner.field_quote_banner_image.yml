@@ -1,0 +1,28 @@
+uuid: a17fe0d2-8fc0-4988-928a-d11ec6cc9bcb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quote_banner_image
+    - media.type.image
+    - paragraphs.paragraphs_type.quote_banner
+id: paragraph.quote_banner.field_quote_banner_image
+field_name: field_quote_banner_image
+entity_type: paragraph
+bundle: quote_banner
+label: Image
+description: 'Images will display at the size of: 1900px x 800px'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

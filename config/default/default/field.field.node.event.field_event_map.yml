@@ -1,0 +1,28 @@
+uuid: 99cc02e2-9fc9-42bc-a23f-d004c82ee257
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.map_embed
+    - field.storage.node.field_event_map
+    - node.type.event
+id: node.event.field_event_map
+field_name: field_event_map
+entity_type: node
+bundle: event
+label: Map
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      map_embed: map_embed
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

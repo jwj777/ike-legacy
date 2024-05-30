@@ -1,0 +1,22 @@
+uuid: a89441fb-bf1a-48cb-972e-f39c66e0ef89
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - ike
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: ike_breadcrumbs
+theme: ike
+region: header
+weight: -9
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,8 @@
+uuid: 76fc3f77-c0ab-492b-bcb1-8e38102fe753
+langcode: en
+status: true
+dependencies: {  }
+name: 'Resource Collections'
+vid: resource_collections
+description: ''
+weight: 0

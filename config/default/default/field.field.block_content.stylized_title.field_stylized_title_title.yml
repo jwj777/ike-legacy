@@ -1,0 +1,19 @@
+uuid: 9169a019-8e69-4571-ac29-6fccc8a674e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.stylized_title
+    - field.storage.block_content.field_stylized_title_title
+id: block_content.stylized_title.field_stylized_title_title
+field_name: field_stylized_title_title
+entity_type: block_content
+bundle: stylized_title
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

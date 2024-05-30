@@ -1,0 +1,21 @@
+uuid: f0ebbb37-db69-424a-87b8-6047d185ce50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_description
+    - media.type.gallery_video
+  module:
+    - text
+id: media.gallery_video.field_description
+field_name: field_description
+entity_type: media
+bundle: gallery_video
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

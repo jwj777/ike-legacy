@@ -1,0 +1,7 @@
+uuid: 01016d86-e034-405c-905e-9d439e0d6401
+langcode: en
+status: true
+dependencies: {  }
+id: content_fields
+label: 'Content Fields'
+weight: -3

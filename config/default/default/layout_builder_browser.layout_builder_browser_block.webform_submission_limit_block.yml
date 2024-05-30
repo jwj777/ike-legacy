@@ -1,0 +1,11 @@
+uuid: af2df13f-8ab7-49fc-9119-a2cdc5856e55
+langcode: en
+status: true
+dependencies: {  }
+id: webform_submission_limit_block
+block_id: webform_submission_limit_block
+category: webform
+label: 'Webform submission limits'
+image_path: ''
+image_alt: ''
+weight: 0

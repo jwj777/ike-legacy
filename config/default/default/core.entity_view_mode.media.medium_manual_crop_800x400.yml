@@ -1,0 +1,11 @@
+uuid: e34ee544-2f11-42ac-b48c-33e0beb08660
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.medium_manual_crop_800x400
+label: 'Medium Manual Crop 800x550'
+description: ''
+targetEntityType: media
+cache: true

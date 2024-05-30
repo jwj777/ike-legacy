@@ -1,0 +1,33 @@
+uuid: 5b5eb86a-e448-484c-9fba-95126f8df73d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.newsletter_date.field_newsletter_pdf
+    - taxonomy.vocabulary.newsletter_date
+  module:
+    - file
+    - text
+id: taxonomy_term.newsletter_date.default
+targetEntityType: taxonomy_term
+bundle: newsletter_date
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_newsletter_pdf:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true
+  uuid: true

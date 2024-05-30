@@ -1,0 +1,10 @@
+uuid: 474bdb90-7402-41e8-92a0-93e7225712fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.quote_banner
+id: hp_quote_banner
+title: 'HP Quote Banner'
+block_content_bundle: quote_banner
+default_content: null

@@ -1,0 +1,11 @@
+uuid: 08fe5eee-5e56-480c-ad52-97ffa695f0d9
+langcode: en
+status: true
+dependencies: {  }
+id: inline_blocksupport_ike_block
+block_id: 'inline_block:support_ike_block'
+category: add_a_new_custom_block
+label: 'Support IKE block'
+image_path: /themes/custom/ike/images/lb_browser/support_ike_block.png
+image_alt: 'Support IKE Block'
+weight: 0

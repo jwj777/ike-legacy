@@ -1,0 +1,21 @@
+uuid: 7b45dc6d-5b4e-4b2a-8bfd-1131e8dd8e58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ikes_soldiers_discharge
+    - node.type.soldier
+  module:
+    - datetime
+id: node.soldier.field_ikes_soldiers_discharge
+field_name: field_ikes_soldiers_discharge
+entity_type: node
+bundle: soldier
+label: 'Discharge Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

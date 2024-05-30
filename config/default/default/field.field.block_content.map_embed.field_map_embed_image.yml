@@ -1,0 +1,28 @@
+uuid: 676f0333-3795-4c4c-8d9c-952d57f61b4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.map_embed
+    - field.storage.block_content.field_map_embed_image
+    - media.type.image
+id: block_content.map_embed.field_map_embed_image
+field_name: field_map_embed_image
+entity_type: block_content
+bundle: map_embed
+label: 'Map Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

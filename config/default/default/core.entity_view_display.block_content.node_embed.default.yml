@@ -1,0 +1,24 @@
+uuid: b10c294c-65ea-49d5-a36c-5ec4214e58a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.node_embed
+    - field.field.block_content.node_embed.field_primary_source
+id: block_content.node_embed.default
+targetEntityType: block_content
+bundle: node_embed
+mode: default
+content:
+  field_primary_source:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true
+  uuid: true

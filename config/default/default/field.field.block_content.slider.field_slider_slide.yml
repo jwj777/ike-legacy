@@ -1,0 +1,37 @@
+uuid: b4863d43-ea44-40d8-b4d1-b7a840f6e030
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.slider
+    - field.storage.block_content.field_slider_slide
+    - paragraphs.paragraphs_type.slide
+  module:
+    - entity_reference_revisions
+id: block_content.slider.field_slider_slide
+field_name: field_slider_slide
+entity_type: block_content
+bundle: slider
+label: Slide
+description: 'Displays slide with text content.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      slide: slide
+    negate: 0
+    target_bundles_drag_drop:
+      quote_banner:
+        weight: 4
+        enabled: false
+      slide:
+        weight: 5
+        enabled: true
+      stylized_title:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

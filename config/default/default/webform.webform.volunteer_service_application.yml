@@ -1,0 +1,497 @@
+uuid: c2f1a51f-476f-4eb8-b0fe-7acdca9f4d48
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: volunteer_service_application
+title: 'Volunteer Service Application'
+description: ''
+categories: {  }
+elements: |-
+  personal_information:
+    '#type': fieldset
+    '#title': 'Personal Information'
+    '#description': '<span style="font-family:serif; font-size:16.6667px; left:424.55px; top:201.86px; transform:scaleX(0.926566)">Please provide a phone number at which we may reach you </span><span style="font-family:serif; font-size:16.6667px; left:214.5px; top:221.86px; transform:scaleX(0.932905)">Monday through Friday, during business hours to follow up on your application. You also </span><span style="font-family:serif; font-size:16.6667px; left:214.5px; top:241.86px; transform:scaleX(1.00805)">may provide an email address for that purpose.</span>'
+    please_check_if_you_have:
+      '#type': checkboxes
+      '#title': 'Please check if you have'
+      '#options':
+        'U.S. Citizenship': 'U.S. Citizenship'
+        'A green card': 'A green card'
+        'an A1 or A2 diplomatic visa': 'an A1 or A2 diplomatic visa'
+    name:
+      '#type': webform_name
+      '#title': Name
+      '#title__access': false
+      '#middle__access': false
+      '#suffix__access': false
+      '#degree__access': false
+    date_of_birth:
+      '#type': date
+      '#title': 'Date of Birth'
+      '#date_date_format': ''
+    address:
+      '#type': webform_address
+      '#title': Address
+    telephone_number:
+      '#type': tel
+      '#title': 'Telephone Number'
+    email:
+      '#type': email
+      '#title': Email
+  education:
+    '#type': fieldset
+    '#title': Education
+    high_school:
+      '#type': fieldset
+      '#title': 'High School'
+      high_school_edu:
+        '#type': webform_custom_composite
+        '#title': 'High School'
+        '#multiple__sorting': false
+        '#multiple__operations': false
+        '#multiple__add_more_input': false
+        '#element':
+          name_location:
+            '#type': textfield
+            '#title': 'Name / Location of Institution'
+          years_attended:
+            '#type': textfield
+            '#title': 'Years Attended'
+          diploma_ged:
+            '#type': checkbox
+            '#title': 'Diploma / GED'
+    undergraduate:
+      '#type': fieldset
+      '#title': College
+      undergraduate_edu:
+        '#type': webform_custom_composite
+        '#title': Undergraduate
+        '#multiple__sorting': false
+        '#multiple__operations': false
+        '#multiple__add_more_input': false
+        '#element':
+          name_location:
+            '#type': textfield
+            '#title': 'Name / Location of Institution'
+          years_attended:
+            '#type': textfield
+            '#title': 'Years Attended'
+          field_study:
+            '#type': textfield
+            '#title': 'Field of Study'
+      graduate:
+        '#type': webform_custom_composite
+        '#title': Graduate
+        '#multiple__sorting': false
+        '#multiple__operations': false
+        '#multiple__add_more_input': false
+        '#element':
+          name_location:
+            '#type': textfield
+            '#title': 'Name / Location of Institution'
+          years_attended:
+            '#type': textfield
+            '#title': 'Years Attended'
+          field_study:
+            '#type': textfield
+            '#title': 'Field of Study'
+  work_experience:
+    '#type': fieldset
+    '#title': 'Work Experience'
+    '#description': '<span style="font-family:serif; font-size:16.6667px; left:189.466px; top:843.743px; transform:scaleX(0.941313)">(Summarize your last 10 years of employment) </span><span style="font-family:serif; font-size:16.6667px; left:487.8px; top:844.043px; transform:scaleX(0.907192)">When listing your work experience, show only the last </span><span style="font-family:serif; font-size:16.6667px; left:189.466px; top:865.71px; transform:scaleX(0.941846)">10 years of employment. If you are retired, describe the last 10 years you worked before you retired.</span>'
+    work_history:
+      '#type': webform_custom_composite
+      '#title': 'Work History'
+      '#multiple__sorting': false
+      '#multiple__operations': false
+      '#multiple__add_more_input': false
+      '#element':
+        position:
+          '#type': textfield
+          '#title': Position
+        position_date:
+          '#type': textfield
+          '#title': 'From / to'
+        position_employer:
+          '#type': textfield
+          '#title': Employer
+  previous_volunteer_experience:
+    '#type': fieldset
+    '#title': 'Previous Volunteer Experience'
+    volunteer_experience:
+      '#type': webform_custom_composite
+      '#title': 'Volunteer Experience'
+      '#multiple__sorting': false
+      '#multiple__operations': false
+      '#multiple__add_more_input': false
+      '#element':
+        volunteer_duties:
+          '#type': textfield
+          '#title': Duties
+        volunteer_date:
+          '#type': textfield
+          '#title': 'From / to'
+        volunteer_org:
+          '#type': textfield
+          '#title': Organization
+  languages:
+    '#type': fieldset
+    '#title': Languages
+    '#description': '<span style="font-family:serif; font-size:16.6667px; left:330.033px; top:157.647px; transform:scaleX(0.953756)">An ability to speak and understand a foreign language most likely will be </span><span style="font-family:serif; font-size:16.6667px; left:226.8px; top:177.647px; transform:scaleX(0.988704)">used to greet and possibly guide foreign visitors. You would not be expected to explain highly </span><span style="font-family:serif; font-size:16.6667px; left:226.8px; top:197.647px; transform:scaleX(0.927589)">technical aspects of the program. Reading and translating duties might </span><span style="font-family:serif; font-size:16.6667px; left:226.8px; top:217.647px; transform:scaleX(0.994932)">involve assisting the staff in reading and responding to foreign language correspondence or in </span><span style="font-family:serif; font-size:16.6667px; left:226.8px; top:237.647px; transform:scaleX(1.01386)">translating documents from the holdings of the </span>'
+    foreign_language_s_please_list:
+      '#type': webform_custom_composite
+      '#title': 'Foreign Language(s) please list'
+      '#multiple__sorting': false
+      '#multiple__operations': false
+      '#multiple__add_more_input': false
+      '#element':
+        language:
+          '#type': textfield
+          '#title': Language
+        speak_understand:
+          '#type': select
+          '#options':
+            Fluent: Fluent
+            Proficient: Proficient
+          '#title': 'Speak and Understand'
+        read_translate:
+          '#type': select
+          '#options':
+            Easily: Easily
+            Passably: Passably
+          '#title': 'Can read and translate into and from'
+    special_languages:
+      '#type': fieldset
+      '#title': 'Special Languages'
+      american_sign_language:
+        '#type': checkboxes
+        '#title': 'American Sign Language'
+        '#options':
+          'Highly Skilled': 'Highly Skilled'
+          'Some Ability': 'Some Ability'
+      braille:
+        '#type': checkboxes
+        '#title': Braille
+        '#options':
+          'Highly Skilled': 'Highly Skilled'
+          'Some Ability': 'Some Ability'
+  special_skills:
+    '#type': fieldset
+    '#title': 'Special Skills'
+    '#description': '<span style="font-family:serif; font-size:16.6667px; left:226.8px; top:506.147px; transform:scaleX(0.998766)">The information you provide will help us to identify which activities at the </span><span style="font-family:serif; font-size:16.6667px; left:226.8px; top:526.147px; transform:scaleX(0.958684)"> will most interest you and where you can make </span><span style="font-family:serif; font-size:16.6667px; left:226.8px; top:546.147px; transform:scaleX(1.02253)">the greatest contribution to our program.</span>'
+    are_you_skilled_in:
+      '#type': checkboxes
+      '#title': 'Are you skilled in'
+      '#options':
+        'Genealogical research using computers': 'Genealogical research using computers'
+        'Genealogical research using sources other than computers please specify': 'Genealogical research using sources other than computers please specify'
+        'Archival work such as holdings maintenance, processing, or description': 'Archival work such as holdings maintenance, processing, or description'
+        'Data entry': 'Data entry'
+        'Word processing': 'Word processing'
+        Excel: Excel
+        PowerPoint: PowerPoint
+    do_you_have_any_other_skills_or_particular_interests_related_to_:
+      '#type': textarea
+      '#title': 'Do you have any other skills or particular interests related to volunteering? Please list them'
+  when_are_you_available:
+    '#type': fieldset
+    '#title': 'When are you available'
+    monday:
+      '#type': checkbox
+      '#title': Monday
+    monday_hours:
+      '#type': textfield
+      '#title': 'Monday Hours'
+      '#states':
+        visible:
+          ':input[name="monday"]':
+            checked: true
+    tuesday:
+      '#type': checkbox
+      '#title': Tuesday
+    tuesday_hours:
+      '#type': textfield
+      '#title': 'Tuesday Hours'
+      '#states':
+        visible:
+          ':input[name="tuesday"]':
+            checked: true
+    wednesday:
+      '#type': checkbox
+      '#title': Wednesday
+    wednesday_hours:
+      '#type': textfield
+      '#title': 'Wednesday Hours'
+      '#states':
+        visible:
+          ':input[name="wednesday"]':
+            checked: true
+    thursday:
+      '#type': checkbox
+      '#title': Thursday
+    thursday_hours:
+      '#type': textfield
+      '#title': 'Thursday Hours'
+      '#states':
+        visible:
+          ':input[name="thursday"]':
+            checked: true
+    friday:
+      '#type': checkbox
+      '#title': Friday
+    friday_hours:
+      '#type': textfield
+      '#title': 'Friday Hours'
+      '#states':
+        visible:
+          ':input[name="friday"]':
+            checked: true
+    saturday:
+      '#type': checkbox
+      '#title': Saturday
+    saturday_hours:
+      '#type': textfield
+      '#title': 'Saturday Hours'
+      '#states':
+        visible:
+          ':input[name="saturday"]':
+            checked: true
+    sunday:
+      '#type': checkbox
+      '#title': Sunday
+    sunday_hours:
+      '#type': textfield
+      '#title': 'Sunday Hours'
+      '#states':
+        visible:
+          ':input[name="sunday"]':
+            checked: true
+  references:
+    '#type': fieldset
+    '#title': References
+    processed_text:
+      '#type': processed_text
+      '#text': |
+        <p><strong>List two people who are not relatives who know about your ability and knowledge.</strong> It is important that you provide the names of two individuals who can be contracted to discuss your qualifications for a volunteer position. They will be informed of the reason for the contact.</p>
+      '#format': basic_html
+    flexbox:
+      '#type': webform_flexbox
+      container:
+        '#type': container
+        reference_name_1:
+          '#type': textfield
+          '#title': Name
+        reference_address_1:
+          '#type': webform_address
+          '#title': Address
+          '#address_2__access': false
+          '#country__access': false
+        reference_telephone_1:
+          '#type': tel
+          '#title': Telephone
+      container_01:
+        '#type': container
+        reference_name_2:
+          '#type': textfield
+          '#title': Name
+        reference_address_2:
+          '#type': webform_address
+          '#title': Address
+          '#address_2__access': false
+          '#country__access': false
+        reference_telephone_2:
+          '#type': tel
+          '#title': Telephone
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: source_entity_webform
+  form_submit_once: false
+  form_open_message: ''
+  form_close_message: ''
+  form_exception_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_reset: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_attributes:
+    class:
+      - form-show-fieldset-labels
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

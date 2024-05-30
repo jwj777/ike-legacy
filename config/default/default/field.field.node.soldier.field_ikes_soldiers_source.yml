@@ -1,0 +1,29 @@
+uuid: 8dba0ad5-d573-4248-824e-f0e692fb4404
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ikes_soldiers_source
+    - node.type.soldier
+    - taxonomy.vocabulary.soldiers_primary_source_type
+id: node.soldier.field_ikes_soldiers_source
+field_name: field_ikes_soldiers_source
+entity_type: node
+bundle: soldier
+label: 'Primary Source Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      soldiers_primary_source_type: soldiers_primary_source_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

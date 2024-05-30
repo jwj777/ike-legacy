@@ -1,0 +1,11 @@
+uuid: 7c1ec74e-b72d-4ec3-beb3-3b41c52afcdf
+langcode: en
+status: true
+dependencies: {  }
+id: fixed_block_contenthp_support_ike_block
+block_id: 'fixed_block_content:hp_support_ike_block'
+category: fixed_custom
+label: 'HP Support IKE Block'
+image_path: /themes/custom/ike/images/lb_browser/support_ike_block.png
+image_alt: 'Homepage Support IKE block'
+weight: 0

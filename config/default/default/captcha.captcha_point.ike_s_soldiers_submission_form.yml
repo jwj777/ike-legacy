@@ -1,0 +1,7 @@
+uuid: d5f4825a-c379-43c5-a904-b6efeb34641b
+langcode: en
+status: true
+dependencies: {  }
+formId: ike_s_soldiers_submission_form
+captchaType: recaptcha/reCAPTCHA
+label: ike_s_soldiers_submission_form

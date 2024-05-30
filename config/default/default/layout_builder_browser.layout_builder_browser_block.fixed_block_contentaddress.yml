@@ -1,0 +1,11 @@
+uuid: fa8baa0e-d82f-4063-944a-1a8035ac4c81
+langcode: en
+status: true
+dependencies: {  }
+id: fixed_block_contentaddress
+block_id: 'fixed_block_content:address'
+category: fixed_custom
+label: Address
+image_path: /themes/custom/ike/images/lb_browser/address.png
+image_alt: Address
+weight: 0

@@ -1,0 +1,18 @@
+uuid: d3d2f078-419f-4576-af89-bd918fe66e9f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_ikes_soldiers_approx_enlis
+field_name: field_ikes_soldiers_approx_enlis
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,11 @@
+uuid: 816cd22c-def3-4a5e-84e5-5c62cac86e40
+langcode: en
+status: true
+dependencies: {  }
+id: field_blockuseruserfield_last_name
+block_id: 'field_block:user:user:field_last_name'
+category: user_fields
+label: 'Last Name'
+image_path: ''
+image_alt: ''
+weight: 0

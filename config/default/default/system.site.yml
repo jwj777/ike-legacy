@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
+langcode: en
+uuid: b1066cae-4832-4f56-837e-73adaf93a651
+name: 'Eisenhower Foundation'
+mail: info@eisenhowerfoundation.net
+slogan: ''
+page:
+  403: /
+  404: /node/120
+  front: /node/2
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: info@eisenhowerfoundation.net

@@ -1,0 +1,28 @@
+uuid: 8bae1b54-4230-4c39-9ba3-affc192353e9
+langcode: en
+status: true
+dependencies:
+  module:
+    - socialfeed
+  theme:
+    - ike
+id: facebookblock
+theme: ike
+region: social
+weight: 0
+provider: null
+plugin: facebook_post
+settings:
+  id: facebook_post
+  label: 'Facebook Block'
+  label_display: '0'
+  provider: socialfeed
+  override: 1
+  page_name: eisenhowerfoundation
+  app_id: '511729989534961'
+  secret_key: c6c46c7c8f9b3456703c9756f7198bc4
+  no_feeds: '3'
+  all_types: 1
+  post_type: ''
+  user_token: EAAHRamwZCRPEBO0GdjDAA92xMsYNAF7OnLHSPiLSPIdVZCZCvIr3hMaIYsnkTHDmaBT9jOZBeDuP1PhknNdkAZCkIQGPUno7cyRo8GxrpuPhhdqPwIXCIh0ScO5r7Sf9hR9QWZA34ho3422WE8Cke3KZB0cZA6dqoPuBmJZBYTFbUQHO0bnK0A7QSDasIq3ZBlHXulpfW5QRdFlGgQZAFX2sL2s30m2tbWY8sJNFplUQXft78WjZAlZBQ
+visibility: {  }

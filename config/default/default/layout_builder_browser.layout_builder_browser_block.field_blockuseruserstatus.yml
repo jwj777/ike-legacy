@@ -1,0 +1,11 @@
+uuid: 63715965-9ea9-45ee-8745-0c6f66799dd6
+langcode: en
+status: true
+dependencies: {  }
+id: field_blockuseruserstatus
+block_id: 'field_block:user:user:status'
+category: user_fields
+label: 'User status'
+image_path: ''
+image_alt: ''
+weight: 0

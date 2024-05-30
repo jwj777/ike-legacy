@@ -1,0 +1,23 @@
+uuid: bcf30525-9ed1-4010-9868-bd27217e0f47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_ticket_url
+    - node.type.event
+  module:
+    - link
+id: node.event.field_event_ticket_url
+field_name: field_event_ticket_url
+entity_type: node
+bundle: event
+label: 'Ticket URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

@@ -1,0 +1,276 @@
+uuid: fdc6a6c7-6db2-4117-a6cc-4ddc305d97d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.node.article.default
+    - core.entity_view_display.node.component_page.default
+    - filter.format.full_html
+    - filter.format.raw_html
+    - filter.format.restricted_html
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - node.type.article
+    - node.type.component_page
+    - node.type.event
+    - node.type.lesson_plan
+    - node.type.news
+    - node.type.page
+    - node.type.soldier
+    - node.type.sponsors
+    - rest.resource.teacher_collection_flag_delete_rest_resource
+    - rest.resource.teacher_collection_flag_rest_resource
+    - taxonomy.vocabulary.article_categories
+    - taxonomy.vocabulary.event_categories
+    - taxonomy.vocabulary.resource_grade_level
+    - taxonomy.vocabulary.resource_subject
+    - taxonomy.vocabulary.resource_topic
+    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.video_categories
+    - user.role.authenticated
+    - user.role.marketing_admin
+    - user.role.teacher
+  module:
+    - admin_toolbar_search
+    - block
+    - contact
+    - contextual
+    - entity_clone
+    - file
+    - filter
+    - flag
+    - flag_lists
+    - google_analytics
+    - help
+    - layout_builder
+    - masquerade
+    - media
+    - menu_link_attributes
+    - metatag
+    - node
+    - paragraphs
+    - path
+    - recaptcha
+    - redirect
+    - rest
+    - shortcut
+    - system
+    - taxonomy
+    - toolbar
+    - tour
+    - ui_patterns_library
+    - webform
+id: marketing_admin
+label: 'Marketing Admin'
+weight: -7
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access any webform configuration'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access flagging collection overview'
+  - 'access global flag lists'
+  - 'access help pages'
+  - 'access media overview'
+  - 'access own webform configuration'
+  - 'access patterns page'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access tour'
+  - 'access user contact forms'
+  - 'access user profiles'
+  - 'access webform overview'
+  - 'access webform submission user'
+  - 'add flag lists'
+  - 'administer account settings'
+  - 'administer blocks'
+  - 'administer contact forms'
+  - 'administer flag lists'
+  - 'administer flaggings'
+  - 'administer flags'
+  - 'administer google analytics'
+  - 'administer media'
+  - 'administer menu'
+  - 'administer menu link attributes'
+  - 'administer meta tags'
+  - 'administer nodes'
+  - 'administer permissions'
+  - 'administer recaptcha'
+  - 'administer redirect settings'
+  - 'administer redirects'
+  - 'administer shortcuts'
+  - 'administer taxonomy'
+  - 'administer url aliases'
+  - 'administer users'
+  - 'administer webform'
+  - 'administer webform element access'
+  - 'administer webform submission'
+  - 'bypass node access'
+  - 'change own username'
+  - 'clone block entity'
+  - 'clone file entity'
+  - 'clone fixed_block_content entity'
+  - 'clone layout_builder_browser_block entity'
+  - 'clone layout_builder_browser_blockcat entity'
+  - 'clone media entity'
+  - 'clone node entity'
+  - 'clone paragraph entity'
+  - 'clone webform entity'
+  - 'configure all article node layout overrides'
+  - 'configure all component_page node layout overrides'
+  - 'configure any layout'
+  - 'configure editable article node layout overrides'
+  - 'configure editable component_page node layout overrides'
+  - 'create and edit custom blocks'
+  - 'create article content'
+  - 'create audio media'
+  - 'create component_page content'
+  - 'create document media'
+  - 'create event content'
+  - 'create image media'
+  - 'create lesson_plan content'
+  - 'create media'
+  - 'create news content'
+  - 'create page content'
+  - 'create remote_video media'
+  - 'create soldier content'
+  - 'create sponsors content'
+  - 'create terms in article_categories'
+  - 'create terms in event_categories'
+  - 'create terms in resource_grade_level'
+  - 'create terms in resource_subject'
+  - 'create terms in resource_topic'
+  - 'create terms in tags'
+  - 'create terms in video_categories'
+  - 'create url aliases'
+  - 'create video media'
+  - 'create webform'
+  - 'customize shortcut links'
+  - 'delete any article content'
+  - 'delete any audio media'
+  - 'delete any component_page content'
+  - 'delete any document media'
+  - 'delete any event content'
+  - 'delete any image media'
+  - 'delete any lesson_plan content'
+  - 'delete any media'
+  - 'delete any news content'
+  - 'delete any page content'
+  - 'delete any remote_video media'
+  - 'delete any soldier content'
+  - 'delete any sponsors content'
+  - 'delete any video media'
+  - 'delete any webform submission'
+  - 'delete media'
+  - 'delete own article content'
+  - 'delete own audio media'
+  - 'delete own component_page content'
+  - 'delete own document media'
+  - 'delete own event content'
+  - 'delete own image media'
+  - 'delete own lesson_plan content'
+  - 'delete own news content'
+  - 'delete own page content'
+  - 'delete own remote_video media'
+  - 'delete own soldier content'
+  - 'delete own sponsors content'
+  - 'delete own video media'
+  - 'delete own webform'
+  - 'delete terms in article_categories'
+  - 'delete terms in event_categories'
+  - 'delete terms in resource_grade_level'
+  - 'delete terms in resource_subject'
+  - 'delete terms in resource_topic'
+  - 'delete terms in tags'
+  - 'delete terms in video_categories'
+  - 'edit any article content'
+  - 'edit any audio media'
+  - 'edit any component_page content'
+  - 'edit any document media'
+  - 'edit any event content'
+  - 'edit any image media'
+  - 'edit any lesson_plan content'
+  - 'edit any news content'
+  - 'edit any page content'
+  - 'edit any remote_video media'
+  - 'edit any soldier content'
+  - 'edit any sponsors content'
+  - 'edit any video media'
+  - 'edit any webform'
+  - 'edit any webform submission'
+  - 'edit own article content'
+  - 'edit own audio media'
+  - 'edit own component_page content'
+  - 'edit own document media'
+  - 'edit own event content'
+  - 'edit own flag lists'
+  - 'edit own image media'
+  - 'edit own lesson_plan content'
+  - 'edit own news content'
+  - 'edit own page content'
+  - 'edit own remote_video media'
+  - 'edit own soldier content'
+  - 'edit own sponsors content'
+  - 'edit own video media'
+  - 'edit own webform'
+  - 'edit own webform submission'
+  - 'edit terms in article_categories'
+  - 'edit terms in event_categories'
+  - 'edit terms in resource_grade_level'
+  - 'edit terms in resource_subject'
+  - 'edit terms in resource_topic'
+  - 'edit terms in tags'
+  - 'edit terms in video_categories'
+  - 'edit webform assets'
+  - 'edit webform source'
+  - 'edit webform twig'
+  - 'edit webform variants'
+  - 'masquerade as any user'
+  - 'masquerade as authenticated'
+  - 'masquerade as marketing_admin'
+  - 'masquerade as teacher'
+  - 'restful post teacher_collection_flag_delete_rest_resource'
+  - 'restful post teacher_collection_flag_rest_resource'
+  - 'revert all revisions'
+  - 'revert article revisions'
+  - 'revert component_page revisions'
+  - 'revert event revisions'
+  - 'revert lesson_plan revisions'
+  - 'revert news revisions'
+  - 'revert page revisions'
+  - 'revert soldier revisions'
+  - 'revert sponsors revisions'
+  - 'select account cancellation method'
+  - 'switch shortcut sets'
+  - 'update any media'
+  - 'update media'
+  - 'use admin toolbar search'
+  - 'use menu link attributes'
+  - 'use text format full_html'
+  - 'use text format raw_html'
+  - 'use text format restricted_html'
+  - 'view all flagging collection revisions'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view any webform submission'
+  - 'view article revisions'
+  - 'view component_page revisions'
+  - 'view event revisions'
+  - 'view lesson_plan revisions'
+  - 'view news revisions'
+  - 'view own flag lists'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view own webform submission'
+  - 'view page revisions'
+  - 'view soldier revisions'
+  - 'view sponsors revisions'
+  - 'view the administration theme'
+  - 'view unpublished paragraphs'

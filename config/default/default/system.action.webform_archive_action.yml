@@ -1,0 +1,11 @@
+uuid: 0c31da3f-c441-4546-a27c-f19bb9147e75
+langcode: en
+status: true
+dependencies:
+  module:
+    - webform
+id: webform_archive_action
+label: 'Archive webform'
+type: webform
+plugin: webform_archive_action
+configuration: {  }

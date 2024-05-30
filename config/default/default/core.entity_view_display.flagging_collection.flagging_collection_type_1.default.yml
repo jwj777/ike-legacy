@@ -1,0 +1,48 @@
+uuid: ccf1e55c-9566-4bb2-8762-1411cb1a2767
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.flagging_collection.flagging_collection_type_1.field_collection_subtitle
+    - flag_lists.flagging_collection_type.flagging_collection_type_1
+  module:
+    - text
+    - user
+id: flagging_collection.flagging_collection_type_1.default
+targetEntityType: flagging_collection
+bundle: flagging_collection_type_1
+mode: default
+content:
+  field_collection_subtitle:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  relatedflag:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  templateflag:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  user_id:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true
+  uuid: true

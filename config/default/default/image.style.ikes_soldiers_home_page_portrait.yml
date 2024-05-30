@@ -1,0 +1,15 @@
+uuid: 2bca40f7-3ef1-449b-8dca-2ac0dde88430
+langcode: en
+status: true
+dependencies: {  }
+name: ikes_soldiers_home_page_portrait
+label: 'Ikes Soldiers Home page portrait'
+effects:
+  554c8fc7-2054-427c-8628-912db93dad94:
+    uuid: 554c8fc7-2054-427c-8628-912db93dad94
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 360
+      height: 320
+      anchor: center-top

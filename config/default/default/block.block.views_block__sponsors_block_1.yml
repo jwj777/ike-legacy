@@ -1,0 +1,25 @@
+uuid: 86a0ec64-fc31-465d-8aa3-d624ce4a9956
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sponsors
+  module:
+    - views
+  theme:
+    - ike
+id: views_block__sponsors_block_1
+theme: ike
+region: footer_right
+weight: 0
+provider: null
+plugin: 'views_block:sponsors-block_1'
+settings:
+  id: 'views_block:sponsors-block_1'
+  label: Supporters
+  label_display: visible
+  provider: views
+  views_label: Supporters
+  items_per_page: none
+  exposed: {  }
+visibility: {  }

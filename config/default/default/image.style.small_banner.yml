@@ -1,0 +1,15 @@
+uuid: 4fa98f6c-40b3-460e-8c66-3074b7bf59ec
+langcode: en
+status: true
+dependencies: {  }
+name: small_banner
+label: 'Small Banner 2x (1388x308)'
+effects:
+  52b22ef5-0074-4bfa-b754-633cb819714a:
+    uuid: 52b22ef5-0074-4bfa-b754-633cb819714a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1388
+      height: 308
+      anchor: center-center

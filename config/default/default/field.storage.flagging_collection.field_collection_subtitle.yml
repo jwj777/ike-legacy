@@ -1,0 +1,19 @@
+uuid: e5cf34ac-2f48-4530-bdb7-aa026971589c
+langcode: en
+status: true
+dependencies:
+  module:
+    - flag_lists
+    - text
+id: flagging_collection.field_collection_subtitle
+field_name: field_collection_subtitle
+entity_type: flagging_collection
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

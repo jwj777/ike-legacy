@@ -1,0 +1,23 @@
+uuid: 4575c32e-a8da-434b-9299-609345d9dcc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta_banner
+    - field.storage.block_content.field_cta_banner_alt_styling
+id: block_content.cta_banner.field_cta_banner_alt_styling
+field_name: field_cta_banner_alt_styling
+entity_type: block_content
+bundle: cta_banner
+label: 'Alt Styling'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

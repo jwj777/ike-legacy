@@ -1,0 +1,11 @@
+uuid: 73a79ebe-d2c2-487f-a2d1-29ba357395c6
+langcode: en
+status: true
+dependencies: {  }
+id: add_to_classroom_block
+block_id: add_to_classroom_block
+category: ike_teacher_collections
+label: 'Add To Classroom Block'
+image_path: ''
+image_alt: ''
+weight: 0

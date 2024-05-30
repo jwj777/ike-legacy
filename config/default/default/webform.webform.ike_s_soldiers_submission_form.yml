@@ -1,0 +1,508 @@
+uuid: 7b4f7f5e-dd78-4222-8893-c701a2305f7c
+langcode: en
+status: open
+dependencies:
+  module:
+    - antibot
+    - honeypot
+third_party_settings:
+  honeypot:
+    honeypot: true
+    time_restriction: true
+  antibot:
+    antibot: true
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: ike_s_soldiers_submission_form
+title: "Ike's Soldiers Submission Form"
+description: ''
+categories: {  }
+elements: |-
+  form_title:
+    '#type': processed_text
+    '#text': |
+      <h2>Ike's Soldiers Submission Form</h2<span class="text-red" style="font-size:14px;">*Required Field</span>
+    '#format': basic_html
+  personal_information:
+    '#type': fieldset
+    '#title': 'Personal Information'
+    '#description_display': invisible
+    row_1:
+      '#type': webform_flexbox
+      '#align_items': flex-end
+      first_name:
+        '#type': textfield
+        '#title': 'First Name'
+        '#required': true
+        '#flex': 3
+      last_name:
+        '#type': textfield
+        '#title': 'Last Name'
+        '#required': true
+        '#flex': 3
+      middle:
+        '#type': textfield
+        '#title': Middle
+        '#flex': 2
+      suffix:
+        '#type': textfield
+        '#title': Suffix
+      gender:
+        '#type': select
+        '#title': Gender
+        '#options':
+          Male: Male
+          Female: Female
+        '#empty_option': 'Select an option'
+        '#required': true
+        '#flex': 2
+    row_2:
+      '#type': webform_flexbox
+      date_of_birth:
+        '#type': date
+        '#title': 'Date of Birth'
+        '#date_date_min': 01/01/1850
+        '#date_date_format': ''
+      date_of_death:
+        '#type': date
+        '#title': 'Date of Death'
+        '#date_date_format': ''
+      birthplace:
+        '#type': textfield
+        '#title': Birthplace
+        '#description': '(City, State)'
+        '#description_display': before
+        '#flex': 2
+        '#label_attributes':
+          class:
+            - label-with-desc
+      home_town:
+        '#type': textfield
+        '#title': 'Home Town'
+        '#description': '(City, State)'
+        '#description_display': before
+        '#flex': 2
+        '#label_attributes':
+          class:
+            - label-with-desc
+    biographical_information:
+      '#type': textarea
+      '#title': 'Biographical Information'
+      '#description': '(Please tell us about this veteran and their World War II service.)'
+      '#description_display': before
+      '#label_attributes':
+        class:
+          - label-with-desc
+  service_information:
+    '#type': fieldset
+    '#title': 'Service Information'
+    '#description': 'Ike&#39;s Soldiers must have served in World War II between the dates of September 1, 1939 through March 31, 1946.'
+    '#description_display': before
+    row_4:
+      '#type': webform_flexbox
+      highest_rank:
+        '#type': textfield
+        '#title': 'Highest Rank'
+      enlistment_commissioned_date:
+        '#type': date
+        '#title': 'Enlistment/Commissioned Date'
+        '#description': 'If approximate date, select any date within the correct year'
+        '#flex': 2
+        '#date_date_format': ''
+      enlist_is_this_an_approximate_date:
+        '#type': checkbox
+        '#title': 'Is this an approximate date?'
+        '#title_display': before
+        '#field_suffix': 'Yes'
+      discharge_date:
+        '#type': date
+        '#title': 'Discharge Date'
+        '#description': 'If approximate date, select any date within the correct year'
+        '#flex': 2
+        '#date_date_format': ''
+      discharge_is_this_an_approximate_date:
+        '#type': checkbox
+        '#title': 'Is this an approximate date?'
+        '#title_display': before
+        '#field_suffix': 'Yes'
+    row_5:
+      '#type': webform_flexbox
+      branch_of_service:
+        '#type': webform_term_select
+        '#title': 'Branch of Service'
+        '#description': 'If other, please explain in biography'
+        '#empty_option': 'Select an option'
+        '#required': true
+        '#vocabulary': branch_of_service
+        '#breadcrumb_delimiter': ''
+      theater_of_operation:
+        '#type': webform_term_select
+        '#title': 'Theater of Operation'
+        '#description': 'If other, please explain in biography'
+        '#empty_option': 'Select an option'
+        '#required': true
+        '#vocabulary': theater_of_operation
+        '#breadcrumb_delimiter': ''
+      unit:
+        '#type': textarea
+        '#title': Unit
+        '#flex': 2
+    row_6:
+      '#type': webform_flexbox
+      major_battles:
+        '#type': textarea
+        '#title': 'Major Battle(s)'
+      honors_service_awards:
+        '#type': textarea
+        '#title': 'Honors & Service Awards'
+    row_7:
+      '#type': webform_flexbox
+      was_the_veteran_a_prisoner_of_war_:
+        '#type': checkbox
+        '#title': 'Was the veteran a prisoner of war?'
+        '#title_display': before
+        '#field_suffix': 'Yes'
+        '#label_attributes':
+          class:
+            - label-with-desc
+      was_the_veteran_killed_in_action_:
+        '#type': checkbox
+        '#title': 'Was the veteran killed in action?'
+        '#title_display': before
+        '#field_suffix': 'Yes'
+        '#label_attributes':
+          class:
+            - label-with-desc
+  media:
+    '#type': fieldset
+    '#title': Media
+    row_8:
+      '#type': webform_flexbox
+      veteran_photo:
+        '#type': webform_image_file
+        '#title': 'Veteran Photo'
+        '#description_display': invisible
+        '#uri_scheme': public
+        '#file_placeholder': 'Select a file (png, jpg)'
+        '#file_preview': 'crop_thumbnail:image'
+        '#attachment_image_style': ikes_soldiers_portrait
+      other_service_documents:
+        '#type': managed_file
+        '#title': 'Other Service Documents'
+        '#multiple': true
+        '#description': '(examples include discharge papers, photos of medals)'
+        '#description_display': before
+        '#flex': 2
+        '#label_attributes':
+          class:
+            - label-with-desc
+        '#uri_scheme': public
+        '#file_help': none
+        '#file_placeholder': 'Select a file (png, jpg, pdf)'
+        '#file_extensions': 'gif jpg jpeg png pdf'
+    videos:
+      '#type': textfield
+      '#title': Videos
+      '#multiple': true
+      '#description': '<span class="placeholder-mock">Paste video links/URL&rsquo;s from youtube, vimeo, etc.</span>'
+      '#description_display': before
+      '#multiple__sorting': false
+      '#multiple__add_more': false
+      '#multiple__add_more_input': false
+  submitter_information:
+    '#type': fieldset
+    '#title': 'Your Information'
+    '#description': '<strong>Why do we need this?&nbsp;</strong>We want to be able to follow up and verify the information with you, if needed.'
+    '#description_display': before
+    '#attributes':
+      class:
+        - fieldset-with-desc
+    row_9:
+      '#type': webform_flexbox
+      submitter_name:
+        '#type': textfield
+        '#title': 'Your Name'
+        '#required': true
+      submitter_email_address:
+        '#type': email
+        '#title': 'Your Email Address'
+        '#required': true
+    row_10:
+      '#type': webform_flexbox
+      message_for_the_administrator:
+        '#type': textarea
+        '#title': 'Message for the Administrator'
+      veteran_honored_by:
+        '#type': textarea
+        '#title': 'Veteran Honored By'
+  disclaimer:
+    '#type': processed_text
+    '#wrapper_attributes':
+      class:
+        - disclaimer
+    '#text': |
+      <p>We will review your submission and either approve it for publication or contact you with any questions. Submitting this form does not guarantee publication on the Ike's Soldiers website. Submitting this form grants the Eisenhower Foundation use of all information included.</p>
+    '#format': basic_html
+  captcha:
+    '#type': captcha
+    '#captcha_type': captcha/Math
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#submit__label': 'Submit A Soldier'
+    '#submit__attributes':
+      class:
+        - button-red
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ike
+  form_title: source_entity_webform
+  form_submit_once: true
+  form_open_message: ''
+  form_close_message: ''
+  form_exception_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_unsaved: true
+  form_disable_back: false
+  form_submit_back: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_reset: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_attributes:
+    class:
+      - soldier-submission-form
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: true
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: url
+  confirmation_url: soldier-confirmation
+  confirmation_title: 'Thank You!'
+  confirmation_message: 'The Soldier has been submitted.'
+  confirmation_attributes: {  }
+  confirmation_back: false
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: true
+  confirmation_exclude_token: true
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  email:
+    id: email
+    handler_id: email
+    label: Email
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: lkijowski@eisenhowerfoundation.net
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: _default
+      body: "<p>A new Soldier has been <strong>Submitted by:</strong> [webform_submission:values:submitter_name]</p>\r\n\r\n<p><strong>Email address</strong>: [webform_submission:values:submitter_email_address]</p>\r\n\r\n<p><strong>Soldier name</strong>: [webform_submission:values:first_name] [webform_submission:values:last_name]</p>\r\n\r\n<p><a href=\"https://www.eisenhowerfoundation.net/admin/content/soldiers\">Manage Soldiers</a></p>"
+      excluded_elements:
+        form_title: form_title
+        middle: middle
+        suffix: suffix
+        gender: gender
+        date_of_birth: date_of_birth
+        date_of_death: date_of_death
+        birthplace: birthplace
+        home_town: home_town
+        biographical_information: biographical_information
+        highest_rank: highest_rank
+        enlistment_commissioned_date: enlistment_commissioned_date
+        enlist_is_this_an_approximate_date: enlist_is_this_an_approximate_date
+        discharge_date: discharge_date
+        discharge_is_this_an_approximate_date: discharge_is_this_an_approximate_date
+        theater_of_operation: theater_of_operation
+        unit: unit
+        major_battles: major_battles
+        honors_service_awards: honors_service_awards
+        was_the_veteran_a_prisoner_of_war_: was_the_veteran_a_prisoner_of_war_
+        was_the_veteran_killed_in_action_: was_the_veteran_killed_in_action_
+        veteran_photo: veteran_photo
+        other_service_documents: other_service_documents
+        videos: videos
+        message_for_the_administrator: message_for_the_administrator
+        veteran_honored_by: veteran_honored_by
+        disclaimer: disclaimer
+        captcha: captcha
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

@@ -1,0 +1,23 @@
+uuid: 5b910ee2-4e86-4373-9958-e30ea8a2577c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_rs_hide_from_search
+    - taxonomy.vocabulary.resource_subject
+id: taxonomy_term.resource_subject.field_rs_hide_from_search
+field_name: field_rs_hide_from_search
+entity_type: taxonomy_term
+bundle: resource_subject
+label: 'Hide from Search'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

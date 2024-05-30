@@ -1,0 +1,46 @@
+uuid: df7a23d9-1322-4338-9f99-0735ac320108
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.lesson_plan.field_lesson_plan_description
+    - field.field.node.lesson_plan.field_lesson_plan_file
+    - field.field.node.lesson_plan.field_lesson_plan_image
+    - field.field.node.lesson_plan.field_resource_grade_level
+    - field.field.node.lesson_plan.field_resource_subject
+    - field.field.node.lesson_plan.field_resource_topic
+    - node.type.lesson_plan
+  module:
+    - user
+id: node.lesson_plan.teaser
+targetEntityType: node
+bundle: lesson_plan
+mode: teaser
+content:
+  field_lesson_plan_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: medium_manual_crop_800x400
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_resource_grade_level:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  addtoany: true
+  field_lesson_plan_description: true
+  field_lesson_plan_file: true
+  field_resource_subject: true
+  field_resource_topic: true
+  links: true
+  search_api_excerpt: true
+  uuid: true

@@ -1,0 +1,28 @@
+uuid: e6cfef14-b608-446f-bb26-69f3999fd833
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lesson_plan_image
+    - media.type.image
+    - node.type.lesson_plan
+id: node.lesson_plan.field_lesson_plan_image
+field_name: field_lesson_plan_image
+entity_type: node
+bundle: lesson_plan
+label: Image
+description: 'Images work best at 400px x 275px or larger.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

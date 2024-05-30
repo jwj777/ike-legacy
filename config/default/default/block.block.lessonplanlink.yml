@@ -1,0 +1,30 @@
+uuid: 18383891-a015-45be-8a00-8c9980b12da6
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:1abac173-d4cc-4242-b698-929f62256745'
+  module:
+    - block_content
+    - system
+  theme:
+    - ike
+id: lessonplanlink
+theme: ike
+region: header
+weight: -14
+provider: null
+plugin: 'block_content:1abac173-d4cc-4242-b698-929f62256745'
+settings:
+  id: 'block_content:1abac173-d4cc-4242-b698-929f62256745'
+  label: 'Lesson Plan Link'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/ikeducation/lesson-plans/*'

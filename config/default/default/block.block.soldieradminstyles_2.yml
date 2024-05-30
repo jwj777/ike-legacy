@@ -1,0 +1,30 @@
+uuid: 9a4819ad-8629-4fc6-a2fc-6543c2723be5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c1835041-0a6b-4fdd-9ed0-d5a0127cae7a'
+  module:
+    - block_content
+    - system
+  theme:
+    - claro
+id: soldieradminstyles_2
+theme: claro
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:c1835041-0a6b-4fdd-9ed0-d5a0127cae7a'
+settings:
+  id: 'block_content:c1835041-0a6b-4fdd-9ed0-d5a0127cae7a'
+  label: 'soldier admin styles'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/admin/content/soldiers*'

@@ -1,0 +1,8 @@
+uuid: 6bacea3e-cef1-41ab-aab7-2fc89a843acc
+langcode: en
+status: true
+dependencies: {  }
+id: spacer
+label: Spacer
+revision: 1
+description: 'A component used for adding some vertical spacing between items.'

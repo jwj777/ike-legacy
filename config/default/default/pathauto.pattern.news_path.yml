@@ -1,0 +1,22 @@
+uuid: 502ad4e9-1ef6-4ffa-af4a-7eed0f3c722c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: news_path
+label: 'News Path'
+type: 'canonical_entities:node'
+pattern: 'ike-insight/[node:title]'
+selection_criteria:
+  26a8def3-484a-4aef-85c1-af35820555ab:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 26a8def3-484a-4aef-85c1-af35820555ab
+    context_mapping:
+      node: node
+    bundles:
+      news: news
+selection_logic: and
+weight: -5
+relationships: {  }

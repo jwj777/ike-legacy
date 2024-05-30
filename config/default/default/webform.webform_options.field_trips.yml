@@ -1,0 +1,32 @@
+uuid: c4f51bd2-e595-4bee-a213-a75cda1a87c2
+langcode: en
+status: true
+dependencies: {  }
+id: field_trips
+label: 'Field Trips'
+category: ''
+likert: false
+options: |
+  'All About Ike Story Time (Grades K-2, 30 minutes)': 'All About Ike Story Time (Grades K-2, 30 minutes)'
+  'Little Ike Artifacts (Grades K-5, 1 hour)': 'Little Ike Artifacts (Grades K-5, 1 hour)'
+  'Dogs for Defense (Grades K - 5, 1 hour)': 'Dogs for Defense (Grades K - 5, 1 hour)'
+  'Attic Artifacts: World War II Kids (Grades 3 - 5, 1 hour)': 'Attic Artifacts: World War II Kids (Grades 3 - 5, 1 hour)'
+  'Flat Ike (Grades 3-5, 30 minutes)': 'Flat Ike (Grades 3-5, 30 minutes)'
+  'Dear Mr. President (Grades 3 - 5, 1 hour)': 'Dear Mr. President (Grades 3 - 5, 1 hour)'
+  'Rosie the Riveter (Grades 3 - 5, 1 hour)': 'Rosie the Riveter (Grades 3 - 5, 1 hour)'
+  'Constitution Day (Grades 4 - 5, 3 hours)': 'Constitution Day (Grades 4 - 5, 3 hours)'
+  'Duck & Cover (Grades 4 - 5, 1 hour)': 'Duck & Cover (Grades 4 - 5, 1 hour)'
+  'Paint Like Ike (Grades 5 - 8, 3 hours)': 'Paint Like Ike (Grades 5 - 8, 3 hours)'
+  'Use it Up, Wear it Out, Make it Do, or Do Without (Grades 6 - 8, 1 hour) ': 'Use it Up, Wear it Out, Make it Do, or Do Without (Grades 6 - 8, 1 hour) '
+  'Code Talkers (Grades 6 - 8, 1 hour)': 'Code Talkers (Grades 6 - 8, 1 hour)'
+  'Space Race (Grades 6-8, 1 hour)': 'Space Race (Grades 6-8, 1 hour)'
+  'Attic Artifacts: 101st Airborne (Grades 9 - 12 Grade, 1 hour)': 'Attic Artifacts: 101st Airborne (Grades 9 - 12 Grade, 1 hour)'
+  'Holocaust: From a Name to a Number (Grades 7 - 12, 1 hour)': 'Holocaust: From a Name to a Number (Grades 7 - 12, 1 hour)'
+  'inHUMANITY and the Holocaust (Grades 7 - 12, 2 hours)': 'inHUMANITY and the Holocaust (Grades 7 - 12, 2 hours)'
+  'Primarily Omaha Beach (Grades 9 - 12,  1 hour)': 'Primarily Omaha Beach (Grades 9 - 12,  1 hour)'
+  'Advise the President: Project Solarium (Grades 9 - 12, 1.5 hours)': 'Advise the President: Project Solarium (Grades 9 - 12, 1.5 hours)'
+  'D-Day Deception (Grades 10 - 12, 1.5 hours)': 'D-Day Deception (Grades 10 - 12, 1.5 hours)'
+  'Desegregation in Little Rock (Grades 11 - 12, 2 hours)': 'Desegregation in Little Rock (Grades 11 - 12, 2 hours)'
+  'The Red Scare: Spies Among Us (Grades 11 - 12, 1.5 hours)': 'The Red Scare: Spies Among Us (Grades 11 - 12, 1.5 hours)'
+  'Student Document Research (Grades 9-12, 3 hours on top of pre-visit work) ': 'Student Document Research (Grades 9-12, 3 hours on top of pre-visit work) '
+  'No on-site program': 'No on-site program'

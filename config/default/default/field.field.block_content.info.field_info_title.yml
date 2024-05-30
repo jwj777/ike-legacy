@@ -1,0 +1,40 @@
+uuid: bd964697-438a-40b3-a2f4-62f7c834be52
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.info
+    - field.storage.block_content.field_info_title
+    - paragraphs.paragraphs_type.stylized_title
+  module:
+    - entity_reference_revisions
+id: block_content.info.field_info_title
+field_name: field_info_title
+entity_type: block_content
+bundle: info
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      stylized_title: stylized_title
+    negate: 0
+    target_bundles_drag_drop:
+      banner_image_with_text:
+        weight: 4
+        enabled: false
+      emphasis_title:
+        weight: 5
+        enabled: false
+      slide:
+        weight: 6
+        enabled: false
+      stylized_title:
+        weight: 8
+        enabled: true
+field_type: entity_reference_revisions

@@ -1,0 +1,11 @@
+uuid: 3096e1a9-71b8-42bf-9863-42996d14d9b4
+langcode: en
+status: true
+dependencies: {  }
+id: fixed_block_contentsocial_share_grid
+block_id: 'fixed_block_content:social_share_grid'
+category: fixed_custom
+label: 'Social Share Grid'
+image_path: /themes/custom/ike/images/lb_browser/social_share_grid.png
+image_alt: 'Social Share Grid'
+weight: 0

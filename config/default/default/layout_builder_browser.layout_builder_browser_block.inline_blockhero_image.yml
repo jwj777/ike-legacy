@@ -1,0 +1,11 @@
+uuid: b9da1405-fb99-4035-be72-83018ac2d1cf
+langcode: en
+status: true
+dependencies: {  }
+id: inline_blockhero_image
+block_id: 'inline_block:hero_image'
+category: add_a_new_custom_block
+label: 'Hero Image'
+image_path: /themes/custom/ike/images/lb_browser/hero.png
+image_alt: 'Hero Image'
+weight: 0

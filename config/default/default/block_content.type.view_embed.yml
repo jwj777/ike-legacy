@@ -1,0 +1,8 @@
+uuid: cee289f0-26fd-4542-b553-9288b3180bd5
+langcode: en
+status: true
+dependencies: {  }
+id: view_embed
+label: 'View Embed'
+revision: 0
+description: 'Place a Drupal View on a page.'

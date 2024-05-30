@@ -1,0 +1,23 @@
+uuid: 358e0340-9784-467c-94ab-c62c044938b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.iked_cta_text_overlay_banner
+    - field.storage.block_content.field_cta_text_overlay_link
+  module:
+    - link
+id: block_content.iked_cta_text_overlay_banner.field_cta_text_overlay_link
+field_name: field_cta_text_overlay_link
+entity_type: block_content
+bundle: iked_cta_text_overlay_banner
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

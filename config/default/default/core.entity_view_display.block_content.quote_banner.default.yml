@@ -1,0 +1,26 @@
+uuid: a91edca5-cc77-45de-8753-1debfee15df9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.quote_banner
+    - field.field.block_content.quote_banner.field_quote_banner
+  module:
+    - entity_reference_revisions
+id: block_content.quote_banner.default
+targetEntityType: block_content
+bundle: quote_banner
+mode: default
+content:
+  field_quote_banner:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true
+  uuid: true

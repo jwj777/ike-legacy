@@ -1,0 +1,11 @@
+uuid: 6c771121-cd19-43fe-af01-2fcaa4faff7c
+langcode: en
+status: true
+dependencies: {  }
+id: field_blockuseruserfield_first_name
+block_id: 'field_block:user:user:field_first_name'
+category: user_fields
+label: 'First Name'
+image_path: ''
+image_alt: ''
+weight: 0

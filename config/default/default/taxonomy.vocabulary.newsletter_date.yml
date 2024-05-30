@@ -1,0 +1,8 @@
+uuid: 2831443e-a395-4f72-8298-f7f6e7710188
+langcode: en
+status: true
+dependencies: {  }
+name: 'Newsletter Date'
+vid: newsletter_date
+description: ''
+weight: 0

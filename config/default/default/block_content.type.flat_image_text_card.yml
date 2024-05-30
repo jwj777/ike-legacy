@@ -1,0 +1,8 @@
+uuid: 61757f36-ba87-4ba7-a81d-e61d90b539f2
+langcode: en
+status: true
+dependencies: {  }
+id: flat_image_text_card
+label: 'Flat Image Text Card'
+revision: 1
+description: 'A flat image with text overlay and a small title below.'

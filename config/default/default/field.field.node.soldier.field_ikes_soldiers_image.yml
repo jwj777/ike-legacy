@@ -1,0 +1,28 @@
+uuid: 529a2b79-a2f3-47fd-9682-75f3f55330f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ikes_soldiers_image
+    - media.type.image
+    - node.type.soldier
+id: node.soldier.field_ikes_soldiers_image
+field_name: field_ikes_soldiers_image
+entity_type: node
+bundle: soldier
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

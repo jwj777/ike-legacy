@@ -1,0 +1,11 @@
+uuid: 49d57e4e-248b-4751-9704-9b6a0a00913a
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.thumbnail
+label: 'Thumbnail (200x200)'
+description: ''
+targetEntityType: media
+cache: true

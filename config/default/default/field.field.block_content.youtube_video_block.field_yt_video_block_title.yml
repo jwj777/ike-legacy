@@ -1,0 +1,19 @@
+uuid: 3b848b01-dc42-425c-8cb5-6f3b4ba2e125
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.youtube_video_block
+    - field.storage.block_content.field_yt_video_block_title
+id: block_content.youtube_video_block.field_yt_video_block_title
+field_name: field_yt_video_block_title
+entity_type: block_content
+bundle: youtube_video_block
+label: 'Video Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,35 @@
+uuid: ddbd5beb-2622-4193-9d35-bf3daca807d7
+langcode: en
+status: true
+dependencies: {  }
+id: counties
+label: Counties
+category: Geographic
+likert: false
+options: |
+  Cheyenne: Cheyenne
+  Cloud: Cloud
+  Decatur: Decatur
+  Ellis: Ellis
+  Ellsworth: Ellsworth
+  Gove: Gove
+  Graham: Graham
+  Jewell: Jewell
+  Lincoln: Lincoln
+  Logan: Logan
+  Mitchell: Mitchell
+  Norton: Norton
+  Osborne: Osborne
+  Ottawa: Ottawa
+  Phillips: Phillips
+  Rawlins: Rawlins
+  Republic: Republic
+  Rooks: Rooks
+  Russell: Russell
+  Saline: Saline
+  Sheridan: Sheridan
+  Sherman: Sherman
+  Smith: Smith
+  Thomas: Thomas
+  Trego: Trego
+  Wallace: Wallace

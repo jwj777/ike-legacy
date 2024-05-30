@@ -1,0 +1,9 @@
+uuid: d38e9643-4c99-463d-ad55-05df182f6fd6
+langcode: en
+status: true
+dependencies: {  }
+id: slide
+label: Slide
+icon_uuid: null
+description: 'Specifically used for the Slider.'
+behavior_plugins: {  }

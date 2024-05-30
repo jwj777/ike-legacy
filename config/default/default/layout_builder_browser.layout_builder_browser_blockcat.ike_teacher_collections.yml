@@ -1,0 +1,7 @@
+uuid: efd80988-d7a0-4504-bbbc-36f2b118b054
+langcode: en
+status: true
+dependencies: {  }
+id: ike_teacher_collections
+label: 'IKE Teacher Collections'
+weight: -5

@@ -1,0 +1,20 @@
+uuid: 28951d08-fd7d-41d1-8899-0a7b7495e471
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+id: block_content.field_flat_image_text_card_body
+field_name: field_flat_image_text_card_body
+entity_type: block_content
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

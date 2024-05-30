@@ -1,0 +1,21 @@
+uuid: a2314037-fabd-455c-8319-cea26d4b3858
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta_banner
+    - field.storage.block_content.field_cta_banner_content
+  module:
+    - text
+id: block_content.cta_banner.field_cta_banner_content
+field_name: field_cta_banner_content
+entity_type: block_content
+bundle: cta_banner
+label: Content
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

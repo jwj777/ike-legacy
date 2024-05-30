@@ -1,0 +1,29 @@
+uuid: 7bf0ca44-e8b0-403b-89a5-f7c961b58076
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sponsor_donation_level
+    - node.type.sponsors
+    - taxonomy.vocabulary.donation_levels
+id: node.sponsors.field_sponsor_donation_level
+field_name: field_sponsor_donation_level
+entity_type: node
+bundle: sponsors
+label: 'Donation Level'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      donation_levels: donation_levels
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

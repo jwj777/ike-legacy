@@ -1,0 +1,25 @@
+uuid: b77350dc-1999-4b35-9776-c1cfce857d26
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.ikes_soldier_manual_crop
+  module:
+    - crop
+name: ikes_soldiers_portrait
+label: 'Ikes Soldiers portrait'
+effects:
+  be9059cb-0aa8-4d32-a839-628de323dbd6:
+    uuid: be9059cb-0aa8-4d32-a839-628de323dbd6
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 185
+      height: 240
+      anchor: center-top
+  07ab8c52-0a46-4877-b98a-b78fed319899:
+    uuid: 07ab8c52-0a46-4877-b98a-b78fed319899
+    id: crop_crop
+    weight: 2
+    data:
+      crop_type: ikes_soldier_manual_crop

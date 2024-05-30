@@ -1,0 +1,25 @@
+uuid: 2c1d5e54-356b-446d-8f74-28796a5d6803
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:hero_image:b6b15a5b-a3d5-4dee-a1f3-7f0e317df539'
+  module:
+    - block_content
+  theme:
+    - ike
+id: ikestatue
+theme: ike
+region: banner
+weight: 0
+provider: null
+plugin: 'block_content:b6b15a5b-a3d5-4dee-a1f3-7f0e317df539'
+settings:
+  id: 'block_content:b6b15a5b-a3d5-4dee-a1f3-7f0e317df539'
+  label: 'Ike Statue'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

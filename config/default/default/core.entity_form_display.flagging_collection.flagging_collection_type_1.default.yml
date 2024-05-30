@@ -1,0 +1,32 @@
+uuid: 9d7fa787-3a8f-4435-a8b1-c43470935518
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.flagging_collection.flagging_collection_type_1.field_collection_subtitle
+    - flag_lists.flagging_collection_type.flagging_collection_type_1
+  module:
+    - text
+id: flagging_collection.flagging_collection_type_1.default
+targetEntityType: flagging_collection
+bundle: flagging_collection_type_1
+mode: default
+content:
+  field_collection_subtitle:
+    type: text_textarea
+    weight: 26
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  user_id: true

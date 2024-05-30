@@ -1,0 +1,22 @@
+uuid: 95ef9d75-4ffb-4f7a-97f3-5a5f24f901b1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: lesson_plans
+label: 'Lesson Plans'
+type: 'canonical_entities:node'
+pattern: '/ikeducation/lesson-plans/[node:title]'
+selection_criteria:
+  0f74ebb6-9cd0-4554-ab26-69e308eb9f97:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 0f74ebb6-9cd0-4554-ab26-69e308eb9f97
+    context_mapping:
+      node: node
+    bundles:
+      lesson_plan: lesson_plan
+selection_logic: and
+weight: -5
+relationships: {  }

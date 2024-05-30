@@ -1,0 +1,181 @@
+uuid: 1bcec3e7-0a49-4473-87a2-6dca09b91aba
+langcode: en
+status: true
+dependencies: {  }
+id: ike_psl_migrations_primary_sources
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: psl_migrations
+label: 'Import Primary Sources'
+source:
+  plugin: csv
+  path: /var/www/html/docroot/modules/custom/ike_psl_migrations/files/import.csv
+  delimiter: ','
+  enclosure: '"'
+  header_offset: 0
+  ids:
+    - id
+  fields:
+    -
+      name: id
+      label: 'Unique Id'
+    -
+      name: title
+      label: Title
+    -
+      name: image
+      label: Image
+    -
+      name: description
+      label: Description
+    -
+      name: psl_type
+      label: 'PSL type'
+    -
+      name: media_file
+      label: 'Media File'
+    -
+      name: 3d_media
+      label: '3D Media embed'
+    -
+      name: video_embed
+      label: 'Video Media embed'
+    -
+      name: original_artifact
+      label: 'Original Artifact'
+    -
+      name: manufactured_dates
+      label: 'Manufactured Dates'
+    -
+      name: manufactured_by
+      label: 'Manufactured by'
+    -
+      name: subject
+      label: Subject
+    -
+      name: timeframe
+      label: Timeframe
+    -
+      name: collection
+      label: Collection
+    -
+      name: tags
+      label: Tags
+    -
+      name: citations
+      label: Citations
+    -
+      name: internal_id
+      label: 'Internal ID'
+process:
+  title: title
+  field_psl_image/target_id:
+    plugin: migration_lookup
+    migration: ike_psl_migrations_psl_images
+    source: id
+  field_psl_image/alt: title
+  field_psl_description: description
+  field_psl_type:
+    plugin: entity_lookup
+    source: psl_type
+    value_key: name
+    bundle_key: vid
+    bundle: psl_type
+    entity_type: taxonomy_term
+  field_psl_file/target_id:
+    plugin: migration_lookup
+    migration: ike_psl_migrations_psl_media_files
+    source: id
+  field_3d_media/target_id:
+    plugin: migration_lookup
+    migration: ike_psl_migrations_psl_3d_media
+    source: id
+  field_video_media/target_id:
+    plugin: migration_lookup
+    migration: ike_psl_migrations_psl_video_embeds
+    source: id
+  field_psl_original:
+    plugin: entity_lookup
+    source: original_artifact
+    value_key: name
+    bundle_key: vid
+    bundle: psl_artifact_original
+    entity_type: taxonomy_term
+  field_psl_manufactured_dates: manufactured_dates
+  field_psl_manufactured_by: manufactured_by
+  field_psl_subject:
+    -
+      plugin: explode
+      source: subject
+      delimiter: '; '
+    -
+      plugin: callback
+      callable: trim
+    -
+      plugin: entity_generate
+      value_key: name
+      bundle_key: vid
+      bundle: resource_subject
+      entity_type: taxonomy_term
+  field_psl_timeframe:
+    -
+      plugin: explode
+      source: timeframe
+      delimiter: '; '
+    -
+      plugin: callback
+      callable: trim
+    -
+      plugin: entity_generate
+      value_key: name
+      bundle_key: vid
+      delimiter: '; '
+      bundle: article_categories
+      entity_type: taxonomy_term
+  field_psl_collection:
+    -
+      plugin: explode
+      source: collection
+      delimiter: '; '
+    -
+      plugin: callback
+      callable: trim
+    -
+      plugin: entity_generate
+      value_key: name
+      bundle_key: vid
+      bundle: resource_collections
+      entity_type: taxonomy_term
+  field_psl_tags:
+    -
+      plugin: explode
+      source: tags
+      delimiter: '; '
+    -
+      plugin: callback
+      callable: trim
+    -
+      plugin: entity_generate
+      value_key: name
+      bundle_key: vid
+      bundle: tags
+  field_psl_citations: citations
+  field_psl_internal_id: internal_id
+  uid:
+    plugin: default_value
+    default_value: 1
+  type:
+    plugin: default_value
+    default_value: primary_source
+destination:
+  plugin: 'entity:node'
+migration_dependencies:
+  required: {  }
+  optional:
+    - ike_psl_migrations_psl_images
+    - ike_psl_migrations_psl_convert_teaser_to_media_type
+    - ike_psl_migrations_psl_media_files
+    - ike_psl_migrations_psl_3d_media
+    - ike_psl_migrations_psl_video_embeds

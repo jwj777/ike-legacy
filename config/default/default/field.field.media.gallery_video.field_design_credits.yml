@@ -1,0 +1,19 @@
+uuid: ffaf5d05-984c-4ca7-912d-a47d15d546b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_design_credits
+    - media.type.gallery_video
+id: media.gallery_video.field_design_credits
+field_name: field_design_credits
+entity_type: media
+bundle: gallery_video
+label: 'Design Credits'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

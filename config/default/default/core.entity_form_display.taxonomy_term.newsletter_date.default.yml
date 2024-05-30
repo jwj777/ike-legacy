@@ -1,0 +1,33 @@
+uuid: 29bd0009-0a6b-49a6-942d-75809b083066
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.newsletter_date.field_newsletter_pdf
+    - taxonomy.vocabulary.newsletter_date
+  module:
+    - file
+id: taxonomy_term.newsletter_date.default
+targetEntityType: taxonomy_term
+bundle: newsletter_date
+mode: default
+content:
+  field_newsletter_pdf:
+    type: file_generic
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  status: true

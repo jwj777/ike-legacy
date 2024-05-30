@@ -1,0 +1,11 @@
+uuid: ee1701d4-fd54-403b-89ab-513279ed9737
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.medium_height_banner_1900x600
+label: 'Medium Height Banner (1900x600)'
+description: ''
+targetEntityType: media
+cache: true

@@ -1,0 +1,11 @@
+uuid: ca96ee81-8da6-499b-a115-de10f9884618
+langcode: en
+status: true
+dependencies: {  }
+id: node_syndicate_block
+block_id: node_syndicate_block
+category: system
+label: Syndicate
+image_path: ''
+image_alt: ''
+weight: 0

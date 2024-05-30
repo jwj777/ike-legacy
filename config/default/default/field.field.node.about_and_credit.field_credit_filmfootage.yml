@@ -1,0 +1,21 @@
+uuid: 1da82c7b-8020-4ed1-957b-71f85fa01a3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_credit_filmfootage
+    - node.type.about_and_credit
+  module:
+    - text
+id: node.about_and_credit.field_credit_filmfootage
+field_name: field_credit_filmfootage
+entity_type: node
+bundle: about_and_credit
+label: 'Archival Film Footage'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

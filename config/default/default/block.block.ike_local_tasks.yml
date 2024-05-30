@@ -1,0 +1,37 @@
+uuid: f19b5535-5d8f-4247-891f-fdd966cd9afa
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - ike
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: ike_local_tasks
+theme: ike
+region: banner
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article
+      component_page: component_page
+      event: event
+      lesson_plan: lesson_plan
+      page: page
+      soldier: soldier
+      sponsors: sponsors

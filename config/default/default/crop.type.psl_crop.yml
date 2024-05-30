@@ -1,0 +1,12 @@
+uuid: 5c19e329-ab70-4a1b-945d-7db3dc76851c
+langcode: en
+status: true
+dependencies: {  }
+label: 'PSL Crop'
+id: psl_crop
+description: ''
+aspect_ratio: ''
+soft_limit_width: 640
+soft_limit_height: 480
+hard_limit_width: 640
+hard_limit_height: 480

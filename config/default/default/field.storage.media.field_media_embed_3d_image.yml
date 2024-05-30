@@ -1,0 +1,19 @@
+uuid: 2b4c0bf0-70ca-44a0-a3e5-e9f60190e06a
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - text
+id: media.field_media_embed_3d_image
+field_name: field_media_embed_3d_image
+entity_type: media
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

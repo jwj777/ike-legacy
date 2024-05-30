@@ -1,0 +1,21 @@
+uuid: 4d689d2d-25e8-4821-99d0-9748106e0d32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_psl_manufactured_by
+    - node.type.primary_source
+  module:
+    - text
+id: node.primary_source.field_psl_manufactured_by
+field_name: field_psl_manufactured_by
+entity_type: node
+bundle: primary_source
+label: 'Created By:'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

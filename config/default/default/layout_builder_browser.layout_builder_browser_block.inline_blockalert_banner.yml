@@ -1,0 +1,11 @@
+uuid: 55e0c13e-047e-492b-a631-ff5d85a5a5b7
+langcode: en
+status: true
+dependencies: {  }
+id: inline_blockalert_banner
+block_id: 'inline_block:alert_banner'
+category: add_a_new_custom_block
+label: 'Alert Banner'
+image_path: /themes/custom/ike/images/lb_browser/alert_banner.png
+image_alt: 'Alert Banner'
+weight: 0

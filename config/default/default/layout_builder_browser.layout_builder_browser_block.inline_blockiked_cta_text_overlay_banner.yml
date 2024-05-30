@@ -1,0 +1,11 @@
+uuid: 8a449351-a7e5-4c04-ba0a-6adcd6e62f60
+langcode: en
+status: true
+dependencies: {  }
+id: inline_blockiked_cta_text_overlay_banner
+block_id: 'inline_block:iked_cta_text_overlay_banner'
+category: add_a_new_custom_block
+label: 'Iked CTA Text Overlay Banner'
+image_path: /themes/custom/ike/images/lb_browser/iked_cta_text_overlay.png
+image_alt: 'Iked CTA Text Overlay Banner'
+weight: 0

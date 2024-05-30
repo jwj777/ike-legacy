@@ -1,0 +1,21 @@
+uuid: 19a8ca7f-209b-4773-ad29-f421f4aa6439
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_description
+    - media.type.gallery_item
+  module:
+    - text
+id: media.gallery_item.field_description
+field_name: field_description
+entity_type: media
+bundle: gallery_item
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

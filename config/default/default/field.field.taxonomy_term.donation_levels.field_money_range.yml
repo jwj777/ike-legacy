@@ -1,0 +1,19 @@
+uuid: 284a19c1-0df9-4623-9fa6-e8c025ad8c3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_money_range
+    - taxonomy.vocabulary.donation_levels
+id: taxonomy_term.donation_levels.field_money_range
+field_name: field_money_range
+entity_type: taxonomy_term
+bundle: donation_levels
+label: 'Money Range'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

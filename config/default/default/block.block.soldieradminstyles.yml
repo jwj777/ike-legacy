@@ -1,0 +1,30 @@
+uuid: 4664fb61-26ea-4cb8-bb54-f8b327ba8273
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c1835041-0a6b-4fdd-9ed0-d5a0127cae7a'
+  module:
+    - block_content
+    - system
+  theme:
+    - ike
+id: soldieradminstyles
+theme: ike
+region: header
+weight: -12
+provider: null
+plugin: 'block_content:c1835041-0a6b-4fdd-9ed0-d5a0127cae7a'
+settings:
+  id: 'block_content:c1835041-0a6b-4fdd-9ed0-d5a0127cae7a'
+  label: 'soldier admin styles'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/admin/content/soldiers*'

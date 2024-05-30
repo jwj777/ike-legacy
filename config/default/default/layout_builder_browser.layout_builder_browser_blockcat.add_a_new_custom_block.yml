@@ -1,0 +1,7 @@
+uuid: e9cbb601-61dc-4555-8c8c-7404199bb1c5
+langcode: en
+status: true
+dependencies: {  }
+id: add_a_new_custom_block
+label: 'Add a new custom block'
+weight: -10

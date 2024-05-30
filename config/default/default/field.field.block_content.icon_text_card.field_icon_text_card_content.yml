@@ -1,0 +1,21 @@
+uuid: cf8523ec-75c5-4e3c-b0cc-41e9f2c2b061
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.icon_text_card
+    - field.storage.block_content.field_icon_text_card_content
+  module:
+    - text
+id: block_content.icon_text_card.field_icon_text_card_content
+field_name: field_icon_text_card_content
+entity_type: block_content
+bundle: icon_text_card
+label: Content
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,14 @@
+uuid: 3bec0445-dd34-48f4-a77c-447543a704f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.wysiwyg
+  content:
+    - 'block_content:wysiwyg:3f31e46e-bf52-4f2c-9204-b1d229df2358'
+id: library_museum_hours
+title: 'Library & Museum Hours'
+block_content_bundle: wysiwyg
+default_content: '{"_links":{"self":{"href":"http:\/\/eisenhower-foundation.docksal\/block\/10?_format=hal_json"},"type":{"href":"http:\/\/fixed_block_content.drupal.org\/rest\/type\/block_content\/wysiwyg"}},"langcode":[{"value":"en","lang":"en"}],"type":[{"target_id":"wysiwyg"}],"status":[{"value":true,"lang":"en"}],"info":[{"value":"Library \u0026 Museum Hours","lang":"en"}],"reusable":[{"value":true}],"default_langcode":[{"value":true,"lang":"en"}],"revision_translation_affected":[{"value":true,"lang":"en"}],"body":[{"value":"\u003Cp\u003E\u003Cem\u003EOpen Daily\u003C\/em\u003E\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cu\u003EAugust - May\u003C\/u\u003E\u003Cbr \/\u003E\r\n9 a.m. - 4:45p.m.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cu\u003EJune - July\u003C\/u\u003E\u003Cbr \/\u003E\r\n8 a.m. - 5:45 p.m.\u003C\/p\u003E\r\n\r\n\u003Cp\u003EClosed on Thanksgiving, Christmas, and New Year\u0027s Day.\u003C\/p\u003E\r\n","format":"full_html","processed":"\u003Cp\u003E\u003Cem\u003EOpen Daily\u003C\/em\u003E\u003C\/p\u003E\n\n\u003Cp\u003E\u003Cu\u003EAugust - May\u003C\/u\u003E\u003Cbr \/\u003E\n9 a.m. - 4:45p.m.\u003C\/p\u003E\n\n\u003Cp\u003E\u003Cu\u003EJune - July\u003C\/u\u003E\u003Cbr \/\u003E\n8 a.m. - 5:45 p.m.\u003C\/p\u003E\n\n\u003Cp\u003EClosed on Thanksgiving, Christmas, and New Year\u0027s Day.\u003C\/p\u003E\n","summary":"","lang":"en"}]}'
+auto_export: null
+protected: null

@@ -1,0 +1,89 @@
+uuid: 193ae9ec-7b22-433b-a0da-d8215e4ee030
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.gallery_video.field_credits
+    - field.field.media.gallery_video.field_description
+    - field.field.media.gallery_video.field_design_credits
+    - field.field.media.gallery_video.field_media_oembed_video_1
+    - media.type.gallery_video
+  module:
+    - field_group
+    - media
+    - text
+third_party_settings:
+  field_group:
+    group_sub_image:
+      children:
+        - name
+        - field_description
+        - field_credits
+        - field_design_credits
+      label: 'Sub Image'
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: container--sub-image
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+id: media.gallery_video.default
+targetEntityType: media
+bundle: gallery_video
+mode: default
+content:
+  field_credits:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_design_credits:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_media_oembed_video_1:
+    type: oembed
+    label: hidden
+    settings:
+      max_width: 0
+      max_height: 0
+      loading:
+        attribute: eager
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  created: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true
+  uuid: true

@@ -1,0 +1,15 @@
+uuid: 267d61df-3651-4a05-bcab-82ba30c28f32
+langcode: en
+status: true
+dependencies: {  }
+name: mobile_hero_450x140_
+label: 'Mobile Hero (767x242)'
+effects:
+  5988baa8-461c-495d-a22c-da44227f456a:
+    uuid: 5988baa8-461c-495d-a22c-da44227f456a
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 767
+      height: 242
+      anchor: center-center

@@ -1,0 +1,33 @@
+uuid: 80148666-b3ce-42b3-8634-7147017c6358
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cta.field_cta__cta_image
+    - field.field.paragraph.cta.field_cta__cta_title
+    - paragraphs.paragraphs_type.cta
+id: paragraph.cta.default
+targetEntityType: paragraph
+bundle: cta
+mode: default
+content:
+  field_cta__cta_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: medium_800x500
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_cta__cta_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true
+  uuid: true

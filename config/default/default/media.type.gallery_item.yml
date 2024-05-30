@@ -1,0 +1,13 @@
+uuid: 68de948b-61c5-425d-9c23-e5f8ccb454ac
+langcode: en
+status: true
+dependencies: {  }
+id: gallery_item
+label: 'Gallery Item'
+description: ''
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image_1
+field_map: {  }

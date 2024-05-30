@@ -1,0 +1,42 @@
+uuid: 44827088-e2ec-428a-a893-5605ac43439a
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.cta_text_overlay_banner
+    - core.entity_view_mode.block_content.full
+    - field.field.block_content.cta_text_overlay_banner.field_cta_text_overlay_body
+    - field.field.block_content.cta_text_overlay_banner.field_cta_text_overlay_image
+    - field.field.block_content.cta_text_overlay_banner.field_cta_text_overlay_link
+  module:
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: block_content.cta_text_overlay_banner.full
+targetEntityType: block_content
+bundle: cta_text_overlay_banner
+mode: full
+content:
+  field_cta_text_overlay_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_cta_text_overlay_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_cta_text_overlay_link: true
+  search_api_excerpt: true
+  uuid: true

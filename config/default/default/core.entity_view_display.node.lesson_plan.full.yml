@@ -1,0 +1,88 @@
+uuid: 6af8ed78-bf5a-4156-acef-4c5aae127b64
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.lesson_plan.field_lesson_plan_description
+    - field.field.node.lesson_plan.field_lesson_plan_file
+    - field.field.node.lesson_plan.field_lesson_plan_image
+    - field.field.node.lesson_plan.field_resource_grade_level
+    - field.field.node.lesson_plan.field_resource_subject
+    - field.field.node.lesson_plan.field_resource_topic
+    - node.type.lesson_plan
+  module:
+    - file_download_link_media
+    - layout_builder
+    - layout_builder_restrictions
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  layout_builder_restrictions:
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: null
+      allowlisted_blocks: null
+      allowed_blocks: {  }
+id: node.lesson_plan.full
+targetEntityType: node
+bundle: lesson_plan
+mode: full
+content:
+  addtoany:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_lesson_plan_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_lesson_plan_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_resource_grade_level:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_resource_subject:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_resource_topic:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_lesson_plan_file: true
+  search_api_excerpt: true
+  uuid: true

@@ -1,0 +1,25 @@
+uuid: 5f16484a-03d9-4344-ab2b-d19f462d5f2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.article_categories.field_ac_hide_from_search
+    - taxonomy.vocabulary.article_categories
+  module:
+    - text
+id: taxonomy_term.article_categories.default
+targetEntityType: taxonomy_term
+bundle: article_categories
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_ac_hide_from_search: true
+  search_api_excerpt: true
+  uuid: true

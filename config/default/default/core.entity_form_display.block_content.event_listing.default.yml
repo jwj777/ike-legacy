@@ -1,0 +1,20 @@
+uuid: 9bb83cf9-25a4-43d8-a152-15ad451483bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.event_listing
+id: block_content.event_listing.default
+targetEntityType: block_content
+bundle: event_listing
+mode: default
+content:
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

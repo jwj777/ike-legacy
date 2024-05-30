@@ -1,0 +1,42 @@
+uuid: 819c8bbb-e24a-4191-9e58-9ffa9096bd8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quote_banner.field_quote_banner_attribution
+    - field.field.paragraph.quote_banner.field_quote_banner_image
+    - field.field.paragraph.quote_banner.field_quote_banner_quote
+    - paragraphs.paragraphs_type.quote_banner
+  module:
+    - text
+id: paragraph.quote_banner.default
+targetEntityType: paragraph
+bundle: quote_banner
+mode: default
+content:
+  field_quote_banner_attribution:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_quote_banner_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: large_banner_1900x800
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_quote_banner_quote:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true
+  uuid: true

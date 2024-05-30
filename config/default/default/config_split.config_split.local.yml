@@ -1,0 +1,21 @@
+uuid: d408f98e-51fe-46b1-b510-410881272222
+langcode: en
+status: true
+dependencies: {  }
+id: local
+label: Local
+description: ''
+weight: 0
+folder: ../config/default/local
+module:
+  smtp: 0
+  views_ui: 10
+  devel: 0
+  restui: 0
+  stage_file_proxy: 0
+theme: {  }
+blacklist:
+  - system.performance
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

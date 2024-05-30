@@ -1,0 +1,20 @@
+uuid: e3d24255-2291-4a51-946d-2d6c78bda060
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_ikes_soldiers_theater_op
+field_name: field_ikes_soldiers_theater_op
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

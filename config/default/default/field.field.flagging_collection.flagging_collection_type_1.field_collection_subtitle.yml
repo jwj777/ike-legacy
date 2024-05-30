@@ -1,0 +1,21 @@
+uuid: 890a9abf-f8d8-4dbc-970b-14a7479baf18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.flagging_collection.field_collection_subtitle
+    - flag_lists.flagging_collection_type.flagging_collection_type_1
+  module:
+    - text
+id: flagging_collection.flagging_collection_type_1.field_collection_subtitle
+field_name: field_collection_subtitle
+entity_type: flagging_collection
+bundle: flagging_collection_type_1
+label: Subtitle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

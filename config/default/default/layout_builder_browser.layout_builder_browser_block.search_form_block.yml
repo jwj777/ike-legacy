@@ -1,0 +1,11 @@
+uuid: 30b64e11-7ee8-45c1-b4de-0d3802438b34
+langcode: en
+status: true
+dependencies: {  }
+id: search_form_block
+block_id: search_form_block
+category: forms
+label: 'Search form'
+image_path: ''
+image_alt: ''
+weight: 0

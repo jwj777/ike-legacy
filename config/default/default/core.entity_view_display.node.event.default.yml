@@ -1,0 +1,419 @@
+uuid: aa42fd5b-bfa4-494e-bbed-13772a857686
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.map_embed
+    - block_content.type.view_embed
+    - field.field.node.event.field_event_category
+    - field.field.node.event.field_event_cost
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_description
+    - field.field.node.event.field_event_featured
+    - field.field.node.event.field_event_image
+    - field.field.node.event.field_event_link
+    - field.field.node.event.field_event_location_title
+    - field.field.node.event.field_event_map
+    - field.field.node.event.field_event_ticket_url
+    - field.field.node.event.field_events_calendar_link
+    - node.type.event
+  content:
+    - 'block_content:quote_banner:09a77a46-b75e-46c2-9755-b4f44b68a737'
+  module:
+    - addtoany
+    - addtocalendar
+    - block_content
+    - datetime_range
+    - koality_layout_builder_layouts
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - link
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          2517752d-30ce-4434-92bf-51fd378dcf27:
+            uuid: 2517752d-30ce-4434-92bf-51fd378dcf27
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_event_image'
+              label: Image
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: medium_height_banner_1900x600
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          322953dc-a7c7-4a5e-ae7c-c59a07f43d52:
+            uuid: 322953dc-a7c7-4a5e-ae7c-c59a07f43d52
+            region: content
+            configuration:
+              id: 'field_block:node:event:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          c6dc9ae9-e8d4-4561-bed2-a8f006e5bfbf:
+            uuid: c6dc9ae9-e8d4-4561-bed2-a8f006e5bfbf
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_event_date'
+              label: Date
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: daterange_default
+                label: hidden
+                settings:
+                  timezone_override: ''
+                  format_type: medium
+                  separator: '-'
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          465f32f8-f7a6-4d89-adc7-323f7282bb46:
+            uuid: 465f32f8-f7a6-4d89-adc7-323f7282bb46
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_event_link'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: link
+                label: above
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: two_center_regions
+        layout_settings:
+          label: ''
+          margin_top: ''
+          margin_bottom: ''
+          overlay_top: null
+          overlay_bottom: null
+          layout_width: row
+          remove_top_bottom_padding: 0
+          region_color: ''
+          layout_color: ''
+          gutters: 1
+          stack: 1
+          resizer: 66/33
+          context_mapping: {  }
+        components:
+          035ddd2c-e623-4fdb-a097-2f7b96008cda:
+            uuid: 035ddd2c-e623-4fdb-a097-2f7b96008cda
+            region: left
+            configuration:
+              id: 'field_block:node:event:field_event_description'
+              label: Description
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          705417c1-ae19-44fb-84c7-3159173f0997:
+            uuid: 705417c1-ae19-44fb-84c7-3159173f0997
+            region: left
+            configuration:
+              id: 'field_block:node:event:field_event_location_title'
+              label: 'Location Title'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          7af2d302-f716-495c-a661-8cbae8cb300c:
+            uuid: 7af2d302-f716-495c-a661-8cbae8cb300c
+            region: left
+            configuration:
+              id: 'field_block:node:event:field_event_cost'
+              label: Cost
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          867f3b96-1315-4003-8ff7-a98a8c3596a0:
+            uuid: 867f3b96-1315-4003-8ff7-a98a8c3596a0
+            region: left
+            configuration:
+              id: addtoany_block
+              label: 'AddToAny buttons'
+              label_display: '0'
+              provider: addtoany
+              context_mapping: {  }
+            weight: 2
+            additional: {  }
+          e75575fc-2905-4551-93e0-bc15e5b97bbe:
+            uuid: e75575fc-2905-4551-93e0-bc15e5b97bbe
+            region: left
+            configuration:
+              id: 'field_block:node:event:field_events_calendar_link'
+              label: 'Calendar Link'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: add_to_calendar
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          4d6c4b9e-72a4-41d5-b6cb-632ac6b6b44e:
+            uuid: 4d6c4b9e-72a4-41d5-b6cb-632ac6b6b44e
+            region: right
+            configuration:
+              id: 'inline_block:map_embed'
+              label: Map
+              label_display: '0'
+              provider: layout_builder
+              view_mode: full
+              block_revision_id: 233
+              block_serialized: null
+              context_mapping: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: one_center_region
+        layout_settings:
+          label: ''
+          margin_top: ''
+          margin_bottom: ''
+          overlay_top: null
+          overlay_bottom: null
+          layout_width: row
+          remove_top_bottom_padding: 0
+          region_color: ''
+          layout_color: ''
+          context_mapping: {  }
+        components:
+          fdec1e46-3220-405a-8ec1-799be2377d78:
+            uuid: fdec1e46-3220-405a-8ec1-799be2377d78
+            region: title
+            configuration:
+              id: 'inline_block:view_embed'
+              label: 'Featured Events'
+              label_display: '0'
+              provider: layout_builder
+              view_mode: full
+              block_revision_id: 234
+              block_serialized: null
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          72e756cc-d5db-4efc-b426-11280d395b6e:
+            uuid: 72e756cc-d5db-4efc-b426-11280d395b6e
+            region: content
+            configuration:
+              id: 'block_content:09a77a46-b75e-46c2-9755-b4f44b68a737'
+              label: 'HP Quote Banner'
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    entity_view_mode_restriction:
+      allowed_layouts:
+        - layout_onecol
+        - one_center_region
+        - two_center_regions
+        - three_center_regions
+        - four_center_regions
+        - layout_twocol_section
+        - layout_threecol_section
+        - layout_fourcol_section
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+    allowed_block_categories: {  }
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  field_event_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_event_cost:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_event_date:
+    type: daterange_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+      separator: '-'
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_event_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_event_featured:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_event_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_event_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_event_location_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_event_map:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_event_ticket_url:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_events_calendar_link:
+    type: add_to_calendar
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  layout_builder__layout: true
+  search_api_excerpt: true
+  uuid: true

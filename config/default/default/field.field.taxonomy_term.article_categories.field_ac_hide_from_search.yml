@@ -1,0 +1,23 @@
+uuid: c56ff509-9ac8-476a-8411-523023598a40
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_ac_hide_from_search
+    - taxonomy.vocabulary.article_categories
+id: taxonomy_term.article_categories.field_ac_hide_from_search
+field_name: field_ac_hide_from_search
+entity_type: taxonomy_term
+bundle: article_categories
+label: 'Hide from Search'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

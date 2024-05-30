@@ -1,0 +1,11 @@
+uuid: 795e9fa1-03fe-49fd-a1d8-fac1fe4cf2b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.small_banner
+label: 'Small Banner 2x (1388x308)'
+description: ''
+targetEntityType: media
+cache: true

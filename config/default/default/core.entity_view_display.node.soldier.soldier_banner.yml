@@ -1,0 +1,108 @@
+uuid: 7cfe5528-a859-499b-9827-1b6cd8b20a6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.soldier_banner
+    - field.field.node.soldier.field_ikes_soldiers_approved
+    - field.field.node.soldier.field_ikes_soldiers_approx_disch
+    - field.field.node.soldier.field_ikes_soldiers_approx_enlis
+    - field.field.node.soldier.field_ikes_soldiers_battle
+    - field.field.node.soldier.field_ikes_soldiers_biography
+    - field.field.node.soldier.field_ikes_soldiers_birth_date
+    - field.field.node.soldier.field_ikes_soldiers_birthplace
+    - field.field.node.soldier.field_ikes_soldiers_death_date
+    - field.field.node.soldier.field_ikes_soldiers_description
+    - field.field.node.soldier.field_ikes_soldiers_discharge
+    - field.field.node.soldier.field_ikes_soldiers_email
+    - field.field.node.soldier.field_ikes_soldiers_enlistment
+    - field.field.node.soldier.field_ikes_soldiers_featured
+    - field.field.node.soldier.field_ikes_soldiers_first_name
+    - field.field.node.soldier.field_ikes_soldiers_gender
+    - field.field.node.soldier.field_ikes_soldiers_highest_rank
+    - field.field.node.soldier.field_ikes_soldiers_home_town
+    - field.field.node.soldier.field_ikes_soldiers_honored_by
+    - field.field.node.soldier.field_ikes_soldiers_image
+    - field.field.node.soldier.field_ikes_soldiers_k_i_a
+    - field.field.node.soldier.field_ikes_soldiers_last_name
+    - field.field.node.soldier.field_ikes_soldiers_middle_name
+    - field.field.node.soldier.field_ikes_soldiers_mil_honors
+    - field.field.node.soldier.field_ikes_soldiers_other_docs
+    - field.field.node.soldier.field_ikes_soldiers_p_o_w
+    - field.field.node.soldier.field_ikes_soldiers_recollection
+    - field.field.node.soldier.field_ikes_soldiers_serv_branch
+    - field.field.node.soldier.field_ikes_soldiers_source
+    - field.field.node.soldier.field_ikes_soldiers_suffix
+    - field.field.node.soldier.field_ikes_soldiers_theater_op
+    - field.field.node.soldier.field_ikes_soldiers_unit
+    - field.field.node.soldier.field_ikes_soldiers_video
+    - field.field.node.soldier.field_submission_id
+    - image.style.ikes_soldiers_home_page_portrait
+    - node.type.soldier
+  module:
+    - layout_builder
+    - media
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.soldier.soldier_banner
+targetEntityType: node
+bundle: soldier
+mode: soldier_banner
+content:
+  field_ikes_soldiers_description:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 150
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ikes_soldiers_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ikes_soldiers_home_page_portrait
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  field_ikes_soldiers_approved: true
+  field_ikes_soldiers_approx_disch: true
+  field_ikes_soldiers_approx_enlis: true
+  field_ikes_soldiers_battle: true
+  field_ikes_soldiers_biography: true
+  field_ikes_soldiers_birth_date: true
+  field_ikes_soldiers_birthplace: true
+  field_ikes_soldiers_death_date: true
+  field_ikes_soldiers_discharge: true
+  field_ikes_soldiers_email: true
+  field_ikes_soldiers_enlistment: true
+  field_ikes_soldiers_featured: true
+  field_ikes_soldiers_first_name: true
+  field_ikes_soldiers_gender: true
+  field_ikes_soldiers_highest_rank: true
+  field_ikes_soldiers_home_town: true
+  field_ikes_soldiers_honored_by: true
+  field_ikes_soldiers_k_i_a: true
+  field_ikes_soldiers_last_name: true
+  field_ikes_soldiers_middle_name: true
+  field_ikes_soldiers_mil_honors: true
+  field_ikes_soldiers_other_docs: true
+  field_ikes_soldiers_p_o_w: true
+  field_ikes_soldiers_recollection: true
+  field_ikes_soldiers_serv_branch: true
+  field_ikes_soldiers_source: true
+  field_ikes_soldiers_suffix: true
+  field_ikes_soldiers_theater_op: true
+  field_ikes_soldiers_unit: true
+  field_ikes_soldiers_video: true
+  field_submission_id: true
+  links: true
+  search_api_excerpt: true
+  uuid: true

@@ -1,0 +1,57 @@
+uuid: f6768289-c270-4f07-87fb-4a901bb7c3c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_events_calendar_link
+    - node.type.event
+  module:
+    - addtocalendar
+id: node.event.field_events_calendar_link
+field_name: field_events_calendar_link
+entity_type: node
+bundle: event
+label: 'Calendar Link'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings:
+  on_label: 'Add to Calendar'
+  off_label: 'Add to Calendar Disabled'
+  addtocalendar_show: 1
+  addtocalendar_settings:
+    style: blue
+    atc_title:
+      field: token
+      tokenized: Title
+    atc_description:
+      field: token
+      tokenized: Description
+    atc_location:
+      field: token
+      tokenized: Location
+    atc_organizer:
+      field: token
+      tokenized: 'Eisenhower Foundation'
+    atc_organizer_email:
+      field: token
+      tokenized: info@codekoalas.com
+    atc_date_start:
+      field: token
+      tokenized: ''
+    atc_date_end:
+      field: token
+      tokenized: ''
+    atc_privacy: public
+    data_secure: auto
+    data_calendars:
+      'Google Calendar': 'Google Calendar'
+      'Outlook Online': 'Outlook Online'
+      iCalendar: iCalendar
+      Outlook: Outlook
+      'Yahoo! Calendar': 'Yahoo! Calendar'
+field_type: add_to_calendar_field

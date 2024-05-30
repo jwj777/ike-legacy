@@ -1,0 +1,21 @@
+uuid: 1a6b002a-7bc7-400f-b03a-e48bdc38dab2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_psl_citations
+    - node.type.primary_source
+  module:
+    - text
+id: node.primary_source.field_psl_citations
+field_name: field_psl_citations
+entity_type: node
+bundle: primary_source
+label: 'Citations:'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

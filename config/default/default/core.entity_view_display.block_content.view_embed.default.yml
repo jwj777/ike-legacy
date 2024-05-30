@@ -1,0 +1,27 @@
+uuid: b468559c-4082-46cc-9f8c-ff445e3c9b9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.view_embed
+    - field.field.block_content.view_embed.field_view_embed
+  module:
+    - viewfield
+id: block_content.view_embed.default
+targetEntityType: block_content
+bundle: view_embed
+mode: default
+content:
+  field_view_embed:
+    type: viewfield_default
+    label: hidden
+    settings:
+      view_title: hidden
+      always_build_output: false
+      empty_view_title: hidden
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true
+  uuid: true

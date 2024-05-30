@@ -1,0 +1,9 @@
+uuid: 6faa281e-e64e-4abd-b4c7-abf94a53472b
+langcode: en
+status: true
+dependencies: {  }
+id: stylized_title
+label: 'Stylized Title'
+icon_uuid: null
+description: 'a title with stars under it and a subtitle link.'
+behavior_plugins: {  }

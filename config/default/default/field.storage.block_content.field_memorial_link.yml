@@ -1,0 +1,19 @@
+uuid: 0c56d144-42e7-4d95-a454-e211bcf5ed7a
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - link
+id: block_content.field_memorial_link
+field_name: field_memorial_link
+entity_type: block_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

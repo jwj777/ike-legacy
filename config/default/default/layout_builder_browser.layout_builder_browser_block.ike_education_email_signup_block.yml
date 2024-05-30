@@ -1,0 +1,11 @@
+uuid: a8199ffb-20a6-4e15-8346-9bb35d2db70b
+langcode: en
+status: true
+dependencies: {  }
+id: ike_education_email_signup_block
+block_id: ike_education_email_signup_block
+category: ike_email_signup
+label: 'IKE Education Email signup block'
+image_path: ''
+image_alt: ''
+weight: 0

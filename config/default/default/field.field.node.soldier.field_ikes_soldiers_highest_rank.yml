@@ -1,0 +1,19 @@
+uuid: 146d45aa-c2c3-42f2-a2ea-beec2479d155
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ikes_soldiers_highest_rank
+    - node.type.soldier
+id: node.soldier.field_ikes_soldiers_highest_rank
+field_name: field_ikes_soldiers_highest_rank
+entity_type: node
+bundle: soldier
+label: 'Highest Rank'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

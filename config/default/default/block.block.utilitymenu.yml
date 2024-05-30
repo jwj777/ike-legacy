@@ -1,0 +1,25 @@
+uuid: 0f394038-15a5-43ec-93d5-91a05453c767
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.utility-menu
+  module:
+    - system
+  theme:
+    - ike
+id: utilitymenu
+theme: ike
+region: utility_header
+weight: -10
+provider: null
+plugin: 'system_menu_block:utility-menu'
+settings:
+  id: 'system_menu_block:utility-menu'
+  label: 'Utility Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

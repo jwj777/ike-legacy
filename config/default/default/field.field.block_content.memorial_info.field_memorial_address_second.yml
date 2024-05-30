@@ -1,0 +1,19 @@
+uuid: 26bf72b8-3422-4d7b-b7d2-00a8d0b4fd08
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.memorial_info
+    - field.storage.block_content.field_memorial_address_second
+id: block_content.memorial_info.field_memorial_address_second
+field_name: field_memorial_address_second
+entity_type: block_content
+bundle: memorial_info
+label: 'Memorial Address Second Line'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

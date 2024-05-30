@@ -1,0 +1,117 @@
+uuid: 2bcec3e7-0a49-4473-87a2-6dca09b91hhh
+langcode: en
+status: true
+dependencies: {  }
+id: ikes_soldiers_wp_migrations_convert_docs_to_media_type
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: ikes_soldiers_wp_migrations
+label: 'Convert Imported WP Soldier Documents files to Media'
+source:
+  plugin: csv
+  path: /var/www/html/docroot/modules/custom/ikes_soldiers_wp_migrations/files/wp_import.csv
+  delimiter: ','
+  enclosure: '"'
+  header_offset: 0
+  ids:
+    - id
+  fields:
+    -
+      name: id
+      label: 'Unique Id'
+    -
+      name: first_name
+      label: 'First Name'
+    -
+      name: last_name
+      label: 'Last Name'
+    -
+      name: suffix
+      label: Suffix
+    -
+      name: middle
+      label: Middle
+    -
+      name: gender
+      label: Gender
+    -
+      name: date_of_birth
+      label: 'Date of Birth'
+    -
+      name: date_of_death
+      label: 'Date of Death'
+    -
+      name: birthplace
+      label: Birthplace
+    -
+      name: image
+      label: Image
+    -
+      name: primary_source_type
+      label: 'Primary Source type'
+    -
+      name: branch
+      label: 'Branch of Service'
+    -
+      name: unit
+      label: Unit
+    -
+      name: theater
+      label: 'Theater of Operation'
+    -
+      name: rank
+      label: 'Highest Rank'
+    -
+      name: enlisted_commissioned_date
+      label: 'Enlisted/Commissioned Date'
+    -
+      name: discharge_date
+      label: 'Discharge Date'
+    -
+      name: k_i_a
+      label: 'Killed in Action'
+    -
+      name: p_o_w
+      label: 'Prisoner of War'
+    -
+      name: bio
+      label: 'Biographical Information'
+    -
+      name: email
+      label: 'Email Address'
+    -
+      name: honored_by
+      label: 'Honored by'
+    -
+      name: honors
+      label: Honors
+    -
+      name: video
+      label: 'Video Embed'
+    -
+      name: docs
+      label: Documents
+process:
+  bundle:
+    plugin: default_value
+    default_value: document
+  field_media_document/target_id:
+    -
+      plugin: migration_lookup
+      migration: ikes_soldiers_wp_migrations_docs
+      source: id
+    -
+      plugin: skip_on_empty
+      method: row
+  field_media_document/alt: title
+  name: title
+  uid:
+    plugin: default_value
+    default_value: 1
+destination:
+  plugin: 'entity:media'
+migration_dependencies:
+  required: {  }
+  optional: {  }

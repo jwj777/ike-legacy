@@ -1,0 +1,14 @@
+uuid: 198d3226-1a6a-4983-88b6-ce8d639e49a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.marketing_admin
+  module:
+    - user
+id: user_add_role_action.marketing_admin
+label: 'Add the Marketing Admin role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: marketing_admin

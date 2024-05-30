@@ -1,0 +1,34 @@
+uuid: 56ba165d-e99b-407c-aa3c-b390198d73ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.icon_text_card
+    - field.field.block_content.icon_text_card.field_icon_text_card_content
+    - field.field.block_content.icon_text_card.field_icon_text_card_icon
+  module:
+    - text
+id: block_content.icon_text_card.default
+targetEntityType: block_content
+bundle: icon_text_card
+mode: default
+content:
+  field_icon_text_card_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_icon_text_card_icon:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true
+  uuid: true

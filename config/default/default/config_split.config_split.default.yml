@@ -1,0 +1,15 @@
+uuid: 8e0baf83-2943-48a0-b907-2774be42dcd7
+langcode: en
+status: true
+dependencies: {  }
+id: default
+label: Default
+description: ''
+weight: 0
+folder: ../config/default/default
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

@@ -1,0 +1,8 @@
+uuid: cceb2827-e5e0-485c-8d7d-c9db4fa64473
+langcode: en
+status: true
+dependencies: {  }
+id: social_share_grid
+label: 'Social Share Grid'
+revision: 0
+description: ''

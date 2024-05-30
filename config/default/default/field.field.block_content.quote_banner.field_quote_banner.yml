@@ -1,0 +1,40 @@
+uuid: 3280f133-764b-4d6a-b6ea-e8e74fb0f9ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.quote_banner
+    - field.storage.block_content.field_quote_banner
+    - paragraphs.paragraphs_type.quote_banner
+  module:
+    - entity_reference_revisions
+id: block_content.quote_banner.field_quote_banner
+field_name: field_quote_banner
+entity_type: block_content
+bundle: quote_banner
+label: 'Quote Banner'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      quote_banner: quote_banner
+    negate: 0
+    target_bundles_drag_drop:
+      banner_image_with_text:
+        weight: 5
+        enabled: false
+      quote_banner:
+        weight: 6
+        enabled: true
+      slide:
+        weight: 7
+        enabled: false
+      stylized_title:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

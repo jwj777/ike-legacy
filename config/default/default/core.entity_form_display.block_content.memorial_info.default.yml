@@ -1,0 +1,77 @@
+uuid: a8049fd5-079e-40a2-be3f-32406e3910da
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.memorial_info
+    - field.field.block_content.memorial_info.field_audio_tour_link
+    - field.field.block_content.memorial_info.field_donors_link
+    - field.field.block_content.memorial_info.field_memorial_address_first
+    - field.field.block_content.memorial_info.field_memorial_address_second
+    - field.field.block_content.memorial_info.field_memorial_hours
+    - field.field.block_content.memorial_info.field_memorial_link
+  module:
+    - link
+    - text
+id: block_content.memorial_info.default
+targetEntityType: block_content
+bundle: memorial_info
+mode: default
+content:
+  field_audio_tour_link:
+    type: link_default
+    weight: 5
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_donors_link:
+    type: link_default
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_memorial_address_first:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_memorial_address_second:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_memorial_hours:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_memorial_link:
+    type: link_default
+    weight: 0
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

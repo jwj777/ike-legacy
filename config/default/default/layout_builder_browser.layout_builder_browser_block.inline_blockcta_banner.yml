@@ -1,0 +1,11 @@
+uuid: b1927770-5dc1-49b8-b820-b787eb354d87
+langcode: en
+status: true
+dependencies: {  }
+id: inline_blockcta_banner
+block_id: 'inline_block:cta_banner'
+category: add_a_new_custom_block
+label: 'CTA Banner'
+image_path: /themes/custom/ike/images/lb_browser/cta_banner.png
+image_alt: 'CTA Banner'
+weight: 0

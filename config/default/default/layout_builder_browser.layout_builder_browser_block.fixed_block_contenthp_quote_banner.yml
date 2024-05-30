@@ -1,0 +1,11 @@
+uuid: b80c3164-0f36-46a9-9061-358d0aba0c37
+langcode: en
+status: true
+dependencies: {  }
+id: fixed_block_contenthp_quote_banner
+block_id: 'fixed_block_content:hp_quote_banner'
+category: fixed_custom
+label: 'HP Quote Banner'
+image_path: /themes/custom/ike/images/lb_browser/quote_banner.png
+image_alt: 'Homepage Quote Banner'
+weight: 0

@@ -1,0 +1,11 @@
+uuid: a29df2d9-5aae-4d2a-9b92-2324495ecffc
+langcode: en
+status: true
+dependencies: {  }
+id: field_blockuserusername
+block_id: 'field_block:user:user:name'
+category: user_fields
+label: Name
+image_path: ''
+image_alt: ''
+weight: 0

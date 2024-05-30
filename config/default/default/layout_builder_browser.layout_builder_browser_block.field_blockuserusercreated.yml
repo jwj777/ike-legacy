@@ -1,0 +1,11 @@
+uuid: 4bebaa38-0994-4714-bc3b-07e48a18080b
+langcode: en
+status: true
+dependencies: {  }
+id: field_blockuserusercreated
+block_id: 'field_block:user:user:created'
+category: user_fields
+label: Created
+image_path: ''
+image_alt: ''
+weight: 0

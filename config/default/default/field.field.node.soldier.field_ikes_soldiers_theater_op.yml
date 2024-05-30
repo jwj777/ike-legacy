@@ -1,0 +1,29 @@
+uuid: dc87972a-a1cd-4979-abc8-7712c32c84cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ikes_soldiers_theater_op
+    - node.type.soldier
+    - taxonomy.vocabulary.theater_of_operation
+id: node.soldier.field_ikes_soldiers_theater_op
+field_name: field_ikes_soldiers_theater_op
+entity_type: node
+bundle: soldier
+label: 'Theater of Operation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      theater_of_operation: theater_of_operation
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,11 @@
+uuid: 95ef9263-d291-4c33-a057-4918f554ffb2
+langcode: en
+status: true
+dependencies: {  }
+id: inline_blockstylized_title
+block_id: 'inline_block:stylized_title'
+category: add_a_new_custom_block
+label: 'Stylized Title'
+image_path: /themes/custom/ike/images/lb_browser/stylized_title.png
+image_alt: 'Stylized Title'
+weight: 0

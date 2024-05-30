@@ -1,0 +1,11 @@
+uuid: 21b9ce51-d471-4bf4-91f8-ba375a83525b
+langcode: en
+status: true
+dependencies: {  }
+id: create_teacher_collection_block
+block_id: create_teacher_collection_block
+category: ike_teacher_collections
+label: 'Create teacher collection block'
+image_path: ''
+image_alt: ''
+weight: 0

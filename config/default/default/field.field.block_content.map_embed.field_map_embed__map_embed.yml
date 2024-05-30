@@ -1,0 +1,21 @@
+uuid: beee0024-975f-4ae6-b88e-b122dc62b0dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.map_embed
+    - field.storage.block_content.field_map_embed__map_embed
+  module:
+    - text
+id: block_content.map_embed.field_map_embed__map_embed
+field_name: field_map_embed__map_embed
+entity_type: block_content
+bundle: map_embed
+label: 'Map Embed'
+description: "To use map embed code, follow these instructions:\r\n*   Click \"Source\" in the WYSIWYG\r\n*   Paste your embed code into the editor\r\n*   Click \"Source\" again to save it\r\n*   Disregard the other CTA field and save the map embed"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

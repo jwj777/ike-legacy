@@ -1,0 +1,30 @@
+uuid: 4728ba8e-810c-4ef5-b7b4-d66740c80161
+langcode: en
+status: true
+dependencies:
+  module:
+    - flag_lists
+    - node
+id: test_collection_2
+label: 'Test Collection 2'
+bundles: {  }
+entity_type: node
+global: false
+flag_short: 'Add this item to the [flagging_collection:name] list'
+flag_long: 'Add this to your flag list'
+flag_message: 'Added to the flag list'
+unflag_short: 'Remove this item from the [flagging_collection:name] list'
+unflag_long: 'Remove this item from your flag list'
+unflag_message: 'Removed from the flag list'
+unflag_denied_text: ''
+weight: 0
+flag_type: 'entity:node'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links: {  }
+  show_as_field: false
+  show_on_form: true
+  show_contextual_link: false
+  extra_permissions:
+    owner: '0'
+linkTypeConfig: {  }

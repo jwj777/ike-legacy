@@ -1,0 +1,15 @@
+uuid: 91a65bb1-b9de-4d8a-9524-1033c21d53b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.relflag_18_275
+  module:
+    - flag
+id: flag_action.relflag_18_275_flag
+label: 'Add this item to the [flagging_collection:name] list'
+type: node
+plugin: 'flag_action:relflag_18_275_flag'
+configuration:
+  flag_id: relflag_18_275
+  flag_action: flag

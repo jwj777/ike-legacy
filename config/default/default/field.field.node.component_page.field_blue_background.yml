@@ -1,0 +1,23 @@
+uuid: 5fde7649-8e45-490a-a912-2582c10274cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_blue_background
+    - node.type.component_page
+id: node.component_page.field_blue_background
+field_name: field_blue_background
+entity_type: node
+bundle: component_page
+label: 'Blue Background'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,216 @@
+uuid: aef634df-02db-4b6c-a6dc-5e3b49d12069
+langcode: en
+status: true
+dependencies: {  }
+id: ikes_soldiers_wcc
+title: 'Ikes Soldiers WCC'
+webform: ike_s_soldiers_submission_form
+content_type: soldier
+field_title: '[webform_submission:values:first_name] [webform_submission:values:last_name]'
+use_encrypt: false
+encryption_profile: ''
+sync_content: true
+sync_content_delete: false
+sync_content_node_field: ''
+elements:
+  changed:
+    type: true
+    mapping: default_mapping
+    webform_field: changed
+    custom_check: 0
+    custom_value: ''
+  created:
+    type: true
+    mapping: default_mapping
+    webform_field: created
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_approved:
+    type: false
+    mapping: default_mapping
+    webform_field: ''
+    custom_check: '1'
+    custom_value: 'False'
+  field_ikes_soldiers_approx_disch:
+    type: false
+    mapping: default_mapping
+    webform_field: discharge_is_this_an_approximate_date
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_approx_enlis:
+    type: false
+    mapping: default_mapping
+    webform_field: enlist_is_this_an_approximate_date
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_battle:
+    type: false
+    mapping: default_mapping
+    webform_field: major_battles
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_biography:
+    type: false
+    mapping: default_mapping
+    webform_field: biographical_information
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_birth_date:
+    type: false
+    mapping: default_mapping
+    webform_field: date_of_birth
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_birthplace:
+    type: false
+    mapping: default_mapping
+    webform_field: birthplace
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_death_date:
+    type: false
+    mapping: default_mapping
+    webform_field: date_of_death
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_discharge:
+    type: false
+    mapping: default_mapping
+    webform_field: discharge_date
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_email:
+    type: false
+    mapping: default_mapping
+    webform_field: submitter_email_address
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_enlistment:
+    type: false
+    mapping: default_mapping
+    webform_field: enlistment_commissioned_date
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_first_name:
+    type: false
+    mapping: default_mapping
+    webform_field: first_name
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_gender:
+    type: false
+    mapping: default_mapping
+    webform_field: gender
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_highest_rank:
+    type: false
+    mapping: default_mapping
+    webform_field: highest_rank
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_home_town:
+    type: false
+    mapping: default_mapping
+    webform_field: home_town
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_honored_by:
+    type: false
+    mapping: default_mapping
+    webform_field: veteran_honored_by
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_image:
+    type: false
+    mapping: default_mapping
+    webform_field: veteran_photo
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_k_i_a:
+    type: false
+    mapping: default_mapping
+    webform_field: was_the_veteran_killed_in_action_
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_last_name:
+    type: false
+    mapping: default_mapping
+    webform_field: last_name
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_middle_name:
+    type: false
+    mapping: default_mapping
+    webform_field: middle
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_mil_honors:
+    type: false
+    mapping: default_mapping
+    webform_field: honors_service_awards
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_other_docs:
+    type: false
+    mapping: default_mapping
+    webform_field: other_service_documents
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_p_o_w:
+    type: false
+    mapping: default_mapping
+    webform_field: was_the_veteran_a_prisoner_of_war_
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_serv_branch:
+    type: false
+    mapping: default_mapping
+    webform_field: branch_of_service
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_suffix:
+    type: false
+    mapping: default_mapping
+    webform_field: suffix
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_theater_op:
+    type: false
+    mapping: default_mapping
+    webform_field: theater_of_operation
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_unit:
+    type: false
+    mapping: default_mapping
+    webform_field: unit
+    custom_check: 0
+    custom_value: ''
+  field_ikes_soldiers_video:
+    type: false
+    mapping: default_mapping
+    webform_field: videos
+    custom_check: 0
+    custom_value: ''
+  field_submission_id:
+    type: true
+    mapping: default_mapping
+    webform_field: sid
+    custom_check: 0
+    custom_value: ''
+  status:
+    type: false
+    mapping: default_mapping
+    webform_field: ''
+    custom_check: '1'
+    custom_value: 'False'
+  title:
+    type: false
+    mapping: default_mapping
+    webform_field: ''
+    custom_check: '1'
+    custom_value: '[webform_submission:values:first_name] [webform_submission:values:last_name]'
+sync_content_field: field_submission_id
+target_entity_type: node
+target_bundle: soldier

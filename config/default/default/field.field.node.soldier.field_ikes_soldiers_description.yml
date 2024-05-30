@@ -1,0 +1,23 @@
+uuid: c6bcf6b3-f461-4dbf-b9d9-76a6cd7d563d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ikes_soldiers_description
+    - node.type.soldier
+  module:
+    - text
+id: node.soldier.field_ikes_soldiers_description
+field_name: field_ikes_soldiers_description
+entity_type: node
+bundle: soldier
+label: Description
+description: 'Brief intro text used on the Video Teasers.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

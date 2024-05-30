@@ -1,0 +1,48 @@
+uuid: ad4c0fbd-d358-4aab-bf98-92b921c57868
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta_text_overlay_banner
+    - field.field.block_content.cta_text_overlay_banner.field_cta_text_overlay_body
+    - field.field.block_content.cta_text_overlay_banner.field_cta_text_overlay_image
+    - field.field.block_content.cta_text_overlay_banner.field_cta_text_overlay_link
+  module:
+    - link
+    - text
+id: block_content.cta_text_overlay_banner.default
+targetEntityType: block_content
+bundle: cta_text_overlay_banner
+mode: default
+content:
+  field_cta_text_overlay_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_cta_text_overlay_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_cta_text_overlay_link:
+    type: link_separate
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: _blank
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  search_api_excerpt: true
+  uuid: true

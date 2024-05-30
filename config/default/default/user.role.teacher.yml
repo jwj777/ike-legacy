@@ -1,0 +1,22 @@
+uuid: c50ccaa6-0412-4273-a894-b65677343a16
+langcode: en
+status: true
+dependencies:
+  config:
+    - rest.resource.teacher_collection_flag_delete_rest_resource
+    - rest.resource.teacher_collection_flag_rest_resource
+  module:
+    - flag_lists
+    - rest
+    - system
+id: teacher
+label: Teacher
+weight: -8
+is_admin: null
+permissions:
+  - 'add flag lists'
+  - 'edit own flag lists'
+  - 'restful post teacher_collection_flag_delete_rest_resource'
+  - 'restful post teacher_collection_flag_rest_resource'
+  - 'view own flag lists'
+  - 'view the administration theme'

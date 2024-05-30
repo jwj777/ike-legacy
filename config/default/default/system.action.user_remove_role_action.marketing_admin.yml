@@ -1,0 +1,14 @@
+uuid: 1e60d9d1-7638-46bd-8f1b-22a1541cdc60
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.marketing_admin
+  module:
+    - user
+id: user_remove_role_action.marketing_admin
+label: 'Remove the Marketing Admin role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: marketing_admin

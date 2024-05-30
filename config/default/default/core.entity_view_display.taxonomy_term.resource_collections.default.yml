@@ -1,0 +1,25 @@
+uuid: 078687c5-ba1e-4079-a503-386d8d8e7757
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.resource_collections.field_rc_hide_from_search
+    - taxonomy.vocabulary.resource_collections
+  module:
+    - text
+id: taxonomy_term.resource_collections.default
+targetEntityType: taxonomy_term
+bundle: resource_collections
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_rc_hide_from_search: true
+  search_api_excerpt: true
+  uuid: true

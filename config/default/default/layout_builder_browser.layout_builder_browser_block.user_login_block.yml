@@ -1,0 +1,11 @@
+uuid: 7fd32cd2-7fd5-44ba-946c-1dffde2568ea
+langcode: en
+status: true
+dependencies: {  }
+id: user_login_block
+block_id: user_login_block
+category: forms
+label: 'User login'
+image_path: ''
+image_alt: ''
+weight: 0

@@ -1,0 +1,65 @@
+uuid: 2cf9f15a-e09d-40a0-a4d7-20ebfff1114b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.primary_source.field_3d_media
+    - field.field.node.primary_source.field_blue_background
+    - field.field.node.primary_source.field_psl_citations
+    - field.field.node.primary_source.field_psl_collection
+    - field.field.node.primary_source.field_psl_description
+    - field.field.node.primary_source.field_psl_featured_item
+    - field.field.node.primary_source.field_psl_file
+    - field.field.node.primary_source.field_psl_image
+    - field.field.node.primary_source.field_psl_internal_id
+    - field.field.node.primary_source.field_psl_manufactured_by
+    - field.field.node.primary_source.field_psl_manufactured_dates
+    - field.field.node.primary_source.field_psl_original
+    - field.field.node.primary_source.field_psl_subject
+    - field.field.node.primary_source.field_psl_tags
+    - field.field.node.primary_source.field_psl_timeframe
+    - field.field.node.primary_source.field_psl_type
+    - field.field.node.primary_source.field_video_media
+    - image.style.manual_medium_800x400
+    - node.type.primary_source
+  module:
+    - image
+    - user
+id: node.primary_source.teaser
+targetEntityType: node
+bundle: primary_source
+mode: teaser
+content:
+  field_psl_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: manual_medium_800x400
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  field_3d_media: true
+  field_blue_background: true
+  field_psl_citations: true
+  field_psl_collection: true
+  field_psl_description: true
+  field_psl_featured_item: true
+  field_psl_file: true
+  field_psl_internal_id: true
+  field_psl_manufactured_by: true
+  field_psl_manufactured_dates: true
+  field_psl_original: true
+  field_psl_subject: true
+  field_psl_tags: true
+  field_psl_timeframe: true
+  field_psl_type: true
+  field_video_media: true
+  links: true
+  search_api_excerpt: true
+  uuid: true

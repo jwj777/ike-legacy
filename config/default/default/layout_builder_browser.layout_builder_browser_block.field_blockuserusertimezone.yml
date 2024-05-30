@@ -1,0 +1,11 @@
+uuid: b3b6ae3e-865f-4a9c-b8ca-89fa968cd788
+langcode: en
+status: true
+dependencies: {  }
+id: field_blockuserusertimezone
+block_id: 'field_block:user:user:timezone'
+category: user_fields
+label: Timezone
+image_path: ''
+image_alt: ''
+weight: 0

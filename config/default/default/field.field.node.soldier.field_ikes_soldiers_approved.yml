@@ -1,0 +1,23 @@
+uuid: 62d4b213-7f9f-4ab8-a2f8-f27677eb6c95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ikes_soldiers_approved
+    - node.type.soldier
+id: node.soldier.field_ikes_soldiers_approved
+field_name: field_ikes_soldiers_approved
+entity_type: node
+bundle: soldier
+label: Approved
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

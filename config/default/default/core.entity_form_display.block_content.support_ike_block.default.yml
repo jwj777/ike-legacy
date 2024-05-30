@@ -1,0 +1,57 @@
+uuid: e325033a-ea45-49fa-b812-88e96d54ced8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.support_ike_block
+    - field.field.block_content.support_ike_block.body
+    - field.field.block_content.support_ike_block.field_support_ike_block_link
+    - field.field.block_content.support_ike_block.field_support_ike_block_title
+  module:
+    - link
+    - paragraphs
+    - text
+id: block_content.support_ike_block.default
+targetEntityType: block_content
+bundle: support_ike_block
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_support_ike_block_link:
+    type: link_default
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_support_ike_block_title:
+    type: entity_reference_paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

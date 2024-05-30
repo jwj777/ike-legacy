@@ -1,0 +1,23 @@
+uuid: ea916bf0-9b9e-4185-bc67-b0e9950fb9d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.resource_topic
+  module:
+    - text
+id: taxonomy_term.resource_topic.default
+targetEntityType: taxonomy_term
+bundle: resource_topic
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true
+  uuid: true

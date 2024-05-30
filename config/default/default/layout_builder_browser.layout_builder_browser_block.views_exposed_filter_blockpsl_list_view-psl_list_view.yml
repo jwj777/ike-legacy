@@ -1,0 +1,11 @@
+uuid: d946b11b-6e71-4a8c-a325-403fbf5ea974
+langcode: en
+status: true
+dependencies: {  }
+id: views_exposed_filter_blockpsl_list_view-psl_list_view
+block_id: 'views_exposed_filter_block:psl_list_view-psl_list_view'
+category: fixed_custom
+label: 'Exposed form: psl_list_view-psl_list_view'
+image_path: ''
+image_alt: ''
+weight: 0

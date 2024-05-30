@@ -1,0 +1,8 @@
+uuid: c98ff312-6b98-49eb-865c-fb90b71c454c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Soldiers Primary Source Type'
+vid: soldiers_primary_source_type
+description: "Primary Source Type (for Ike's Soliders)"
+weight: 0

@@ -1,0 +1,126 @@
+uuid: 300481b0-9ac4-4db3-bb7c-15b6358e413e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.donation_levels.field_image
+    - field.field.taxonomy_term.donation_levels.field_money_range
+    - taxonomy.vocabulary.donation_levels
+  module:
+    - image
+    - layout_builder
+    - layout_discovery
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          c654e9cf-d9ec-42b0-857d-92433edfb33c:
+            uuid: c654e9cf-d9ec-42b0-857d-92433edfb33c
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:donation_levels:description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          0dd26254-4dc6-497e-a044-59ef26a565c9:
+            uuid: 0dd26254-4dc6-497e-a044-59ef26a565c9
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:donation_levels:field_money_range'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          a34db893-b4d5-4dea-b494-3c355d2bdebb:
+            uuid: a34db893-b4d5-4dea-b494-3c355d2bdebb
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:donation_levels:field_image'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: image
+                label: above
+                settings:
+                  image_link: ''
+                  image_style: ''
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          1a7f0e61-b135-405c-9d1e-ff0f9b9a4c1a:
+            uuid: 1a7f0e61-b135-405c-9d1e-ff0f9b9a4c1a
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:donation_levels:field_image'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: image
+                label: above
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
+id: taxonomy_term.donation_levels.default
+targetEntityType: taxonomy_term
+bundle: donation_levels
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_money_range:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true
+  uuid: true

@@ -1,0 +1,28 @@
+uuid: 827e55e0-06ad-4d7c-b3d6-00865fbfd217
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_media
+    - media.type.remote_video
+    - node.type.primary_source
+id: node.primary_source.field_video_media
+field_name: field_video_media
+entity_type: node
+bundle: primary_source
+label: 'Video Media'
+description: 'Video embed code'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      remote_video: remote_video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,8 @@
+uuid: 4d9a3766-e417-4c70-a008-942f6ad11ce5
+langcode: en
+status: true
+dependencies: {  }
+id: cta_text_overlay_banner
+label: 'CTA Text Overlay Banner'
+revision: 0
+description: 'CTA banner with text in a blue overlay field'

@@ -1,0 +1,19 @@
+uuid: 9360871b-1544-40d3-8b7d-00a53da56fbd
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+    - video_embed_media
+third_party_settings:
+  crop:
+    image_field: _none
+id: 3d_image
+label: '3D Image'
+description: 'A 3D image embed'
+source: video_embed_field
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_video_embed_field
+field_map: {  }

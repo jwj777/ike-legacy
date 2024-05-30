@@ -1,0 +1,8 @@
+uuid: 5b06087a-02c2-4765-bedc-a1604407d1fb
+langcode: en
+status: true
+dependencies: {  }
+id: icon_text_card
+label: 'Icon Text Card'
+revision: 0
+description: 'This displays text alongside an icon.'

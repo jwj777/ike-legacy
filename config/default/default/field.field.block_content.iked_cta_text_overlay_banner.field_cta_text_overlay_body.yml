@@ -1,0 +1,21 @@
+uuid: 4ea2d6f6-bff7-4fd3-b1d2-c8cc560291f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.iked_cta_text_overlay_banner
+    - field.storage.block_content.field_cta_text_overlay_body
+  module:
+    - text
+id: block_content.iked_cta_text_overlay_banner.field_cta_text_overlay_body
+field_name: field_cta_text_overlay_body
+entity_type: block_content
+bundle: iked_cta_text_overlay_banner
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: 9894a59e-81a4-4836-b62a-d6ef2fd494e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.flat_image_text_card
+    - field.storage.block_content.field_flat_image_text_card_title
+  module:
+    - text
+id: block_content.flat_image_text_card.field_flat_image_text_card_title
+field_name: field_flat_image_text_card_title
+entity_type: block_content
+bundle: flat_image_text_card
+label: Title
+description: 'The text that will overlay the image.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

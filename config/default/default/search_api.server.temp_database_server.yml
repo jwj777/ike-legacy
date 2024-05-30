@@ -1,0 +1,17 @@
+uuid: 559c3e68-ec44-48e7-81f5-19cae1be043a
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: temp_database_server
+name: 'Temp Database Server'
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 1
+  matching: partial
+  autocomplete:
+    suggest_suffix: true
+    suggest_words: true

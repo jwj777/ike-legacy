@@ -1,0 +1,36 @@
+uuid: 1ed3aa83-d055-42eb-9e51-10b7db1cfd4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.component_page.field_blue_background
+    - field.field.node.component_page.layout_builder__layout
+    - node.type.component_page
+  module:
+    - user
+id: node.component_page.teaser
+targetEntityType: node
+bundle: component_page
+mode: teaser
+content:
+  field_blue_background:
+    type: boolean
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  layout_builder__layout: true
+  search_api_excerpt: true
+  uuid: true

@@ -1,0 +1,29 @@
+uuid: 3613287b-912e-4bd9-ba2f-74f31f464554
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_psl_collection
+    - node.type.primary_source
+    - taxonomy.vocabulary.resource_collections
+id: node.primary_source.field_psl_collection
+field_name: field_psl_collection
+entity_type: node
+bundle: primary_source
+label: 'Collection:'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      resource_collections: resource_collections
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

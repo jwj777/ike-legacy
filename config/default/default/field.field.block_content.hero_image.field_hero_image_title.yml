@@ -1,0 +1,19 @@
+uuid: bff16097-111e-459b-b544-e765c2026986
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_image
+    - field.storage.block_content.field_hero_image_title
+id: block_content.hero_image.field_hero_image_title
+field_name: field_hero_image_title
+entity_type: block_content
+bundle: hero_image
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,29 @@
+uuid: f0d4ec10-aea4-4b54-88a9-55a3787315fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ikes_soldiers_serv_branch
+    - node.type.soldier
+    - taxonomy.vocabulary.branch_of_service
+id: node.soldier.field_ikes_soldiers_serv_branch
+field_name: field_ikes_soldiers_serv_branch
+entity_type: node
+bundle: soldier
+label: 'Branch of Service'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      branch_of_service: branch_of_service
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

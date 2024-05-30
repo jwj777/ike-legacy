@@ -1,0 +1,11 @@
+uuid: 6fc78ab3-a1d1-469f-abd4-ecfea0615527
+langcode: en
+status: true
+dependencies: {  }
+id: fixed_block_contenthp_virtual_classroom
+block_id: 'fixed_block_content:hp_virtual_classroom'
+category: fixed_custom
+label: 'HP Virtual Classroom'
+image_path: /themes/custom/ike/images/lb_browser/cta_banner.png
+image_alt: 'Homepage Virtual Classroom banner'
+weight: 0

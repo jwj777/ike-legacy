@@ -1,0 +1,19 @@
+uuid: 5448a3a4-98e6-4b3a-b5dc-bb4b02c9df79
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.spacer
+    - field.storage.block_content.field_spacer_lg_desktop_padding
+id: block_content.spacer.field_spacer_lg_desktop_padding
+field_name: field_spacer_lg_desktop_padding
+entity_type: block_content
+bundle: spacer
+label: 'Large Desktop Padding'
+description: 'How much padding should there be on large desktops? (This should be a whole value, and <b>not</b> a decimal or percent). I.e. 15, 50'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

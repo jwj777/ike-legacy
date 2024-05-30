@@ -1,0 +1,20 @@
+uuid: 1060363d-a2f7-408b-9243-eb46c3752959
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - media
+id: block_content.field_cta_banner_left_image
+field_name: field_cta_banner_left_image
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

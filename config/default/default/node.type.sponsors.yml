@@ -1,0 +1,17 @@
+uuid: 5f4ed458-e4b3-48f4-bbb4-bfd00f8a409a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Sponsors
+type: sponsors
+description: 'A content type that displays a logo or information about a sponsor.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

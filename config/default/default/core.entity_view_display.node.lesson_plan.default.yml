@@ -1,0 +1,210 @@
+uuid: e809b32c-339c-40fb-bc88-2bbdcd478d59
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.spacer
+    - field.field.node.lesson_plan.field_lesson_plan_description
+    - field.field.node.lesson_plan.field_lesson_plan_file
+    - field.field.node.lesson_plan.field_lesson_plan_image
+    - field.field.node.lesson_plan.field_resource_grade_level
+    - field.field.node.lesson_plan.field_resource_subject
+    - field.field.node.lesson_plan.field_resource_topic
+    - fixed_block_content.fixed_block_content.hp_quote_banner
+    - node.type.lesson_plan
+  module:
+    - fixed_block_content
+    - ike_teacher_collections
+    - koality_layout_builder_layouts
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          468f733a-ac29-41b7-814b-deb1205b457f:
+            uuid: 468f733a-ac29-41b7-814b-deb1205b457f
+            region: content
+            configuration:
+              id: 'field_block:node:lesson_plan:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: -8
+            additional: {  }
+          00bd47b8-daeb-4caa-8475-0cb282a1ab69:
+            uuid: 00bd47b8-daeb-4caa-8475-0cb282a1ab69
+            region: content
+            configuration:
+              id: 'inline_block:spacer'
+              label: ''
+              label_display: ''
+              provider: layout_builder
+              view_mode: full
+              block_revision_id: 557
+              block_serialized: null
+              context_mapping: {  }
+            weight: -9
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: one_center_region
+        layout_settings:
+          label: ''
+          margin_top: ''
+          margin_bottom: ''
+          overlay_top: null
+          overlay_bottom: null
+          layout_width: row
+          remove_top_bottom_padding: 0
+          region_color: ''
+          layout_color: ''
+          context_mapping: {  }
+        components:
+          f4ce04ba-c076-4e83-8604-b4543b8a4a82:
+            uuid: f4ce04ba-c076-4e83-8604-b4543b8a4a82
+            region: content
+            configuration:
+              id: add_to_classroom_block
+              label: 'Add To Classroom Block'
+              label_display: '0'
+              provider: ike_teacher_collections
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: one_center_region
+        layout_settings:
+          label: ''
+          margin_top: ''
+          margin_bottom: ''
+          overlay_top: null
+          overlay_bottom: null
+          layout_width: row
+          remove_top_bottom_padding: 0
+          region_color: ''
+          layout_color: white-background
+          context_mapping: {  }
+        components:
+          644ddaaf-da95-4066-aba8-5b8b4d93a1f6:
+            uuid: 644ddaaf-da95-4066-aba8-5b8b4d93a1f6
+            region: content
+            configuration:
+              id: 'field_block:node:lesson_plan:field_lesson_plan_description'
+              label: Description
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          f28af9ae-aaad-4abf-a217-414885b1c4ed:
+            uuid: f28af9ae-aaad-4abf-a217-414885b1c4ed
+            region: content
+            configuration:
+              id: 'field_block:node:lesson_plan:field_lesson_plan_file'
+              label: 'Media File'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          0018f789-b607-4997-930d-a09e607424f0:
+            uuid: 0018f789-b607-4997-930d-a09e607424f0
+            region: content
+            configuration:
+              id: 'field_block:node:lesson_plan:field_lesson_plan_image'
+              label: Image
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          3ecd9461-1865-4da2-b53f-4929f3dd8e07:
+            uuid: 3ecd9461-1865-4da2-b53f-4929f3dd8e07
+            region: content
+            configuration:
+              id: 'fixed_block_content:hp_quote_banner'
+              label: 'HP Quote Banner'
+              label_display: '0'
+              provider: fixed_block_content
+              view_mode: ''
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.lesson_plan.default
+targetEntityType: node
+bundle: lesson_plan
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  field_lesson_plan_description: true
+  field_lesson_plan_file: true
+  field_lesson_plan_image: true
+  field_resource_grade_level: true
+  field_resource_subject: true
+  field_resource_topic: true
+  search_api_excerpt: true
+  uuid: true

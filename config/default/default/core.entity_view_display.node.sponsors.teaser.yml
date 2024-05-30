@@ -1,0 +1,37 @@
+uuid: 271cf328-f25a-4a79-a1f1-4e953465c6e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sponsors.field_sponsor_description
+    - field.field.node.sponsors.field_sponsor_donation_level
+    - field.field.node.sponsors.field_sponsor_image
+    - field.field.node.sponsors.field_sponsor_link
+    - field.field.node.sponsors.field_sponsors_display_in_footer
+    - node.type.sponsors
+  module:
+    - user
+id: node.sponsors.teaser
+targetEntityType: node
+bundle: sponsors
+mode: teaser
+content:
+  field_sponsor_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  field_sponsor_description: true
+  field_sponsor_donation_level: true
+  field_sponsor_link: true
+  field_sponsors_display_in_footer: true
+  links: true
+  search_api_excerpt: true
+  uuid: true

@@ -1,0 +1,11 @@
+uuid: 1ec4941e-6136-4d28-a70e-b9a8e8dea0ca
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.video_teaser
+label: 'Video Teaser'
+description: ''
+targetEntityType: node
+cache: true

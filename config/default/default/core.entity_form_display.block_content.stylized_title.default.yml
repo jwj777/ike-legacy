@@ -1,0 +1,50 @@
+uuid: fa7dd3ae-62e0-46fa-9488-bebc9c262d68
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.stylized_title
+    - field.field.block_content.stylized_title.field_stylized_title_description
+    - field.field.block_content.stylized_title.field_stylized_title_link
+    - field.field.block_content.stylized_title.field_stylized_title_title
+  module:
+    - link
+    - text
+id: block_content.stylized_title.default
+targetEntityType: block_content
+bundle: stylized_title
+mode: default
+content:
+  field_stylized_title_description:
+    type: text_textarea
+    weight: 28
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_stylized_title_link:
+    type: link_default
+    weight: 27
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_stylized_title_title:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

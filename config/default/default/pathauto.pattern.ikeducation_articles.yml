@@ -1,0 +1,22 @@
+uuid: 623fda27-f85d-4f3f-b0e7-be4eeac0c597
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: ikeducation_articles
+label: 'IKEducation (articles)'
+type: 'canonical_entities:node'
+pattern: '/ikeducation/[node:title]'
+selection_criteria:
+  1945f58c-1c72-48c4-b0fe-4966a5b3e8d2:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 1945f58c-1c72-48c4-b0fe-4966a5b3e8d2
+    context_mapping:
+      node: node
+    bundles:
+      article: article
+selection_logic: and
+weight: -5
+relationships: {  }

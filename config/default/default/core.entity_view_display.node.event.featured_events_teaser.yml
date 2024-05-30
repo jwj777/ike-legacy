@@ -1,0 +1,80 @@
+uuid: 535de0c9-93dc-4d78-b4ed-bf49f4ac5d0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.featured_events_teaser
+    - field.field.node.event.field_event_category
+    - field.field.node.event.field_event_cost
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_description
+    - field.field.node.event.field_event_featured
+    - field.field.node.event.field_event_image
+    - field.field.node.event.field_event_link
+    - field.field.node.event.field_event_location_title
+    - field.field.node.event.field_event_map
+    - field.field.node.event.field_event_ticket_url
+    - field.field.node.event.field_events_calendar_link
+    - node.type.event
+  module:
+    - datetime_range
+    - layout_builder
+    - layout_builder_restrictions
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  layout_builder_restrictions:
+    entity_view_mode_restriction:
+      allowed_layouts:
+        - layout_onecol
+        - one_center_region
+        - two_center_regions
+        - three_center_regions
+        - four_center_regions
+        - layout_twocol_section
+        - layout_threecol_section
+        - layout_fourcol_section
+      denylisted_blocks: null
+      allowlisted_blocks: null
+      allowed_blocks: {  }
+id: node.event.featured_events_teaser
+targetEntityType: node
+bundle: event
+mode: featured_events_teaser
+content:
+  field_event_date:
+    type: daterange_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+      separator: '-'
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_event_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  field_event_category: true
+  field_event_cost: true
+  field_event_description: true
+  field_event_featured: true
+  field_event_link: true
+  field_event_location_title: true
+  field_event_map: true
+  field_event_ticket_url: true
+  field_events_calendar_link: true
+  layout_builder__layout: true
+  links: true
+  search_api_excerpt: true
+  uuid: true

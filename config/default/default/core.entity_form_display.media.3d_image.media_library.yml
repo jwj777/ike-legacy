@@ -1,0 +1,49 @@
+uuid: c7577de7-4ec6-4664-8891-57748b3eeb82
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.3d_image.field_3d_preview_image
+    - field.field.media.3d_image.field_media_embed_3d_image
+    - field.field.media.3d_image.field_media_video_embed_field
+    - image.style.medium
+    - media.type.3d_image
+  module:
+    - image
+    - text
+id: media.3d_image.media_library
+targetEntityType: media
+bundle: 3d_image
+mode: media_library
+content:
+  field_3d_preview_image:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: medium
+    third_party_settings: {  }
+  field_media_embed_3d_image:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_video_embed_field: true
+  path: true
+  status: true
+  uid: true

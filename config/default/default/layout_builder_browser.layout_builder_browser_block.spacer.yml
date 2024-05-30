@@ -1,0 +1,11 @@
+uuid: 7564add2-4125-4572-ad2e-7bd1bb54ca70
+langcode: en
+status: true
+dependencies: {  }
+id: spacer
+block_id: 'inline_block:spacer'
+category: add_a_new_custom_block
+label: Spacer
+image_path: ''
+image_alt: ''
+weight: 0

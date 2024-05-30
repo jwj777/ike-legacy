@@ -1,0 +1,8 @@
+uuid: 148de3b3-cb19-41f2-935f-0265c61b6487
+langcode: en
+status: true
+dependencies: {  }
+id: recaptcha3
+label: recaptcha3
+threshold: 1.0
+challenge: recaptcha/reCAPTCHA

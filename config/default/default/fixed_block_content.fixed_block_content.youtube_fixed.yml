@@ -1,0 +1,12 @@
+uuid: 968df685-afb0-4c76-83dd-35df8c3ffed3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.youtube_video_block
+id: youtube_fixed
+title: YoutubeFixed
+block_content_bundle: youtube_video_block
+default_content: null
+auto_export: 0
+protected: false

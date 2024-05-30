@@ -1,0 +1,10 @@
+uuid: cfea4480-ef47-44c0-b3b2-c0ad5a3e2a3b
+langcode: en
+status: true
+dependencies: {  }
+id: ikes_soldiers_wp_migrations
+label: "Ike's Soldiers WP Migrations"
+description: 'Soldiers from ikessoldiers.com wp site'
+source_type: CSV
+module: null
+shared_configuration: null

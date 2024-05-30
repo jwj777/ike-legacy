@@ -1,0 +1,47 @@
+uuid: 746642b0-bce2-49ad-896b-9d9c0b84f941
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.youtube_video_block
+    - field.field.block_content.youtube_video_block.field_yt_video_block_description
+    - field.field.block_content.youtube_video_block.field_yt_video_block_title
+    - field.field.block_content.youtube_video_block.field_yt_video_block_video
+  module:
+    - video_embed_field
+id: block_content.youtube_video_block.default
+targetEntityType: block_content
+bundle: youtube_video_block
+mode: default
+content:
+  field_yt_video_block_description:
+    type: string_textarea
+    weight: 29
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_yt_video_block_title:
+    type: string_textfield
+    weight: 28
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_yt_video_block_video:
+    type: video_embed_field_textfield
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

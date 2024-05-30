@@ -1,0 +1,20 @@
+uuid: 112cf02b-50c4-4a67-9d44-db3217040534
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - media
+id: block_content.field_rendered_gallery_item
+field_name: field_rendered_gallery_item
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

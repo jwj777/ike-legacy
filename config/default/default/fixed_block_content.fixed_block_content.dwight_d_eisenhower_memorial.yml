@@ -1,0 +1,12 @@
+uuid: aff52ad3-0d94-4a46-a2de-2a9e1969b248
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.memorial_info
+id: dwight_d_eisenhower_memorial
+title: 'Dwight D. Eisenhower Memorial'
+block_content_bundle: memorial_info
+default_content: null
+auto_export: 0
+protected: false

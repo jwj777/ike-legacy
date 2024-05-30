@@ -1,0 +1,30 @@
+uuid: 284259b0-9ee5-42c7-98a9-6acb42aeeb96
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:quote_banner:09a77a46-b75e-46c2-9755-b4f44b68a737'
+  module:
+    - block_content
+    - system
+  theme:
+    - ike
+id: hpquotebanner
+theme: ike
+region: bottom
+weight: -13
+provider: null
+plugin: 'block_content:09a77a46-b75e-46c2-9755-b4f44b68a737'
+settings:
+  id: 'block_content:09a77a46-b75e-46c2-9755-b4f44b68a737'
+  label: 'HP Quote Banner'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

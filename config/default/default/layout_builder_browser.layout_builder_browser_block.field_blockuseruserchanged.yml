@@ -1,0 +1,11 @@
+uuid: dd12d3b3-488b-4260-8800-55472dd03b84
+langcode: en
+status: true
+dependencies: {  }
+id: field_blockuseruserchanged
+block_id: 'field_block:user:user:changed'
+category: user_fields
+label: Changed
+image_path: ''
+image_alt: ''
+weight: 0

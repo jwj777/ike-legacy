@@ -1,0 +1,29 @@
+uuid: fbc7ca36-c22c-4bdb-85f8-43ed33d46f77
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_topic
+    - node.type.lesson_plan
+    - taxonomy.vocabulary.resource_topic
+id: node.lesson_plan.field_resource_topic
+field_name: field_resource_topic
+entity_type: node
+bundle: lesson_plan
+label: 'Resource Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      resource_topic: resource_topic
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

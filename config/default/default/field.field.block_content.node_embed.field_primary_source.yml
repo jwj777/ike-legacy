@@ -1,0 +1,28 @@
+uuid: f1233806-d7ba-41dd-92fe-1f0549d43296
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.node_embed
+    - field.storage.block_content.field_primary_source
+    - node.type.primary_source
+id: block_content.node_embed.field_primary_source
+field_name: field_primary_source
+entity_type: block_content
+bundle: node_embed
+label: 'Primary Source'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      primary_source: primary_source
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

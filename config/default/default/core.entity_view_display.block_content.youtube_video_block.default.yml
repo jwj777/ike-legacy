@@ -1,0 +1,49 @@
+uuid: b3daea03-6270-45a9-858e-148ae5431622
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.youtube_video_block
+    - field.field.block_content.youtube_video_block.field_yt_video_block_description
+    - field.field.block_content.youtube_video_block.field_yt_video_block_title
+    - field.field.block_content.youtube_video_block.field_yt_video_block_video
+    - image.style.max_650x650
+  module:
+    - video_embed_field
+id: block_content.youtube_video_block.default
+targetEntityType: block_content
+bundle: youtube_video_block
+mode: default
+content:
+  field_yt_video_block_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_yt_video_block_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_yt_video_block_video:
+    type: video_embed_field_colorbox
+    label: hidden
+    settings:
+      autoplay: false
+      responsive: true
+      width: 854
+      height: 480
+      image_style: max_650x650
+      link_image_to: content
+      modal_max_width: 854
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true
+  uuid: true

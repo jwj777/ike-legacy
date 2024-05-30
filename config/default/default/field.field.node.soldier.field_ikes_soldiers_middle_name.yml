@@ -1,0 +1,19 @@
+uuid: 4db9fd67-8a0f-4a32-8532-f427b5eb605d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ikes_soldiers_middle_name
+    - node.type.soldier
+id: node.soldier.field_ikes_soldiers_middle_name
+field_name: field_ikes_soldiers_middle_name
+entity_type: node
+bundle: soldier
+label: 'Middle Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

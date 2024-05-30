@@ -1,0 +1,23 @@
+uuid: cf376ba0-c97e-4e27-92ef-b03a3a87df0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.gallery_block
+    - field.field.block_content.gallery_block.field_rendered_gallery_item
+  module:
+    - media_library
+id: block_content.gallery_block.default
+targetEntityType: block_content
+bundle: gallery_block
+mode: default
+content:
+  field_rendered_gallery_item:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+hidden:
+  info: true

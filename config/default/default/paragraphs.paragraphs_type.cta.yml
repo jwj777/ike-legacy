@@ -1,0 +1,9 @@
+uuid: 6eb1327a-3f9a-4fcb-bd0c-965356c96271
+langcode: en
+status: true
+dependencies: {  }
+id: cta
+label: CTA
+icon_uuid: null
+description: 'Creates an image and text in a CTA-styled card.'
+behavior_plugins: {  }

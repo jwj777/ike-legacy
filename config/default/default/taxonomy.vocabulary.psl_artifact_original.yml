@@ -1,0 +1,8 @@
+uuid: 9d0d63d2-9961-4bfe-989a-9abde4792ba7
+langcode: en
+status: true
+dependencies: {  }
+name: 'PSL Artifact Original'
+vid: psl_artifact_original
+description: 'Original, Replica or Combination'
+weight: 0

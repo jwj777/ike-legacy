@@ -1,0 +1,28 @@
+uuid: 28016989-4905-4d7a-a8b3-489e28d42f93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_image
+    - media.type.image
+    - node.type.event
+id: node.event.field_event_image
+field_name: field_event_image
+entity_type: node
+bundle: event
+label: Image
+description: 'Images will work best at 800px x 400px.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

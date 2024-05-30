@@ -1,0 +1,22 @@
+uuid: 400e6aab-dbfb-4a91-bdbc-e2d81d1cfd52
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - ike
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: ike_powered
+theme: ike
+region: header
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

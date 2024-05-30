@@ -1,0 +1,21 @@
+uuid: ab52aa4d-aea2-48ac-a4a1-ed6b4ce9b063
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ikes_soldiers_enlistment
+    - node.type.soldier
+  module:
+    - datetime
+id: node.soldier.field_ikes_soldiers_enlistment
+field_name: field_ikes_soldiers_enlistment
+entity_type: node
+bundle: soldier
+label: 'Enlisted/Commissioned Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

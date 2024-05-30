@@ -1,0 +1,7 @@
+uuid: bc6f24ad-7169-4c4c-9368-924a6a91b05a
+langcode: en
+status: true
+dependencies: {  }
+id: ike_email_signup
+label: 'IKE Email Signup'
+weight: -6

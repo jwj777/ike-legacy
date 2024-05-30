@@ -1,0 +1,11 @@
+uuid: a0b464af-7b4f-408f-b051-764f2701575b
+langcode: en
+status: true
+dependencies: {  }
+id: block_content09a77a46-b75e-46c2-9755-b4f44b68a737
+block_id: 'block_content:09a77a46-b75e-46c2-9755-b4f44b68a737'
+category: custom
+label: 'HP Quote Banner'
+image_path: /themes/custom/ike/images/lb_browser/quote_banner.png
+image_alt: 'HP Quote Banner'
+weight: 0

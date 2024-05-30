@@ -1,0 +1,65 @@
+uuid: 1bcec3e7-0a49-4473-87a2-6dca09b91eee
+langcode: en
+status: true
+dependencies: {  }
+id: ike_psl_migrations_psl_video_embeds
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: psl_migrations
+label: 'Import Embedded Video for Primary Sources'
+source:
+  plugin: csv
+  path: /var/www/html/docroot/modules/custom/ike_psl_migrations/files/import.csv
+  delimiter: ','
+  enclosure: '"'
+  header_offset: 0
+  ids:
+    - id
+  fields:
+    -
+      name: id
+      label: 'Unique Id'
+    -
+      name: title
+      label: Title
+    -
+      name: image
+      label: Image
+    -
+      name: description
+      label: Description
+    -
+      name: psl_type
+      label: 'PSL type'
+    -
+      name: media_file
+      label: 'Media File'
+    -
+      name: 3d_media
+      label: '3D Media embed'
+    -
+      name: video_embed
+      label: 'Video Media embed'
+process:
+  bundle:
+    plugin: default_value
+    default_value: remote_video
+  field_media_oembed_video/value:
+    plugin: skip_on_empty
+    method: row
+    source: video_embed
+  field_media_oembed_video/format:
+    plugin: default_value
+    default_value: plain_text
+  name: title
+  uid:
+    plugin: default_value
+    default_value: 1
+destination:
+  plugin: 'entity:media'
+migration_dependencies:
+  required: {  }
+  optional:
+    - ike_psl_migrations_psl_images

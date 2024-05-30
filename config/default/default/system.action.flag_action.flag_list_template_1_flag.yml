@@ -1,0 +1,17 @@
+uuid: 9cd32fd0-8534-452a-b8a9-ece59638c86d
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.flag_list_template_1
+  module:
+    - flag
+_core:
+  default_config_hash: LkE1QB2Y0oqjrb33mVsdE0cSy6E9wujJklHGqH91GvE
+id: flag_action.flag_list_template_1_flag
+label: 'Add this item to a list'
+type: node
+plugin: 'flag_action:flag_list_template_1_flag'
+configuration:
+  flag_id: flag_list_template_1
+  flag_action: flag

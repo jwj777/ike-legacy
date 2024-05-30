@@ -1,0 +1,21 @@
+uuid: beb5a6f2-d101-49e2-a387-1f095f25358c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.stylized_title
+    - field.storage.block_content.field_stylized_title_description
+  module:
+    - text
+id: block_content.stylized_title.field_stylized_title_description
+field_name: field_stylized_title_description
+entity_type: block_content
+bundle: stylized_title
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

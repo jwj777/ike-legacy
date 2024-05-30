@@ -1,0 +1,29 @@
+uuid: 695ad6a0-39d8-4db2-a376-d805b3b40010
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_subject
+    - node.type.lesson_plan
+    - taxonomy.vocabulary.resource_subject
+id: node.lesson_plan.field_resource_subject
+field_name: field_resource_subject
+entity_type: node
+bundle: lesson_plan
+label: 'Resource Subject'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      resource_subject: resource_subject
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

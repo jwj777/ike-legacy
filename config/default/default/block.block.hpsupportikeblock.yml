@@ -1,0 +1,31 @@
+uuid: d72f1f08-f923-4f37-a3c9-02652c5c5b03
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:support_ike_block:1a00fd06-92b8-4951-9a1f-9ad5b7f558be'
+  module:
+    - block_content
+    - system
+  theme:
+    - ike
+id: hpsupportikeblock
+theme: ike
+region: top
+weight: 0
+provider: null
+plugin: 'block_content:1a00fd06-92b8-4951-9a1f-9ad5b7f558be'
+settings:
+  id: 'block_content:1a00fd06-92b8-4951-9a1f-9ad5b7f558be'
+  label: 'HP Support IKE Block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

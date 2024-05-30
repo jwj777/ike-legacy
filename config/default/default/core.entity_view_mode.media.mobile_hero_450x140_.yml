@@ -1,0 +1,11 @@
+uuid: 82dec6d5-6c7d-4392-9157-67eb6d951ae7
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.mobile_hero_450x140_
+label: 'Mobile Hero (767x242)'
+description: ''
+targetEntityType: media
+cache: true

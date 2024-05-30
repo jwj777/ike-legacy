@@ -1,0 +1,11 @@
+uuid: bf1d9a5a-974d-4436-9ab2-efc45b22e80d
+langcode: en
+status: true
+dependencies: {  }
+id: field_blockuseruserroles
+block_id: 'field_block:user:user:roles'
+category: user_fields
+label: Roles
+image_path: ''
+image_alt: ''
+weight: 0

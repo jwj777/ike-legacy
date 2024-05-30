@@ -1,0 +1,23 @@
+uuid: d69ca493-cf21-4ff4-a925-2a890e251501
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lesson_plan_description
+    - node.type.lesson_plan
+  module:
+    - text
+id: node.lesson_plan.field_lesson_plan_description
+field_name: field_lesson_plan_description
+entity_type: node
+bundle: lesson_plan
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

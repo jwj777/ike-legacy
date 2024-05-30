@@ -1,0 +1,9 @@
+uuid: 69568ec1-2145-4e9c-b6ee-dec4498c70fe
+langcode: en
+status: true
+dependencies: {  }
+id: quote_banner
+label: 'Quote Banner'
+icon_uuid: null
+description: 'Displays full-width image with quote text.'
+behavior_plugins: {  }

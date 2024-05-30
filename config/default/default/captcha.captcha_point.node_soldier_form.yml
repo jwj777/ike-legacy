@@ -1,0 +1,7 @@
+uuid: 6e7d3a42-7ae4-4f99-a66f-aaf421344f32
+langcode: en
+status: false
+dependencies: {  }
+formId: node_soldier_form
+captchaType: default
+label: node_soldier_form

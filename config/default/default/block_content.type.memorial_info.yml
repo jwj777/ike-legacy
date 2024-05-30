@@ -1,0 +1,8 @@
+uuid: 6a11607b-d12b-4512-9131-d79b90c9aa4d
+langcode: en
+status: true
+dependencies: {  }
+id: memorial_info
+label: 'Memorial Info'
+revision: 0
+description: 'Block for the Memorial landing page'

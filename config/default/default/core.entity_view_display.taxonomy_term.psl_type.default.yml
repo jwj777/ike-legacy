@@ -1,0 +1,25 @@
+uuid: 2ec29bcf-b13b-4ee4-8260-a8c079da983d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.psl_type.field_psl_type_hide_from_search
+    - taxonomy.vocabulary.psl_type
+  module:
+    - text
+id: taxonomy_term.psl_type.default
+targetEntityType: taxonomy_term
+bundle: psl_type
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_psl_type_hide_from_search: true
+  search_api_excerpt: true
+  uuid: true

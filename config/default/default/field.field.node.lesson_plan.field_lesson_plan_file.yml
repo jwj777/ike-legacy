@@ -1,0 +1,28 @@
+uuid: ab61a087-a691-4c29-9abe-331f0a698f29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lesson_plan_file
+    - media.type.document
+    - node.type.lesson_plan
+id: node.lesson_plan.field_lesson_plan_file
+field_name: field_lesson_plan_file
+entity_type: node
+bundle: lesson_plan
+label: 'Media File'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: audio
+field_type: entity_reference

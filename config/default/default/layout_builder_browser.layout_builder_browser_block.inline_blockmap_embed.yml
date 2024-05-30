@@ -1,0 +1,11 @@
+uuid: 01860ce5-7439-408a-bacc-59bb84e5be40
+langcode: en
+status: true
+dependencies: {  }
+id: inline_blockmap_embed
+block_id: 'inline_block:map_embed'
+category: add_a_new_custom_block
+label: 'Map Embed'
+image_path: /themes/custom/ike/images/lb_browser/map_embed.png
+image_alt: 'Map embed'
+weight: 0

@@ -1,0 +1,8 @@
+uuid: 2aa0a6b0-a392-4106-a934-b7d2acd6a6c3
+langcode: en
+status: true
+dependencies: {  }
+id: link_block
+label: 'Link Block'
+revision: 0
+description: 'Top of the Gallery page'

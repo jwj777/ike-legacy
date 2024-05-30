@@ -1,0 +1,23 @@
+uuid: ea7ea726-6e44-4c87-a915-b0b30c6a2ee0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_rc_hide_from_search
+    - taxonomy.vocabulary.resource_collections
+id: taxonomy_term.resource_collections.field_rc_hide_from_search
+field_name: field_rc_hide_from_search
+entity_type: taxonomy_term
+bundle: resource_collections
+label: 'Hide from Search'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

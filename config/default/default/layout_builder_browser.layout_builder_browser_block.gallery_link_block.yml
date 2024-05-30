@@ -1,0 +1,11 @@
+uuid: 5d6f68aa-80fb-4fb8-aa9f-8cb267161fc7
+langcode: en
+status: true
+dependencies: {  }
+id: gallery_link_block
+block_id: 'inline_block:link_block'
+category: add_a_new_custom_block
+label: 'Gallery Link Block'
+image_path: ''
+image_alt: ''
+weight: -11

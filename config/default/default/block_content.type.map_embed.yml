@@ -1,0 +1,8 @@
+uuid: b1d3bfc2-7d95-42b9-b94d-bf1e83937210
+langcode: en
+status: true
+dependencies: {  }
+id: map_embed
+label: 'Map Embed'
+revision: 0
+description: 'Create a map from an embed code or drop in an image and a link to display on a page.'

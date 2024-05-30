@@ -1,0 +1,28 @@
+uuid: 6796c04a-8627-48db-9919-e1e7f728cc1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.flat_image_text_card
+    - field.storage.block_content.field_flat_image_text_card_media
+    - media.type.image
+id: block_content.flat_image_text_card.field_flat_image_text_card_media
+field_name: field_flat_image_text_card_media
+entity_type: block_content
+bundle: flat_image_text_card
+label: Media
+description: 'The media item behind the title.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

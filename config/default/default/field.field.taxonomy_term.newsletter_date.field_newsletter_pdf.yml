@@ -1,0 +1,27 @@
+uuid: a64f7912-f165-4239-8a05-501107b29f64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_newsletter_pdf
+    - taxonomy.vocabulary.newsletter_date
+  module:
+    - file
+id: taxonomy_term.newsletter_date.field_newsletter_pdf
+field_name: field_newsletter_pdf
+entity_type: taxonomy_term
+bundle: newsletter_date
+label: 'Newsletter PDF'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+field_type: file

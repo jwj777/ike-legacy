@@ -1,0 +1,8 @@
+_core:
+  default_config_hash: S6rQarWvkmKD23_sdFs_HQdHZbyd6KX58eINnvUL9n4
+system_match: ''
+system_prefix: ''
+system_regex: ''
+layout_match: "masquerade\r\ndevel_switch_user\r\nhelp_block\r\nemail_signup_block\r\nshortcuts\r\ntwitter_post_block\r\ninstagram_post_block\r\nfacebook_post\r\nsystem_branding_block\r\nsystem_main_block\r\nsystem_messages_block\r\nsystem_powered_by_block\r\nlocal_actions_block\r\nlocal_tasks_block\r\npage_title_block"
+layout_prefix: "block_content\r\nentity_view\r\nsystem_menu_block\r\nviews_block"
+layout_regex: ''

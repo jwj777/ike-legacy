@@ -1,0 +1,8 @@
+uuid: 891ba2e8-b184-4d32-af62-c6823bb71f9d
+langcode: en
+status: true
+dependencies: {  }
+id: iked_cta_text_overlay_banner
+label: 'Iked CTA Text Overlay Banner'
+revision: 0
+description: 'CTA banner with text in a blue overlay field'

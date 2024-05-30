@@ -1,0 +1,11 @@
+uuid: ae5a5604-67a8-4c4b-b6d2-abbd53371cdb
+langcode: en
+status: true
+dependencies: {  }
+id: field_blocknodecomponent_pagefield_blue_background
+block_id: 'field_block:node:component_page:field_blue_background'
+category: content_fields
+label: 'Blue Background'
+image_path: ''
+image_alt: ''
+weight: 0

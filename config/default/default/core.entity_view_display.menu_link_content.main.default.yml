@@ -1,0 +1,29 @@
+uuid: 7ba0b908-4b85-421a-a461-e70702113de0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.main.field_menu_dropdown_text
+    - system.menu.main
+  module:
+    - text
+id: menu_link_content.main.default
+targetEntityType: menu_link_content
+bundle: main
+mode: default
+content:
+  children:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_menu_dropdown_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  search_api_excerpt: true
+  uuid: true

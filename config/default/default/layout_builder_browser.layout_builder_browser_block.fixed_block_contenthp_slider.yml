@@ -1,0 +1,11 @@
+uuid: ae2f0c55-a675-4581-b7d1-4800e141b273
+langcode: en
+status: true
+dependencies: {  }
+id: fixed_block_contenthp_slider
+block_id: 'fixed_block_content:hp_slider'
+category: fixed_custom
+label: 'HP Slider'
+image_path: /themes/custom/ike/images/lb_browser/slider.png
+image_alt: 'Homepage Slider'
+weight: 0

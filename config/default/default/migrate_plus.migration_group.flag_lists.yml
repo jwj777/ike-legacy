@@ -1,0 +1,10 @@
+uuid: a80626d7-5024-43e8-be88-9f414afc75cf
+langcode: en
+status: true
+dependencies: {  }
+id: flag_lists
+label: flag_lists
+description: ''
+source_type: null
+module: null
+shared_configuration: null

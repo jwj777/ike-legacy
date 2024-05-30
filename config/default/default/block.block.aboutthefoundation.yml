@@ -1,0 +1,23 @@
+uuid: 257c6632-9ff8-40b9-90f3-557825fc75f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - fixed_block_content.fixed_block_content.about_the_foundation
+  module:
+    - fixed_block_content
+  theme:
+    - ike
+id: aboutthefoundation
+theme: ike
+region: footer_right
+weight: 0
+provider: null
+plugin: 'fixed_block_content:about_the_foundation'
+settings:
+  id: 'fixed_block_content:about_the_foundation'
+  label: 'About The Foundation'
+  label_display: visible
+  provider: fixed_block_content
+  view_mode: ''
+visibility: {  }

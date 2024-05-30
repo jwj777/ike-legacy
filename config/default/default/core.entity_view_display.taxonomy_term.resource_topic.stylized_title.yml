@@ -1,0 +1,29 @@
+uuid: ad5a0988-4a7b-474d-9491-6f7caa4eadab
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.stylized_title
+    - taxonomy.vocabulary.resource_topic
+  module:
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: taxonomy_term.resource_topic.stylized_title
+targetEntityType: taxonomy_term
+bundle: resource_topic
+mode: stylized_title
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true
+  uuid: true

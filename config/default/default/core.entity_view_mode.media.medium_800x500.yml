@@ -1,0 +1,11 @@
+uuid: be679617-89a5-4df1-805d-1d9e39bcbb91
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.medium_800x500
+label: 'Medium 800x500'
+description: ''
+targetEntityType: media
+cache: true

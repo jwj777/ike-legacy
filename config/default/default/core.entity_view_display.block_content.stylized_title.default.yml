@@ -1,0 +1,47 @@
+uuid: b7780352-0681-4893-8b97-484074c1bf2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.stylized_title
+    - field.field.block_content.stylized_title.field_stylized_title_description
+    - field.field.block_content.stylized_title.field_stylized_title_link
+    - field.field.block_content.stylized_title.field_stylized_title_title
+  module:
+    - link
+    - text
+id: block_content.stylized_title.default
+targetEntityType: block_content
+bundle: stylized_title
+mode: default
+content:
+  field_stylized_title_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_stylized_title_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_stylized_title_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true
+  uuid: true

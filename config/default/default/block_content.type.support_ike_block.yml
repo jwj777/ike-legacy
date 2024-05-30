@@ -1,0 +1,8 @@
+uuid: 591844d1-9d6a-432c-80d4-2e83306bb289
+langcode: en
+status: true
+dependencies: {  }
+id: support_ike_block
+label: 'Support IKE block'
+revision: 0
+description: 'Block type with Stylized title, body text, and link button'

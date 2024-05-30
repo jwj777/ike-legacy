@@ -1,0 +1,11 @@
+uuid: 5fedd814-5ded-4a5d-8238-73ab2f75ba01
+langcode: en
+status: true
+dependencies: {  }
+id: field_blockuserusermail
+block_id: 'field_block:user:user:mail'
+category: user_fields
+label: Email
+image_path: ''
+image_alt: ''
+weight: 0

@@ -1,0 +1,21 @@
+uuid: 04584995-a56b-498f-b0bc-eff30c744907
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.memorial_info
+    - field.storage.block_content.field_memorial_hours
+  module:
+    - text
+id: block_content.memorial_info.field_memorial_hours
+field_name: field_memorial_hours
+entity_type: block_content
+bundle: memorial_info
+label: 'Memorial Hours'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
